@@ -6,8 +6,8 @@ FLVM website
 ### Le prototype de contenu
 Première étape important du projet, le code du prototype est publié sur la branche [https://github.com/flvm/flvm-website/tree/content-prototype](https://github.com/flvm/flvm-website/tree/content-prototype), le contenu sur dépot [https://github.com/FLVM/FLVM-website-content](https://github.com/FLVM/FLVM-website-content)
 
-## Le prototype graphique
-Le design du site est élaboré par itération uatour de documents prototypes, il est publié sur la page [http://flvm.github.io/flvm-website/styleguide](http://flvm.github.io/flvm-website/styleguide) 
+### Le prototype graphique
+Le design du site est élaboré par itération autour de documents prototypes, il est publié sur la page [http://flvm.github.io/flvm-website/styleguide](http://flvm.github.io/flvm-website/styleguide) 
 
 ## Usage
 
