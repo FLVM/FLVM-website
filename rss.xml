@@ -1,0 +1,60 @@
+
+
+<rss version="2.0">
+	<channel>
+		<generator>Mixture</generator>
+		<title>Simple Blog</title>
+		<link>http://link.com</link>
+		<description>A simple example blog boilerplate using 'collections' in Mixture.</description>
+		<language>en</language>
+		<webMaster>mail@yourmail.com</webMaster>
+		<copyright>2015</copyright>
+		<pubDate>Thu, 06 Jun 2013 12:17:05 GMT</pubDate>
+		<lastBuildDate>Thu, 06 Jun 2013 12:17:05 GMT</lastBuildDate>
+		
+			<item>
+	<title>Example post</title>
+	<link>http://link.com/article/example</link>
+	<guid>/article/example</guid>
+	
+	<pubDate>Wed, 05 Jun 2013 05:02:08 GMT</pubDate>
+	<description>Example post Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra laoreet fermentum. Aliquam faucibus eleifend fermentum. Aliquam convallis nunc id diam suscipit at viverra tellus bibendum. Sed mollis magna ut arcu cursus semper. In sed orci justo, non pretium dolor. Pellentesque convallis risus vitae sapien faucibus ultrices. Phasellus...</description>
+</item><item>
+	<title>Example post HAML</title>
+	<link>http://link.com/article/example-post-haml</link>
+	<guid>/article/example-post-haml</guid>
+	
+	<pubDate>Wed, 05 Jun 2013 05:02:08 GMT</pubDate>
+	<description>Example post HAML Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra laoreet fermentum. Aliquam faucibus eleifend fermentum. Aliquam convallis nunc id diam suscipit at viverra tellus bibendum. Sed mollis magna ut arcu cursus semper. In sed orci justo, non pretium dolor. Pellentesque convallis risus vitae sapien faucibus ultrices....</description>
+</item><item>
+	<title>Example post 2</title>
+	<link>http://link.com/article/example-2</link>
+	<guid>/article/example-2</guid>
+	
+	<pubDate>Wed, 05 Jun 2013 05:02:08 GMT</pubDate>
+	<description>Example post 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra laoreet fermentum. Aliquam faucibus eleifend fermentum. Aliquam convallis nunc id diam suscipit at viverra tellus bibendum. Sed mollis magna ut arcu cursus semper. In sed orci justo, non pretium dolor. Pellentesque convallis risus vitae sapien faucibus ultrices....</description>
+</item><item>
+	<title>Example post 3</title>
+	<link>http://link.com/article/example-3</link>
+	<guid>/article/example-3</guid>
+	
+	<pubDate>Wed, 05 Jun 2013 05:02:08 GMT</pubDate>
+	<description>Example post 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra laoreet fermentum. Aliquam faucibus eleifend fermentum. Aliquam convallis nunc id diam suscipit at viverra tellus bibendum. Sed mollis magna ut arcu cursus semper. In sed orci justo, non pretium dolor. Pellentesque convallis risus vitae sapien faucibus ultrices....</description>
+</item><item>
+	<title>Example Liquid Post</title>
+	<link>http://link.com/article/example-liquid-post</link>
+	<guid>/article/example-liquid-post</guid>
+	
+	<pubDate>Wed, 05 Jun 2013 05:02:08 GMT</pubDate>
+	<description>About Me Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra laoreet fermentum. Aliquam faucibus eleifend fermentum. Aliquam convallis nunc id diam suscipit at viverra tellus bibendum. Sed mollis magna ut arcu cursus semper. In sed orci justo, non pretium dolor. Pellentesque convallis risus vitae sapien faucibus ultrices. Phasellus...</description>
+</item><item>
+	<title>Example Old</title>
+	<link>http://link.com/article/example-old</link>
+	<guid>/article/example-old</guid>
+	
+	<pubDate>Sat, 20 Apr 2013 00:00:00 GMT</pubDate>
+	<description>Example old Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra laoreet fermentum. Aliquam faucibus eleifend fermentum. Aliquam convallis nunc id diam suscipit at viverra tellus bibendum. Sed mollis magna ut arcu cursus semper. In sed orci justo, non pretium dolor. Pellentesque convallis risus vitae sapien faucibus ultrices. Phasellus...</description>
+</item>
+		
+	</channel>
+</rss>
