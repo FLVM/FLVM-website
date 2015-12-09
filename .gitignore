@@ -7,6 +7,8 @@ composer.lock
 ##########
 modules/
 application/config/
+application/cache/
+application/logs/
 
 # Compiled source #
 ###################
