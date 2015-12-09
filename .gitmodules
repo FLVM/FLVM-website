@@ -1,3 +1,6 @@
 [submodule "content"]
 	path = content
 	url = https://github.com/FLVM/FLVM-website-content.git
+[submodule "assets/css/libs/chibicss"]
+	path = assets/css/libs/chibicss
+	url = https://github.com/ziopod/ChibiCSS.git

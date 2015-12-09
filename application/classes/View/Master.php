@@ -12,6 +12,15 @@
 **/
 
 class View_Master extends View_Tanuki {
+	/**
+	* Set Styles
+	**/
+	public function styles()
+	{
+		return array(
+			'src' => 'assets/css/main.css',
+		);
+	}
 
 	/**
 	* Somes defaults globales data for all views
@@ -21,12 +30,12 @@ class View_Master extends View_Tanuki {
 	public function tanuki()
 	{
 		return array(
-			'title' 		=> "Tanuki Get it simple!",
-			'description'	=> "Just a simple web publishing design pattern",
+			'title' 		=> "Faites le vous même",
+			'description'	=> "Des cours de cuisine et pâtisseries et bien plus encore.",
 			'author'		=> array(
-				'name'		=> "Ziopod",
-				'email'		=> "hello@ziopod.com",
-				'url'		=> "http://ziopod.com",
+				'name'		=> "FLVM",
+				'email'		=> "contatc@flvm.fr",
+				'url'		=> "http://flvm.fr",
 			),
 			'license'		=> array(
 				'name'		=> 'MIT',
@@ -50,9 +59,9 @@ class View_Master extends View_Tanuki {
 				'current'	=> Request::initial()->controller() === 'App' AND Request::initial()->action() === 'home',
 			),
 			array(
-				'url'		=> $this->base_url() . 'about',
-				'name'		=> __('About'),
-				'title'		=> __('Go to example page'),
+				'url'		=> $this->base_url() . 'informations',
+				'name'		=> __('Informations'),
+				'title'		=> __('À propos de FLVM'),
 				'current'	=> Request::initial()->controller() === 'App' AND Request::initial()->param('slug') === 'about',
 			),
 		);
