@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-# tanuki
-A MVVM Flatfile CMS for Kohana
-=======
-FLVM website
-============
+# FLVM website
 
 ## Élaboration du projet
 
