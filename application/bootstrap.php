@@ -144,6 +144,6 @@ Kohana::modules(array(
  * If you have not defined a cookie salt in your Cookie class then
  * uncomment the line below and define a preferrably long salt.
  */
-// Cookie::$salt = NULL;
+Cookie::$salt = Kohana::$config->load('session.cookie.salt');
 
 include_once APPPATH . 'route' . EXT;
