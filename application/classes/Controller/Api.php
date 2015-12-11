@@ -22,7 +22,7 @@ Class Controller_Api extends Controller {
 		// Check secret key
 		if ( ! Request::current()->query('secret') OR (Request::current()->query('secret') !== Kohana::$config->load('tanuki.secret')))
 		{
-			throw http_exception::factory(403, "acces denied");		  
+			throw HTTP_Exception::factory(403, "acces denied");		  
 		}
 	}
 
