@@ -20,7 +20,7 @@ Class Controller_Api extends Controller {
 	public function before()
 	{
 		// Check secret key
-		if (Request::current()->query('secret') !== Kohana::$config->load('tanuki.secret'))
+		if (! Request::current()->query('secret') AND (Request::current()->query('secret') !== Kohana::$config->load('tanuki.secret')))
 		{
 			throw http_exception::factory(403, "acces denied");		  
 		}
