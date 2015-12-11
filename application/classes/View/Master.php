@@ -34,7 +34,7 @@ class View_Master extends View_Tanuki {
 			'description'	=> "Des cours de cuisine et pâtisseries et bien plus encore.",
 			'author'		=> array(
 				'name'		=> "FLVM",
-				'email'		=> "contatc@flvm.fr",
+				'email'		=> "contact@flvm.fr",
 				'url'		=> "http://flvm.fr",
 			),
 			'license'		=> array(
