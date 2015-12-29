@@ -3,39 +3,6 @@
 @import 'banner.less';
 @import 'footer.less';
 @import 'navigation.less';
+@import 'grid.less';
 
 // @debug: true;
-// Grid Mobile first
-.wrapper,
-main,
-.main-header,
-.main-navigation,
-.main-footer
-{
-	.wrapper();
-}
-
-// Medium device
-@media (min-width: @screen-medium)
-{
-	// Wrappers
-	main,
-	.main-header,
-	.main-navigation,
-	.main-footer
-	{
-		.wrapper(12);
-	}
-	// Init columns
-	main > article,
-	.main-footer > section
-	{
-		.column-init();
-	}
-	
-	main > article
-	{
-		.column(8);	
-	}
-
-}

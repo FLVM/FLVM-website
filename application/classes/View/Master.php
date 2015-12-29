@@ -23,25 +23,57 @@ class View_Master extends View_Tanuki {
 	}
 
 	/**
-	* Somes defaults globales data for all views
+	* Somes defaults global data for all views
 	*
 	* @return	array	Global informations
 	**/
 	public function tanuki()
 	{
-		return array(
-			'title' 		=> "Faites le vous même",
-			'description'	=> "Des cours de cuisine et pâtisseries et bien plus encore.",
-			'author'		=> array(
-				'name'		=> "FLVM",
-				'email'		=> "contact@flvm.fr",
-				'url'		=> "http://flvm.fr",
-			),
-			'license'		=> array(
-				'name'		=> 'MIT',
-				'url'		=> 'http://opensource.org/licenses/mit-license.php',
-			),
-		);
+		return  Kohana::$config->load('tanuki.tanuki');
+	}
+
+	/**
+	* Set HTML metas list
+	*
+	* Try to grab metas from Flatfile, even load metas from configuration file
+	*
+	* @return	array
+	**/
+	public function metas()
+	{
+		// Load metas from config file, remplaced by values set in Flatfile
+		$model_name = $this->model_name;
+		$default_metas = Kohana::$config->load('tanuki.metas');
+		$metas = array();
+
+		foreach ($default_metas as $name => $content)
+		{
+			$metas[] = array(
+				'name' => $name,
+				'content' => $this->$model_name->$name ? $this->$model_name->$name : $content,
+			);
+		}
+
+		return $metas;
+	}
+
+	/**
+	* Set HTML title tag
+	*
+	* @return	string
+	**/
+	public function title()
+	{
+		// Try to load title from model
+		$model_name = $this->model_name;
+
+		if (isset($this->$model_name->title))
+		{
+			return $this->$model_name->title;
+		}
+
+		// Instead use global config
+		return Kohana::$config->load('tanuki.tanuki.title');
 	}
 
 	/**
@@ -53,16 +85,22 @@ class View_Master extends View_Tanuki {
 	{
 		return array(
 			array(
-				'url'		=> $this->base_url(),
-				'name'		=> __('Home'),
-				'title'		=> __('Go to Home'),
-				'current'	=> Request::initial()->controller() === 'App' AND Request::initial()->action() === 'home',
+				'url'		=> $this->base_url() . 'cours',
+				'name'		=> __('Cours'),
+				'title'		=> __('Cours de cuisine et de pâtisserie'),
+				'current'	=> Request::initial()->controller() === 'Pages' AND Request::initial()->param('slug') === 'cours',
+			),
+			array(
+				'url'		=> $this->base_url() . 'planning',
+				'name'		=> __('Planning'),
+				'title'		=> __('Le planning complet des cours'),
+				'current'	=> Request::initial()->controller() === 'Pages' AND Request::initial()->param('slug') === 'planning',
 			),
 			array(
 				'url'		=> $this->base_url() . 'informations',
 				'name'		=> __('Informations'),
 				'title'		=> __('À propos de FLVM'),
-				'current'	=> Request::initial()->controller() === 'App' AND Request::initial()->param('slug') === 'about',
+				'current'	=> Request::initial()->controller() === 'Pages' AND Request::initial()->param('slug') === 'informations',
 			),
 		);
 	}	

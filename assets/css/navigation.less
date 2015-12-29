@@ -1,6 +1,18 @@
 /**
 * Élements de navigation globaux
 **/
+// Main navigation
+.navigation-link
+{
+	&:extend(.btn all);
+}
+
+.navigation-link-current
+{
+	font-weight: @bold;
+}
+
+// Buttons
 .btn
 {
 	.btn-init();

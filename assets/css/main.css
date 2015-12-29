@@ -728,14 +728,19 @@ optgroup {
 /**
 * Éntete du site
 **/
-.main-navigation {
+.banner {
   margin-bottom: 1.5em;
-  color: red !important;
+}
+.banner-logo {
+  font-size: 1.55555556em;
+}
+.banner-description {
+  font-style: italic;
 }
 /**
 * Footer
 **/
-.main-footer {
+.footer {
   font-size: 0.88888889em;
 }
 .sub-footer {
@@ -744,7 +749,11 @@ optgroup {
 /**
 * Élements de navigation globaux
 **/
+.navigation-link-current {
+  font-weight: 600;
+}
 .btn,
+.navigation-link,
 .btn-cta {
   display: inline-block;
   padding: 0.5em 1.5em;
@@ -758,16 +767,22 @@ optgroup {
   text-align: center;
 }
 .btn:link,
-.btn:visited {
+.btn:visited,
+.navigation-link:link,
+.navigation-link:visited {
   color: #000000;
 }
 .btn:hover,
-.btn.current {
+.btn.current,
+.navigation-link:hover,
+.navigation-link.current {
   background-color: #e3e9f3;
   color: #000000;
 }
 .btn.disabled,
-.btn[disabled] {
+.btn[disabled],
+.navigation-link.disabled,
+.navigation-link[disabled] {
   background-color: #f9fafb;
 }
 .btn-cta {
@@ -786,6 +801,9 @@ optgroup {
 .btn-cta[disabled] {
   background-color: #5188e2;
 }
+/**
+* Grid
+**/
 .wrapper,
 main,
 .main-header,
@@ -815,18 +833,20 @@ main:after,
   clear: both;
 }
 @media (min-width: 64rem) {
+  .banner,
   main,
-  .main-header,
-  .main-navigation,
-  .main-footer {
+  .footer {
     width: 72rem;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
     clear: both;
   }
+  .header,
+  .navigation,
+  .navigation a,
   main > article,
-  .main-footer > section {
+  .footer > section {
     box-sizing: border-box;
     float: left;
     clear: none;
@@ -835,8 +855,18 @@ main:after,
     min-height: 1px;
     width: 100%;
   }
+  .header,
+  .navigation {
+    width: 36rem;
+  }
+  .navigation {
+    padding: 0;
+  }
+  .navigation a {
+    width: 12rem;
+  }
   main > article {
-    width: 48rem;
+    width: 36rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,57 @@
+/**
+* Grid
+**/
+
+// Mobile first
+.wrapper,
+main,
+.main-header,
+.main-navigation,
+.main-footer
+{
+	.wrapper();
+}
+
+
+// Medium device
+@media (min-width: @screen-medium)
+{
+	// Wrappers
+	.banner,
+	main,
+	.footer
+	{
+		.wrapper(12);
+	}
+	// Init columns
+	.header,
+	.navigation,
+	.navigation a,
+	main > article,
+	.footer > section
+	{
+		.column-init();
+	}
+	
+	// Banner
+	.header,
+	.navigation
+	{
+		.column(6);
+	}
+	.navigation
+	{
+		// .nested();
+		padding: 0; // FIX: Chibicss grid tool
+		a
+		{
+			.column(2);
+		}
+	}
+
+	// Main content
+	main > article
+	{
+		.column(6);	
+	}
+}
