@@ -67,7 +67,8 @@ class Model_Page extends Flatfile {
 			// Just one entry
 			try
 			{
-				$result[] = new Model_Page($sub_directory . $parts);
+				$part = new Model_Page($sub_directory . $parts);
+				$result[$part->slug] = $part;
 			}
 			catch(Kohana_exception $e)
 			{
@@ -82,7 +83,8 @@ class Model_Page extends Flatfile {
 			{
 				try
 				{
-					$result[] = new Model_Page($sub_directory . $part);
+					$part = new Model_Page($sub_directory . $part);
+					$result[] = $part;
 				}
 				catch(Kohana_exception $e)
 				{

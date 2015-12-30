@@ -846,6 +846,7 @@ main:after,
   .navigation,
   .navigation a,
   main > article,
+  main > nav,
   .footer > section {
     box-sizing: border-box;
     float: left;
@@ -864,6 +865,9 @@ main:after,
   }
   .navigation a {
     width: 12rem;
+  }
+  main > nav {
+    width: 18rem;
   }
   main > article {
     width: 36rem;
