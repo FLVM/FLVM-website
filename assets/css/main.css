@@ -295,7 +295,7 @@ table {
 **/
 body {
   font: normal 1em/1.5em Georgia, serif;
-  font-size: 112.5%;
+  font-size: 143.75%;
   color: #000000;
   padding: 1.5em;
 }
@@ -309,7 +309,7 @@ section nav {
 }
 hr {
   border: none;
-  border-top: 0.11111111em solid #5886d0;
+  border-top: 0.08695652em solid #5886d0;
   margin: 0;
   padding: 1.5em 0 0;
 }
@@ -318,7 +318,7 @@ address {
   margin-bottom: 1.5em;
 }
 small {
-  font-size: 0.88888889em;
+  font-size: 0.82608696em;
 }
 em,
 i {
@@ -333,9 +333,9 @@ code,
 samp,
 kbd {
   font: normal 1em/1.5em "Andale Mono", "Lucida Console", monospace;
-  line-height: 1.6875em;
-  font-size: 0.88888889em;
-  margin-bottom: 1.6875em;
+  line-height: 1.81578947em;
+  font-size: 0.82608696em;
+  margin-bottom: 1.81578947em;
   background-color: #f4f5f6;
   padding: .2em .3em .28em;
 }
@@ -401,29 +401,29 @@ h6 {
   font-weight: 600;
 }
 h1 {
-  line-height: 1.35em;
-  font-size: 3.33333333em;
-  margin-bottom: 0.45em;
+  line-height: 1.36184211em;
+  font-size: 3.30434783em;
+  margin-bottom: 0.45394737em;
 }
 h2 {
-  line-height: 1.125em;
-  font-size: 2.66666667em;
-  margin-bottom: 0.5625em;
+  line-height: 1.15em;
+  font-size: 2.60869565em;
+  margin-bottom: 0.575em;
 }
 h3 {
-  line-height: 1.5em;
-  font-size: 2em;
-  margin-bottom: 0.75em;
+  line-height: 1.4375em;
+  font-size: 2.08695652em;
+  margin-bottom: 0.71875em;
 }
 h4 {
-  line-height: 1.92857143em;
-  font-size: 1.55555556em;
-  margin-bottom: 0.96428571em;
+  line-height: 1.91666667em;
+  font-size: 1.56521739em;
+  margin-bottom: 0.95833333em;
 }
 h5 {
-  line-height: 1.125em;
-  font-size: 1.33333333em;
-  margin-bottom: 1.125em;
+  line-height: 1.27777778em;
+  font-size: 1.17391304em;
+  margin-bottom: 1.27777778em;
 }
 h6 {
   line-height: 1.5em;
@@ -431,24 +431,24 @@ h6 {
   margin-bottom: 1.5em;
 }
 :-moz-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.125em;
-  font-size: 2.66666667em;
-  margin-bottom: 0.5625em;
+  line-height: 1.15em;
+  font-size: 2.60869565em;
+  margin-bottom: 0.575em;
 }
 :-moz-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.5em;
-  font-size: 2em;
-  margin-bottom: 0.75em;
+  line-height: 1.4375em;
+  font-size: 2.08695652em;
+  margin-bottom: 0.71875em;
 }
 :-moz-any(section, article, footer, aside, nav) h3 {
-  line-height: 1.92857143em;
-  font-size: 1.55555556em;
-  margin-bottom: 0.96428571em;
+  line-height: 1.91666667em;
+  font-size: 1.56521739em;
+  margin-bottom: 0.95833333em;
 }
 :-moz-any(section, article, footer, aside, nav) h4 {
-  line-height: 1.125em;
-  font-size: 1.33333333em;
-  margin-bottom: 1.125em;
+  line-height: 1.27777778em;
+  font-size: 1.17391304em;
+  margin-bottom: 1.27777778em;
 }
 :-moz-any(section, article, footer, aside, nav) h5 {
   line-height: 1.5em;
@@ -456,19 +456,19 @@ h6 {
   margin-bottom: 1.5em;
 }
 :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.5em;
-  font-size: 2em;
-  margin-bottom: 0.75em;
+  line-height: 1.4375em;
+  font-size: 2.08695652em;
+  margin-bottom: 0.71875em;
 }
 :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.92857143em;
-  font-size: 1.55555556em;
-  margin-bottom: 0.96428571em;
+  line-height: 1.91666667em;
+  font-size: 1.56521739em;
+  margin-bottom: 0.95833333em;
 }
 :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h3 {
-  line-height: 1.125em;
-  font-size: 1.33333333em;
-  margin-bottom: 1.125em;
+  line-height: 1.27777778em;
+  font-size: 1.17391304em;
+  margin-bottom: 1.27777778em;
 }
 :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h4 {
   line-height: 1.5em;
@@ -476,14 +476,14 @@ h6 {
   margin-bottom: 1.5em;
 }
 :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.92857143em;
-  font-size: 1.55555556em;
-  margin-bottom: 0.96428571em;
+  line-height: 1.91666667em;
+  font-size: 1.56521739em;
+  margin-bottom: 0.95833333em;
 }
 :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.125em;
-  font-size: 1.33333333em;
-  margin-bottom: 1.125em;
+  line-height: 1.27777778em;
+  font-size: 1.17391304em;
+  margin-bottom: 1.27777778em;
 }
 :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h3 {
   line-height: 1.5em;
@@ -491,24 +491,24 @@ h6 {
   margin-bottom: 1.5em;
 }
 :-webkit-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.125em;
-  font-size: 2.66666667em;
-  margin-bottom: 0.5625em;
+  line-height: 1.15em;
+  font-size: 2.60869565em;
+  margin-bottom: 0.575em;
 }
 :-webkit-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.5em;
-  font-size: 2em;
-  margin-bottom: 0.75em;
+  line-height: 1.4375em;
+  font-size: 2.08695652em;
+  margin-bottom: 0.71875em;
 }
 :-webkit-any(section, article, footer, aside, nav) h3 {
-  line-height: 1.92857143em;
-  font-size: 1.55555556em;
-  margin-bottom: 0.96428571em;
+  line-height: 1.91666667em;
+  font-size: 1.56521739em;
+  margin-bottom: 0.95833333em;
 }
 :-webkit-any(section, article, footer, aside, nav) h4 {
-  line-height: 1.125em;
-  font-size: 1.33333333em;
-  margin-bottom: 1.125em;
+  line-height: 1.27777778em;
+  font-size: 1.17391304em;
+  margin-bottom: 1.27777778em;
 }
 :-webkit-any(section, article, footer, aside, nav) h5 {
   line-height: 1.5em;
@@ -521,19 +521,19 @@ h6 {
   margin-bottom: 1.5em;
 }
 :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.5em;
-  font-size: 2em;
-  margin-bottom: 0.75em;
+  line-height: 1.4375em;
+  font-size: 2.08695652em;
+  margin-bottom: 0.71875em;
 }
 :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.92857143em;
-  font-size: 1.55555556em;
-  margin-bottom: 0.96428571em;
+  line-height: 1.91666667em;
+  font-size: 1.56521739em;
+  margin-bottom: 0.95833333em;
 }
 :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h3 {
-  line-height: 1.125em;
-  font-size: 1.33333333em;
-  margin-bottom: 1.125em;
+  line-height: 1.27777778em;
+  font-size: 1.17391304em;
+  margin-bottom: 1.27777778em;
 }
 :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h4 {
   line-height: 1.5em;
@@ -541,14 +541,14 @@ h6 {
   margin-bottom: 1.5em;
 }
 :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.92857143em;
-  font-size: 1.55555556em;
-  margin-bottom: 0.96428571em;
+  line-height: 1.91666667em;
+  font-size: 1.56521739em;
+  margin-bottom: 0.95833333em;
 }
 :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.125em;
-  font-size: 1.33333333em;
-  margin-bottom: 1.125em;
+  line-height: 1.27777778em;
+  font-size: 1.17391304em;
+  margin-bottom: 1.27777778em;
 }
 :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h3 {
   line-height: 1.5em;
@@ -639,10 +639,10 @@ figure img {
   margin: 0 auto;
 }
 figcaption {
-  border-bottom: 0.05555556em dotted #5886d0;
+  border-bottom: 0.04347826em dotted #5886d0;
   padding: 1.5em 1em;
   margin-bottom: 1.5em;
-  font: normal 0.88888889em/1.5em Arial, sans-serif;
+  font: normal 0.82608696em/1.5em Arial, sans-serif;
   color: #8b929d;
   font-weight: 200;
 }
@@ -660,16 +660,16 @@ table {
 th,
 td {
   padding: 0.75em 0.5em;
-  border-bottom: 0.05555556em solid #d0d3d8;
+  border-bottom: 0.04347826em solid #d0d3d8;
 }
 th {
   text-align: left;
-  border-bottom: 0.11111111em solid #d0d3d8;
-  padding-top: 0.69444444em;
+  border-bottom: 0.08695652em solid #d0d3d8;
+  padding-top: 0.70652174em;
   font-weight: 600;
 }
 caption {
-  font: italic 0.88888889em/1.5em Arial, sans-serif;
+  font: italic 0.82608696em/1.5em Arial, sans-serif;
   font-weight: 200;
 }
 /**
@@ -688,7 +688,7 @@ fieldset *:last-child {
 legend {
   font-weight: 600;
   margin-bottom: 1.5em;
-  font: 600 1.33333333em/1.5em Arial, sans-serif;
+  font: 600 1.17391304em/1.5em Arial, sans-serif;
 }
 button,
 input,
@@ -732,7 +732,7 @@ optgroup {
   margin-bottom: 1.5em;
 }
 .banner-logo {
-  font-size: 1.55555556em;
+  font-size: 1.56521739em;
 }
 .banner-description {
   font-style: italic;
@@ -741,10 +741,10 @@ optgroup {
 * Footer
 **/
 .footer {
-  font-size: 0.88888889em;
+  font-size: 0.82608696em;
 }
 .sub-footer {
-  font: normal 0.77777778em/1.5em Arial, sans-serif;
+  font: normal 0.69565217em/1.5em Arial, sans-serif;
 }
 /**
 * Élements de navigation globaux
@@ -868,5 +868,47 @@ main:after,
   main > article {
     width: 36rem;
   }
+}
+/** Layout **/
+.excerpt {
+  font: normal 0.82608696em/1.5em Arial, sans-serif;
+  padding: 1.5rem;
+  background-color: #97b4e2;
+  color: #000000;
+}
+.muted {
+  color: #8b929d;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.pull-right {
+  float: right;
+  margin-left: 0.75rem;
+}
+.pull-left {
+  float: left;
+  margin-right: 0.75rem;
+}
+.xxlarge {
+  font-size: 2.08695652em;
+}
+.xlarge {
+  font-size: 1.56521739em;
+}
+.large {
+  font-size: 1.17391304em;
+}
+.small {
+  font-size: 0.82608696em;
+}
+.xsmall {
+  font-size: 0.69565217em;
+}
+.xxsmall {
+  font-size: 0.60869565em;
 }
 /*# sourceMappingURL=main.css.map */
