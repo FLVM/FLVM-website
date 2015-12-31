@@ -32,8 +32,12 @@ class Model_Page extends Flatfile {
 			'license' => array(
 				array('json_decode'),
 			),
-			'sections'	=> array(
-				array(array($this, 'load_parts'), array(':value', 'sections')),
+			'related'	=> array(
+				array(array($this, 'load_parts'), array(':value', 'related')),
+			),
+			'summary' => array(
+				array('Flatfile::str_to_list'),
+				// array(array($this, 'load_anchors'), array(':value')),
 			),
 		);
 	}
@@ -50,51 +54,44 @@ class Model_Page extends Flatfile {
 	* Load adittionnal content part
 	*
 	* @param	string	$parts			part name or list of part names
-	* @param	string	$sub_directory	subdirectory name
+	* @param	string	$subdirectory	subdirectory name
 	*
 	* @return	array
 	**/
 
-	public function load_parts($parts, $subcategory = NULL)
+	public function load_parts($parts, $subdirectory = NULL)
 	{
-		$parts = func_get_arg(0);
-		$sub_directory = func_get_arg(1);
-		$sub_directory = $sub_directory ? $sub_directory . '/' : NULL;
+
+		$subdirectory = $subdirectory ? $subdirectory . '/' : NULL;
 		$result = array();
 
-		if ( strpos($parts, ',') === FALSE)
+		foreach (explode(',', $parts) as $part)
 		{
-			// Just one entry
 			try
 			{
-				$part = new Model_Page($sub_directory . $parts);
-				$result[$part->slug] = $part;
+				$part = new Model_Page($subdirectory . trim($part));
+				$result[] = $part;
 			}
 			catch(Kohana_exception $e)
 			{
 				Log::instance()->add(Log::WARNING, $e->getMessage());
 			}
-			
-		}
-		else
-		{
-			// Multiples entries
-			foreach (explode(',', $parts) as $part)
-			{
-				try
-				{
-					$part = new Model_Page($sub_directory . $part);
-					$result[] = $part;
-				}
-				catch(Kohana_exception $e)
-				{
-					Log::instance()->add(Log::WARNING, $e->getMessage());
-				}
 
-			}
 		}
 
 		return $result;
 	}
 
+	public function has_summary()
+	{
+		return (bool) $this->summary;
+	}
+	public function load_anchors($anchors)
+	{
+		echo 'io';
+		foreach (explode(',', $anchors) as $anchor)
+		{
+			echo debug::vars($anchor);
+		}
+	}
 }

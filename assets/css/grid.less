@@ -28,7 +28,7 @@ main,
 	.navigation,
 	.navigation a,
 	main > article,
-	main > nav,
+	main > aside,
 	.footer > section
 	{
 		.column-init();
@@ -51,12 +51,12 @@ main,
 	}
 
 	// Main content
-	main > nav
-	{
-		.column(3);
-	}
 	main > article
 	{
-		.column(6);	
+		.column(7, 2);	
+	}
+	main > aside
+	{
+		.column(3);
 	}
 }

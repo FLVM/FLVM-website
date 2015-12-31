@@ -1,12 +1,24 @@
 {{#page}}
 <main role="main">
-	{{#sections.navigation}}
+	{{#has_summary}}
 	<nav>
-		{{{content}}}
+		<h2>Sommaire</h2>
+		<ul>
+		{{#summary}}
+			<li><a href="{{curren_url}}#{{slug}}">{{name}}</a></li>
+		{{/summary}}
+		</ul>
 	</nav>
-	{{/sections.navigation}}
+	{{/has_summary}}
 	<article>
 		{{{content}}}
 	</article>
+	{{#related}}
+	<aside>
+		<article>
+		{{{content}}}
+		</article>
+	</aside>
+	{{/related}}
 </main>
 {{/page}}

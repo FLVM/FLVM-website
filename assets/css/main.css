@@ -430,131 +430,56 @@ h6 {
   font-size: 1em;
   margin-bottom: 1.5em;
 }
-:-moz-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.15em;
-  font-size: 2.60869565em;
-  margin-bottom: 0.575em;
+/*
+* Experimental
+:-moz-any(section, article, footer, aside, nav)
+{
+	h1 { .baseline(@xxx-large);}
+	h2 { .baseline(@xx-large);}
+	h3 { .baseline(@x-large);}
+	h4 { .baseline(@large);}
+	h5 { .baseline(@normal);}
+
+	:-moz-any(section, article, footer, aside, nav)
+	{
+		h1 { .baseline(@xx-large);}
+		h2 { .baseline(@x-large);}
+		h3 { .baseline(@large);}
+		h4 { .baseline(@normal);}
+
+		:-moz-any(section, article, footer, aside, nav)
+		{	
+			h1 { .baseline(@x-large);}
+			h2 { .baseline(@large);}
+			h3 { .baseline(@normal);}
+		}
+	}
 }
-:-moz-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.4375em;
-  font-size: 2.08695652em;
-  margin-bottom: 0.71875em;
+:-webkit-any(section, article, footer, aside, nav)
+{
+	h1 { .baseline(@xxx-large);}
+	h2 { .baseline(@xx-large);}
+	h3 { .baseline(@x-large);}
+	h4 { .baseline(@large);}
+	h5 { .baseline(@normal);}
+	h6 { .baseline(@normal);}
+
+	:-webkit-any(section, article, footer, aside, nav)
+	{
+		h1 { .baseline(@xx-large);}
+		h2 { .baseline(@x-large);}
+		h3 { .baseline(@large);}
+		h4 { .baseline(@normal);}
+
+		:-webkit-any(section, article, footer, aside, nav)
+		{	
+			h1 { .baseline(@x-large);}
+			h2 { .baseline(@large);}
+			h3 { .baseline(@normal);}
+		}
+	}
 }
-:-moz-any(section, article, footer, aside, nav) h3 {
-  line-height: 1.91666667em;
-  font-size: 1.56521739em;
-  margin-bottom: 0.95833333em;
-}
-:-moz-any(section, article, footer, aside, nav) h4 {
-  line-height: 1.27777778em;
-  font-size: 1.17391304em;
-  margin-bottom: 1.27777778em;
-}
-:-moz-any(section, article, footer, aside, nav) h5 {
-  line-height: 1.5em;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-}
-:-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.4375em;
-  font-size: 2.08695652em;
-  margin-bottom: 0.71875em;
-}
-:-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.91666667em;
-  font-size: 1.56521739em;
-  margin-bottom: 0.95833333em;
-}
-:-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h3 {
-  line-height: 1.27777778em;
-  font-size: 1.17391304em;
-  margin-bottom: 1.27777778em;
-}
-:-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h4 {
-  line-height: 1.5em;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-}
-:-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.91666667em;
-  font-size: 1.56521739em;
-  margin-bottom: 0.95833333em;
-}
-:-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.27777778em;
-  font-size: 1.17391304em;
-  margin-bottom: 1.27777778em;
-}
-:-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) :-moz-any(section, article, footer, aside, nav) h3 {
-  line-height: 1.5em;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-}
-:-webkit-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.15em;
-  font-size: 2.60869565em;
-  margin-bottom: 0.575em;
-}
-:-webkit-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.4375em;
-  font-size: 2.08695652em;
-  margin-bottom: 0.71875em;
-}
-:-webkit-any(section, article, footer, aside, nav) h3 {
-  line-height: 1.91666667em;
-  font-size: 1.56521739em;
-  margin-bottom: 0.95833333em;
-}
-:-webkit-any(section, article, footer, aside, nav) h4 {
-  line-height: 1.27777778em;
-  font-size: 1.17391304em;
-  margin-bottom: 1.27777778em;
-}
-:-webkit-any(section, article, footer, aside, nav) h5 {
-  line-height: 1.5em;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-}
-:-webkit-any(section, article, footer, aside, nav) h6 {
-  line-height: 1.5em;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-}
-:-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.4375em;
-  font-size: 2.08695652em;
-  margin-bottom: 0.71875em;
-}
-:-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.91666667em;
-  font-size: 1.56521739em;
-  margin-bottom: 0.95833333em;
-}
-:-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h3 {
-  line-height: 1.27777778em;
-  font-size: 1.17391304em;
-  margin-bottom: 1.27777778em;
-}
-:-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h4 {
-  line-height: 1.5em;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-}
-:-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h1 {
-  line-height: 1.91666667em;
-  font-size: 1.56521739em;
-  margin-bottom: 0.95833333em;
-}
-:-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h2 {
-  line-height: 1.27777778em;
-  font-size: 1.17391304em;
-  margin-bottom: 1.27777778em;
-}
-:-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) :-webkit-any(section, article, footer, aside, nav) h3 {
-  line-height: 1.5em;
-  font-size: 1em;
-  margin-bottom: 1.5em;
-}
+*/
 /**
 * Link
 *
@@ -802,6 +727,30 @@ optgroup {
   background-color: #5188e2;
 }
 /**
+* Article
+**/
+main article h1 {
+  font-size: 2.60869565em;
+}
+main article h2 {
+  font-size: 2.08695652em;
+}
+main article h3 {
+  font-size: 1.56521739em;
+}
+main article h4 {
+  font-size: 1.17391304em;
+}
+main article h5 {
+  font-size: 1em;
+}
+main aside article {
+  font-size: 0.82608696em;
+}
+main aside article h1 {
+  font-size: 1.56521739em;
+}
+/**
 * Grid
 **/
 .wrapper,
@@ -839,14 +788,13 @@ main:after,
     width: 72rem;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
     clear: both;
   }
   .header,
   .navigation,
   .navigation a,
   main > article,
-  main > nav,
+  main > aside,
   .footer > section {
     box-sizing: border-box;
     float: left;
@@ -866,11 +814,12 @@ main:after,
   .navigation a {
     width: 12rem;
   }
-  main > nav {
-    width: 18rem;
-  }
   main > article {
-    width: 36rem;
+    width: 42rem;
+    margin-left: 12rem;
+  }
+  main > aside {
+    width: 18rem;
   }
 }
 /** Layout **/
