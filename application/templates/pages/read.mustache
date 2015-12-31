@@ -13,12 +13,14 @@
 	<article>
 		{{{content}}}
 	</article>
-	{{#related}}
+	{{#has_related}}
 	<aside>
+	{{#related}}
 		<article>
 		{{{content}}}
 		</article>
-	</aside>
 	{{/related}}
+	</aside>
+	{{/has_related}}
 </main>
 {{/page}}

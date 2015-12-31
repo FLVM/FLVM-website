@@ -816,13 +816,18 @@ main:after,
   }
   main > article {
     width: 42rem;
-    margin-left: 12rem;
   }
   main > aside {
     width: 18rem;
   }
 }
 /** Layout **/
+dl {
+  padding-left: 0;
+}
+dl dd {
+  margin-bottom: 1.5em;
+}
 .excerpt {
   font: normal 0.82608696em/1.5em Arial, sans-serif;
   padding: 1.5rem;

@@ -37,7 +37,6 @@ class Model_Page extends Flatfile {
 			),
 			'summary' => array(
 				array('Flatfile::str_to_list'),
-				// array(array($this, 'load_anchors'), array(':value')),
 			),
 		);
 	}
@@ -82,16 +81,9 @@ class Model_Page extends Flatfile {
 		return $result;
 	}
 
-	public function has_summary()
+	public function has_related()
 	{
-		return (bool) $this->summary;
+		return (bool) $this->related;
 	}
-	public function load_anchors($anchors)
-	{
-		echo 'io';
-		foreach (explode(',', $anchors) as $anchor)
-		{
-			echo debug::vars($anchor);
-		}
-	}
+
 }
