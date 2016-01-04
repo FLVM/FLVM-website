@@ -46,12 +46,15 @@ class View_Master extends View_Tanuki {
 		$default_metas = Kohana::$config->load('tanuki.metas');
 		$metas = array();
 
-		foreach ($default_metas as $name => $content)
+		if ($default_metas)
 		{
-			$metas[] = array(
-				'name' => $name,
-				'content' => $this->$model_name->$name ? $this->$model_name->$name : $content,
-			);
+			foreach ($default_metas as $name => $content)
+			{
+				$metas[] = array(
+					'name' => $name,
+					'content' => $this->$model_name->$name ? $this->$model_name->$name : $content,
+				);
+			}			
 		}
 
 		return $metas;
