@@ -26,12 +26,6 @@ class Model_Page extends Flatfile {
 			'content' => array(
 				array('Flatfile::Markdown'),
 			),
-			'credit' => array(
-				array('json_decode'),
-			),
-			'license' => array(
-				array('json_decode'),
-			),
 			'related'	=> array(
 				array(array($this, 'load_parts'), array(':value', 'related')),
 			),

@@ -12,6 +12,7 @@
 **/
 
 class View_Master extends View_Tanuki {
+	
 	/**
 	* Set Styles
 	**/

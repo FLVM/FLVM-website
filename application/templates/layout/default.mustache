@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>{{title}}</title>
-		{{#metas}}{{#content}}<meta name="{{name}}" content="{{content}}"/>{{/content}}{{/metas}}
+		{{#metas}}{{#content}}<meta name="{{name}}" content="{{content}}"/>
+		{{/content}}{{/metas}}
 		{{#styles}}<link rel="stylesheet" href="{{src}}" media="{{media}}" />{{/styles}}
 	</head>
 	<body {{#custom_css}}class="{{custom_css}}"{{/custom_css}}>
