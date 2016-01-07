@@ -657,10 +657,15 @@ optgroup {
   margin-bottom: 1.5em;
 }
 .banner-logo {
-  font-size: 1.56521739em;
+  font-size: 1.17391304em;
+  text-align: center;
+  margin-bottom: 0;
 }
 .banner-description {
   font-style: italic;
+  text-align: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 /**
 * Footer
@@ -754,6 +759,7 @@ main aside article h1 {
 * Grid
 **/
 .wrapper,
+.banner,
 main,
 .main-header,
 .main-navigation,
@@ -762,11 +768,13 @@ main,
   *zoom: 1;
 }
 .wrapper:before,
+.banner:before,
 main:before,
 .main-header:before,
 .main-navigation:before,
 .main-footer:before,
 .wrapper:after,
+.banner:after,
 main:after,
 .main-header:after,
 .main-navigation:after,
@@ -775,6 +783,7 @@ main:after,
   display: table;
 }
 .wrapper:after,
+.banner:after,
 main:after,
 .main-header:after,
 .main-navigation:after,
@@ -785,7 +794,7 @@ main:after,
   .banner,
   main,
   .footer {
-    width: 72rem;
+    width: 60rem;
     margin-left: auto;
     margin-right: auto;
     clear: both;
@@ -804,21 +813,41 @@ main:after,
     min-height: 1px;
     width: 100%;
   }
-  .header,
-  .navigation {
-    width: 36rem;
+  .header {
+    width: 18rem;
   }
   .navigation {
+    width: 42rem;
     padding: 0;
   }
   .navigation a {
-    width: 12rem;
+    width: 33.33333333%;
+  }
+  main > article {
+    width: 36rem;
+  }
+  main > aside {
+    width: 24rem;
+  }
+}
+@media (min-width: 80rem) {
+  .banner,
+  main,
+  .footer {
+    width: 72rem;
+  }
+  .header {
+    width: 24rem;
+  }
+  .navigation {
+    width: 48rem;
   }
   main > article {
     width: 42rem;
   }
   main > aside {
-    width: 30rem;
+    width: 24rem;
+    margin-left: 6rem;
   }
 }
 /** Layout **/
