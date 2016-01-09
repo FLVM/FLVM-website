@@ -95,12 +95,6 @@ class View_Master extends View_Tanuki {
 				'current'	=> Request::initial()->controller() === 'Pages' AND Request::initial()->param('slug') === 'cours',
 			),
 			array(
-				'url'		=> $this->base_url() . 'planning',
-				'name'		=> __('Planning'),
-				'title'		=> __('Le planning complet des cours'),
-				'current'	=> Request::initial()->controller() === 'Pages' AND Request::initial()->param('slug') === 'planning',
-			),
-			array(
 				'url'		=> $this->base_url() . 'informations',
 				'name'		=> __('Informations'),
 				'title'		=> __('À propos de FLVM'),

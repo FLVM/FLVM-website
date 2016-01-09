@@ -9,9 +9,10 @@
 	</head>
 	<body {{#custom_css}}class="{{custom_css}}"{{/custom_css}}>
 		<div class="banner">
-			{{>layout/header-home}}
+			{{>layout/home/header}}
 			{{>layout/navigation}}
 		</div>
+		{{>layout/home/heroes}}
 		{{>content}}
 		{{>layout/footer}}
 		{{#scripts}}<script type="text/javascript" src="{{src}}"></script>{{/scripts}}

@@ -11,4 +11,15 @@
 * @license		http://opensource.org/licenses/MIT
 **/
 
-class View_Pages_Home extends View_Master {}
+class View_Pages_Home extends View_Master {
+
+	/**
+	* Load some heroes
+	*
+	* @return 	object 	return the first hero
+	**/
+	public function heroes()
+	{
+		return Flatfile::factory('hero')->find();
+	}
+}

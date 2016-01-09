@@ -13,10 +13,27 @@ main,
 	.wrapper();
 }
 
+main > article,
+main > aside,
+footer
+{
+	padding: 1em;
+}
+
+// Base font
+body
+{
+	font-size:  unit(@small / @root * 100, %);
+}
 
 // Medium device
 @media (min-width: @screen-medium)
 {
+	// Base font
+	body
+	{
+		font-size:  unit(@normal / @root * 100, %);
+	}
 	// Wrappers
 	.banner,
 	main,

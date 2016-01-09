@@ -1,0 +1,13 @@
+{{#heroes}}
+	<article class="hero">
+		{{#has_cover}}
+		<figure>
+			<img src="{{cover.url}}" alt="" >
+		</figure>
+		{{/has_cover}}
+		<header>
+			<h1>{{{title}}}</h1>
+		</header>
+		{{{content}}}
+	</article>
+{{/heroes}}

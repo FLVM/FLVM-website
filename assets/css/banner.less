@@ -4,9 +4,12 @@
 .banner
 {
 	margin-bottom: 1.5em;
+	padding: 1em;
+	background-color: @color;
+
 	&.compact
 	{
-		.navigation
+		.btn
 		{
 			.font-size(@small);
 		}
@@ -25,6 +28,13 @@
 	text-align: center;
 	padding-left: 1.5em;
 	padding-right: 1.5em;
+}
+
+
+.banner-btn-planning:link,
+.banner-btn-planning:visited
+{
+	.btn-color(@color-black);
 }
 
 .enhance-banner()

@@ -309,7 +309,7 @@ section nav {
 }
 hr {
   border: none;
-  border-top: 0.08695652em solid #5886d0;
+  border-top: 0.08695652em solid #f2b825;
   margin: 0;
   padding: 1.5em 0 0;
 }
@@ -336,7 +336,7 @@ kbd {
   line-height: 1.81578947em;
   font-size: 0.82608696em;
   margin-bottom: 1.81578947em;
-  background-color: #f4f5f6;
+  background-color: #cfcbc0;
   padding: .2em .3em .28em;
 }
 pre {
@@ -350,7 +350,7 @@ var {
 }
 blockquote {
   padding: 1.5em;
-  background-color: #f4f5f6;
+  background-color: #cfcbc0;
   margin-bottom: 1.5em;
   font-style: italic;
 }
@@ -508,20 +508,20 @@ h3 a:hover,
 h4 a:hover,
 h5 a:hover,
 h6 a:hover {
-  color: #5886d0;
+  color: #f2b825;
 }
 a:link {
-  color: #5886d0;
+  color: #f2b825;
 }
 a:visited {
-  color: #688ac0;
+  color: #e1b036;
 }
 a:hover {
-  color: #4882e0;
+  color: #ffbe18;
 }
 a:active,
 a:focus {
-  color: #d0a258;
+  color: #255ff2;
 }
 /**
 * List
@@ -564,11 +564,11 @@ figure img {
   margin: 0 auto;
 }
 figcaption {
-  border-bottom: 0.04347826em dotted #5886d0;
+  border-bottom: 0.04347826em dotted #f2b825;
   padding: 1.5em 1em;
   margin-bottom: 1.5em;
   font: normal 0.82608696em/1.5em Arial, sans-serif;
-  color: #8b929d;
+  color: #9b927c;
   font-weight: 200;
 }
 /**
@@ -585,11 +585,11 @@ table {
 th,
 td {
   padding: 0.75em 0.5em;
-  border-bottom: 0.04347826em solid #d0d3d8;
+  border-bottom: 0.04347826em solid #bdb7a9;
 }
 th {
   text-align: left;
-  border-bottom: 0.08695652em solid #d0d3d8;
+  border-bottom: 0.08695652em solid #bdb7a9;
   padding-top: 0.70652174em;
   font-weight: 600;
 }
@@ -655,8 +655,11 @@ optgroup {
 **/
 .banner {
   margin-bottom: 1.5em;
+  padding: 1em;
+  background-color: #f2b825;
 }
-.banner.compact .navigation {
+.banner.compact .btn,
+.banner.compact .navigation-link {
   font-size: 0.82608696em;
 }
 .banner-logo {
@@ -668,6 +671,29 @@ optgroup {
   text-align: center;
   padding-left: 1.5em;
   padding-right: 1.5em;
+}
+.banner-btn-planning:link,
+.banner-btn-planning:visited {
+  background-color: #000000;
+}
+.banner-btn-planning:link:link,
+.banner-btn-planning:visited:link,
+.banner-btn-planning:link:visited,
+.banner-btn-planning:visited:visited {
+  color: #ffffff;
+}
+.banner-btn-planning:link:hover,
+.banner-btn-planning:visited:hover,
+.banner-btn-planning:link.current,
+.banner-btn-planning:visited.current {
+  background-color: #000000;
+  color: #ffffff;
+}
+.banner-btn-planning:link.disabled,
+.banner-btn-planning:visited.disabled,
+.banner-btn-planning:link[disabled],
+.banner-btn-planning:visited[disabled] {
+  background-color: #050505;
 }
 /**
 * Footer
@@ -694,7 +720,7 @@ optgroup {
   cursor: pointer;
   font: normal 1em/1.5em Arial, sans-serif;
   text-decoration: none;
-  background-color: #f4f5f6;
+  background-color: #ffffff;
   display: block;
   text-align: center;
 }
@@ -708,30 +734,30 @@ optgroup {
 .btn.current,
 .navigation-link:hover,
 .navigation-link.current {
-  background-color: #e3e9f3;
+  background-color: #ebffff;
   color: #000000;
 }
 .btn.disabled,
 .btn[disabled],
 .navigation-link.disabled,
 .navigation-link[disabled] {
-  background-color: #f9fafb;
+  background-color: #ffffff;
 }
 .btn-cta {
-  background-color: #5886d0;
+  background-color: #f2b825;
 }
 .btn-cta:link,
 .btn-cta:visited {
-  color: #ffffff;
+  color: #000000;
 }
 .btn-cta:hover,
 .btn-cta.current {
-  background-color: #2572ef;
-  color: #ffffff;
+  background-color: #ffb804;
+  color: #000000;
 }
 .btn-cta.disabled,
 .btn-cta[disabled] {
-  background-color: #5188e2;
+  background-color: #ffc122;
 }
 /**
 * Article
@@ -792,7 +818,18 @@ main:after,
 .main-footer:after {
   clear: both;
 }
+main > article,
+main > aside,
+footer {
+  padding: 1em;
+}
+body {
+  font-size: 118.75%;
+}
 @media (min-width: 64rem) {
+  body {
+    font-size: 143.75%;
+  }
   .banner,
   main,
   .footer {
@@ -865,11 +902,11 @@ dl dd {
 .excerpt {
   font: normal 0.82608696em/1.5em Arial, sans-serif;
   padding: 1.5rem;
-  background-color: #97b4e2;
+  background-color: #fcefcd;
   color: #000000;
 }
 .muted {
-  color: #8b929d;
+  color: #9b927c;
 }
 .align-right {
   text-align: right;
@@ -902,5 +939,8 @@ dl dd {
 }
 .xxsmall {
   font-size: 0.60869565em;
+}
+body {
+  padding: 0;
 }
 /*# sourceMappingURL=main.css.map */
