@@ -13,13 +13,24 @@ Route::set('page', '<slug>', array(
 		'controller'	=> 'Pages',
 		'action'		=> 'read',
 	));
-	
+
 /**
 * Default route, provide home page by default
 **/
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
 		'controller'	=> 'Pages',
-		'action'		=> 'read',
+		'action'		=> 'home',
+		'slug'			=> 'ss',
+	));
+
+
+/**
+* Welcome home route (catch route when you have nothing after your domain)
+**/
+Route::set('welcome', '')
+	->defaults(array(
+		'controller'	=> 'Pages',
+		'action'		=> 'home',
 		'slug'			=> 'welcome',
 	));

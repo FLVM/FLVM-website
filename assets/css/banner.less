@@ -4,16 +4,19 @@
 .banner
 {
 	margin-bottom: 1.5em;
+	&.compact
+	{
+		.navigation
+		{
+			.font-size(@small);
+		}
+	}
 }
 
-.banner
-{
-}
 .banner-logo
 {
 	.font-size(@large);
 	text-align: center;
-	margin-bottom: 0;
 }
 
 .banner-description
@@ -26,7 +29,14 @@
 
 .enhance-banner()
 {
-	.banner-description
+	.banner
 	{
+		&.compact
+		{
+			.banner-logo
+			{
+				text-align: left;
+			}
+		}
 	}
 }

@@ -656,10 +656,12 @@ optgroup {
 .banner {
   margin-bottom: 1.5em;
 }
+.banner.compact .navigation {
+  font-size: 0.82608696em;
+}
 .banner-logo {
   font-size: 1.17391304em;
   text-align: center;
-  margin-bottom: 0;
 }
 .banner-description {
   font-style: italic;
@@ -812,6 +814,9 @@ main:after,
     padding-right: 0.75rem;
     min-height: 1px;
     width: 100%;
+  }
+  .banner.compact .banner-logo {
+    text-align: left;
   }
   .header {
     width: 18rem;
