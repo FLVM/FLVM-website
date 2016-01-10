@@ -3,7 +3,6 @@
 **/
 .banner
 {
-	// margin-bottom: 1.5em;
 	padding: 1em;
 	background-color: @color;
 
@@ -35,6 +34,7 @@
 	text-align: center;
 	padding-left: 1.5em;
 	padding-right: 1.5em;
+	.font-size(@large);
 }
 
 
@@ -50,8 +50,7 @@
 	{
 		&.compact
 		{
-			padding: .5em;
-			padding-bottom: .6em;
+			padding: 0 .5em .6em;
 			.header
 			{
 				max-width: 5em;
@@ -66,17 +65,58 @@
 					display: block;
 				}
 			}
-			.navigation
+			.banner-description
+			{
+				.font-size(@x-small);
+				line-height: 1.5em;
+				padding-top: 1.3em;
+				margin-left: 4em;
+			}
+			.banner-navigation
 			{
 				padding-top: .5em;
 			}
+			.btn-banner-planning
+			{
+				top: .6em;
+			}
 		}
-
+	}
+	.banner-logo
+	{
+		position: absolute;
+		z-index: 1;
+		left: .2em;
+		top: .2em;
+		max-width: 6em;
+		background-color: @color;
+		border-radius: 3em;
+		margin-bottom: 0;
+		border: 3px * @pixem solid @color;
+		img
+		{
+			display: block;
+		}
+	}
+	.banner-description
+	{
+		margin-bottom: 0;
+		float: left;
+		margin: 0 0 0 6em;
+		white-space: nowrap;
+		.font-size(@normal);
+	}
+	.banner-navigation
+	{
+		.cf();
+		float: right;
+		width: 5 * @column-width;
+		margin-right: 8em;
 	}
 	.btn-banner-planning
 	{
 		position: absolute;
-		top: 1.2em;
+		top: 1em;
 		right: 1em;
 		// float: right;
 	}

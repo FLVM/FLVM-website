@@ -1,16 +1,6 @@
 /**
 * Élements de navigation globaux
 **/
-// Main navigation
-.navigation-link
-{
-	&:extend(.btn all);
-}
-
-.navigation-link-current
-{
-	font-weight: @bold;
-}
 
 // Buttons
 .btn
@@ -21,6 +11,11 @@
 }
 .btn-cta
 {
-	&:extend(.btn);
-	.btn-color(@color);
+	&:extend(.btn all);
+	.btn-color(@color; @color-ar-10);
+}
+.btn-navigation
+{
+	&:extend(.btn all);
+	.btn-color(@color-mono-70);
 }
