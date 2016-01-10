@@ -3,7 +3,7 @@
 **/
 .banner
 {
-	margin-bottom: 1.5em;
+	// margin-bottom: 1.5em;
 	padding: 1em;
 	background-color: @color;
 
@@ -12,6 +12,13 @@
 		.btn
 		{
 			.font-size(@small);
+		}
+		.banner-logo
+		{
+			img
+			{
+				max-width: 6em;
+			}
 		}
 	}
 }
@@ -31,8 +38,8 @@
 }
 
 
-.banner-btn-planning:link,
-.banner-btn-planning:visited
+.btn-banner-planning:link,
+.btn-banner-planning:visited
 {
 	.btn-color(@color-black);
 }
@@ -43,10 +50,34 @@
 	{
 		&.compact
 		{
+			padding: .5em;
+			padding-bottom: .6em;
+			.header
+			{
+				max-width: 5em;
+			}
 			.banner-logo
 			{
 				text-align: left;
+				margin-bottom: 0;
+				img
+				{
+					max-width: 3em;
+					display: block;
+				}
+			}
+			.navigation
+			{
+				padding-top: .5em;
 			}
 		}
+
+	}
+	.btn-banner-planning
+	{
+		position: absolute;
+		top: 1.2em;
+		right: 1em;
+		// float: right;
 	}
 }

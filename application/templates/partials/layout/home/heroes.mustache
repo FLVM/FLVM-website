@@ -1,13 +1,17 @@
 {{#heroes}}
-	<article class="hero">
+	<article class="hero {{#has_cover}}covered{{/has_cover}}">
 		{{#has_cover}}
-		<figure>
-			<img src="{{cover.url}}" alt="" >
+		<figure class="cover" style="background-image: url({{cover.url}})">
+			<div class="cover-container">
+				<img class="cover-image" src="{{cover.url}}" alt="" >
+			</div>
 		</figure>
-		{{/has_cover}}
-		<header>
-			<h1>{{{title}}}</h1>
-		</header>
-		{{{content}}}
+		<div class="hero-content">
+			{{/has_cover}}
+			<header>
+				<h1>{{{title}}}</h1>
+			</header>
+			{{{content}}}
+		</div>
 	</article>
 {{/heroes}}
