@@ -868,6 +868,7 @@ main,
 .main-footer {
   width: auto;
   *zoom: 1;
+  overflow: hidden;
 }
 .wrapper:before,
 .banner:before,
@@ -897,7 +898,6 @@ footer {
 }
 body {
   font-size: 118.75%;
-  word-wrap: break-word;
 }
 @media (min-width: 64rem) {
   body {
