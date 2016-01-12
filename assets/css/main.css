@@ -663,7 +663,7 @@ optgroup {
   font-size: 0.82608696em;
 }
 .banner.compact .banner-logo img {
-  max-width: 6em;
+  max-width: 7.5rem;
 }
 .banner-logo {
   font-size: 1.17391304em;
@@ -704,9 +704,46 @@ optgroup {
 **/
 .footer {
   font-size: 0.82608696em;
+  line-height: 1.5em;
+  background-color: #1a222f;
+  color: #ffffff;
+  padding-top: 3em;
+  padding-bottom: 0.75rem;
+}
+.footer h1 {
+  font-size: 1.56521739em;
+}
+.footer h2 {
+  font-size: 1.17391304em;
+}
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+  font-size: 1em;
 }
 .sub-footer {
   font: normal 0.69565217em/1.5em Arial, sans-serif;
+}
+.footer-banner {
+  *zoom: 1;
+}
+.footer-banner:before,
+.footer-banner:after {
+  content: " ";
+  display: table;
+}
+.footer-banner:after {
+  clear: both;
+}
+.footer-banner-logo {
+  float: left;
+  max-width: 7.5rem;
+  margin-right: 1.5rem;
+}
+.footer-banner-description {
+  text-align: center;
+  padding-top: .9em;
 }
 /**
 * Élements de navigation globaux
@@ -903,8 +940,7 @@ body {
   body {
     font-size: 143.75%;
   }
-  main,
-  .footer {
+  main {
     width: 60rem;
     margin-left: auto;
     margin-right: auto;
@@ -997,10 +1033,15 @@ body {
   main > aside {
     width: 24rem;
   }
+  .footer > section {
+    width: 33.33333333%;
+  }
+  .footer > section.sub-footer {
+    float: none;
+  }
 }
 @media (min-width: 80rem) {
-  main,
-  .footer {
+  main {
     width: 72rem;
   }
   .header {
