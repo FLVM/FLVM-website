@@ -7,7 +7,7 @@
 @import 'hero.less';
 @import 'grid.less';
 @import 'layout.less';
-@import 'styleguide.less';
+// @import 'styleguide.less';
 
 // Configuration
 @xxxx-large			: 76px;
@@ -27,6 +27,7 @@
 @color-link-visited: #F99157;
 @color-link-hover: #E35D27;
 @color-link-active: @color-complementary;
+@color-muted-lighter: lighten(@color-muted, (100 - @luma) * 0.8);
 
 // Pixrem
 @pixrem: unit((1 / @root), rem);

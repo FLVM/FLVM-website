@@ -32,6 +32,9 @@ class Model_Page extends Flatfile {
 			'summary' => array(
 				array('Flatfile::str_to_list'),
 			),
+			'parts'	=> array(
+				array('json_decode'),
+			),
 		);
 	}
 
@@ -55,7 +58,7 @@ class Model_Page extends Flatfile {
 	public function load_parts($parts, $subdirectory = NULL)
 	{
 
-		$subdirectory = $subdirectory ? $subdirectory . '/' : NULL;
+		$subdirectory = $subdirectory ? $subdirectory . '/' . $this->slug . '/' : NULL;
 		$result = array();
 
 		foreach (explode(',', $parts) as $part)
