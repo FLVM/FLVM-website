@@ -819,6 +819,19 @@ optgroup {
 .btn-navigation[disabled] {
   background-color: #ffd770;
 }
+a:link {
+  color: #e7773a;
+}
+a:visited {
+  color: #f99157;
+}
+a:hover {
+  color: #e35d27;
+}
+a:active,
+a:focus {
+  color: #255ff2;
+}
 /**
 * Article
 **/
