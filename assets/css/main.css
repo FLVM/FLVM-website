@@ -760,7 +760,7 @@ optgroup {
   cursor: pointer;
   font: normal 1em/1.5em Arial, sans-serif;
   text-decoration: none;
-  background-color: #ffffff;
+  background-color: #fcefcd;
   display: block;
   text-align: center;
 }
@@ -782,7 +782,7 @@ optgroup {
 .btn-navigation.current,
 .btn-muted:hover,
 .btn-muted.current {
-  background-color: #ebffff;
+  background-color: #ffeab6;
   color: #000000;
 }
 .btn.disabled,
@@ -793,7 +793,7 @@ optgroup {
 .btn-navigation[disabled],
 .btn-muted.disabled,
 .btn-muted[disabled] {
-  background-color: #ffffff;
+  background-color: #fff3d5;
 }
 .btn-cta {
   background-color: #f2b825;
@@ -879,9 +879,19 @@ main article h5 {
 }
 main aside article {
   font-size: 0.82608696em;
+  margin-bottom: 2em;
 }
 main aside article h1 {
   font-size: 1.56521739em;
+}
+main aside article h2 {
+  font-size: 1.17391304em;
+}
+main aside article h3,
+main aside article h4,
+main aside article h5,
+main aside article h6 {
+  font-size: 1em;
 }
 /**
 * Heroes

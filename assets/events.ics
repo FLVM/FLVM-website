@@ -1,0 +1,294 @@
+BEGIN:VCALENDAR
+METHOD:PUBLISH
+VERSION:2.0
+X-WR-CALNAME:Evénements
+PRODID:-//Apple Inc.//iCal 5.0.3//EN
+X-WR-CALDESC:Concert\, sortie\, fête\, etc...
+X-APPLE-CALENDAR-COLOR:#691426
+X-WR-TIMEZONE:Europe/Paris
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+DTSTART:19810329T020000
+TZNAME:CEST
+TZOFFSETTO:+0200
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+DTSTART:19961027T030000
+TZNAME:CET
+TZOFFSETTO:+0100
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+TRANSP:TRANSPARENT
+DTEND;VALUE=DATE:20160118
+UID:2AAAEC5C-4E4E-46B8-8140-69F827225A92
+DTSTAMP:20160115T201529Z
+LOCATION:adresse de lieu
+DESCRIPTION:Description
+URL;VALUE=URI:adresse%20web
+SEQUENCE:3
+SUMMARY:Modèle d'évenement journée complete
+DTSTART;VALUE=DATE:20160117
+CREATED:20160115T201417Z
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:OPAQUE
+DTEND;TZID=Europe/Paris:20160117T180000
+UID:014E96BA-72F6-4F04-9522-A7EB6E518998
+DTSTAMP:20160115T201514Z
+LOCATION:adresse de lieu
+DESCRIPTION:Description
+URL;VALUE=URI:adresse%20web
+SEQUENCE:6
+SUMMARY:Modèle d'évenement
+DTSTART;TZID=Europe/Paris:20160117T100000
+CREATED:20160115T201417Z
+END:VEVENT
+END:VCALENDAR
+BEGIN:VEVENT
+DTEND;TZID=Europe/Paris:20111104T210000
+TRANSP:OPAQUE
+ORGANIZER:mailto:ioq9jnbvdf5eqj669uthgso83o@group.calendar.google.com
+UID:sd7cnejkbteiufea5psv0vepbc@google.com
+DTSTAMP:20111028T161527Z
+LOCATION:Jardin des plantes 62\, rue de Cauville Rouen rive gauche
+DESCRIPTION:Conférence BIBLE et ACTUALITE : L'occultisme avec F. ALEXAND
+ RE et la participation de la chorale évangélique du jardin des plantes
+STATUS:CONFIRMED
+SEQUENCE:0
+CLASS:PRIVATE
+SUMMARY:conférence+chorale 
+LAST-MODIFIED:20111028T161527Z
+DTSTART;TZID=Europe/Paris:20111104T200000
+CREATED:20111028T160456Z
+ATTENDEE;CN="odo@gmail.com";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE
+ =REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:odo@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:TRANSPARENT
+DTEND;VALUE=DATE:20110717
+UID:1g43h0fpqkrlpikd8vmcricbnc@google.com
+DTSTAMP:20120613T173535Z
+LOCATION:La Barre en ouche 27330
+DESCRIPTION:musique et fromage de chèvre!
+STATUS:CONFIRMED
+SEQUENCE:1
+CLASS:PRIVATE
+RECURRENCE-ID;VALUE=DATE:20110713
+SUMMARY:Les Nuits Colorées !
+LAST-MODIFIED:20120613T173535Z
+DTSTART;VALUE=DATE:20110710
+CREATED:20080604T155047Z
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Paris:20111109T203000
+TRANSP:OPAQUE
+ORGANIZER:mailto:ioq9jnbvdf5eqj669uthgso83o@group.calendar.google.com
+UID:ut4f3nitsf0d7t80kcanrkjf68@google.com
+DTSTAMP:20111101T155925Z
+LOCATION:
+DESCRIPTION:
+STATUS:CONFIRMED
+SEQUENCE:0
+SUMMARY:Assemblée Générale AMAP
+LAST-MODIFIED:20111101T155925Z
+DTSTART;TZID=Europe/Paris:20111109T193000
+CREATED:20111028T160205Z
+ATTENDEE;CN="ziopod@gmail.com";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;R
+ OLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:ziopod@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20111106
+TRANSP:TRANSPARENT
+ORGANIZER:mailto:ioq9jnbvdf5eqj669uthgso83o@group.calendar.google.com
+UID:it4u10qegaoom3apmsjtcapnrs@google.com
+DTSTAMP:20111028T161250Z
+LOCATION:chez Mathilde
+DESCRIPTION:
+STATUS:CONFIRMED
+SEQUENCE:0
+SUMMARY:anniversaire Karine
+LAST-MODIFIED:20111028T161250Z
+DTSTART;VALUE=DATE:20111105
+CREATED:20111028T161249Z
+ATTENDEE;CN="ziopod@gmail.com";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;R
+ OLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:ziopod@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:OPAQUE
+DTEND;TZID=Europe/Paris:20111119T193000
+UID:fg3177obf7rufj7idlm4s3sba4@google.com
+DTSTAMP:20111028T162605Z
+LOCATION:Evreux Haute-Normandie à L'Abordage
+DESCRIPTION:
+STATUS:CONFIRMED
+SEQUENCE:0
+SUMMARY:Groupe Laurent "Devil's Rejects"
+LAST-MODIFIED:20111028T162605Z
+DTSTART;TZID=Europe/Paris:20111119T183000
+CREATED:20111028T162605Z
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:OPAQUE
+DTEND;TZID=Europe/Paris:20111101T163000
+UID:7t612ktctenojfdlbi61loe0hs@google.com
+DTSTAMP:20111028T161413Z
+LOCATION:zénith de Rouen Grand-Quevilly
+DESCRIPTION:gratuit
+STATUS:CONFIRMED
+SEQUENCE:0
+CLASS:PRIVATE
+SUMMARY:"Osez la foi" 
+LAST-MODIFIED:20111028T161413Z
+DTSTART;TZID=Europe/Paris:20111101T153000
+CREATED:20111028T160052Z
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=Europe/Paris:20110827T193000
+TRANSP:OPAQUE
+ORGANIZER:mailto:ioq9jnbvdf5eqj669uthgso83o@group.calendar.google.com
+UID:fqahigg0iklvkai41dkcsn7hlk@google.com
+DTSTAMP:20110707T085521Z
+LOCATION:St Martin le Gaillard (76)
+DESCRIPTION:animations\, performances\, spectacles\, fanfare\, village m
+ ilitant\, concerts...\n16 euros les deux jours\, camping gratuit...\nwww
+ .cultureenbrousse.com
+STATUS:CONFIRMED
+SEQUENCE:0
+SUMMARY:festival SkaPotatoes 7
+LAST-MODIFIED:20110707T085521Z
+DTSTART;TZID=Europe/Paris:20110826T183000
+CREATED:20110706T160834Z
+ATTENDEE;CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=REQ-PARTICIPANT;X-
+ NUM-GUESTS=0:mailto:mylene.beau@gmail.com
+ATTENDEE;CN="karine_le_lezec@hotmail.com";CUTYPE=INDIVIDUAL;PARTSTAT=NEE
+ DS-ACTION;ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:karine_le_lezec@hot
+ mail.com
+ATTENDEE;CN="sarreanthony@gmail.com";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-AC
+ TION;ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:sarreanthony@gmail.com
+ATTENDEE;CN="mamatiniou.md@hotmail.fr";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-
+ ACTION;ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:mamatiniou.md@hotmail.
+ fr
+ATTENDEE;CN="Steve Beau";CUTYPE=INDIVIDUAL;PARTSTAT=ACCEPTED;ROLE=REQ-PA
+ RTICIPANT;X-NUM-GUESTS=0:mailto:ziopod@gmail.com
+ATTENDEE;CN="krolbeau@gmail.com";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION
+ ;ROLE=REQ-PARTICIPANT;X-NUM-GUESTS=0:mailto:krolbeau@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:TRANSPARENT
+DTEND;VALUE=DATE:20110613
+UID:su4e7r9bepns0fo5d3t134dsso@google.com
+DTSTAMP:20110514T160348Z
+LOCATION:Beaumont-le-Roger
+DESCRIPTION:Chacun ramène un petit truc à manger!
+STATUS:CONFIRMED
+SEQUENCE:0
+SUMMARY:Cousinade
+LAST-MODIFIED:20110514T160348Z
+DTSTART;VALUE=DATE:20110612
+CREATED:20110512T203729Z
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:OPAQUE
+DTEND;TZID=Europe/Paris:20110521T000000
+UID:oqro4su7r595ca4mch39vcnhdc@google.com
+DTSTAMP:20110513T170226Z
+LOCATION: Le Bateau Ivre rue des sapins Rouen\, France
+DESCRIPTION:\nCréé par :\nOXP\nEn savoir plus\nN'y allons pas par quatre
+  chemins: serons réunis ce soir-là à bord de notre bon vieux Bateau troi
+ s groupes incontournables\, indiscutablement ce que la Haute-Normandie p
+ roduit de plus pur en matière d'inspiration rock... Déclinée selon trois
+  visions d'une intégrité et d'une sincérité inébranlables\, l'énergie él
+ ectrique et charnelle se verra rendre un hommage en forme de rituel sono
+ re libérateur...\n\n3€ en offrande à l'entrée...
+STATUS:CONFIRMED
+SEQUENCE:0
+SUMMARY:OXP\, GORDON MELON\, ICH BIN DOKTOR @ LE BATEAU IVRE
+LAST-MODIFIED:20110513T170226Z
+DTSTART;TZID=Europe/Paris:20110520T210000
+CREATED:20110510T214520Z
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:TRANSPARENT
+DTEND;VALUE=DATE:20110530
+UID:uk0tk60rnktoenf2f6qehv9t38@google.com
+DTSTAMP:20110514T160801Z
+LOCATION:
+DESCRIPTION:
+STATUS:CONFIRMED
+SEQUENCE:0
+SUMMARY:Fête des méres
+LAST-MODIFIED:20110514T160801Z
+DTSTART;VALUE=DATE:20110529
+CREATED:20110514T160710Z
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:OPAQUE
+DTEND;TZID=Europe/Paris:20110514T200000
+UID:pt0oulv63og91n0tght2ja8us4@google.com
+DTSTAMP:20110513T170255Z
+LOCATION:Green Café\, Évreux\, France
+DESCRIPTION:\nsamedi 14 mai\, 19:00\n
+STATUS:CONFIRMED
+SEQUENCE:0
+SUMMARY:Concert NMK
+LAST-MODIFIED:20110513T170255Z
+DTSTART;TZID=Europe/Paris:20110514T190000
+CREATED:20110407T130225Z
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20151113
+TRANSP:TRANSPARENT
+ORGANIZER:mailto:ioq9jnbvdf5eqj669uthgso83o@group.calendar.google.com
+UID:ibku70jukl9miqjksovh6jai2g@google.com
+DTSTAMP:20151110T030322Z
+LOCATION:
+DESCRIPTION:
+STATUS:CONFIRMED
+SEQUENCE:0
+SUMMARY:L'argent n'a pas d'odeur jeudi\, à 18:30 La Conjuration des Four
+ neaux Organisé par Collectif de Solidarité ZAD - Rouen/NDDL
+LAST-MODIFIED:20151110T030322Z
+DTSTART;VALUE=DATE:20151112
+CREATED:20151110T030322Z
+ATTENDEE;CN="Steve Beau";CUTYPE=INDIVIDUAL;PARTSTAT=NEEDS-ACTION;ROLE=RE
+ Q-PARTICIPANT;X-NUM-GUESTS=0:mailto:ziopod@gmail.com
+END:VEVENT
+BEGIN:VEVENT
+TRANSP:OPAQUE
+DTEND:20151114T200000Z
+UID:gsp04po7qc12t8065g1ketndn0@google.com
+DTSTAMP:20151110T030716Z
+LOCATION:
+DESCRIPTION:Pour la première fois en france\, Nos Années Sauvages vous p
+ ropose de découvrir «Bruxelles Sauvages» !\n\n"Bruxelles Sauvage\, Faune
+  Capitale" n’est ni un documentaire de société\, ni un film animalier. O
+ u plutôt\, il est les deux : un film hybride et original. On s’intéresse
+  ici à l’animal non pas en tant qu’espèce biologique mais en tant que co
+ mposante d’une société urbaine.\n\nLa projection de ce film (1h05) est p
+ révue le samedi 14 Novembre à 20H à l’Ubi - 20\, rue Alsace-Lorraine - R
+ ouen.\n\nEntrée libre !\n\nUn soir qu’il rentrait chez lui à vélo\, Bern
+ ard Crutzen tombe nez-à-nez avec un renard qui lui barre le passage et l
+ e regarde avec l’air de dire : « que fais-tu là ? ». Depuis lors\, le ré
+ alisateur cherche à lui retourner la question : « Et toi\, que fais-tu à
+  Bruxelles ? La ville est-elle pour toi ? ». La question vaut aussi pour
+  les faucons des clochers\, les crapauds des fontaines\, les couleuvres 
+ ou les lucanes. Chaque fois qu’un citadin est confronté au sauvage naît 
+ un sentiment où se mêlent fascination et méfiance. Le film explore cette
+  cohabitation où il est question de transgression et d’une acceptable pr
+ oximité.\n\nwww.bruxelles-sauvage.be\n\nwww.nos-annees-sauvages.com\nmai
+ l@nos-annees-sauvages.com\n\nwww.ubi-rouen.com
+STATUS:CONFIRMED
+SEQUENCE:1
+SUMMARY:Bruxelles Sauvage samedi\, à 20:00 Le 20 rue Alsace Lorraine
+LAST-MODIFIED:20151110T030716Z
+DTSTART:20151114T190000Z
+CREATED:20151110T030605Z
+END:VEVENT
+END:VCALENDAR
