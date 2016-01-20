@@ -14,7 +14,8 @@
 	],
 	"require": {
 		"ziopod/tanuki-core": "dev-dev",
-		"kohana/core": "3.3.3.*"
+		"kohana/core": "3.3.3.*",
+		"johngrogg/ics-parser": "1.0.*"
 	}
 
 }

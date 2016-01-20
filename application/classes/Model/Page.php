@@ -103,45 +103,12 @@ class Model_Page extends Flatfile {
 	**/
 	public function parse_ical($url)
 	{
-		$ical = file_get_contents($url);
-		$events = explode('BEGIN:VEVENT', $ical);
-		$result = array();
+		$ical = new ICal($url);
+		$events = $ical->events();
 
 		foreach ($events as $event)
 		{
-			if ($event)
-			{
-				$metas = explode("\n", $event);
-				$event_metas = array();
-
-				foreach ($metas as $meta)
-				{
-					$meta = explode(':', $meta);
-					
-					if (in_array($meta[0], array('URL;VALUE=URI', 'DTSTART;VALUE=DATE', 'DTEND;VALUE:DATE', 'DTSTAMP', 'LOCATION', 'DESCRIPTION', 'CONFIRMED', 'SUMMARY', 'DTSTART;TZID=Europe/Paris', 'DTEND;TZID=Europe/Paris')))
-					{
-						if (strpos($meta[0], 'DT') !== FALSE)
-						{
-							if (strpos($meta[0], 'DATE'))
-							{
-								$meta[1] = strftime('%A %e %B %Y', strtotime($meta[1])); 
-							}
-							else
-							{
-								$meta[1] = strftime('%A %e %B %Y à %R', strtotime($meta[1])); 
-							}
-						}
-						$event_metas[strtolower($meta[0])] = $meta[1];
-					}
-				}
-
-				if ($event_metas)
-				{
-					$result[] = $event_metas;
-				}
-			}
+			echo debug::vars($event);
 		}
-		// echo debug::vars($result);
-		return $result;
 	}
 }
