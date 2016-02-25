@@ -5,6 +5,17 @@
 {
 	padding: 1em;
 	background-color: @color;
+	
+	.banner-logo
+	{
+		img
+		{
+			width: 100%;
+			max-width: 175 * @pixrem;
+		}
+		
+		margin: 0 auto 1rem;
+	}
 
 	&.compact
 	{
@@ -30,14 +41,15 @@
 
 .banner-description
 {
+	display: none;
 	font-style: italic;
 	text-align: center;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-	.font-size(@large);
+	.font-size(@small);
+	padding-top: 15 * @pixem;
+	padding-left: 80 * @pixem;
+	padding-right: 80 * @pixem;
+	line-height: 1.2em;
 }
-
-
 .btn-banner-planning:link,
 .btn-banner-planning:visited
 {
@@ -88,9 +100,9 @@
 		z-index: 1;
 		left: .2em;
 		top: .2em;
-		max-width: 6em;
+		max-width: 175 * @pixrem;
 		background-color: @color;
-		border-radius: 3em;
+		border-radius: 180 * @pixrem;
 		margin-bottom: 0;
 		border: 3px * @pixem solid @color;
 		img
@@ -100,17 +112,17 @@
 	}
 	.banner-description
 	{
+		display: block;
 		margin-bottom: 0;
 		float: left;
 		margin: 0 0 0 6em;
 		white-space: nowrap;
-		.font-size(@normal);
 	}
 	.banner-navigation
 	{
 		.cf();
 		float: right;
-		width: 5 * @column-width;
+		width: 4 * @column-width;
 		margin-right: 8em;
 	}
 	.btn-banner-planning

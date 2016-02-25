@@ -657,6 +657,13 @@ optgroup {
   padding: 1em;
   background-color: #f2b825;
 }
+.banner .banner-logo {
+  margin: 0 auto 1rem;
+}
+.banner .banner-logo img {
+  width: 100%;
+  max-width: 10.9375rem;
+}
 .banner.compact .btn,
 .banner.compact .btn-cta,
 .banner.compact .btn-navigation,
@@ -671,11 +678,14 @@ optgroup {
   text-align: center;
 }
 .banner-description {
+  display: none;
   font-style: italic;
   text-align: center;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  font-size: 1.17391304em;
+  font-size: 0.82608696em;
+  padding-top: 0.65217391em;
+  padding-left: 3.47826087em;
+  padding-right: 3.47826087em;
+  line-height: 1.2em;
 }
 .btn-banner-planning:link,
 .btn-banner-planning:visited {
@@ -900,7 +910,7 @@ main aside article h6 {
   background-color: #1a222f;
 }
 .hero-content {
-  padding: 3em 1em 1em;
+  padding: 4em 1em 1em;
   color: #ffffff;
   background-color: rgba(26, 34, 47, 0.7);
   text-shadow: #1a222f 0 0 2px;
@@ -910,6 +920,9 @@ main aside article h6 {
 .hero-content h3,
 .hero-content h4 {
   line-height: 1em;
+}
+.hero-content h1 {
+  font-size: 2.60869565em;
 }
 .hero-content p {
   font-size: 1.17391304em;
@@ -1036,9 +1049,9 @@ body {
     z-index: 1;
     left: .2em;
     top: .2em;
-    max-width: 6em;
+    max-width: 10.9375rem;
     background-color: #f2b825;
-    border-radius: 3em;
+    border-radius: 11.25rem;
     margin-bottom: 0;
     border: 0.13043478em solid #f2b825;
   }
@@ -1046,16 +1059,16 @@ body {
     display: block;
   }
   .banner-description {
+    display: block;
     margin-bottom: 0;
     float: left;
     margin: 0 0 0 6em;
     white-space: nowrap;
-    font-size: 1em;
   }
   .banner-navigation {
     *zoom: 1;
     float: right;
-    width: 30rem;
+    width: 24rem;
     margin-right: 8em;
   }
   .banner-navigation:before,
