@@ -35,9 +35,9 @@ class Model_Page extends Flatfile {
 			'parts'	=> array(
 				array('json_decode'),
 			),
-			'ical'	=> array(
-				array(array($this, 'parse_ical'), array(':value')),
-			),
+			// 'ical'	=> array(
+			// 	array(array($this, 'parse_ical'), array(':value')),
+			// ),
 		);
 	}
 
@@ -97,6 +97,7 @@ class Model_Page extends Flatfile {
 	* Note : 
 	* https://www.googleapis.com/calendar/v3/calendars/assoflvm@gmail.com
 	* https://www.googleapis.com/calendar/v3/calendars/09c6d68cl7qs5fjtlg938orn1k@group.calendar.google.com
+	* https://calendar.google.com/calendar/ical/assoflvm%40gmail.com/public/basic.ics
 	*
 	* @param	url		URL to ical
 	* @return	array	Ical in array format
@@ -106,9 +107,23 @@ class Model_Page extends Flatfile {
 		$ical = new ICal($url);
 		$events = $ical->events();
 
+		$limit = 8;
+		$result = array();
+
 		foreach ($events as $event)
 		{
-			echo debug::vars($event);
+			if ( ! $limit--)
+				break;
+
+			// $result[] = $event;
+			$result[] = array(
+				'DTSTART' =>  strftime('%A %e %B %Y à %Hh%M', strtotime($event['DTSTART'])),
+				'LOCATION'	=> $event['LOCATION'],
+				'SUMMARY'	=> $event['SUMMARY'],
+			);
+
 		}
+
+		return $result;
 	}
 }
