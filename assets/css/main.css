@@ -48,7 +48,7 @@
 **/
 /**
 * Font-size
-* Set REM font-size, based on size name
+* Set EM font-size, based on size name
 * Usage: .font-size(@large)
 *
 * @param	string		font-size
@@ -295,7 +295,7 @@ table {
 **/
 body {
   font: normal 1em/1.5em Georgia, serif;
-  font-size: 143.75%;
+  font-size: 125%;
   color: #1a222f;
   padding: 1.5em;
 }
@@ -309,7 +309,7 @@ section nav {
 }
 hr {
   border: none;
-  border-top: 0.08695652em solid #f2b825;
+  border-top: 0.1em solid #f2b825;
   margin: 0;
   padding: 1.5em 0 0;
 }
@@ -318,7 +318,7 @@ address {
   margin-bottom: 1.5em;
 }
 small {
-  font-size: 0.82608696em;
+  font-size: 0.8em;
 }
 em,
 i {
@@ -333,9 +333,9 @@ code,
 samp,
 kbd {
   font: normal 1em/1.5em "Andale Mono", "Lucida Console", monospace;
-  line-height: 1.81578947em;
-  font-size: 0.82608696em;
-  margin-bottom: 1.81578947em;
+  line-height: 1.875em;
+  font-size: 0.8em;
+  margin-bottom: 1.875em;
   background-color: #eeece9;
   padding: .2em .3em .28em;
 }
@@ -401,29 +401,29 @@ h6 {
   font-weight: 600;
 }
 h1 {
-  line-height: 1.36184211em;
-  font-size: 3.30434783em;
-  margin-bottom: 0.45394737em;
+  line-height: 1em;
+  font-size: 3em;
+  margin-bottom: 0.5em;
 }
 h2 {
-  line-height: 1.15em;
-  font-size: 2.60869565em;
-  margin-bottom: 0.575em;
+  line-height: 1.25em;
+  font-size: 2.4em;
+  margin-bottom: 0.625em;
 }
 h3 {
-  line-height: 1.4375em;
-  font-size: 2.08695652em;
-  margin-bottom: 0.71875em;
+  line-height: 1.66666667em;
+  font-size: 1.8em;
+  margin-bottom: 0.83333333em;
 }
 h4 {
-  line-height: 1.91666667em;
-  font-size: 1.56521739em;
-  margin-bottom: 0.95833333em;
+  line-height: 1.07142857em;
+  font-size: 1.4em;
+  margin-bottom: 1.07142857em;
 }
 h5 {
-  line-height: 1.27777778em;
-  font-size: 1.17391304em;
-  margin-bottom: 1.27777778em;
+  line-height: 1.30434783em;
+  font-size: 1.15em;
+  margin-bottom: 1.30434783em;
 }
 h6 {
   line-height: 1.5em;
@@ -564,10 +564,10 @@ figure img {
   margin: 0 auto;
 }
 figcaption {
-  border-bottom: 0.04347826em dotted #f2b825;
+  border-bottom: 0.05em dotted #f2b825;
   padding: 1.5em 1em;
   margin-bottom: 1.5em;
-  font: normal 0.82608696em/1.5em Arial, sans-serif;
+  font: normal 0.8em/1.5em Arial, sans-serif;
   color: #9b927c;
   font-weight: 200;
 }
@@ -585,16 +585,16 @@ table {
 th,
 td {
   padding: 0.75em 0.5em;
-  border-bottom: 0.04347826em solid #bdb7a9;
+  border-bottom: 0.05em solid #bdb7a9;
 }
 th {
   text-align: left;
-  border-bottom: 0.08695652em solid #bdb7a9;
-  padding-top: 0.70652174em;
+  border-bottom: 0.1em solid #bdb7a9;
+  padding-top: 0.7em;
   font-weight: 600;
 }
 caption {
-  font: italic 0.82608696em/1.5em Arial, sans-serif;
+  font: italic 0.8em/1.5em Arial, sans-serif;
   font-weight: 200;
 }
 /**
@@ -613,7 +613,7 @@ fieldset *:last-child {
 legend {
   font-weight: 600;
   margin-bottom: 1.5em;
-  font: 600 1.17391304em/1.5em Arial, sans-serif;
+  font: 600 1.15em/1.5em Arial, sans-serif;
 }
 button,
 input,
@@ -668,23 +668,23 @@ optgroup {
 .banner.compact .btn-cta,
 .banner.compact .btn-navigation,
 .banner.compact .btn-muted {
-  font-size: 0.82608696em;
+  font-size: 0.8em;
 }
 .banner.compact .banner-logo img {
   max-width: 7.5rem;
 }
 .banner-logo {
-  font-size: 1.17391304em;
+  font-size: 1.15em;
   text-align: center;
 }
 .banner-description {
   display: none;
   font-style: italic;
   text-align: center;
-  font-size: 0.82608696em;
-  padding-top: 0.65217391em;
-  padding-left: 3.47826087em;
-  padding-right: 3.47826087em;
+  font-size: 1em;
+  padding-top: 0.75em;
+  padding-left: 4em;
+  padding-right: 4em;
   line-height: 1.2em;
 }
 .btn-banner-planning:link,
@@ -699,6 +699,10 @@ optgroup {
 }
 .btn-banner-planning:link:hover,
 .btn-banner-planning:visited:hover,
+.btn-banner-planning:link:focus,
+.btn-banner-planning:visited:focus,
+.btn-banner-planning:link:active,
+.btn-banner-planning:visited:active,
 .btn-banner-planning:link.current,
 .btn-banner-planning:visited.current {
   background-color: #0b172a;
@@ -714,7 +718,7 @@ optgroup {
 * Footer
 **/
 .footer {
-  font-size: 0.82608696em;
+  font-size: 0.8em;
   line-height: 1.5em;
   background-color: #1a222f;
   color: #ffffff;
@@ -722,10 +726,10 @@ optgroup {
   padding-bottom: 0.75rem;
 }
 .footer h1 {
-  font-size: 1.56521739em;
+  font-size: 1.4em;
 }
 .footer h2 {
-  font-size: 1.17391304em;
+  font-size: 1.15em;
 }
 .footer h3,
 .footer h4,
@@ -734,7 +738,7 @@ optgroup {
   font-size: 1em;
 }
 .sub-footer {
-  font: normal 0.69565217em/1.5em Arial, sans-serif;
+  font: normal 0.7em/1.5em Arial, sans-serif;
 }
 .footer-banner {
   *zoom: 1;
@@ -785,12 +789,20 @@ optgroup {
   color: #000000;
 }
 .btn:hover,
+.btn:focus,
+.btn:active,
 .btn.current,
 .btn-cta:hover,
+.btn-cta:focus,
+.btn-cta:active,
 .btn-cta.current,
 .btn-navigation:hover,
+.btn-navigation:focus,
+.btn-navigation:active,
 .btn-navigation.current,
 .btn-muted:hover,
+.btn-muted:focus,
+.btn-muted:active,
 .btn-muted.current {
   background-color: #ffeab6;
   color: #000000;
@@ -813,6 +825,8 @@ optgroup {
   color: #000000;
 }
 .btn-cta:hover,
+.btn-cta:focus,
+.btn-cta:active,
 .btn-cta.current {
   background-color: #ff930e;
   color: #ffffff;
@@ -829,6 +843,8 @@ optgroup {
   color: #000000;
 }
 .btn-navigation:hover,
+.btn-navigation:focus,
+.btn-navigation:active,
 .btn-navigation.current {
   background-color: #ffce52;
   color: #000000;
@@ -845,6 +861,8 @@ optgroup {
   color: #000000;
 }
 .btn-muted:hover,
+.btn-muted:focus,
+.btn-muted:active,
 .btn-muted.current {
   background-color: #eee7d4;
   color: #000000;
@@ -873,29 +891,31 @@ main {
   padding-top: 1.5em;
 }
 main article h1 {
-  font-size: 2.60869565em;
+  font-size: 2.4em;
 }
 main article h2 {
-  font-size: 2.08695652em;
+  font-size: 1.8em;
 }
 main article h3 {
-  font-size: 1.56521739em;
+  font-size: 1.4em;
 }
 main article h4 {
-  font-size: 1.17391304em;
+  font-size: 1.15em;
 }
 main article h5 {
   font-size: 1em;
 }
 main aside article {
-  font-size: 0.82608696em;
+  line-height: 1.875em;
+  font-size: 0.8em;
+  margin-bottom: 1.875em;
   margin-bottom: 2em;
 }
 main aside article h1 {
-  font-size: 1.56521739em;
+  font-size: 1.4em;
 }
 main aside article h2 {
-  font-size: 1.17391304em;
+  font-size: 1.15em;
 }
 main aside article h3,
 main aside article h4,
@@ -922,10 +942,12 @@ main aside article h6 {
   line-height: 1em;
 }
 .hero-content h1 {
-  font-size: 2.60869565em;
+  font-size: 2.4em;
 }
 .hero-content p {
-  font-size: 1.17391304em;
+  line-height: 1.30434783em;
+  font-size: 1.15em;
+  margin-bottom: 1.30434783em;
 }
 .hero-content p:last-child {
   margin-bottom: 0;
@@ -994,11 +1016,11 @@ footer {
   padding-right: 1em;
 }
 body {
-  font-size: 118.75%;
+  font-size: 100%;
 }
 @media (min-width: 64rem) {
   body {
-    font-size: 143.75%;
+    font-size: 125%;
   }
   main {
     width: 60rem;
@@ -1033,7 +1055,7 @@ body {
     display: block;
   }
   .banner.compact .banner-description {
-    font-size: 0.69565217em;
+    font-size: 0.8em;
     line-height: 1.5em;
     padding-top: 1.3em;
     margin-left: 4em;
@@ -1053,7 +1075,7 @@ body {
     background-color: #f2b825;
     border-radius: 11.25rem;
     margin-bottom: 0;
-    border: 0.13043478em solid #f2b825;
+    border: 0.15em solid #f2b825;
   }
   .banner-logo img {
     display: block;
@@ -1123,7 +1145,7 @@ dl dd {
   margin-bottom: 1.5em;
 }
 .excerpt {
-  font: normal 0.82608696em/1.5em Arial, sans-serif;
+  font: normal 0.8em/1.5em Arial, sans-serif;
   padding: 1.5rem;
   background-color: #fcefcd;
   color: #1a222f;
@@ -1146,22 +1168,22 @@ dl dd {
   margin-right: 0.75rem;
 }
 .xxlarge {
-  font-size: 2.08695652em;
+  font-size: 1.8em;
 }
 .xlarge {
-  font-size: 1.56521739em;
+  font-size: 1.4em;
 }
 .large {
-  font-size: 1.17391304em;
+  font-size: 1.15em;
 }
 .small {
-  font-size: 0.82608696em;
+  font-size: 0.8em;
 }
 .xsmall {
-  font-size: 0.69565217em;
+  font-size: 0.7em;
 }
 .xxsmall {
-  font-size: 0.60869565em;
+  font-size: 0.6em;
 }
 body {
   padding: 0;
