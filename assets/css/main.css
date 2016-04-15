@@ -295,7 +295,7 @@ table {
 **/
 body {
   font: normal 1em/1.5em Georgia, serif;
-  font-size: 125%;
+  font-size: 137.5%;
   color: #1a222f;
   padding: 1.5em;
 }
@@ -309,7 +309,7 @@ section nav {
 }
 hr {
   border: none;
-  border-top: 0.1em solid #f2b825;
+  border-top: 0.09090909em solid #f2b825;
   margin: 0;
   padding: 1.5em 0 0;
 }
@@ -318,7 +318,7 @@ address {
   margin-bottom: 1.5em;
 }
 small {
-  font-size: 0.8em;
+  font-size: 0.81818182em;
 }
 em,
 i {
@@ -333,9 +333,9 @@ code,
 samp,
 kbd {
   font: normal 1em/1.5em "Andale Mono", "Lucida Console", monospace;
-  line-height: 1.875em;
-  font-size: 0.8em;
-  margin-bottom: 1.875em;
+  line-height: 1.83333333em;
+  font-size: 0.81818182em;
+  margin-bottom: 1.83333333em;
   background-color: #eeece9;
   padding: .2em .3em .28em;
 }
@@ -401,29 +401,29 @@ h6 {
   font-weight: 600;
 }
 h1 {
-  line-height: 1em;
-  font-size: 3em;
-  margin-bottom: 0.5em;
+  line-height: 1.35616438em;
+  font-size: 3.31818182em;
+  margin-bottom: 0.45205479em;
 }
 h2 {
-  line-height: 1.25em;
-  font-size: 2.4em;
-  margin-bottom: 0.625em;
+  line-height: 1.13793103em;
+  font-size: 2.63636364em;
+  margin-bottom: 0.56896552em;
 }
 h3 {
-  line-height: 1.66666667em;
-  font-size: 1.8em;
-  margin-bottom: 0.83333333em;
+  line-height: 1.43478261em;
+  font-size: 2.09090909em;
+  margin-bottom: 0.7173913em;
 }
 h4 {
-  line-height: 1.07142857em;
-  font-size: 1.4em;
-  margin-bottom: 1.07142857em;
+  line-height: 1.94117647em;
+  font-size: 1.54545455em;
+  margin-bottom: 0.97058824em;
 }
 h5 {
-  line-height: 1.30434783em;
-  font-size: 1.15em;
-  margin-bottom: 1.30434783em;
+  line-height: 1.26923077em;
+  font-size: 1.18181818em;
+  margin-bottom: 1.26923077em;
 }
 h6 {
   line-height: 1.5em;
@@ -564,10 +564,10 @@ figure img {
   margin: 0 auto;
 }
 figcaption {
-  border-bottom: 0.05em dotted #f2b825;
+  border-bottom: 0.04545455em dotted #f2b825;
   padding: 1.5em 1em;
   margin-bottom: 1.5em;
-  font: normal 0.8em/1.5em Arial, sans-serif;
+  font: normal 0.81818182em/1.5em Arial, sans-serif;
   color: #9b927c;
   font-weight: 200;
 }
@@ -585,16 +585,16 @@ table {
 th,
 td {
   padding: 0.75em 0.5em;
-  border-bottom: 0.05em solid #bdb7a9;
+  border-bottom: 0.04545455em solid #bdb7a9;
 }
 th {
   text-align: left;
-  border-bottom: 0.1em solid #bdb7a9;
-  padding-top: 0.7em;
+  border-bottom: 0.09090909em solid #bdb7a9;
+  padding-top: 0.70454545em;
   font-weight: 600;
 }
 caption {
-  font: italic 0.8em/1.5em Arial, sans-serif;
+  font: italic 0.81818182em/1.5em Arial, sans-serif;
   font-weight: 200;
 }
 /**
@@ -613,7 +613,7 @@ fieldset *:last-child {
 legend {
   font-weight: 600;
   margin-bottom: 1.5em;
-  font: 600 1.15em/1.5em Arial, sans-serif;
+  font: 600 1.18181818em/1.5em Arial, sans-serif;
 }
 button,
 input,
@@ -668,13 +668,13 @@ optgroup {
 .banner.compact .btn-cta,
 .banner.compact .btn-navigation,
 .banner.compact .btn-muted {
-  font-size: 0.8em;
+  font-size: 0.81818182em;
 }
 .banner.compact .banner-logo img {
   max-width: 7.5rem;
 }
 .banner-logo {
-  font-size: 1.15em;
+  font-size: 1.18181818em;
   text-align: center;
 }
 .banner-description {
@@ -682,9 +682,9 @@ optgroup {
   font-style: italic;
   text-align: center;
   font-size: 1em;
-  padding-top: 0.75em;
-  padding-left: 4em;
-  padding-right: 4em;
+  padding-top: 0.68181818em;
+  padding-left: 3.63636364em;
+  padding-right: 3.63636364em;
   line-height: 1.2em;
 }
 .btn-banner-planning:link,
@@ -718,7 +718,7 @@ optgroup {
 * Footer
 **/
 .footer {
-  font-size: 0.8em;
+  font-size: 0.81818182em;
   line-height: 1.5em;
   background-color: #1a222f;
   color: #ffffff;
@@ -726,10 +726,10 @@ optgroup {
   padding-bottom: 0.75rem;
 }
 .footer h1 {
-  font-size: 1.4em;
+  font-size: 1.54545455em;
 }
 .footer h2 {
-  font-size: 1.15em;
+  font-size: 1.18181818em;
 }
 .footer h3,
 .footer h4,
@@ -738,7 +738,7 @@ optgroup {
   font-size: 1em;
 }
 .sub-footer {
-  font: normal 0.7em/1.5em Arial, sans-serif;
+  font: normal 0.72727273em/1.5em Arial, sans-serif;
 }
 .footer-banner {
   *zoom: 1;
@@ -891,31 +891,31 @@ main {
   padding-top: 1.5em;
 }
 main article h1 {
-  font-size: 2.4em;
+  font-size: 2.63636364em;
 }
 main article h2 {
-  font-size: 1.8em;
+  font-size: 2.09090909em;
 }
 main article h3 {
-  font-size: 1.4em;
+  font-size: 1.54545455em;
 }
 main article h4 {
-  font-size: 1.15em;
+  font-size: 1.18181818em;
 }
 main article h5 {
   font-size: 1em;
 }
 main aside article {
-  line-height: 1.875em;
-  font-size: 0.8em;
-  margin-bottom: 1.875em;
+  line-height: 1.83333333em;
+  font-size: 0.81818182em;
+  margin-bottom: 1.83333333em;
   margin-bottom: 2em;
 }
 main aside article h1 {
-  font-size: 1.4em;
+  font-size: 1.54545455em;
 }
 main aside article h2 {
-  font-size: 1.15em;
+  font-size: 1.18181818em;
 }
 main aside article h3,
 main aside article h4,
@@ -942,12 +942,12 @@ main aside article h6 {
   line-height: 1em;
 }
 .hero-content h1 {
-  font-size: 2.4em;
+  font-size: 2.63636364em;
 }
 .hero-content p {
-  line-height: 1.30434783em;
-  font-size: 1.15em;
-  margin-bottom: 1.30434783em;
+  line-height: 1.26923077em;
+  font-size: 1.18181818em;
+  margin-bottom: 1.26923077em;
 }
 .hero-content p:last-child {
   margin-bottom: 0;
@@ -1016,11 +1016,11 @@ footer {
   padding-right: 1em;
 }
 body {
-  font-size: 100%;
+  font-size: 112.5%;
 }
 @media (min-width: 64rem) {
   body {
-    font-size: 125%;
+    font-size: 137.5%;
   }
   main {
     width: 60rem;
@@ -1055,7 +1055,7 @@ body {
     display: block;
   }
   .banner.compact .banner-description {
-    font-size: 0.8em;
+    font-size: 0.81818182em;
     line-height: 1.5em;
     padding-top: 1.3em;
     margin-left: 4em;
@@ -1075,7 +1075,7 @@ body {
     background-color: #f2b825;
     border-radius: 11.25rem;
     margin-bottom: 0;
-    border: 0.15em solid #f2b825;
+    border: 0.13636364em solid #f2b825;
   }
   .banner-logo img {
     display: block;
@@ -1145,7 +1145,7 @@ dl dd {
   margin-bottom: 1.5em;
 }
 .excerpt {
-  font: normal 0.8em/1.5em Arial, sans-serif;
+  font: normal 0.81818182em/1.5em Arial, sans-serif;
   padding: 1.5rem;
   background-color: #fcefcd;
   color: #1a222f;
@@ -1168,22 +1168,22 @@ dl dd {
   margin-right: 0.75rem;
 }
 .xxlarge {
-  font-size: 1.8em;
+  font-size: 2.09090909em;
 }
 .xlarge {
-  font-size: 1.4em;
+  font-size: 1.54545455em;
 }
 .large {
-  font-size: 1.15em;
+  font-size: 1.18181818em;
 }
 .small {
-  font-size: 0.8em;
+  font-size: 0.81818182em;
 }
 .xsmall {
-  font-size: 0.7em;
+  font-size: 0.72727273em;
 }
 .xxsmall {
-  font-size: 0.6em;
+  font-size: 0.63636364em;
 }
 body {
   padding: 0;
