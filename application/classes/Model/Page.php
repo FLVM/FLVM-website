@@ -59,7 +59,6 @@ class Model_Page extends Flatfile {
 	public function load_parts($parts, $subdirectory = NULL)
 	{
 
-		$subdirectory = $subdirectory ? $this->slug . '/' . $subdirectory . '/' : $this->slug . '/';
 		$result = array();
 
 		foreach (explode(',', $parts) as $part)
