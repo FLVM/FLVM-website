@@ -63,16 +63,39 @@ class Model_Page extends Flatfile {
 
 		foreach (explode(',', $parts) as $part)
 		{
+			$subcontent[$part] = array();
+
 			try
 			{
-				$part = new Model_Page($subdirectory . trim($part));
-				$result[] = $part;
+				$file = new Model_Page($subdirectory . trim($part));
+				$result[] = $file;
 			}
 			catch(Kohana_exception $e)
 			{
 				Log::instance()->add(Log::WARNING, $e->getMessage());
 			}
 
+		}
+
+		// echo debug::vars($result);
+		return $result;
+	}
+
+	/**
+	* Get associative array from path
+	*
+	* 	$subparts = explode('/', $this->_process_part($path));
+	**/
+	protected function _process_path($parts)
+	{
+		$result = array();
+
+		$part = array_shift($parts);
+		$result[$part] = array();
+
+		if ($parts)
+		{
+			$result[$part][] = $this->_process_path($parts);
 		}
 
 		return $result;
