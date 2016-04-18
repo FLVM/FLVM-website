@@ -26,14 +26,12 @@ class Model_Page extends Flatfile {
 			'content' => array(
 				array('Flatfile::Markdown'),
 			),
-			'related'	=> array(
-				array(array($this, 'load_parts'), array(':value', 'related')),
-			),
 			'summary' => array(
 				array('Flatfile::str_to_list'),
 			),
-			'parts'	=> array(
-				array('json_decode'),
+			// Contenu en relation, placé directement dans un sous dossier portant le nom de la page
+			'related'	=> array(
+				array(array($this, 'load_parts'), array(':value')),
 			),
 			// 'ical'	=> array(
 			// 	array(array($this, 'parse_ical'), array(':value')),
@@ -50,7 +48,7 @@ class Model_Page extends Flatfile {
 	}
 
 	/**
-	* Load adittionnal content part
+	* Load adittionnal content part by name
 	*
 	* @param	string	$parts			part name or list of part names
 	* @param	string	$subdirectory	subdirectory name
@@ -61,7 +59,7 @@ class Model_Page extends Flatfile {
 	public function load_parts($parts, $subdirectory = NULL)
 	{
 
-		$subdirectory = $subdirectory ? $subdirectory . '/' . $this->slug . '/' : NULL;
+		$subdirectory = $subdirectory ? $this->slug . '/' . $subdirectory . '/' : $this->slug . '/';
 		$result = array();
 
 		foreach (explode(',', $parts) as $part)
