@@ -51,23 +51,43 @@ class Model_Page extends Flatfile {
 	* Load adittionnal content part by name
 	*
 	* @param	string	$parts			part name or list of part names
-	* @param	string	$subdirectory	subdirectory name
+	* @param	string	$subdirectory	force subdirectory name
 	*
 	* @return	array
 	**/
 
-	public function load_parts($parts, $subdirectory = NULL)
+	public function load_parts($paths, $subdirectory = NULL)
 	{
+/*
+Refacto :
 
+Une méthode qui charge les fichiers plat nommées (liste de chemins relatifs vers chauqye fichier séparés par des virgules)
+Une méthode qui charge tous les fichiers plats d'un répertoire donnée (liste de noms de chemins relatif vers le dossier à charger)
+
+TODO Find_all : Mettre au point une query path = nom-de-chemin; pour permettre de charger tout les fichiers flat d'un modèle situé dans un sous dossier
+Au passge envisager aussi de mettre au point une query qui permet de charger tout les fichiers de sous-dossier de manière récursives
+
+	1. charger tous les fichiers de manière récursif (default)
+	2. charger tous les fichiers de mainère non récursif; recursive = FALSE ou direct_child ou sibling (parent en commun, que les fichiers frères) (actuellement en défault (il me semble))
+	3. charger tous les fichiers et les sous-fichiers à partir d'un dossier specifique (path = name/of/the/path)
+
+	Flatfile::factory('Page')->find_all();
+	Flatfile::factory('Page')->sibling->find_all();
+	Flatfile::factory('Page')->path('specicifc/path')->find_all();
+	// Combinaison de requêtes : 
+	Flatfile::factory('Page')->path('informations')->query('publish')->sibling()->find_all(); // query('publish', '=' (default), TRUE (default))
+	// Toutes les pages située dans le dossier 'information', sans recursivité dans les dossier et qui possède la méta 'publish' (avec n'importe quelle valeur autre que FALSE)
+	// Attention, executer les requetes en dernier
+
+*/
 		$result = array();
 
-		foreach (explode(',', $parts) as $part)
+		foreach (explode(',', $paths) as $path)
 		{
-			$subcontent[$part] = array();
-
 			try
 			{
-				$file = new Model_Page($subdirectory . trim($part));
+				// Load file
+				$file = new Model_Page($subdirectory . trim($path));
 				$result[] = $file;
 			}
 			catch(Kohana_exception $e)
@@ -77,25 +97,48 @@ class Model_Page extends Flatfile {
 
 		}
 
-		// echo debug::vars($result);
 		return $result;
 	}
 
 	/**
 	* Get associative array from path
 	*
-	* 	$subparts = explode('/', $this->_process_part($path));
+	* Usage : 
+	* 	$result = array_merge_recursive($this->_process_path($dir_path, $file), $result);
+	*
+	* Résulat attendu : 
+	*	array(
+	*		'informations'	=> array(
+	*			'teams'	=> array(
+	*				'files'	=> array(
+	*					Flatfile,
+	*					Flatfile,
+	*					Flatfile,
+	*				),
+	*			),
+	*			'files' => array(
+	*				Flatfile,
+	*			),
+	*		),
+	*
+	*
+	*	)
+	*
 	**/
-	protected function _process_path($parts)
+	protected function _process_path($parts, $file)
 	{
 		$result = array();
 
-		$part = array_shift($parts);
-		$result[$part] = array();
+		$part = trim(array_shift($parts));
 
 		if ($parts)
 		{
-			$result[$part][] = $this->_process_path($parts);
+			$result[$part] = $this->_process_path($parts, $file);
+		}
+		else
+		{
+			// Set file in last dimension
+			$result['files'][] = $file;
 		}
 
 		return $result;
