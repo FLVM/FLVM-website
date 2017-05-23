@@ -296,7 +296,7 @@ table {
 body {
   font: normal 1em/1.5em Georgia, serif;
   font-size: 137.5%;
-  color: #1a222f;
+  color: #1A222F;
   padding: 1.5em;
 }
 p,
@@ -309,7 +309,7 @@ section nav {
 }
 hr {
   border: none;
-  border-top: 0.09090909em solid #f2b825;
+  border-top: 0.09090909em solid #F2B825;
   margin: 0;
   padding: 1.5em 0 0;
 }
@@ -336,7 +336,7 @@ kbd {
   line-height: 1.83333333em;
   font-size: 0.81818182em;
   margin-bottom: 1.83333333em;
-  background-color: #eeece9;
+  background-color: #edece8;
   padding: .2em .3em .28em;
 }
 pre {
@@ -350,7 +350,7 @@ var {
 }
 blockquote {
   padding: 1.5em;
-  background-color: #eeece9;
+  background-color: #edece8;
   margin-bottom: 1.5em;
   font-style: italic;
 }
@@ -380,8 +380,8 @@ dfn {
   font-style: italic;
 }
 mark {
-  background-color: #ffff00;
-  color: #1a222f;
+  background-color: #FF0;
+  color: #1A222F;
   padding: .2em .3em .28em;
 }
 /**
@@ -499,7 +499,7 @@ h5 a:link,
 h5 a:visited,
 h6 a:link,
 h6 a:visited {
-  color: #1a222f;
+  color: #1A222F;
   text-decoration: none;
 }
 h1 a:hover,
@@ -508,10 +508,10 @@ h3 a:hover,
 h4 a:hover,
 h5 a:hover,
 h6 a:hover {
-  color: #f2b825;
+  color: #F2B825;
 }
 a:link {
-  color: #f2b825;
+  color: #F2B825;
 }
 a:visited {
   color: #e1b036;
@@ -564,7 +564,7 @@ figure img {
   margin: 0 auto;
 }
 figcaption {
-  border-bottom: 0.04545455em dotted #f2b825;
+  border-bottom: 0.04545455em dotted #F2B825;
   padding: 1.5em 1em;
   margin-bottom: 1.5em;
   font: normal 0.81818182em/1.5em Arial, sans-serif;
@@ -655,7 +655,7 @@ optgroup {
 **/
 .banner {
   padding: 1em;
-  background-color: #f2b825;
+  background-color: #F2B825;
 }
 .banner .banner-logo {
   margin: 0 auto 1rem;
@@ -689,7 +689,7 @@ optgroup {
 }
 .btn-banner-planning:link,
 .btn-banner-planning:visited {
-  background-color: #1a222f;
+  background-color: #1A222F;
 }
 .btn-banner-planning:link:link,
 .btn-banner-planning:visited:link,
@@ -720,8 +720,8 @@ optgroup {
 .footer {
   font-size: 0.81818182em;
   line-height: 1.5em;
-  background-color: #1a222f;
-  color: #ffffff;
+  background-color: #1A222F;
+  color: #FFF;
   padding-top: 3em;
   padding-bottom: 0.75rem;
 }
@@ -774,7 +774,7 @@ optgroup {
   cursor: pointer;
   font: normal 1em/1.5em Arial, sans-serif;
   text-decoration: none;
-  background-color: #fcefcd;
+  background-color: #fcefce;
   display: block;
   text-align: center;
 }
@@ -804,7 +804,7 @@ optgroup {
 .btn-muted:focus,
 .btn-muted:active,
 .btn-muted.current {
-  background-color: #ffeab6;
+  background-color: #ffebb7;
   color: #000000;
 }
 .btn.disabled,
@@ -815,10 +815,10 @@ optgroup {
 .btn-navigation[disabled],
 .btn-muted.disabled,
 .btn-muted[disabled] {
-  background-color: #fff3d5;
+  background-color: #fff3d6;
 }
 .btn-cta {
-  background-color: #f2b825;
+  background-color: #F2B825;
 }
 .btn-cta:link,
 .btn-cta:visited {
@@ -854,7 +854,7 @@ optgroup {
   background-color: #ffd770;
 }
 .btn-muted {
-  background-color: #eeece9;
+  background-color: #edece8;
 }
 .btn-muted:link,
 .btn-muted:visited {
@@ -864,21 +864,21 @@ optgroup {
 .btn-muted:focus,
 .btn-muted:active,
 .btn-muted.current {
-  background-color: #eee7d4;
+  background-color: #eee6d3;
   color: #000000;
 }
 .btn-muted.disabled,
 .btn-muted[disabled] {
-  background-color: #f5f2ec;
+  background-color: #f4f2ec;
 }
 a:link {
-  color: #e7773a;
+  color: #E7773A;
 }
 a:visited {
-  color: #f99157;
+  color: #F99157;
 }
 a:hover {
-  color: #e35d27;
+  color: #E35D27;
 }
 a:active,
 a:focus {
@@ -927,13 +927,13 @@ main aside article h6 {
 * Heroes
 **/
 .hero {
-  background-color: #1a222f;
+  background-color: #1A222F;
 }
 .hero-content {
   padding: 4em 1em 1em;
-  color: #ffffff;
+  color: #FFF;
   background-color: rgba(26, 34, 47, 0.7);
-  text-shadow: #1a222f 0 0 2px;
+  text-shadow: #1A222F 0 0 2px;
 }
 .hero-content h1,
 .hero-content h2,
@@ -1018,6 +1018,8 @@ footer {
 body {
   font-size: 112.5%;
 }
+@media (min-width: 37.5rem) {
+}
 @media (min-width: 64rem) {
   body {
     font-size: 137.5%;
@@ -1031,7 +1033,7 @@ body {
   .banner-navigation a,
   main > article,
   main > aside,
-  .footer > section {
+  .footer > section:not(.sub-footer) {
     box-sizing: border-box;
     float: left;
     clear: none;
@@ -1072,10 +1074,10 @@ body {
     left: .2em;
     top: .2em;
     max-width: 10.9375rem;
-    background-color: #f2b825;
+    background-color: #F2B825;
     border-radius: 11.25rem;
     margin-bottom: 0;
-    border: 0.13636364em solid #f2b825;
+    border: 0.13636364px solid #F2B825;
   }
   .banner-logo img {
     display: block;
@@ -1115,11 +1117,11 @@ body {
   main > aside {
     width: 24rem;
   }
-  .footer > section {
+  .footer > section:not(.sub-footer) {
     width: 33.33333333%;
   }
   .footer > section.sub-footer {
-    float: none;
+    clear: left;
   }
 }
 @media (min-width: 80rem) {
@@ -1147,8 +1149,8 @@ dl dd {
 .excerpt {
   font: normal 0.81818182em/1.5em Arial, sans-serif;
   padding: 1.5rem;
-  background-color: #fcefcd;
-  color: #1a222f;
+  background-color: #fcefce;
+  color: #1A222F;
 }
 .muted {
   color: #9b927c;
