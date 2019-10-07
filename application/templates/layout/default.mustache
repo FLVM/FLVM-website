@@ -17,6 +17,8 @@
 		</div>
 		{{>content}}
 		{{>layout/footer}}
-		{{#scripts}}<script type="text/javascript" src="{{src}}"></script>{{/scripts}}
+		{{#scripts}}<script {{#script.async}}async{{/script.async}} {{#script.src}}src="{{script.src}}"{{/script.src}}>
+			{{{script.content}}}
+		</script>{{/scripts}}
 	</body>
 </html>

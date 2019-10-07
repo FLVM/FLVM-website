@@ -62,6 +62,20 @@ class View_Master extends View_Tanuki {
 	}
 
 	/**
+	 * Set scripts
+	 * 
+	 * Return scripts information from Tanuki config file 
+	 * 
+	 * @return array
+	 */
+	public function scripts()
+	{
+		return Kohana::$config->load('tanuki.scripts');
+	}
+
+
+
+	/**
 	* Set HTML title tag
 	*
 	* @return	string
