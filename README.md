@@ -1,7 +1,20 @@
-# FLVM website
+# FLVM site web
 
-## Le prototype
-Le prototype est disponible sur la branche du `content-prototype` du projet [https://github.com/FLVM/FLVM-website/tree/content-prototype](https://github.com/FLVM/FLVM-website/tree/content-prototype)
+Code source du site web de cours de cuisines et de pâtisseries Faites-le vous-même.
 
-## Le contenu du site 
-Le contenu du site ce trouve sur le dépot [https://github.com/FLVM/FLVM-website-content](https://github.com/FLVM/FLVM-website-content).
+Le cahier des charges est le suivant :
+
+- respecter l'approche [JAMSSTACK](https://jamstack.org/)
+- grande performance d'affichage
+- empreinte énergétique faible
+- maintenance simplifié 
+- édition de contenu simplifier
+- permettre l'affichage d'un planning de cours
+- faciliter l'inscription aux cours
+
+## Technologies
+Les technologies ont été choisies pour offrir le meilleur rapport performances / simplicité d'usage.
+
+- Framework client & serveur : [Svelte](https://svelte.dev/)
+- Framework design & composants graphiques : [Skeleton](https://www.skeleton.dev/) 
+- Gestionnaire de contenu : [Svletia CMS](https://github.com/sveltia/sveltia-cms)
