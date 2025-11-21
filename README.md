@@ -18,3 +18,4 @@ Les technologies ont été choisies pour offrir le meilleur rapport performances
 - Framework client & serveur : [Svelte](https://svelte.dev/)
 - Framework design & composants graphiques : [Skeleton](https://www.skeleton.dev/) 
 - Gestionnaire de contenu : [Svletia CMS](https://github.com/sveltia/sveltia-cms)
+- Hébergement : [Vercel](https://vercel.com)
