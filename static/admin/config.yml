@@ -4,12 +4,17 @@
 # - Locales
 # - Slug type (en cas de soucis)
 # local_backend: true
-site_url: http://localhost:5173
-logo_url: /next.svg
+# site_url: http://localhost:5173
+# logo_url: /next.svg
+logo:
+  src: /logo-flvm-compact-white.png
 backend:
+# @todo: utiliser github pour ce projet
+# @todo: Conserver une config local commenté
   # name: test-repo
-  name: gitlab
-  repo: ziopod/test
+  name: github
+  repo: FLVM/FLVM-website
+  branch: develop
 media_folder: /static/uploads
 public_folder: /uploads
 slug:
