@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//Address Book 6.1.3//EN
+N:Lionis;Marie;;;
+FN:Faites le vous même
+ORG:Faites le vous même;
+EMAIL;type=INTERNET;type=WORK;type=pref:02 35 71 58 47
+EMAIL;type=INTERNET;type=WORK:contact@flvm.fr
+item1.ADR;type=HOME;type=pref:;;32\, rue des Capucins;Rouen;;76000;France
+item1.X-ABADR:fr
+NOTE:Ateliers de cuisine et de pâtisserie
+X-ABShowAs:COMPANY
+X-ABUID:CD187194-25DB-43BB-A9F5-3FCEAF5ED84C:ABPerson
+END:VCARD
