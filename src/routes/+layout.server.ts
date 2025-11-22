@@ -1,14 +1,18 @@
 import { editor, type Editor, home, type Home, type Link } from "$lib/server/data"
 
+const maintenance = import.meta.env.VITE_MAINTENANCE_MODE === "true"
+
 export type Links = Link[]
 
 export function load(): {
+  maintenance: boolean,
   editor: Editor,
   home: Home,
   links: Links,
   navigation: Links
 } {
   return {
+    maintenance,
     editor,
     home,
     links: [
