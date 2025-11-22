@@ -3,8 +3,15 @@
   import favicon from "$lib/assets/favicon.svg"
   import Footer from "$lib/components/layout/footer.svelte"
 	import Header from "$lib/components/layout/header.svelte"
-
+	import { error } from "@sveltejs/kit";
+  
   let { children, data } = $props()
+
+  // Contrôle du mode maintenance
+  if (data.maintenance) {
+    throw error(503, "Site en maintenance")
+  }
+
 </script>
 
 <svelte:head>
