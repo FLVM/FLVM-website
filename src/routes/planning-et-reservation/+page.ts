@@ -1,4 +1,5 @@
 import type { PageLoad } from "./$types"
+const { VITE_CALENDAR_ID, VITE_CALENDAR_API_KEY } = import.meta.env
 
 // Google Calendar Event ressource :
 // https://developers.google.com/workspace/calendar/api/v3/reference/events?hl=fr
@@ -34,11 +35,10 @@ export type CalendarEventType = {
   visibility: "default" | "public" | "private" | "confidential" | null
 }
 
-const calendarId = process.env.VITE_CALENDAR_ID
 
-const url = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?`
+const url = `https://www.googleapis.com/calendar/v3/calendars/${VITE_CALENDAR_ID}/events?`
 const params: Record<string,string> = {
-  key: process.env.VITE_CALENDAR_API_KEY || "",
+  key: VITE_CALENDAR_API_KEY || "",
   orderBy: "startTime",
   singleEvents: "true",
   timeMin: "2025-11-15T10:07:25.123Z",
