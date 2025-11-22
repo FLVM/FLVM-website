@@ -1,0 +1,652 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+# Options aditionnelles possibles :
+# - Preview (avec Github ou Gitlab)
+# - Locales
+# - Slug type (en cas de soucis)
+# local_backend: true
+site_url: http://localhost:5173
+logo_url: /next.svg
+backend:
+  # name: test-repo
+  name: gitlab
+  repo: ziopod/test
+media_folder: /static/uploads
+public_folder: /uploads
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+# Snippets
+# YAML Anchor, ALias & override
+# https://www.educative.io/blog/advanced-yaml-syntax-cheatsheet#YAML-Anchors-and-Alias
+# YML Cheatsheet : https://quickref.me/yaml
+# Héritage : doit être un objet et peut être appelé comme héritage (`<<: *inheritance_data`)
+# ou comme valeur (`my_entry: *inheritance_data`)
+# Référence : tout autre valeur (tableau, chaine, entier, etc.) définie de la même 
+# manière q'un héritage, mais appelé comme value (`my_entry: *reference_data`)
+# Optimisation pour les moteurs de reccherches
+# Contacts
+email: &email
+  label: Email
+  name: email
+  pattern: ["^$|([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)", "Adresse email non valide"]
+phone: &phone
+  label: Phone
+  name: phone
+  hint: "Respecter le format xx xx xx xx xx, par exemple : 06 55 55 55 55" 
+  pattern: ["^$|(([0-9\ ]){14})", "Le numéro de téléphone ne respecte pas le format requis."]
+url: &url
+  label: Lien
+  name: url
+  pattern: ["((http|https)://)(www.)?[a-zA-Z0-9@:%._\\+~#?&//=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%._\\+~#?&//=]*)", "URL invalide"]
+# Makdown minimal
+markdown_minimal: &markdown_minimal
+  label: Contenu
+  name: content
+  widget: markdown
+  minimal: true
+  buttons: [bold, italic, link]
+  editor_components: []
+# Markdown simple
+markdown_simple: &markdown_simple
+  label: Contenu
+  name: content
+  widget: markdown
+  buttons: [heading-one, heading-two, italic, link, bulleted-list]
+  editor_components: [image]
+# SEO
+SEO: &SEO
+  label: SEO
+  name: seo
+  widget: object
+  collapsed: true
+  summary: Éditer les informations SEO
+  fields: 
+    - label: Titre
+      name: title
+      hint: Les titres doivent être uniques et d'une longueur de 8 signes minimum et 70 signes maximum.
+      pattern: ["^.{8,70}$", "Minimum 8 signes, maximm 70."]
+    - label: Description
+      name: description
+      widget: text
+      hint: Décrivez votre publication en 180 signes maximum.
+# Image de couverture
+image: &image
+  label: Image de présentation
+  name: image
+  widget: object
+  collapsed: true
+  # summary: "{{src | ternary('Modifier l'image', 'Ajouter une image')}}"
+  fields:
+    - label: Image
+      name: src
+      widget: file
+      # required: false
+    - label: Texte de remplacement
+      name: alt
+      # required: false
+      hint: Description de l'image
+    - label: Légende de l'image
+      name: legend
+      hint: "Le crédit photo, par exemple : Photo par Machin © BY 4.0"
+      required: false
+      <<: *markdown_minimal
+# Lien avec couleur et icones
+link: &link 
+  label: Lien
+  name: link
+  summary: "{{text}} ({{url}})"
+  widget: object
+  collapsed: true
+  fields:
+    - label: Texte
+      name: text
+      maxlength: 32
+    - label: Lien
+      name: url
+    - label: Couleur
+      name: color
+      widget: select
+      # options: ["primary", "secondary", "black"]
+      default: ""
+      options: [
+        { label: "Neutre", value: "" },
+        { label: "Coloré", value: "primary-500" },
+        { label: "Variante coloré", value: "secondary-500" },
+        { label: "Sombre", value: "tertiary-950-50" },
+        { label: "Noir", value: "surface-950-50" },
+        { label: "Blanc", value: "surface-50-950" }
+      ]
+      required: false
+    - label: Icone avant
+      name: icon_before
+      required: false
+      widget: select
+      # Selectionner les icones sur https://lucide.dev/icons/ 
+      options: ["arrow-left", "arrow-right", "external-link", "facebook", "instagram", "twitter", "calendar", "cake", "cookie", "ice-cream-cone", "croissant", "cooking-pot", "chef-hat", "heart", "gift", "mail", "send", "star", "party-popper"]
+    - label: Icone après
+      name: icon_after
+      required: false
+      widget: select
+      options: ["arrow-left", "arrow-right", "external-link", "facebook", "instagram", "twitter", "calendar", "cake", "cookie", "ice-cream-cone", "croissant", "cooking-pot", "chef-hat", "heart", "gift", "mail", "send", "star", "party-popper"]
+    - label: Afficher uniquement l'icone
+      name: icon_only
+      widget: boolean
+      default: false
+      required: false
+# image de couverture
+cover: &cover
+  label: Couverture
+  name: cover
+  widget: object
+  # summary: "Gérer la couverture d'accueil."
+  fields:
+  - label: Sur-titre
+    name : overhead
+    hint: Texte à afficher au dessus du titre
+    required: false
+  - label: Titre
+    name: title
+    hint: Titre à afficher par dessus l'image.
+    required: false
+  - label: Texte
+    name: text
+    hint: Texte à afficher par dessus l'image.
+    widget: markdown
+    required: false
+  - <<: *image
+    required: false
+  # - label: Lien
+  #   name: link
+  #   widget: object
+  #   collapsed: true
+  #   required: false
+  #   summary: "{{href | ternary('Modifier le lien', 'Ajouter un lien')}}"
+  - <<: *link
+    required: false
+# Adresse postale
+address: &address
+  label: Adresse postale
+  name: address
+  widget: object
+  collapsed: true
+  summary: "{{name}} - {{city}}"
+  fields: 
+    - label: Nom du lieu
+      name: name
+      required: false
+    - label: Rue
+      name: street
+      required: false
+    - label: Code postal
+      name: zipcode
+    - label: Ville
+      name: city
+    - label: Pays
+      name: country
+      default: France
+# Contact
+contacts: &contacts
+  label: Contacts
+  name: contacts
+  widget: object
+  collapsed: true
+  summary: "{{address.name}} {{email}}"
+  fields:
+    - <<: *address
+      required: false
+    - <<: *email
+    - <<: *phone
+      required: false
+# Blocs pour les listes variables
+field_featured: &field_featured
+  - label: Mettre en avant
+    name: featured
+    widget: boolean
+    default: false
+    required: false
+
+block_base: &block_base
+  - label: BLoc de base
+    name: block_base
+    widget: object
+    fields: 
+      - label: Mettre en avant
+        name: featured
+        widget: boolean
+        default: false
+        required: false
+
+block_text: &block_text
+  label: Bloc de texte
+  name: block_text
+  widget: object
+  fields: 
+    - <<: *field_featured
+    - label: Titre
+      name: title
+    - <<: *markdown_minimal
+    - <<: *link
+      required: false
+block_cover: &block_cover  
+  label: Bloc d'image
+  name: block_cover
+  widget: object
+  fields:
+    - <<: *field_featured
+    - label: Titre
+      name: title
+    - <<: *markdown_minimal
+    - <<: *link
+      required: false
+    - <<: *image
+block_link: &block_link
+  label: Bloc de lien
+  name: block_link
+  widget: object
+  summary: "{{link.text}}"
+  fields:
+    - <<: *field_featured
+    - <<: *link
+card: &card
+  label: Bloc de contenu
+  name: card
+  widget: object
+  collapsed: true
+  fields:
+    - <<: *field_featured
+    - label: Titre
+      name: title
+      required: false
+    - <<: *markdown_minimal
+      required: false
+    - <<: *image
+      required: false
+      collapsed: true
+    - <<: *link
+      required: false
+      collapsed: true
+
+cards: &cards
+  label: Cards
+  name: cards
+  required: false
+  widget: list
+  collapsed: true
+  max: 3
+  types: 
+    - <<: *block_text
+    - <<: *block_cover
+    - <<: *block_link
+  
+
+# Collections
+collections:
+  # Permet de générer le schéma pour Velite
+  - name: image
+    hide: true
+    folder: content/schema
+    <<: *image
+  - name: link
+    hide: true
+    folder: content/schema
+    <<: *link
+  - name: card
+    hide: true
+    folder: content/schema
+    <<: *card
+    # - <<: *block_text
+    # - <<: *block_cover
+    # - <<: *block_link
+  - label: L'équipe
+    label_singular: personne
+    name: team
+    icon: chef_hat
+    description: Liste des personnes animant les cours.
+    summary: "{{firstname}} {{lastname}} ({{title}})"
+    folder: content/team
+    slug: "{{lastname}}-{{firstname}}"
+    create: true
+    editor:
+      preview: false
+    fields: 
+      - label: Publier
+        name: publish
+        widget: boolean
+        default: true
+      - label: Prénom
+        name: firstname
+      - label: Nom
+        name: lastname
+      - label: Intitulé
+        name: title
+        required: false
+        hint: Par ex. Organisatrice ou Maître pâtissier, confiseur 
+      - label: Description
+        name: description
+        required: false
+        widget: text
+      - <<: *email
+        required: false
+      - <<: *phone
+        required: false
+  - label: Lieux
+    name: places
+    icon: place
+    description: Lieux ou se déroulent les ateliers.
+    folder: content/places
+    slug: "{{name}}"
+    media_folder: "{{media_folder}}/places"
+    public_folder: "{{public_folder}}/places"
+    create: true
+    editor:
+      preview: false
+    fields: 
+      - label: Publier
+        name: publish
+        widget: boolean
+        default: true
+      - label: Nom du lieux
+        name: name
+      - <<: *image
+        required: false
+      - label: Description
+        name: body
+        <<: *markdown_minimal
+        required: false
+      - <<: *address
+      - label: Horaires
+        name: hours
+        hint: Listez les jours d'ouvertures et des horaires
+        <<: *markdown_minimal
+        required: false
+singletons:
+  - label: Accueil
+    name: home
+    editor:
+      preview: false
+    file: content/settings/home.json
+    icon: home
+    fields:
+      - <<: *SEO
+      - <<: *cover
+        collapsed: true
+      # - label: Blocs en vedette
+      #   name: blocks
+      #   widget: list
+      #   collapsed: true
+      #   required: false
+      #   max: 6
+      #   types:
+      #     - label: Un lien
+      #       name: block_link
+      #       <<: *link
+      #     - label: Bloc de texte
+      #       name: block_text
+      #       widget: object
+      #       fields:
+      #         - label: Mettre en avant
+      #           name: featured
+      #           widget: boolean
+      #           default: false
+      #         - label: Titre
+      #           name: title
+      #         - <<: *markdown_simple
+      #         - <<: *link
+      #     - label: Bloc avec visuel
+      #       name: block_cover
+      #       <<: *cover
+      - label: Mise en avant
+        label_singular: Contenu
+        name: cards
+        widget: list
+        collapsed: true
+        max: 6
+        <<: *card
+      - label: Informations complémentaire
+        label_singular: Information
+        name: aside
+        widget: list
+        collapsed: true
+        <<: *card
+      - label: Publications
+        label_singular: Publication
+        name: posts
+        widget: list
+        collapsed: true
+        max: 3
+        <<: *card
+  - label: Les cours
+    name: courses
+    icon: school
+    media_folder: "{{media_folder}}/courses"
+    public_folder: "{{public_folder}}/courses"
+    editor:
+      preview: false
+    file: content/cours.md
+    fields:
+      - <<: *SEO
+      - label: Description
+        name: body
+        <<: *markdown_minimal
+      - label: Cours
+        name: lessons
+        widget: list
+        summary: "{{title}} - par {{instructor}}"
+        collapsed: true
+        required: false
+        fields: 
+        - label: Nom du cours
+          name: title
+        - <<: *image
+          required: false
+        - label: Description du cours
+          name: description
+          <<: *markdown_minimal
+        - label: Intervenant
+          name: instructor
+          widget: relation
+          collection: team
+          # display_fields: ["firstname", "lastname", "title"]
+          # value_field: "team/{{slug}}.md"
+          value_field: "{{firstname}} {{lastname}}"
+        - label: Lieu
+          name: place
+          widget: relation
+          collection: places
+          # display_fields: 
+            # - name
+          # value_field: "places/{{slug}}.md"
+          value_field: "name"
+        - <<: *link
+          required: false
+      - label: Informations complémentaire
+        label_singular: information
+        name: cards
+        widget: list
+        collapsed: true
+        <<: *card
+  - label: Planning & réservation
+    name: booking
+    icon: calendar_meal
+    file: content/booking.md
+    editor:
+      preview: false
+    fields:
+      - <<: *SEO
+      - label: Informations de réservations
+        hint: Décrivez brievement comment choisir un cours.
+        name: body
+        <<: *markdown_minimal
+      - label: Informations complémentaires
+        label_singular: Information
+        name: cards
+        widget: list
+        collapsed: true
+        <<: *card
+  - label: Tarifs & modalités
+    name: pricelist
+    icon: view_list
+    file: content/pricelist.md
+    editor:
+      preview: false
+    fields:
+      - <<: *SEO
+      - label: Information de réservation
+        hint: Décrivez brievement les modalité de réservation.
+        name: body
+        <<: *markdown_minimal
+      - label: Grille de tarifs
+        name: prices
+        widget: list
+        collapsed: true
+        required: false
+        fields: 
+          - label: Intitulé
+            name: name
+          - label: Tarif par personne
+            name: price
+            widget: number
+            value_type: float
+            required: false
+          - label: Détail
+            name: detail
+            required: false
+            <<: *markdown_minimal
+      - label: Informations complémentaires
+        label_singular: Information
+        name: cards
+        widget: list
+        collapsed: true
+        <<: *card
+  - label: À propos
+    name: about
+    icon: view_list
+    file: content/about.md
+    editor:
+      preview: false
+    fields:
+      - <<: *SEO
+      - label: Contenu
+        name: body
+        <<: *markdown_simple
+      - label: Informations complémentaire
+        label_singular: Information
+        name: cards
+        widget: list
+        collapsed: true
+        <<: *card
+  - divider: true
+  - label: Configuration
+    name: configuration
+    file: content/settings/main.json
+    editor:
+      preview: false
+    icon: instant_mix
+    fields:
+      # @todo : Ajouter configurations 
+      # - URL du google calendar
+      # - mentions de pied de page
+      - label: Pied de page
+        name: footer
+        widget: object
+        summary: Gestion du colophon et des listes de liens
+        collapsed: true
+        fields: 
+          - label: Colophon
+            name: colophon
+            widget: text
+          - label: Liste de liens
+            name: links
+  # - label: Grille de tarifs
+  #   name: price-list
+  #   # icon: percent_discount
+  #   # icon: payments
+  #   file: content/price-list.md
+  #   editor:
+  #     preview: false
+  #   fields: 
+  #     - label: Présentation
+  #       name: body
+  #       widget: markdown
+  #       minimal: true
+  #       buttons: [bold, italic, link]
+  #       editor_components: []
+  #       required: false
+  #     - label: Tarifs
+  #       name: prices
+  #       widget: list
+  #       collapsed: true
+  #       # summary: "{{name}}"
+  #       fields: 
+  #         - label: Intitulé
+  #           name: name
+  #         - label: Tarif par personne
+  #           name: price
+  #           widget: number
+  #           value_type: float
+  #           required: false
+  #         - label: Détail
+  #           name: detail
+  #           <<: *markdown_simple
+  - label: Informations éditeur
+    name: editor
+    file: content/settings/editor.json
+    editor:
+      preview: false
+    # icon: data_loss_prevention
+    # icon: contact_page
+    icon: id_card
+    fields:
+      - label: Nom de l'éditeur
+        name: name
+      - label: Slogan
+        name: baseline
+        required: false
+      - label: Description
+        name: description
+        <<: *markdown_minimal
+      - label: Contact
+        name: contact
+        widget: object
+        collapsed: true
+        summary: "{{name}} {{city}}"
+        fields: 
+          - label: Nom du contact
+            name: name
+            required: false
+          - <<: *phone
+          - <<: *email
+      - label: Réseau sociaux
+        name: socials
+        widget: list
+        collapsed: true
+        required: false
+        summary: "{{text}}"
+        fields:
+          - label: Description
+            name: text
+            maxlength: 26
+          - label: Nom du réseau
+            name: icon
+            widget: select
+            options: [
+             { label: "Facebook", value: "facebook" },
+             { label: "Twitter", value: "twitter" },
+             { label: "Instagram", value: "instagram" },
+             { label: "Vimeo", value: "vimeo" }
+            ]
+            default: { label: "Facebook", value: "facebook" }
+          - <<: *url
+            label: Lien vers le réseau
+          - label: Afficher uniquement l'icône
+            name: icon_only
+            widget: boolean
+            default: false
+            required: false
+      - <<: *address
+      - label: Fichier de contact
+        name: vcf_file
+        widget: file
+        required: false

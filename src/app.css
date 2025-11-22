@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@import "@skeletonlabs/skeleton";
+@import "@skeletonlabs/skeleton-svelte";
+@import "@skeletonlabs/skeleton/themes/cerberus";
+@import "$lib/style/themes/flvm.css";
+@import "$lib/style/components.css";
+
+@import "@fontsource-variable/roboto";
+/* @import "@fontsource-variable/lora"; */
+@import '@fontsource-variable/noto-serif';
+
+:root {
+  --heading-font-family: "Roboto Variable";
+  --base-font-family: "Noto Serif Variable";
+}
+/* @plugin "@tailwindcss/forms"; */
+
+/* Mode switcher */
+@custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+@layer base {
+  body {
+    /* @apply bg-surface-100-900; */
+    /* @note: utiliser #1A222F pour la couleur du texte */
+  }
+}
+
+/**
+* Directives Tailwinds
+*
+* https://tailwindcss.com/docs/functions-and-directives
+*
+* @layer : ex. base (ex. h1, p, etc.), component (ex. card, card rounded-none, btn, badge)
+* Cette directive n'est plus utilisé maintenant au profits des directives suivantes.
+* @theme : pour modifier les variables de theme
+* @variant : Personnaliser les varaintes naitves ex. dark
+* @custom-variant : Ajouter se propres variantes
+* @utility : Génère les variantes de classes ex. rounded hover:rounded
+* @apply: Combine des règles CSS
+*/
+
+/* From DaisyUI Hero */
+/* https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/hero.css */
+@layer components {
+  .hero {
+   /* @apply grid w-full place-items-center bg-cover bg-center; */
+   @apply grid w-full place-items-center bg-cover bg-center;
+   & > * {
+     @apply col-start-1 row-start-1;
+   }
+ }
+}
+/* Affichage du contenu */
+@layer components {
+  .hero-overlay {
+   /* @apply bg-neutral/50 col-start-1 row-start-1 h-full w-full; */
+   @apply bg-surface-50-950/30 col-start-1 row-start-1 h-full w-full;
+  }
+}
+/* Affichage d'une image en arrière plan */
+@layer components {
+  .hero-content {
+    /* @apply isolate flex max-w-[80rem] items-center justify-center gap-4 p-4; */
+    @apply p-4 md:ml-12 justify-self-start max-w-xl;
+  }
+}

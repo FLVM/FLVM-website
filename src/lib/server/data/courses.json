@@ -1,0 +1,55 @@
+{
+  "seo": {
+    "title": "Cours de cuisine et de pâtisserie",
+    "description": "Listes de cours proposés par FLVM."
+  },
+  "content": "<h1>Les cours</h1>\n<p>Nous proposons des <a href=\"http://localhost:5173/les-cours#cours-de-patisserie\">cours de pâtisserie</a> et <a href=\"http://localhost:5173/cours-de-cuisine\">des cours de cuisine</a> d'une durée de 3 heures, pour prendre rendez-vous, choisissez un cours <a href=\"/planning\">sur le planning</a> ou <a href=\"/devis\">proposez votre thème</a>.</p>",
+  "lessons": [
+    {
+      "title": "Cours de pâtisserie",
+      "image": null,
+      "description": "<p>Arnaud Houley, maître pâtissier, vous aidera à parfaire vos connaissances en pâtisserie, chocolaterie et confiserie. Les cours se déroulent à <a href=\"http://flvm.fr/informations#l-atelier-de-patisserie\">l'Atelier de pâtisserie</a>.</p>",
+      "instructor": "Arnaud Houley",
+      "place": "L'atelier des pâtissier",
+      "link": {
+        "text": "Réservez un cours de pâtisserie",
+        "url": "/planning",
+        "color": "primary-500",
+        "icon_before": "cake",
+        "icon_after": "arrow-right",
+        "icon_only": false
+      }
+    },
+    {
+      "title": "Cours de cuisine",
+      "image": null,
+      "description": "<p>Description du cours de cuisine.</p>",
+      "instructor": "Marie Lionis",
+      "place": "L'atelier des pâtissier",
+      "link": {
+        "text": "Réservez un cours de cuisine",
+        "url": "/planning",
+        "color": "primary-500",
+        "icon_before": "cooking-pot",
+        "icon_after": "arrow-right",
+        "icon_only": false
+      }
+    }
+  ],
+  "cards": [
+    {
+      "featured": true,
+      "title": "Proposez votre thème",
+      "content": "<p>Nous sommes ouvert à toute proposition de thème de cours de cuisine et de pâtisserie, n'hésitez pas à proposer vos idées originales.</p>",
+      "link": {
+        "text": "Proposer un thème",
+        "url": "/devis",
+        "color": "primary-500",
+        "icon_before": "",
+        "icon_after": "",
+        "icon_only": false
+      }
+    }
+  ],
+  "slug": "cours"
+}
