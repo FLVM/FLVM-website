@@ -16,7 +16,7 @@ backend:
   name: github
   repo: FLVM/FLVM-website
   branch: develop
-  base_url: https://flvm-website.vercel.app
+  # base_url: https://flvm-website.vercel.app
 media_folder: /static/uploads
 public_folder: /uploads
 slug:
