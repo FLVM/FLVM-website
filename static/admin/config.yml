@@ -12,9 +12,11 @@ backend:
 # @todo: utiliser github pour ce projet
 # @todo: Conserver une config local commenté
   # name: test-repo
+  # Confgi from : https://github.com/yardstick-codebase/decap-cms-oauth?tab=readme-ov-file
   name: github
   repo: FLVM/FLVM-website
   branch: develop
+  base_url: https://flvm-website.vercel.app
 media_folder: /static/uploads
 public_folder: /uploads
 slug:
