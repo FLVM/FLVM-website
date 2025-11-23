@@ -13,10 +13,15 @@ backend:
 # @todo: Conserver une config local commenté
   # name: test-repo
   # Confgi from : https://github.com/yardstick-codebase/decap-cms-oauth?tab=readme-ov-file
+  # Suivre tuto : 
+  # https://ironeko.com/posts/how-to-install-netlify-cms-on-vercel
   name: github
   repo: FLVM/FLVM-website
   branch: develop
-  # base_url: https://flvm-website.vercel.app
+  # Base URL pour l'authentification
+  base_url: https://flvm-website.vercel.app
+  # base_url: http://localhost:5173
+  auth_endpoint: "api/auth"
 media_folder: /static/uploads
 public_folder: /uploads
 slug:
