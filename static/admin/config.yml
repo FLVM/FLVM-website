@@ -18,10 +18,12 @@ backend:
   name: github
   repo: FLVM/FLVM-website
   branch: develop
-  # Base URL pour l'authentification
-  base_url: https://flvm-website.vercel.app
+  # Base URL pour le serveru d'authentification (https://api.netlify.com  par defaut)
+  # base_url: https://flvm-website.vercel.app
   # base_url: http://localhost:5173
-  auth_endpoint: "api/auth"
+  # auth_endpoint: "api/auth"  Custom
+  # auth_endpoint: "auth" # Github
+  # auth_endpoint: "oauth/authorize" # Gitlab
 media_folder: /static/uploads
 public_folder: /uploads
 slug:
