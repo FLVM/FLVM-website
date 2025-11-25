@@ -16,9 +16,7 @@
 
 <main>
   <TwoCols>
-    <Cover
-      content={data.pricelist.content}
-    />
+    <Cover cover={data.pricelist.cover}/>
     <div class="typo pr-8 mb-8 border-b-1 md:border-none border-surface-200-800 pb-6">
       <h2 id="tarifs">Tarifs</h2>
       <table class="table">

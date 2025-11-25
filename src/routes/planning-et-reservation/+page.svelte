@@ -61,13 +61,7 @@
 </script>
 <main>
   <TwoCols>
-    <Cover
-      bgImage={{
-        src: coverImage,
-        alt: "Illustration de couverture"
-      }}
-      content={data.booking.content}
-    />
+    <Cover cover={data.booking.cover} />
     <div class="pr-8 mb-8">
       <div class="typo">
         <h2 id="planning">Planning</h2>

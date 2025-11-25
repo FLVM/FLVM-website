@@ -1,15 +1,14 @@
 <script lang="ts">
   import type { ClassValue } from "svelte/elements"
-  import type { Image } from "$lib/server/data"
+  import type { Cover, Image } from "$lib/server/data"
+	import Button from "./button.svelte";
 
   let props: {
-    bgImage?: Image,
-    fgImage?: Image,
-    content: string,
+    cover: Cover,
     class?: ClassValue,
   } = $props()
 
-  const bgImage = props.bgImage ? `background-image: url(${props.bgImage.src})` : ""
+  const bgImage = props.cover.image ? `background-image: url(${props.cover.image.src})` : ""
 </script>
 <div
   class={[
@@ -22,9 +21,13 @@
   }
   >
   <div>
-    {@html props.content}
+    {#if props.cover.overhead}
+    <div class="tagline">{props.cover.overhead}</div>
+    {/if}
+    <h1>{props.cover.title}</h1>
+    {@html props.cover.text}
+    {#if props.cover.link}
+    <Button link={props.cover.link} class="mt-2 btn-lg" />
+    {/if}
   </div>
-  {#if props.fgImage}
-  <img src={props.fgImage.src} alt={props.fgImage.alt} />
-  {/if}
 </div>
