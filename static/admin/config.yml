@@ -165,12 +165,12 @@ cover: &cover
   - label: Titre
     name: title
     hint: Titre à afficher par dessus l'image.
-    required: false
+    required: true
   - label: Texte
     name: text
     hint: Texte à afficher par dessus l'image.
-    widget: markdown
-    required: false
+    <<: *markdown_minimal
+    required: true
   - <<: *image
     required: false
   # - label: Lien
@@ -312,6 +312,10 @@ collections:
     hide: true
     folder: content/schema
     <<: *card
+  - name: cover
+    hide: true
+    folder: content/schema 
+    <<: *cover
     # - <<: *block_text
     # - <<: *block_cover
     # - <<: *block_link
@@ -382,7 +386,7 @@ singletons:
     name: home
     editor:
       preview: false
-    file: content/settings/home.json
+    file: content/home.json
     icon: home
     fields:
       - <<: *SEO
@@ -440,13 +444,12 @@ singletons:
     public_folder: "{{public_folder}}/courses"
     editor:
       preview: false
-    file: content/cours.md
+    file: content/cours.json
     fields:
       - <<: *SEO
       - label: Au sujet des cours
-        name: body
         hint: Décrivez succinctement les types de cours et la durée.
-        <<: *markdown_minimal
+        <<: *cover
       - label: Cours
         name: lessons
         widget: list
@@ -487,15 +490,14 @@ singletons:
   - label: Planning & réservation
     name: booking
     icon: calendar_meal
-    file: content/booking.md
+    file: content/booking.json
     editor:
       preview: false
     fields:
       - <<: *SEO
       - label: Informations de réservations
         hint: Décrivez brievement comment réserver un cours.
-        name: body
-        <<: *markdown_minimal
+        <<: *cover
       - label: Informations complémentaires
         label_singular: Information
         name: cards
@@ -505,15 +507,14 @@ singletons:
   - label: Tarifs & modalités
     name: pricelist
     icon: view_list
-    file: content/pricelist.md
+    file: content/pricelist.json
     editor:
       preview: false
     fields:
       - <<: *SEO
       - label: Information sur les tarifs
         hint: Décrivez simplement les modalités de réglement.
-        name: body
-        <<: *markdown_minimal
+        <<: *cover
       - label: Grille de tarifs
         name: prices
         widget: list
@@ -540,13 +541,14 @@ singletons:
   - label: À propos
     name: about
     icon: chat_info
-    file: content/about.md
+    file: content/about.json
     editor:
       preview: false
     fields:
       - <<: *SEO
-      - <<: *cover
+      - label: Introduction de la page
         hint: Écrivez un texte cours d'introduction
+        <<: *cover
       - label: Contenu de la page
         name: body
         hint: Contenu long de la page, vous pouvez y insérer des titrages intermédiaires, des images, des tableau, etc.
