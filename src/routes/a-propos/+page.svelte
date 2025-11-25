@@ -15,7 +15,7 @@
 </script>
 <main>
 <TwoCols>
-  <Cover content={data.about.content} />
+  <Cover cover={data.about.cover} />
   <article>
     <div class="pr-8 typo">
       {@html data.about.content}

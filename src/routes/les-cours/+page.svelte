@@ -3,7 +3,6 @@
 	import Debug from "$lib/components/debug.svelte"
   import TwoCols from "$lib/components/layout/two-cols.svelte"
 	import Card from "$lib/components/shared/card.svelte"
-	import coverImage from "$lib/assets/cover-cours.jpg"
 	import Place from "$lib/components/courses/place.svelte"
 	import Button from "$lib/components/shared/button.svelte"
 	import Cover from "$lib/components/shared/cover.svelte"
@@ -21,13 +20,7 @@
 </script>
 <main>
   <TwoCols>
-    <Cover
-      bgImage={{
-        src: coverImage,
-        alt: "Illustration de couverture"
-      }}
-      content={data.courses.content}
-    />
+    <Cover cover={data.courses.cover}/>
     <div class="pr-8">
       {#each data.courses.lessons as lesson}
       <article class="mb-12 last:border-0 last:pb-0 text-center md:text-left">
