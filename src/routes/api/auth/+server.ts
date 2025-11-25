@@ -5,6 +5,8 @@ import { randomBytes } from "crypto";
 // import { redirect, type RequestHandler } from "@sveltejs/kit";
 // import type { ClientRequest, ServerResponse } from "http";
 import { GITHUB_CLIENT_ID } from "$env/static/private";
+// import { redirect } from "@sveltejs/kit";
+// import { dev } from "$app/environment";
 // import { dev } from "$app/environment";
 // const randomString = () => randomBytes(4).toString("hex")
 
@@ -23,7 +25,7 @@ export async function GET({ url }: { url: URL }) {
   if (!clientId) return new Response("Missing GITHUB_CLIENT_ID", { status: 500 })
   const state = randomBytes(16).toString("hex")
   const redirectUri = `${url.origin || ""}/api/callback`
-  const scope = "repo"
+  const scope = "public_repo,repo,user"
 
   const params = new URLSearchParams({
     client_id: clientId,
@@ -34,6 +36,13 @@ export async function GET({ url }: { url: URL }) {
   })
 
   const cookie = `gh_oauth_state=${state}; Path=/; Max-Age=300; HttpOnly; Secure; SameSite=Lax`
+  return new Response("", {
+    headers: {
+      location: `https://github.com/login/oauth/authorize?${params.toString()}`,
+      "Set-Cookie": cookie
+    },
+    status: 302
+  })
 
   // throw redirect(302, `https://github.com/login/oauth/authorize?${params.toString()}`, {
   //   headers: { "Set-Cookie": cookie }
@@ -46,13 +55,16 @@ export async function GET({ url }: { url: URL }) {
   // client_id=Ov23liqsz6PueJDkDPsp
   // &redirect_uri=http%3A%2F%2Flocalhost%3A5173%2Fapi%2Fcallback&state=977e8785a3c3b223c5d435fc2ec32d77&scope=repo&allow_signup=false
 
-  return new Response("", {
-    headers: {
-      location: `https://github.com/login/oauth/authorize?${params.toString()}`,
-      "Set-Cookie": cookie
-    },
-    status: 302
-  })
+  // Même soucis avec cette méthode
+  // cookies.set('gh_oauth_state', state, {
+  //   path: '/',
+  //   httpOnly: true,
+  //   sameSite: 'lax',
+  //   secure: !dev,
+  //   maxAge: 300
+  // });
+  // throw redirect(302, `https://github.com/login/oauth/authorize?${params.toString()}`)
+
 }
 
 // export default async (req: Request , res: ServerResponse) => {

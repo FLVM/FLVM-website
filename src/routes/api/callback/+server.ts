@@ -2,8 +2,8 @@ import { GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET } from "$env/static/private"
 
 
 export async function GET({ url, request }: { url: URL, request: Request }) {
-  console.log("CALLBACK URL ", url)
-  console.log("CALLBACK REQUEST ", request)
+  // console.log("CALLBACK URL ", url)
+  // console.log("CALLBACK REQUEST ", request)
 
   const code = url.searchParams.get("code")
   const state = url.searchParams.get("state")
@@ -50,6 +50,22 @@ export async function GET({ url, request }: { url: URL, request: Request }) {
   // https://www.ailurotech.com/blog/github-oauth-with-decap
   const html = `<!doctype html><html><head><meta charset="utf-8"></head><body>
   <script>
+        const receiveMessage = (message) => {
+        window.opener.postMessage(
+          'authorization:github:success:${JSON.stringify({
+            token: accessToken,
+            provider: "github"
+          })}',
+          message.origin
+        );
+
+        window.removeEventListener("message", receiveMessage, false);
+      }
+      window.addEventListener("message", receiveMessage, false);
+
+      window.opener.postMessage("authorizing:github", "*");
+  
+  /*
   try {
     window.opener.postMessage({ token: "${accessToken.replace(/"/g,'\\"')}" }, "${url.origin}");
   } catch(e) { console.error(e); }
@@ -57,6 +73,7 @@ export async function GET({ url, request }: { url: URL, request: Request }) {
   //  window.close()
   // setTimeout(()=> window.close(), 100);
   fetch('https://api.github.com/user', { headers: { Authorization: 'token ${accessToken.replace(/"/g,'\\"')}' } }).then(r=>r.json()).then(console.log);
+  */
   </script>
 
   <p>Authentication complete. You may close this window.</p>
