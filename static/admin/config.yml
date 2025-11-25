@@ -449,6 +449,7 @@ singletons:
       - <<: *SEO
       - label: Au sujet des cours
         hint: Décrivez succinctement les types de cours et la durée.
+        collapsed: true
         <<: *cover
       - label: Cours
         name: lessons
@@ -486,6 +487,7 @@ singletons:
         name: cards
         widget: list
         collapsed: true
+        required: false
         <<: *card
   - label: Planning & réservation
     name: booking
@@ -497,12 +499,14 @@ singletons:
       - <<: *SEO
       - label: Informations de réservations
         hint: Décrivez brievement comment réserver un cours.
+        collapsed: true
         <<: *cover
       - label: Informations complémentaires
         label_singular: Information
         name: cards
         widget: list
         collapsed: true
+        required: false
         <<: *card
   - label: Tarifs & modalités
     name: pricelist
@@ -514,6 +518,7 @@ singletons:
       - <<: *SEO
       - label: Information sur les tarifs
         hint: Décrivez simplement les modalités de réglement.
+        collapsed: true
         <<: *cover
       - label: Grille de tarifs
         name: prices
@@ -537,6 +542,7 @@ singletons:
         name: cards
         widget: list
         collapsed: true
+        required: false
         <<: *card
   - label: À propos
     name: about
@@ -548,16 +554,19 @@ singletons:
       - <<: *SEO
       - label: Introduction de la page
         hint: Écrivez un texte cours d'introduction
+        collapsed: true
         <<: *cover
       - label: Contenu de la page
         name: body
         hint: Contenu long de la page, vous pouvez y insérer des titrages intermédiaires, des images, des tableau, etc.
+        required: false
         <<: *markdown_simple
       - label: Informations complémentaire
         label_singular: Information
         name: cards
         widget: list
         collapsed: true
+        required: false
         <<: *card
   - divider: true
   # - label: Configuration

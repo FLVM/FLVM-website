@@ -1,6 +1,6 @@
 ---
 publish: true
-name: L'atelier des pâtissier
+name: L'atelier des pâtissiers
 image:
   src: /uploads/places/l-atelier-de-patisserie.jpg
   alt: Façade de l'atelier de pâtisserie
