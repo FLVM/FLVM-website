@@ -1,0 +1,15 @@
+{
+  "seo": {
+    "title": "Cours de cuisine et de pâtisserie",
+    "description": "Listes de cours proposés par FLVM."
+  },
+  "cover": {
+    "overhead": "Cuisine & pâtisserie",
+    "title": "Les cours",
+    "text": "Nous proposons des [cours de pâtisserie](http://localhost:5173/les-cours#cours-de-patisserie) et [des cours de cuisine](http://localhost:5173/cours-de-cuisine) d'une durée de 3 heures, pour prendre rendez-vous, choisissez un cours [sur le planning](/planning) ou [proposez votre thème](/devis).",
+    "image": null,
+    "link": null
+  },
+  "lessons": [],
+  "cards": []
+}
