@@ -33,7 +33,7 @@ export function load(): {
     navigation: [
       {
         url: "/",
-        text: "Acceuil"
+        text: "Accueil"
       },
       {
         url: "/planning-et-reservation",
