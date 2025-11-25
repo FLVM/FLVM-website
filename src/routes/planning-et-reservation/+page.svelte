@@ -3,9 +3,8 @@
   import CalendarEvent from "$lib/components/calendar/event.svelte"
 	import type { Booking } from "$lib/server/data"
 	import type { CalendarEventType } from "./+page"
-	import { Regex, SearchIcon, Tags, XIcon } from "@lucide/svelte"
+	import { XIcon } from "@lucide/svelte"
 	import Card from "$lib/components/shared/card.svelte"
-  import coverImage from "$lib/assets/cover-planning.jpg"
 	import { browser } from "$app/environment"
 	import Cover from "$lib/components/shared/cover.svelte"
 

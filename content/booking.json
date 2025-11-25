@@ -6,7 +6,7 @@
   "cover": {
     "overhead": "",
     "title": "Planning & réservation",
-    "text": "<p>Choisissez un cours disponible qui vous convient dans le planning ou <a href=\"/information#proposer-son-theme\">proposez votre propre thème</a>.</p>",
+    "text": "Choisissez un cours disponible qui vous convient dans le planning ou [proposez votre propre thème](/information#proposer-son-theme).",
     "image": {
       "src": "/uploads/booking/cover-planning.jpg",
       "alt": "Illustration de chat préparant un gâteau.",
@@ -18,7 +18,7 @@
     {
       "featured": true,
       "title": "Tarifs & durée des cours",
-      "content": "<p>Nos cours sont <strong>ouverts à tout public</strong>, comptez en moyenne <strong>3h avec un professionnel</strong> et <strong>39€ par personne</strong> pour un atelier de 5 personnes.</p>",
+      "content": "Nos cours sont **ouverts à tout public**, comptez en moyenne **3h avec un professionnel** et **39€ par personne** pour un atelier de 5 personnes.",
       "image": null,
       "link": {
         "text": "Voir la grille tarfaire",
@@ -32,10 +32,9 @@
     {
       "featured": false,
       "title": "Se préparer pour son cours",
-      "content": "<p><strong>Le matériel et les produits sont fournis</strong>. Attention tout de mêmes au vétements sensible aux tâches.</p>\n<p><strong>Votre checklist</strong> :</p>\n<ul>\n<li>✔ Un carnet &#x26; crayon si voulez noter des astuces.</li>\n<li>✔ une boîte hermétique pour repartir avec vos réalisations.</li>\n</ul>",
+      "content": "**Le matériel et les produits sont fournis**. Attention tout de mêmes au vétements sensible aux tâches.\n\n**Votre checklist** :\n\n- ✔ Un carnet & crayon si voulez noter des astuces.\n- ✔ une boîte hermétique pour repartir avec vos réalisations.",
       "image": null,
       "link": null
     }
-  ],
-  "slug": "booking"
+  ]
 }
