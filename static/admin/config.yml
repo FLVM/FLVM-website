@@ -443,8 +443,9 @@ singletons:
     file: content/cours.md
     fields:
       - <<: *SEO
-      - label: Description
+      - label: Au sujet des cours
         name: body
+        hint: Décrivez succinctement les types de cours et la durée.
         <<: *markdown_minimal
       - label: Cours
         name: lessons
@@ -492,7 +493,7 @@ singletons:
     fields:
       - <<: *SEO
       - label: Informations de réservations
-        hint: Décrivez brievement comment choisir un cours.
+        hint: Décrivez brievement comment réserver un cours.
         name: body
         <<: *markdown_minimal
       - label: Informations complémentaires
@@ -509,8 +510,8 @@ singletons:
       preview: false
     fields:
       - <<: *SEO
-      - label: Information de réservation
-        hint: Décrivez brievement les modalité de réservation.
+      - label: Information sur les tarifs
+        hint: Décrivez simplement les modalités de réglement.
         name: body
         <<: *markdown_minimal
       - label: Grille de tarifs
@@ -538,14 +539,17 @@ singletons:
         <<: *card
   - label: À propos
     name: about
-    icon: view_list
+    icon: chat_info
     file: content/about.md
     editor:
       preview: false
     fields:
       - <<: *SEO
-      - label: Contenu
+      - <<: *cover
+        hint: Écrivez un texte cours d'introduction
+      - label: Contenu de la page
         name: body
+        hint: Contenu long de la page, vous pouvez y insérer des titrages intermédiaires, des images, des tableau, etc.
         <<: *markdown_simple
       - label: Informations complémentaire
         label_singular: Information
@@ -554,58 +558,27 @@ singletons:
         collapsed: true
         <<: *card
   - divider: true
-  - label: Configuration
-    name: configuration
-    file: content/settings/main.json
-    editor:
-      preview: false
-    icon: instant_mix
-    fields:
-      # @todo : Ajouter configurations 
-      # - URL du google calendar
-      # - mentions de pied de page
-      - label: Pied de page
-        name: footer
-        widget: object
-        summary: Gestion du colophon et des listes de liens
-        collapsed: true
-        fields: 
-          - label: Colophon
-            name: colophon
-            widget: text
-          - label: Liste de liens
-            name: links
-  # - label: Grille de tarifs
-  #   name: price-list
-  #   # icon: percent_discount
-  #   # icon: payments
-  #   file: content/price-list.md
+  # - label: Configuration
+  #   name: configuration
+  #   file: content/settings/main.json
   #   editor:
   #     preview: false
-  #   fields: 
-  #     - label: Présentation
-  #       name: body
-  #       widget: markdown
-  #       minimal: true
-  #       buttons: [bold, italic, link]
-  #       editor_components: []
-  #       required: false
-  #     - label: Tarifs
-  #       name: prices
-  #       widget: list
+  #   icon: instant_mix
+  #   fields:
+  #     # @todo : Ajouter configurations 
+  #     # - URL du google calendar
+  #     # - mentions de pied de page
+  #     - label: Pied de page
+  #       name: footer
+  #       widget: object
+  #       summary: Gestion du colophon et des listes de liens
   #       collapsed: true
-  #       # summary: "{{name}}"
   #       fields: 
-  #         - label: Intitulé
-  #           name: name
-  #         - label: Tarif par personne
-  #           name: price
-  #           widget: number
-  #           value_type: float
-  #           required: false
-  #         - label: Détail
-  #           name: detail
-  #           <<: *markdown_simple
+  #         - label: Colophon
+  #           name: colophon
+  #           widget: text
+  #         - label: Liste de liens
+  #           name: links
   - label: Informations éditeur
     name: editor
     file: content/settings/editor.json
