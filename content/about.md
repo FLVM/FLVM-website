@@ -5,23 +5,17 @@ seo:
     L'association FLVM vous propose des cours de cuisine et de pâtisserie pour adultes et enfants.
 
     Nos cours se déroulent dans nos ateliers à Rouen, nous mettons un point d'honneur à pratiquer des tarifs accessibles à toutes et tous.
+cover:
+  overhead: À propos de
+  title: Faites‑le&nbsp;vous‑même
+  text: ''
 cards:
   - featured: false
     title: ''
     content: ''
     image: null
     link: null
-cover:
-  text: ''
-  title: Faites‑le&nbsp;vous‑même
-  overhead: À propos de
 ---
-# À propos de Faites‑le&nbsp;vous‑même
-
-L'association FLVM vous propose des cours de cuisine et de pâtisserie pour adultes et enfants.
-
-Nos cours se déroulent dans [nos ateliers à Rouen](http://flvm.fr/informations#ateliers), nous mettons un point d'honneur à pratiquer des [tarifs accessibles à toutes et tous](http://flvm.fr/informations#tarifs).
-
 ## Pour réserver vos cours
 
 Pour **réserver un cours de pâtisserie**, contactez notre pâtissier Arnaud au 06 64 50 71 23.
