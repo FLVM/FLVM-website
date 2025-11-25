@@ -18,4 +18,5 @@ hours: |-
   - de 14h30 à 17h30 ;
   - et de 18h30 à 21h30.
 ---
+
 L'atelier de pâtisserie accueille les cours de pâtisserie pour adultes et enfants.

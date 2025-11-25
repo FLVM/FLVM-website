@@ -1,17 +1,17 @@
-@import "tailwindcss";
-@import "@skeletonlabs/skeleton";
-@import "@skeletonlabs/skeleton-svelte";
-@import "@skeletonlabs/skeleton/themes/cerberus";
-@import "$lib/style/themes/flvm.css";
-@import "$lib/style/components.css";
+@import 'tailwindcss';
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton-svelte';
+@import '@skeletonlabs/skeleton/themes/cerberus';
+@import '$lib/style/themes/flvm.css';
+@import '$lib/style/components.css';
 
-@import "@fontsource-variable/roboto";
+@import '@fontsource-variable/roboto';
 /* @import "@fontsource-variable/lora"; */
 @import '@fontsource-variable/noto-serif';
 
 :root {
-  --heading-font-family: "Roboto Variable";
-  --base-font-family: "Noto Serif Variable";
+	--heading-font-family: 'Roboto Variable';
+	--base-font-family: 'Noto Serif Variable';
 }
 /* @plugin "@tailwindcss/forms"; */
 
@@ -20,10 +20,10 @@
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 
 @layer base {
-  body {
-    /* @apply bg-surface-100-900; */
-    /* @note: utiliser #1A222F pour la couleur du texte */
-  }
+	body {
+		/* @apply bg-surface-100-900; */
+		/* @note: utiliser #1A222F pour la couleur du texte */
+	}
 }
 
 /**
@@ -43,25 +43,25 @@
 /* From DaisyUI Hero */
 /* https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/hero.css */
 @layer components {
-  .hero {
-   /* @apply grid w-full place-items-center bg-cover bg-center; */
-   @apply grid w-full place-items-center bg-cover bg-center;
-   & > * {
-     @apply col-start-1 row-start-1;
-   }
- }
+	.hero {
+		/* @apply grid w-full place-items-center bg-cover bg-center; */
+		@apply grid w-full place-items-center bg-cover bg-center;
+		& > * {
+			@apply col-start-1 row-start-1;
+		}
+	}
 }
 /* Affichage du contenu */
 @layer components {
-  .hero-overlay {
-   /* @apply bg-neutral/50 col-start-1 row-start-1 h-full w-full; */
-   @apply bg-surface-50-950/30 col-start-1 row-start-1 h-full w-full;
-  }
+	.hero-overlay {
+		/* @apply bg-neutral/50 col-start-1 row-start-1 h-full w-full; */
+		@apply bg-surface-50-950/30 col-start-1 row-start-1 h-full w-full;
+	}
 }
 /* Affichage d'une image en arrière plan */
 @layer components {
-  .hero-content {
-    /* @apply isolate flex max-w-[80rem] items-center justify-center gap-4 p-4; */
-    @apply p-4 md:ml-12 justify-self-start max-w-xl;
-  }
+	.hero-content {
+		/* @apply isolate flex max-w-[80rem] items-center justify-center gap-4 p-4; */
+		@apply p-4 md:ml-12 justify-self-start max-w-xl;
+	}
 }

@@ -1,41 +1,41 @@
 {
-  "seo": {
-    "title": "Planning des cours",
-    "description": "Calendrier des cours."
-  },
-  "cover": {
-    "overhead": "",
-    "title": "Planning & réservation",
-    "text": "<p>Choisissez un cours disponible qui vous convient dans le planning ou <a href=\"/information#proposer-son-theme\">proposez votre propre thème</a>.</p>",
-    "image": {
-      "src": "/uploads/booking/cover-planning.jpg",
-      "alt": "Illustration de chat préparant un gâteau.",
-      "legend": ""
-    },
-    "link": null
-  },
-  "cards": [
-    {
-      "featured": true,
-      "title": "Tarifs & durée des cours",
-      "content": "<p>Nos cours sont <strong>ouverts à tout public</strong>, comptez en moyenne <strong>3h avec un professionnel</strong> et <strong>39€ par personne</strong> pour un atelier de 5 personnes.</p>",
-      "image": null,
-      "link": {
-        "text": "Voir la grille tarfaire",
-        "url": "/informations#tarifs",
-        "color": "primary-500",
-        "icon_before": "",
-        "icon_after": "",
-        "icon_only": false
-      }
-    },
-    {
-      "featured": false,
-      "title": "Se préparer pour son cours",
-      "content": "<p><strong>Le matériel et les produits sont fournis</strong>. Attention tout de mêmes au vétements sensible aux tâches.</p>\n<p><strong>Votre checklist</strong> :</p>\n<ul>\n<li>✔ Un carnet &#x26; crayon si voulez noter des astuces.</li>\n<li>✔ une boîte hermétique pour repartir avec vos réalisations.</li>\n</ul>",
-      "image": null,
-      "link": null
-    }
-  ],
-  "slug": "booking"
+	"seo": {
+		"title": "Planning des cours",
+		"description": "Calendrier des cours."
+	},
+	"cover": {
+		"overhead": "",
+		"title": "Planning & réservation",
+		"text": "<p>Choisissez un cours disponible qui vous convient dans le planning ou <a href=\"/information#proposer-son-theme\">proposez votre propre thème</a>.</p>",
+		"image": {
+			"src": "/uploads/booking/cover-planning.jpg",
+			"alt": "Illustration de chat préparant un gâteau.",
+			"legend": ""
+		},
+		"link": null
+	},
+	"cards": [
+		{
+			"featured": true,
+			"title": "Tarifs & durée des cours",
+			"content": "<p>Nos cours sont <strong>ouverts à tout public</strong>, comptez en moyenne <strong>3h avec un professionnel</strong> et <strong>39€ par personne</strong> pour un atelier de 5 personnes.</p>",
+			"image": null,
+			"link": {
+				"text": "Voir la grille tarfaire",
+				"url": "/informations#tarifs",
+				"color": "primary-500",
+				"icon_before": "",
+				"icon_after": "",
+				"icon_only": false
+			}
+		},
+		{
+			"featured": false,
+			"title": "Se préparer pour son cours",
+			"content": "<p><strong>Le matériel et les produits sont fournis</strong>. Attention tout de mêmes au vétements sensible aux tâches.</p>\n<p><strong>Votre checklist</strong> :</p>\n<ul>\n<li>✔ Un carnet &#x26; crayon si voulez noter des astuces.</li>\n<li>✔ une boîte hermétique pour repartir avec vos réalisations.</li>\n</ul>",
+			"image": null,
+			"link": null
+		}
+	],
+	"slug": "booking"
 }

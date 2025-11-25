@@ -1,77 +1,77 @@
 {
-  "seo": {
-    "title": "Réserver un cours",
-    "description": "Détails des tarifs et des ateliers."
-  },
-  "cover": {
-    "overhead": "",
-    "title": "Taris & modalités",
-    "text": "<p>La réservation se fait par email via les liens dédiés sur <a href=\"/planning\">le planning</a>. Le règlement se fait sur place, prévoyez des moyens de paiements.</p>",
-    "image": null,
-    "link": null
-  },
-  "prices": [
-    {
-      "name": "2 personnes",
-      "price": 69,
-      "detail": ""
-    },
-    {
-      "name": "3 à 4 personnes",
-      "price": 49,
-      "detail": ""
-    },
-    {
-      "name": "5 personnes ou plus",
-      "price": 39,
-      "detail": "<p>Tarif pour un groupe de 5 personnes minimum, dans la limite de 8 personnes.</p>"
-    },
-    {
-      "name": "Tarif réduit",
-      "price": 29,
-      "detail": "<p>Tarif applicable pour les enfants, les étudiants et les bénéficiaire des minima sociaux (groupe de 4 personnes minimum).</p>"
-    },
-    {
-      "name": "Entreprise",
-      "price": 45,
-      "detail": "<p>Pour un groupe de 4 personnes minimum.</p>"
-    },
-    {
-      "name": "Cours à la demande",
-      "price": null,
-      "detail": "<p>Si vous souhaitez un cours pour une occasion spéciale, <a href=\"/informations#contact\">n'hésitez-pas à nous contacter</a></p>"
-    },
-    {
-      "name": "Adhésion",
-      "price": null,
-      "detail": "<p>L'adhésion à l'association est obligatoire pour profiter des cours, elle est incluse dans le prix de votre premier cours de l'année.</p>"
-    },
-    {
-      "name": "Carte cadeau enfant",
-      "price": 30,
-      "detail": "<p>Offrez un cours à un enfant.</p>\n<p>Les cours est collectif, la carte est illimitée dans le temps.</p>\n<p><a href=\"mailto:arnaud@flvm.fr\">Commander une carte cadeau pour un enfant.</a></p>"
-    },
-    {
-      "name": "Carte cadeau adulte",
-      "price": 50,
-      "detail": "<p>Offrez un cours à un adulte.</p>\n<p>Les cours est collectif, la carte est illimitée dans le temps.</p>\n<p><a href=\"mailto:arnaud@flvm.fr\">Commander une carte cadeau pour un adulte.</a></p>"
-    }
-  ],
-  "cards": [
-    {
-      "featured": true,
-      "title": "Cours pour les enfants",
-      "content": "<p>Les enfants de moins de 8 ans doivent être accompagnées d'au moins un adulte référent.</p>\n<p>Pour tout d'autres question, consulter notre <a href=\"/informatiosn#faq\">FAQ</a> ou <a href=\"/informations/contact\">écrivez-nous</a></p>",
-      "image": null,
-      "link": null
-    },
-    {
-      "featured": false,
-      "title": "Annulation et remboursement",
-      "content": "<p>\"[Détailler brièvement la politique et la procédure d'annulation et de remboursement]\"</p>",
-      "image": null,
-      "link": null
-    }
-  ],
-  "slug": "pricelist"
+	"seo": {
+		"title": "Réserver un cours",
+		"description": "Détails des tarifs et des ateliers."
+	},
+	"cover": {
+		"overhead": "",
+		"title": "Taris & modalités",
+		"text": "<p>La réservation se fait par email via les liens dédiés sur <a href=\"/planning\">le planning</a>. Le règlement se fait sur place, prévoyez des moyens de paiements.</p>",
+		"image": null,
+		"link": null
+	},
+	"prices": [
+		{
+			"name": "2 personnes",
+			"price": 69,
+			"detail": ""
+		},
+		{
+			"name": "3 à 4 personnes",
+			"price": 49,
+			"detail": ""
+		},
+		{
+			"name": "5 personnes ou plus",
+			"price": 39,
+			"detail": "<p>Tarif pour un groupe de 5 personnes minimum, dans la limite de 8 personnes.</p>"
+		},
+		{
+			"name": "Tarif réduit",
+			"price": 29,
+			"detail": "<p>Tarif applicable pour les enfants, les étudiants et les bénéficiaire des minima sociaux (groupe de 4 personnes minimum).</p>"
+		},
+		{
+			"name": "Entreprise",
+			"price": 45,
+			"detail": "<p>Pour un groupe de 4 personnes minimum.</p>"
+		},
+		{
+			"name": "Cours à la demande",
+			"price": null,
+			"detail": "<p>Si vous souhaitez un cours pour une occasion spéciale, <a href=\"/informations#contact\">n'hésitez-pas à nous contacter</a></p>"
+		},
+		{
+			"name": "Adhésion",
+			"price": null,
+			"detail": "<p>L'adhésion à l'association est obligatoire pour profiter des cours, elle est incluse dans le prix de votre premier cours de l'année.</p>"
+		},
+		{
+			"name": "Carte cadeau enfant",
+			"price": 30,
+			"detail": "<p>Offrez un cours à un enfant.</p>\n<p>Les cours est collectif, la carte est illimitée dans le temps.</p>\n<p><a href=\"mailto:arnaud@flvm.fr\">Commander une carte cadeau pour un enfant.</a></p>"
+		},
+		{
+			"name": "Carte cadeau adulte",
+			"price": 50,
+			"detail": "<p>Offrez un cours à un adulte.</p>\n<p>Les cours est collectif, la carte est illimitée dans le temps.</p>\n<p><a href=\"mailto:arnaud@flvm.fr\">Commander une carte cadeau pour un adulte.</a></p>"
+		}
+	],
+	"cards": [
+		{
+			"featured": true,
+			"title": "Cours pour les enfants",
+			"content": "<p>Les enfants de moins de 8 ans doivent être accompagnées d'au moins un adulte référent.</p>\n<p>Pour tout d'autres question, consulter notre <a href=\"/informatiosn#faq\">FAQ</a> ou <a href=\"/informations/contact\">écrivez-nous</a></p>",
+			"image": null,
+			"link": null
+		},
+		{
+			"featured": false,
+			"title": "Annulation et remboursement",
+			"content": "<p>\"[Détailler brièvement la politique et la procédure d'annulation et de remboursement]\"</p>",
+			"image": null,
+			"link": null
+		}
+	],
+	"slug": "pricelist"
 }

@@ -1,157 +1,157 @@
 {
-  "seo": {
-    "title": "Faites le vous même",
-    "description": "Faîtes le vous même donne  des cours sympathiques de pâtisserie et de cuisine."
-  },
-  "cover": {
-    "overhead": "C'est la rentrée!",
-    "title": "Réouverture des ateliers adultes",
-    "text": "Les ateliers [pâtisserie](/cours#patisserie) et [cuisine](/cours#cuisine) adultes sont de nouveau ouvert.\nN'hésitez pas à consulter le planning afin de réserver votre cours.",
-    "image": {
-      "src": "/uploads/chocopistache.jpg",
-      "alt": "Visuels de réalisation d'un forêt noire",
-      "legend": "©crédit photo"
-    },
-    "link": {
-      "text": "Réserver un cours",
-      "url": "/planning",
-      "color": "primary-500",
-      "icon_before": "calendar",
-      "icon_after": "arrow-right"
-    }
-  },
-  "cards": [
-    {
-      "featured": false,
-      "title": "Enterrement de vie de jeune fille",
-      "content": "Faites une surprise à la future mariée et offrez-lui un cours mémorable de cuisine et de pâtisserie !",
-      "image": {
-        "src": "/uploads/enterrement-de-vie-de-jf.jpg",
-        "alt": "Cours de pâtisserie festif entre amies",
-        "legend": "Photo par Machin © [BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
-      },
-      "link": null
-    },
-    {
-      "featured": true,
-      "title": "Carte cadeau",
-      "content": "Pour les enfants ou les adultes, Faites découvrir les trucs et astuces de pâtisserie et de cuisines en offrant une carte‑cadeaux FLVM.",
-      "image": null,
-      "link": {
-        "text": "Offrir une carte cadeau",
-        "url": "/informations#carte-cadeaux",
-        "color": "tertiary-950-50",
-        "icon_before": "cake",
-        "icon_after": "",
-        "icon_only": false
-      }
-    },
-    {
-      "featured": false,
-      "title": "Laisse ton cartable et mets ton tablier !",
-      "content": "Viens me retrouver après la classe, à partir de 17h du lundi au vendredi. Nous apprendrons ensemble trucs et astuces de pâtissier et cuisinier ! Si tu veux, dès les mercredis matins, tu peux aussi réaliser du bon pain ou de la viennoiserie! MIAM 😋",
-      "image": {
-        "src": "/uploads/les-petites-toques.jpg",
-        "alt": "Enfants lors d'un cours de pâtisserie",
-        "legend": "Photo par Machin © [BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
-      },
-      "link": {
-        "text": "Réserver un cours",
-        "url": "/planning",
-        "color": "primary-500",
-        "icon_before": "party-popper",
-        "icon_after": "arrow-right",
-        "icon_only": false
-      }
-    },
-    {
-      "featured": false,
-      "title": "Team Building",
-      "content": "FLVM, c’est aussi un lieu pour vos événements professionnels, n’hésitez pas à nous contacter à [contact@flvm.fr](mailto:contact@flvm.fr).",
-      "image": null,
-      "link": null
-    }
-  ],
-  "aside": [
-    {
-      "featured": false,
-      "title": "Formats des cours",
-      "content": "Nous propons des divers formats de cours : atelier standard, atelier enfant après-scolaire, team Building, évenements d'anniversaire, EVJF et des thèmes saisonniers. N'hésitez pas à proposer vos thèmes & idées pour des cours à la demande.",
-      "image": null,
-      "link": null
-    },
-    {
-      "featured": false,
-      "title": "Atelier le Chocopistache",
-      "content": "Ce cours d'une durée de 3 heures est accéssible au débutant, vous préparerez une recette gourmande et originale de gateau au chocolat et à la pistache de Arnaud Houley.",
-      "image": {
-        "src": "/uploads/courses/chocopistache.jpg",
-        "alt": "Présentation du gâteau Chocopistache avec une petite figurine posé dessus.",
-        "legend": "@crédit photo"
-      },
-      "link": {
-        "text": "Réservez ce cours",
-        "url": "/planning",
-        "color": "secondary-500",
-        "icon_before": "cake",
-        "icon_after": "arrow-right",
-        "icon_only": false
-      }
-    },
-    {
-      "featured": false,
-      "title": "Vos chocolat de pâques",
-      "content": "À partir du 10 mars, les chocolats de Pâque fait maison sont en vente à l'atelier de pâtisserie [au 2 place du 39e Régiment d'Infanterie](http://flvm.fr/informations#l-atelier-de-patisserie).",
-      "image": null,
-      "link": null
-    },
-    {
-      "featured": true,
-      "title": "Newsletter FLVM",
-      "content": "Inscrivez-vous à notre newsletter pour rester informé des activités et des projets de FLVM.",
-      "image": null,
-      "link": {
-        "text": "S'inscrire à la newsletter",
-        "url": "https://example.com",
-        "color": "tertiary-950-50",
-        "icon_before": "send",
-        "icon_after": "",
-        "icon_only": false
-      }
-    }
-  ],
-  "posts": [
-    {
-      "featured": false,
-      "title": "La recette du Chocopistache",
-      "content": "Arnaud à mis au point cette recette gourmande et facile à réaliser à la maison. Suivez avec nous le déroulement de cette atelier, réalisez-le et déguster-le 😋 !",
-      "image": {
-        "src": "/uploads/chocopistache.jpg",
-        "alt": "Gâteau chocopistache",
-        "legend": ""
-      },
-      "link": {
-        "text": "Consulter sur Facebook",
-        "url": "https://example.com",
-        "color": "secondary-500",
-        "icon_before": "facebook",
-        "icon_after": "external-link",
-        "icon_only": false
-      }
-    },
-    {
-      "featured": false,
-      "title": "Un EFJF pas comme les autres",
-      "content": "Aline nous partage sont enterrement de vie de jeune fille à FLVM, quelle aventure !",
-      "image": null,
-      "link": {
-        "text": "Consulter sur Instagram",
-        "url": "https://example.com",
-        "color": "secondary-500",
-        "icon_before": "instagram",
-        "icon_after": "external-link",
-        "icon_only": false
-      }
-    }
-  ]
+	"seo": {
+		"title": "Faites le vous même",
+		"description": "Faîtes le vous même donne  des cours sympathiques de pâtisserie et de cuisine."
+	},
+	"cover": {
+		"overhead": "C'est la rentrée!",
+		"title": "Réouverture des ateliers adultes",
+		"text": "Les ateliers [pâtisserie](/cours#patisserie) et [cuisine](/cours#cuisine) adultes sont de nouveau ouvert.\nN'hésitez pas à consulter le planning afin de réserver votre cours.",
+		"image": {
+			"src": "/uploads/chocopistache.jpg",
+			"alt": "Visuels de réalisation d'un forêt noire",
+			"legend": "©crédit photo"
+		},
+		"link": {
+			"text": "Réserver un cours",
+			"url": "/planning",
+			"color": "primary-500",
+			"icon_before": "calendar",
+			"icon_after": "arrow-right"
+		}
+	},
+	"cards": [
+		{
+			"featured": false,
+			"title": "Enterrement de vie de jeune fille",
+			"content": "Faites une surprise à la future mariée et offrez-lui un cours mémorable de cuisine et de pâtisserie !",
+			"image": {
+				"src": "/uploads/enterrement-de-vie-de-jf.jpg",
+				"alt": "Cours de pâtisserie festif entre amies",
+				"legend": "Photo par Machin © [BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+			},
+			"link": null
+		},
+		{
+			"featured": true,
+			"title": "Carte cadeau",
+			"content": "Pour les enfants ou les adultes, Faites découvrir les trucs et astuces de pâtisserie et de cuisines en offrant une carte‑cadeaux FLVM.",
+			"image": null,
+			"link": {
+				"text": "Offrir une carte cadeau",
+				"url": "/informations#carte-cadeaux",
+				"color": "tertiary-950-50",
+				"icon_before": "cake",
+				"icon_after": "",
+				"icon_only": false
+			}
+		},
+		{
+			"featured": false,
+			"title": "Laisse ton cartable et mets ton tablier !",
+			"content": "Viens me retrouver après la classe, à partir de 17h du lundi au vendredi. Nous apprendrons ensemble trucs et astuces de pâtissier et cuisinier ! Si tu veux, dès les mercredis matins, tu peux aussi réaliser du bon pain ou de la viennoiserie! MIAM 😋",
+			"image": {
+				"src": "/uploads/les-petites-toques.jpg",
+				"alt": "Enfants lors d'un cours de pâtisserie",
+				"legend": "Photo par Machin © [BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+			},
+			"link": {
+				"text": "Réserver un cours",
+				"url": "/planning",
+				"color": "primary-500",
+				"icon_before": "party-popper",
+				"icon_after": "arrow-right",
+				"icon_only": false
+			}
+		},
+		{
+			"featured": false,
+			"title": "Team Building",
+			"content": "FLVM, c’est aussi un lieu pour vos événements professionnels, n’hésitez pas à nous contacter à [contact@flvm.fr](mailto:contact@flvm.fr).",
+			"image": null,
+			"link": null
+		}
+	],
+	"aside": [
+		{
+			"featured": false,
+			"title": "Formats des cours",
+			"content": "Nous propons des divers formats de cours : atelier standard, atelier enfant après-scolaire, team Building, évenements d'anniversaire, EVJF et des thèmes saisonniers. N'hésitez pas à proposer vos thèmes & idées pour des cours à la demande.",
+			"image": null,
+			"link": null
+		},
+		{
+			"featured": false,
+			"title": "Atelier le Chocopistache",
+			"content": "Ce cours d'une durée de 3 heures est accéssible au débutant, vous préparerez une recette gourmande et originale de gateau au chocolat et à la pistache de Arnaud Houley.",
+			"image": {
+				"src": "/uploads/courses/chocopistache.jpg",
+				"alt": "Présentation du gâteau Chocopistache avec une petite figurine posé dessus.",
+				"legend": "@crédit photo"
+			},
+			"link": {
+				"text": "Réservez ce cours",
+				"url": "/planning",
+				"color": "secondary-500",
+				"icon_before": "cake",
+				"icon_after": "arrow-right",
+				"icon_only": false
+			}
+		},
+		{
+			"featured": false,
+			"title": "Vos chocolat de pâques",
+			"content": "À partir du 10 mars, les chocolats de Pâque fait maison sont en vente à l'atelier de pâtisserie [au 2 place du 39e Régiment d'Infanterie](http://flvm.fr/informations#l-atelier-de-patisserie).",
+			"image": null,
+			"link": null
+		},
+		{
+			"featured": true,
+			"title": "Newsletter FLVM",
+			"content": "Inscrivez-vous à notre newsletter pour rester informé des activités et des projets de FLVM.",
+			"image": null,
+			"link": {
+				"text": "S'inscrire à la newsletter",
+				"url": "https://example.com",
+				"color": "tertiary-950-50",
+				"icon_before": "send",
+				"icon_after": "",
+				"icon_only": false
+			}
+		}
+	],
+	"posts": [
+		{
+			"featured": false,
+			"title": "La recette du Chocopistache",
+			"content": "Arnaud à mis au point cette recette gourmande et facile à réaliser à la maison. Suivez avec nous le déroulement de cette atelier, réalisez-le et déguster-le 😋 !",
+			"image": {
+				"src": "/uploads/chocopistache.jpg",
+				"alt": "Gâteau chocopistache",
+				"legend": ""
+			},
+			"link": {
+				"text": "Consulter sur Facebook",
+				"url": "https://example.com",
+				"color": "secondary-500",
+				"icon_before": "facebook",
+				"icon_after": "external-link",
+				"icon_only": false
+			}
+		},
+		{
+			"featured": false,
+			"title": "Un EFJF pas comme les autres",
+			"content": "Aline nous partage sont enterrement de vie de jeune fille à FLVM, quelle aventure !",
+			"image": null,
+			"link": {
+				"text": "Consulter sur Instagram",
+				"url": "https://example.com",
+				"color": "secondary-500",
+				"icon_before": "instagram",
+				"icon_after": "external-link",
+				"icon_only": false
+			}
+		}
+	]
 }

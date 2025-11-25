@@ -7,23 +7,23 @@ Le cahier des charges est le suivant :
 - respecter l'approche [JAMSSTACK](https://jamstack.org/)
 - grande performance d'affichage
 - empreinte énergétique faible
-- maintenance simplifié 
+- maintenance simplifié
 - édition de contenu simplifier
 - permettre l'affichage d'un planning de cours
 - faciliter l'inscription aux cours
 
 ## Technologies
+
 Les technologies ont été choisies pour offrir le meilleur rapport performances / simplicité d'usage.
 
 - Framework client & serveur : [Svelte](https://svelte.dev/)
-- Framework design & composants graphiques : [Skeleton](https://www.skeleton.dev/) 
+- Framework design & composants graphiques : [Skeleton](https://www.skeleton.dev/)
 - Gestionnaire de contenu : [Svletia CMS](https://github.com/sveltia/sveltia-cms)
 - Hébergement : [Vercel](https://vercel.com)
 
 ## Authentification CMS
 
 L'authenffication necessite un serveur proxy https://decapcms.org/docs/backends-overview/
-
 
 ### Github et Netlify
 
