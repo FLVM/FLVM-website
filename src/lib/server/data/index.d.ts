@@ -13,6 +13,9 @@ export declare const link: Link[]
 export type Card = Collections['card']['schema']['_output']
 export declare const card: Card[]
 
+export type Cover = Collections['cover']['schema']['_output']
+export declare const cover: Cover[]
+
 export type Team = Collections['team']['schema']['_output']
 export declare const team: Team[]
 
@@ -33,9 +36,6 @@ export declare const pricelist: Pricelist
 
 export type About = Collections['about']['schema']['_output']
 export declare const about: About
-
-export type Configuration = Collections['configuration']['schema']['_output']
-export declare const configuration: Configuration
 
 export type Editor = Collections['editor']['schema']['_output']
 export declare const editor: Editor
