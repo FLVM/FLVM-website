@@ -1,39 +1,39 @@
 {
-  "name": "Faites le vous même",
-  "baseline": "Cours<br/> de cuisine &amp; de pâtisserie",
-  "description": "<p>L'association FLVM vous propose des cours de cuisine et de pâtisserie pour adultes et enfants.</p>\n<p>Nos cours se déroulent dans <a href=\"http://flvm.fr/informations#ateliers\">nos ateliers à Rouen</a>, nous mettons un point d'honneur à pratiquer des <a href=\"http://flvm.fr/informations#tarifs\">tarifs accessibles à toutes et tous</a>.</p>",
-  "contact": {
-    "name": "Faites le vous même",
-    "phone": "06 62 81 56 74",
-    "email": "contact@flvm.fr"
-  },
-  "socials": [
-    {
-      "text": "Notre page Facebook",
-      "icon": "facebook",
-      "url": "https://example.com",
-      "icon_only": true
-    },
-    {
-      "text": "Nos vidéos",
-      "icon": "vimeo",
-      "url": "https://example.com",
-      "icon_only": true
-    },
-    {
-      "text": "Piou!",
-      "icon": "twitter",
-      "url": "https://example.com",
-      "icon_only": true
-    }
-  ],
-  "address": {
-    "name": "Siège de l'association",
-    "street": "32 ru des Capucins",
-    "zipcode": "76000",
-    "city": "Rouen",
-    "country": "France"
-  },
-  "vcf_file": "/uploads/FLVM.vcf",
-  "slug": "settings/editor"
+	"name": "Faites le vous même",
+	"baseline": "Cours<br/> de cuisine &amp; de pâtisserie",
+	"description": "<p>L'association FLVM vous propose des cours de cuisine et de pâtisserie pour adultes et enfants.</p>\n<p>Nos cours se déroulent dans <a href=\"http://flvm.fr/informations#ateliers\">nos ateliers à Rouen</a>, nous mettons un point d'honneur à pratiquer des <a href=\"http://flvm.fr/informations#tarifs\">tarifs accessibles à toutes et tous</a>.</p>",
+	"contact": {
+		"name": "Faites le vous même",
+		"phone": "06 62 81 56 74",
+		"email": "contact@flvm.fr"
+	},
+	"socials": [
+		{
+			"text": "Notre page Facebook",
+			"icon": "facebook",
+			"url": "https://example.com",
+			"icon_only": true
+		},
+		{
+			"text": "Nos vidéos",
+			"icon": "vimeo",
+			"url": "https://example.com",
+			"icon_only": true
+		},
+		{
+			"text": "Piou!",
+			"icon": "twitter",
+			"url": "https://example.com",
+			"icon_only": true
+		}
+	],
+	"address": {
+		"name": "Siège de l'association",
+		"street": "32 ru des Capucins",
+		"zipcode": "76000",
+		"city": "Rouen",
+		"country": "France"
+	},
+	"vcf_file": "/uploads/FLVM.vcf",
+	"slug": "settings/editor"
 }
