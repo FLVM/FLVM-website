@@ -57,7 +57,7 @@
       },
       "link": {
         "text": "Réserver un cours",
-        "url": "/planning",
+        "url": "mailto:contact@flvm.fr",
         "color": "primary-500",
         "icon_before": "party-popper",
         "icon_after": "arrow-right",
