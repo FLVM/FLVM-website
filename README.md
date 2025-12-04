@@ -56,3 +56,16 @@ Ajouter un proxy :
 4. Une fois authentifié, Gtihub généère un cookie d'authentification et appel la redirection `api/auth/done`
 5. `api/auth/done` récupère le cookie d'authenfication de Github et réclame le token d'authentification à Github `https://github.com/login/oauth/access_token` en fournissant le ClientId et le ClientSecret et attend un token d'acces.
 6. Une fois le token d'accès récupérer, l'envoyer à Sveltia via `window.opener.postMessage({ token: <token> })`
+
+## Gestion d'utilisateur
+
+Sur le compte de l'[organisation FLVM de Github](https://github.com/FLVM), depuis un compte propriétaire, aller sur l'onglet "People", puis cliquer sur "Invite member".
+
+Saisir l'adresse email, puis valider.
+
+Choisir le rôle "Member", choisir une éventuelle équipe, puis valider.
+
+L'utilisateur doit accepter l'invitation depuis sa boite email et suivre la procédure de création de compte.
+
+Une fois fait, l'utilisateur peut participer [aux discussions sur le projet](https://github.com/FLVM/FLVM-website/issues) et se connecter à [l'interface d'administration du site](https://flvm.fr/admin/index.html) via son compte Github.
+
