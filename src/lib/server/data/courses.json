@@ -24,10 +24,10 @@
       },
       "description": "<p>Arnaud Houley, maître pâtissier, vous aidera à parfaire vos connaissances en pâtisserie, chocolaterie et confiserie. Les cours se déroulent à <a href=\"http://flvm.fr/informations#l-atelier-de-patisserie\">l'Atelier de pâtisserie</a>.</p>",
       "instructor": "Arnaud Houley",
-      "place": "L'atelier des pâtissier",
+      "place": "L'atelier des pâtissiers",
       "link": {
         "text": "Réservez un cours de pâtisserie",
-        "url": "/planning",
+        "url": "/planning#planning?category=patisserie",
         "color": "primary-500",
         "icon_before": "cake",
         "icon_after": "arrow-right",
@@ -43,8 +43,15 @@
       },
       "description": "<p>Produire la description du cours.</p>",
       "instructor": "Marie Lionis",
-      "place": "L'atelier des pâtissier",
-      "link": null
+      "place": "L'atelier des pâtissiers",
+      "link": {
+        "text": "Réserver un cours de cuisine",
+        "url": "/planning#planning?category=cuisine",
+        "color": "",
+        "icon_before": "",
+        "icon_after": "",
+        "icon_only": false
+      }
     }
   ],
   "cards": [
