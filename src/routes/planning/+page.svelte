@@ -7,6 +7,7 @@
 	import Card from '$lib/components/shared/card.svelte';
 	import { browser } from '$app/environment';
 	import Cover from '$lib/components/shared/cover.svelte';
+	import { Switch } from '@skeletonlabs/skeleton-svelte';
 
 	type Props = {
 		data: {
@@ -16,7 +17,9 @@
 	};
 
 	let { data }: Props = $props();
-	let querySearch = $state('');
+	// Query
+  let querySearch = $state('');
+  // Tags
 	let filterTags = $state([
 		{ label: 'Pâtisserie', value: 'pâtisserie', checked: false },
 		{ label: 'Confiserie', value: 'confiserie', checked: false },
@@ -24,15 +27,21 @@
 		{ label: 'Enfants', value: 'enfants', checked: false }
 	]);
 	let checkedFilterTags = $derived(filterTags.filter((tag) => tag.checked));
-	const eventsCalendar = data.eventsCalendar;
+  // Status masqués
+  let showHiddens = $state(false)
+
+	const eventsCalendar = () => data.eventsCalendar;
 	const filteredEvents = $derived(
-		eventsCalendar
-			// Filter OR
-			// .filter(e => {
-			//   if (checkedFilterTags.length <= 0) return true
-			//   return checkedFilterTags.some(tag => e.tags.includes(tag.value))
-			// })
-			// Filter AND
+		eventsCalendar()
+      .filter((e) => {
+        return e.transparency === "opaque" && showHiddens || e.transparency === "transparent" && !showHiddens
+      })
+      // Filter OR
+      // .filter(e => {
+      //   if (checkedFilterTags.length <= 0) return true
+      //   return checkedFilterTags.some(tag => e.tags.includes(tag.value))
+      // })
+      // Filter AND
 			.filter((e) => {
 				if (checkedFilterTags.length <= 0) return true;
 				return checkedFilterTags.every((tag) => e.tags.includes(tag.value));
@@ -52,9 +61,9 @@
 	}
 
 	function changeSearchValue(target: EventTarget & HTMLInputElement) {
-		const query = target.value;
-		querySearch = query;
+		querySearch = target.value;
 	}
+
 </script>
 
 <main>
@@ -74,7 +83,7 @@
 							/>
 							<button><XIcon /></button>
 						</div>
-						<div class="flex gap-2">
+						<div class="flex gap-2 mb-2">
 							<b>Filtres</b>:
 							{#each filterTags as tag}
 								<label
@@ -93,6 +102,15 @@
 								</label>
 							{/each}
 						</div>
+            <div class="flex gap-2 justify-end">
+              <Switch checked={showHiddens} onCheckedChange={(details) => showHiddens = details.checked} dir="rtl">
+                <Switch.Control>
+                  <Switch.Thumb />
+                </Switch.Control>
+                <Switch.Label>Afficher les cours cloturés</Switch.Label>
+                <Switch.HiddenInput/>
+              </Switch>
+            </div>
 					</form>
 				{/if}
 				{#if querySearch.length > 3}
