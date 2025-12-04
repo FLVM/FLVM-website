@@ -16,7 +16,7 @@
 		"build-velite": "node ./lib/sveltia-to-velite.mjs"
 	},
 	"devDependencies": {
-		"@eslint/compat": "^1.4.0",
+		"@eslint/compat": "^2.0.0",
 		"@eslint/js": "^9.39.1",
 		"@skeletonlabs/skeleton": "^4.5.0",
 		"@skeletonlabs/skeleton-svelte": "^4.5.0",
@@ -24,7 +24,7 @@
 		"@sveltejs/kit": "^2.48.5",
 		"@sveltejs/vite-plugin-svelte": "^6.2.1",
 		"@tailwindcss/vite": "^4.1.17",
-		"@types/node": "^22",
+		"@types/node": "^24.10.1",
 		"eslint": "^9.39.1",
 		"eslint-plugin-svelte": "^3.13.0",
 		"globals": "^16.5.0",
@@ -40,7 +40,7 @@
 	"dependencies": {
 		"@fontsource-variable/noto-serif": "^5.2.9",
 		"@fontsource-variable/roboto": "^5.2.8",
-		"@lucide/svelte": "^0.554.0",
+		"@lucide/svelte": "^0.555.0",
 		"velite": "^0.3.0"
 	}
 }
