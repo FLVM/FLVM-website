@@ -69,3 +69,10 @@ L'utilisateur doit accepter l'invitation depuis sa boite email et suivre la proc
 
 Une fois fait, l'utilisateur peut participer [aux discussions sur le projet](https://github.com/FLVM/FLVM-website/issues) et se connecter à [l'interface d'administration du site](https://flvm.fr/admin/index.html) via son compte Github.
 
+## Mise à jour des dépendances
+
+Constater les mises à jour avec la commande `yarn outdated`.
+
+Mise à jour en respectant les versions sémantiques `yarn upgrade`.
+
+Forecer la mise à jour sans respecter les versions sémantiques `yarn upgrade --latest` ou en commande interactive `yarn upgrade-interactive --latest`.
