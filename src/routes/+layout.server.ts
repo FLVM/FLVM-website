@@ -17,7 +17,7 @@ export function load(): {
 		home,
 		links: [
 			{
-				url: '/planning-et-reservation',
+				url: '/planning',
 				text: 'Planning & réservation',
 				color: 'tertiary-950-50'
 			},
@@ -26,7 +26,7 @@ export function load(): {
 				text: 'Les cours'
 			},
 			{
-				url: '/tarifs-et-modalites',
+				url: '/tarifs',
 				text: 'Tarifs'
 			}
 		],
@@ -36,7 +36,7 @@ export function load(): {
 				text: 'Accueil'
 			},
 			{
-				url: '/planning-et-reservation',
+				url: '/planning',
 				text: 'Planning & réservation'
 			},
 			{
@@ -44,7 +44,7 @@ export function load(): {
 				text: 'Les cours'
 			},
 			{
-				url: '/tarifs-et-modalites',
+				url: '/tarifs',
 				text: 'Tarifs & modalités'
 			},
 			{
