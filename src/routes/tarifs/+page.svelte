@@ -40,7 +40,7 @@
 			<div class="text-right">
 				<Button
 					link={{
-						url: '/planning-et-reservation',
+						url: '/planning',
 						text: 'Réserver un cours',
 						color: 'primary-500',
 						icon_before: 'calendar',
