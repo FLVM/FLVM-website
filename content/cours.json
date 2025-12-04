@@ -36,7 +36,11 @@
     },
     {
       "title": "Cours de cuisine",
-      "image": null,
+      "image": {
+        "src": "/uploads/courses/cours-de-cuisine.jpg",
+        "alt": "Préparation de sushis en cours de cuisine",
+        "legend": "Préparation de sushis"
+      },
       "description": "Produire la description du cours.",
       "instructor": "Marie Lionis",
       "place": "L'atelier des pâtissier",
