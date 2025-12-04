@@ -36,7 +36,11 @@
     },
     {
       "title": "Cours de cuisine",
-      "image": null,
+      "image": {
+        "src": "/uploads/courses/cours-de-cuisine.jpg",
+        "alt": "Préparation de sushis en cours de cuisine",
+        "legend": "<p>Préparation de sushis</p>"
+      },
       "description": "<p>Produire la description du cours.</p>",
       "instructor": "Marie Lionis",
       "place": "L'atelier des pâtissier",
@@ -50,8 +54,8 @@
       "content": "<p>Nous sommes ouvert à toute proposition de thème de cours de cuisine et de pâtisserie, n'hésitez pas à <strong>proposer vos idées originales</strong>.</p>",
       "image": {
         "src": "/uploads/courses/verrines.jpg",
-        "alt": "Création de verinnes en cours de cuisine",
-        "legend": ""
+        "alt": "Création de verrines en cours de cuisine",
+        "legend": "<p>Cours de verrines</p>"
       },
       "link": {
         "text": "Proposer un thème",
