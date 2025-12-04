@@ -27,6 +27,11 @@
 					<!-- Cover -->
 					<div class="typo mb-6">
 						<h2>{lesson.title}</h2>
+            {#if lesson.image}
+            <figure>
+              <img src={lesson.image.src} alt={lesson.image.alt} class="w-full"/>
+            </figure>
+            {/if}
 						{@html lesson.description}
 					</div>
 					<div class="typo typo-insert mb-6 text-left">
@@ -41,9 +46,9 @@
 			<Debug data={data.courses} />
 		</div>
 		{#if data.courses.cards}
-			<aside class="mt-11">
+			<aside class="mt-12">
 				{#each data.courses.cards as card}
-					<Card {card} size="sm" class="my-4 last:pb-0" />
+					<Card {card} size="sm" class="my-4 first:mt-0 last:pb-0" />
 				{/each}
 			</aside>
 		{/if}

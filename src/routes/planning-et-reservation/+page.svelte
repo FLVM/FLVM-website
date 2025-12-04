@@ -125,9 +125,9 @@
 			{/each}
 		</div>
 		{#if data.booking.cards}
-			<aside class="mt-11">
+			<aside class="mt-12">
 				{#each data.booking.cards as card}
-					<Card {card} size="sm" class="my-4 last:pb-0" />
+					<Card {card} size="sm" class="my-4 first:mt-0 last:pb-0" />
 				{/each}
 			</aside>
 		{/if}
