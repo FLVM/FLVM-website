@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { ClockIcon } from '@lucide/svelte';
 	import type { ClassValue } from 'svelte/elements';
-	import type { CalendarEventType } from '../../../routes/planning-et-reservation/+page';
+	import type { CalendarEventType } from '../../../routes/planning/+page';
 
 	type Props = {
 		event: CalendarEventType;
