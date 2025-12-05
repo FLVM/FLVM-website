@@ -1,31 +1,28 @@
 <script lang="ts">
 	import TwoCols from '$lib/components/layout/two-cols.svelte';
 	import CalendarEvent from '$lib/components/calendar/event.svelte';
-	import type { Booking } from '$lib/server/data';
-	import type { CalendarEventType } from './+page';
 	import { XIcon } from '@lucide/svelte';
 	import Card from '$lib/components/shared/card.svelte';
 	import { browser } from '$app/environment';
 	import Cover from '$lib/components/shared/cover.svelte';
 	import { Switch } from '@skeletonlabs/skeleton-svelte';
+	import { categories } from '$lib/calendar/eventsCalendar.js';
 
-	type Props = {
-		data: {
-			booking: Booking;
-			eventsCalendar: Array<CalendarEventType>;
-		};
-	};
-
-	let { data }: Props = $props();
+  let { data } = $props()
 	// Query
   let querySearch = $state('');
   // Tags
-	let filterTags = $state([
-		{ label: 'Pâtisserie', value: 'pâtisserie', checked: false },
-		{ label: 'Confiserie', value: 'confiserie', checked: false },
-		{ label: 'Cuisine', value: 'cuisine', checked: false },
-		{ label: 'Enfants', value: 'enfants', checked: false }
-	]);
+	// let filterTags = $state([
+	// 	{ label: 'Pâtisserie', value: 'pâtisserie', checked: false },
+	// 	{ label: 'Confiserie', value: 'confiserie', checked: false },
+	// 	{ label: 'Cuisine', value: 'cuisine', checked: false },
+	// 	{ label: 'Enfants', value: 'enfants', checked: false }
+	// ]);
+  let filterTags = $state(categories.map(c => ({
+    label: c.charAt(0).toUpperCase() + c.slice(1),
+    value: c,
+    checked: false
+  })))
 	let checkedFilterTags = $derived(filterTags.filter((tag) => tag.checked));
   // Status masqués
   let showHiddens = $state(false)
@@ -76,12 +73,23 @@
 					<form class="card preset-filled-surface-100-900 p-4 font-sans">
 						<div class="input-group flex mb-2">
 							<input
-								class="ig-input bg-white"
+								class="ig-input preset-filled-surface-50-950"
 								type="search"
 								placeholder="Macarons, Cupcake…"
+                value={querySearch}
 								oninput={(e) => changeSearchValue(e.currentTarget)}
 							/>
-							<button><XIcon /></button>
+              {#if querySearch.length >= 3}
+							<button
+                class="ig-btn preset-filled-surface-300-700"
+                onclick={(e) => {
+                  querySearch = ""
+                  return false
+                }}
+              >
+                <XIcon size={16}/>
+              </button>
+              {/if}
 						</div>
 						<div class="flex gap-2 mb-2">
 							<b>Filtres</b>:
@@ -103,11 +111,11 @@
 							{/each}
 						</div>
             <div class="flex gap-2 justify-end">
-              <Switch checked={showHiddens} onCheckedChange={(details) => showHiddens = details.checked} dir="rtl">
+              <Switch checked={showHiddens} onCheckedChange={(details) => showHiddens = details.checked}>
+                <Switch.Label>Afficher les cours cloturés</Switch.Label>
                 <Switch.Control>
                   <Switch.Thumb />
                 </Switch.Control>
-                <Switch.Label>Afficher les cours cloturés</Switch.Label>
                 <Switch.HiddenInput/>
               </Switch>
             </div>
