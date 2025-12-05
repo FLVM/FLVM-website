@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import OneCol from '$lib/components/layout/one-col.svelte';
 </script>
 
@@ -162,39 +162,39 @@
 		<h3 class="h3 mt-6">Boutons</h3>
 		<div class="space-y-4">
 			<div class="flex gap-4">
-				<button type="button" class="btn preset-filled-primary-500">Button</button>
-				<button type="button" class="btn preset-tonal-primary">Button</button>
-				<button type="button" class="btn preset-outlined-primary-500">Button</button>
+				<button type="button" class="btn preset-filled-primary-500">Button filled primary</button>
+				<button type="button" class="btn preset-tonal-primary">Button tonal primary</button>
+				<button type="button" class="btn preset-outlined-primary-500">Button outlined primary</button>
 			</div>
 			<div class="flex gap-4">
-				<button type="button" class="btn preset-filled-secondary-500">Button</button>
-				<button type="button" class="btn preset-tonal-secondary">Button</button>
-				<button type="button" class="btn preset-outlined-secondary-500">Button</button>
+				<button type="button" class="btn preset-filled-secondary-500">Button filled scondary</button>
+				<button type="button" class="btn preset-tonal-secondary">Button tonal scondary</button>
+				<button type="button" class="btn preset-outlined-secondary-500">Button outlined scondary</button>
 			</div>
 			<div class="flex gap-4">
-				<button type="button" class="btn preset-filled-tertiary-500">Button</button>
-				<button type="button" class="btn preset-tonal-tertiary">Button</button>
-				<button type="button" class="btn preset-outlined-tertiary-500">Button</button>
+				<button type="button" class="btn preset-filled-tertiary-500">Button filled  tertiary</button>
+				<button type="button" class="btn preset-tonal-tertiary">Button tonal  tertiary</button>
+				<button type="button" class="btn preset-outlined-tertiary-500">Button outlined  tertiary</button>
 			</div>
 			<div class="flex gap-4">
-				<button type="button" class="btn preset-filled-success-500">Button</button>
-				<button type="button" class="btn preset-tonal-success">Button</button>
-				<button type="button" class="btn preset-outlined-success-500">Button</button>
+				<button type="button" class="btn preset-filled-success-500">Button filled success</button>
+				<button type="button" class="btn preset-tonal-success">Button tonal success</button>
+				<button type="button" class="btn preset-outlined-success-500">Button outlined success</button>
 			</div>
 			<div class="flex gap-4">
-				<button type="button" class="btn preset-filled-warning-500">Button</button>
-				<button type="button" class="btn preset-tonal-warning">Button</button>
-				<button type="button" class="btn preset-outlined-warning-500">Button</button>
+				<button type="button" class="btn preset-filled-warning-500">Button filled warning</button>
+				<button type="button" class="btn preset-tonal-warning">Button tonal warning</button>
+				<button type="button" class="btn preset-outlined-warning-500">Button outlined warning</button>
 			</div>
 			<div class="flex gap-4">
-				<button type="button" class="btn preset-filled-error-500">Button</button>
-				<button type="button" class="btn preset-tonal-error">Button</button>
-				<button type="button" class="btn preset-outlined-error-500">Button</button>
+				<button type="button" class="btn preset-filled-error-500">Button filled error</button>
+				<button type="button" class="btn preset-tonal-error">Button tonal error</button>
+				<button type="button" class="btn preset-outlined-error-500">Button outlined error</button>
 			</div>
 			<div class="flex gap-4">
-				<button type="button" class="btn preset-filled-surface-500">Button</button>
-				<button type="button" class="btn preset-tonal-surface">Button</button>
-				<button type="button" class="btn preset-outlined-surface-500">Button</button>
+				<button type="button" class="btn preset-filled-surface-500">Button filled surface</button>
+				<button type="button" class="btn preset-tonal-surface">Button tonal surface</button>
+				<button type="button" class="btn preset-outlined-surface-500">Button outlined surface</button>
 			</div>
 		</div>
 
