@@ -19,15 +19,17 @@ export function load(): {
 			{
 				url: '/planning',
 				text: 'Planning & réservation',
-				color: 'tertiary-950-50'
+				color: 'secondary-500'
 			},
 			{
 				url: '/les-cours',
-				text: 'Les cours'
+				text: 'Les cours',
+        color: 'primary-500'
 			},
 			{
 				url: '/tarifs',
-				text: 'Tarifs'
+				text: 'Tarifs',
+        color: 'primary-500'
 			}
 		],
 		navigation: [

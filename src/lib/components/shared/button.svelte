@@ -66,7 +66,7 @@
 	<a
 		href={props.link.url}
 		class={[
-			// "btn",
+      'text-shadow',
 			`size-[${iconSize}px]`,
 			IconBefore || (IconAfter && 'btn-icon'),
 			!props.link.color && 'preset-tonal-primary',
@@ -84,19 +84,19 @@
 	<a
 		href={props.link.url}
 		class={[
-			// "preset-filled-primary-500",
 			'btn',
-			// "btn-sm",
-			// "md:btn-base",
-			// IconBefore || IconAfter && "btn-icon",$
-			!props.link.color && 'hover:preset-tonal',
+      'drop-shadow-md/20',
+      'font-sans',
+      'font-bold',
+			!props.link.color && 'hover:preset-filled',
+			props.link.color && 'text-white text-shadow-md/20',
 			props.link.color && `preset-filled-${props.link.color}`,
 			props.class
 		]}
 		onclick={props.onclick && props.onclick}
 	>
-		{#if IconBefore}<IconBefore size={iconSize} />{/if}
+		{#if IconBefore}<IconBefore size={iconSize} class="drop-shadow-md/40"/>{/if}
 		{props.link.text}
-		{#if IconAfter}<IconAfter size={iconSize} />{/if}
+		{#if IconAfter}<IconAfter size={iconSize} class="drop-shadow-md/40" />{/if}
 	</a>
 {/if}

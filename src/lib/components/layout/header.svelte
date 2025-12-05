@@ -40,7 +40,7 @@
 				<Button
 					{link}
 					class={[
-						'hidden sm:flex preset-filled-primary-300-700',
+						'hidden sm:flex',
 						page.url.pathname === link.url && 'underline'
 					]}
 				/>
