@@ -3,6 +3,7 @@
 	import TwoCols from '$lib/components/layout/two-cols.svelte';
 	import Button from '$lib/components/shared/button.svelte';
 	import Card from '$lib/components/shared/card.svelte';
+	import CalendarEvent from '$lib/components/calendar/event.svelte';
 
 	let { data } = $props();
 </script>
@@ -29,7 +30,6 @@
 		</div>
 	</div>
 </Full>
-
 <TwoCols>
 	<main class="pr-8 cards">
 		{#each data.home.cards as block}
@@ -47,6 +47,20 @@
 		{/if}
 	</main>
 	<aside class="mt-6 p-6 pt-2 preset-tonal cards">
+    {#if data.lastEvents.length > 0}
+    <section>
+      <h1 class="h5">Il reste des places !</h1>
+      {#each data.lastEvents as event}
+      <CalendarEvent event={event} class="mt-3 mb-3" />
+      <hr class="hr" />
+      {/each}
+      <Button link={{
+        text: "Voir le planning",
+        url: "/planning#planning",
+        color: "tertiary-950-50"
+      }} class="w-full"/>
+    </section>
+    {/if}
 		{#each data.home.aside as block}
 			<Card card={block} size="sm" class="my-4 last:pb-0" />
 		{/each}
