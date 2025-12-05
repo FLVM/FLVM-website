@@ -39,7 +39,7 @@
 		{/if}
 		{#if card.link}
 			<div class="card-actions">
-				<Button link={card.link} class={`btn-${size} btn-wide w-full`} />
+				<Button link={card.link} class={`btn-md btn-wide w-full`} />
 			</div>
 		{/if}
 	</div>
