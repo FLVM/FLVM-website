@@ -91,7 +91,7 @@ export async function getLastEvents() {
   // Les derniers events
   const lastEvents = await getEvents()
   return lastEvents
-    // .filter(e => e.transparency === "transparent")
+    .filter(e => e.transparency === "transparent")
     .slice(0,3)
 }
 
