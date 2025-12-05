@@ -8,7 +8,8 @@
 	let { children, data } = $props();
 
 	// Contrôle du mode maintenance
-	if (data.maintenance) {
+  const maintenance = () => data.maintenance
+	if (maintenance()) {
 		throw error(503, 'Site en maintenance');
 	}
 </script>
