@@ -1,5 +1,6 @@
 <script lang="ts">
 	import OneCol from '$lib/components/layout/one-col.svelte';
+	import Button from '$lib/components/shared/button.svelte';
 </script>
 
 <OneCol class="mt-8">
@@ -12,40 +13,55 @@
 					>l'utilitaire de thème de Skeleton</a
 				>
 			</p>
-			<p>Palettes de couleurs :</p>
-			<ul>
-				<li>
-					<a
-						href="https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#FFBF00-F2CF7D-FFE642-FF7700"
-						>Freshly squeezed</a
-					>
-				</li>
-				<li>
-					<a
-						href="https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#80EF80-E3F0A3-BADBA2-42D674"
-						>Pistachio dream</a
-					>
-				</li>
-				<li>
-					<a
-						href="https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#F2B949-EDD377-F2E829-F27430"
-						>Mango popsicle</a
-					>
-				</li>
-				<li>
-					<a
-						href="https://colordesigner.io/color-palette-builder?mode=lch&steps=10&him=constant#FF8559-FFB578-E65447-CF5376"
-						>Guava</a
-					>
-				</li>
-			</ul>
-			<ul>
-				<li>Blueberry: #6B7A8F</li>
-				<li>Apricot: #F7882F</li>
-				<li>Citrus: #F7C331</li>
-				<li>Apple Core: #DCC7AA</li>
-			</ul>
 		</div>
+    <div class="typo">
+      <h2>Composants</h2>
+      <p>
+        Liste des composants Sveltkit réemployables.
+      </p>
+      <h3>Boutons</h3>
+      <p>
+        Afficher des boutons stylisé.
+      </p>
+      <h3>Liens</h3>
+      <p>
+        Bouton augmenté d'un lien.
+      </p>
+      <Button link={{
+        url: 'https://example.com',
+        text: 'Default button'
+      }}/>
+      <Button link={{
+        url: 'https://example.com',
+        text: 'Default button with icon',
+        icon_before: 'heart'
+      }}/>
+      <Button link={{
+        url: 'https://example.com',
+        text: 'Primay button',
+        color: 'primary-500'
+      }}/>
+      <Button link={{
+        url: 'https://example.com',
+        text: 'Secondary button',
+        color: 'secondary-500'
+      }}/>
+      <Button link={{
+        url: 'https://example.com',
+        text: 'Tertiary button',
+        color: 'tertiary-950-50'
+      }}/>
+      <Button link={{
+        url: 'https://example.com',
+        text: 'Surface dark button',
+        color: 'surface-950-50'
+      }}/>
+      <Button link={{
+        url: 'https://example.com',
+        text: 'Surface light button',
+        color: 'surface-50-950',
+      }}/>
+    </div>
 
 		<div class="typo typo-lg">
 			<h2>Couleurs</h2>
