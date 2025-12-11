@@ -3,6 +3,7 @@
 	import type { ClassValue } from 'svelte/elements';
 	import Headline from '$lib/components/shared/headline.svelte';
 	import ButtonSocial from '$lib/components/shared/button/social.svelte';
+	import LightSwitch from '../shared/light-switch.svelte';
 
 	let props: { class?: ClassValue; editor: Editor; links: Link[] } = $props();
 </script>
@@ -37,4 +38,5 @@
 	<p>© {new Date().getFullYear()}</p>
 	<a href="/styleguide">Guide de style</a>
 	<a href="/legals/mentions-legales">Mentions légales</a>
+  <LightSwitch />
 </footer>

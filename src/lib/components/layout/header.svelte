@@ -10,7 +10,6 @@
 	import { AppBar, Switch } from '@skeletonlabs/skeleton-svelte';
 	import NavigationMobile from '$lib/components/navigation/mobile.svelte';
 	import Button from '$lib/components/shared/button.svelte';
-	import LightSwitch from '$lib/components/shared/light-switch.svelte';
 	import type { Editor, Link } from '$lib/server/data';
 	import type { ClassValue } from 'svelte/elements';
 	import { page } from '$app/state';
@@ -46,7 +45,6 @@
 				/>
 			{/each}
 			<NavigationMobile class="sm:hidden" links={props.links} editor={props.editor} />
-			<LightSwitch />
 		</AppBar.Trail>
 	</AppBar.Toolbar>
 </AppBar>
