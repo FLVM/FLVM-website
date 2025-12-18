@@ -5,10 +5,10 @@
 	let { editor }: { editor: Editor } = $props();
 </script>
 
-<div class="headline">
+<div>
 	<Feather size="64" />
-	<h2 class="footer-title">{editor.name}</h2>
-	<div class="font-bold">
+	<h1 class="h5 leading-none mb-1">{editor.name}</h1>
+	<div class="text-sm leading-[1.2] italic">
 		{@html editor.baseline}
 	</div>
 </div>

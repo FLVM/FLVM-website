@@ -13,37 +13,28 @@
 	import type { Editor, Link } from '$lib/server/data';
 	import type { ClassValue } from 'svelte/elements';
 	import { page } from '$app/state';
+	import Headline from '../shared/headline.svelte';
 
 	let props: { editor: Editor; links: Link[]; class?: ClassValue } = $props();
 </script>
 
 <AppBar class="{props.class} bg-primary-500 py-6">
-	<AppBar.Toolbar class="grid-cols-[auto_1fr_auto]">
+	<AppBar.Toolbar class="grid-cols-[auto_1fr] content-start">
 		<AppBar.Lead>
-			<a href="/" class="text-xl">{props.editor.name}</a>
+      <Headline editor={props.editor} />
 		</AppBar.Lead>
-		<AppBar.Headline class="italic text-base leading-[1.2]">
-			<div class="flex text-center">
-				{@html props.editor.baseline}
-			</div>
-		</AppBar.Headline>
-		<AppBar.Trail>
-			<!--
-      @todo: ajouter une stratégie d'icone requis :
-      - mobile: caché
-      - petit: icone
-      - moyen: texte
-      - large: icon + texte 
-      -->
-			{#each props.links as link}
-				<Button
-					{link}
-					class={[
-						'hidden sm:flex',
-						page.url.pathname === link.url && 'underline'
-					]}
-				/>
-			{/each}
+		<AppBar.Trail class="justify-end self-start">
+      <div class="hidden sm:flex flex-wrap justify-end self-center">
+        {#each props.links as link}
+          <Button
+            {link}
+            class={[
+              "mb-2",
+              page.url.pathname === link.url && 'underline'
+            ]}
+          />
+        {/each}
+      </div>
 			<NavigationMobile class="sm:hidden" links={props.links} editor={props.editor} />
 		</AppBar.Trail>
 	</AppBar.Toolbar>
