@@ -17,19 +17,21 @@ export function load(): {
 		home,
 		links: [
 			{
-				url: '/planning',
-				text: 'Planning & réservation',
-				color: 'secondary-500'
-			},
-			{
 				url: '/les-cours',
 				text: 'Les cours',
-        color: 'primary-500'
 			},
 			{
 				url: '/tarifs',
 				text: 'Tarifs',
-        color: 'primary-500'
+			},
+      {
+        url: '/a-propos',
+        text: 'À propos'
+      },
+			{
+				url: '/planning',
+				text: 'Planning & réservation',
+				color: 'secondary-500'
 			}
 		],
 		navigation: [
