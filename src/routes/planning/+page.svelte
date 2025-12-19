@@ -1,23 +1,21 @@
+<script lang="ts" module>
+  const PAGE_SIZE = 3
+</script>
+
 <script lang="ts">
 	import TwoCols from '$lib/components/layout/two-cols.svelte';
 	import CalendarEvent from '$lib/components/calendar/event.svelte';
-	import { XIcon } from '@lucide/svelte';
+	import { ArrowLeftIcon, ArrowRightIcon, XIcon } from '@lucide/svelte';
 	import Card from '$lib/components/shared/card.svelte';
 	import { browser } from '$app/environment';
 	import Cover from '$lib/components/shared/cover.svelte';
-	import { Switch } from '@skeletonlabs/skeleton-svelte';
+	import { Pagination, Switch } from '@skeletonlabs/skeleton-svelte';
 	import { categories } from '$lib/calendar/eventsCalendar.js';
 
   let { data } = $props()
 	// Query
   let querySearch = $state('');
   // Tags
-	// let filterTags = $state([
-	// 	{ label: 'Pâtisserie', value: 'pâtisserie', checked: false },
-	// 	{ label: 'Confiserie', value: 'confiserie', checked: false },
-	// 	{ label: 'Cuisine', value: 'cuisine', checked: false },
-	// 	{ label: 'Enfants', value: 'enfants', checked: false }
-	// ]);
   let filterTags = $state(categories.map(c => ({
     label: c.charAt(0).toUpperCase() + c.slice(1),
     value: c,
@@ -51,6 +49,13 @@
 			})
 	);
 
+  // Pagination
+  let page = $state(1) // @todo : récupérerdepuis l'URL
+  const start = $derived((page -1) * PAGE_SIZE)
+  const end = $derived(start + PAGE_SIZE) 
+  const paginatedEvents = $derived(filteredEvents.slice(start, end))
+
+  // Actions pour les filtres
 	function changeFilterValue(target: EventTarget & HTMLInputElement) {
 		const filter = filterTags.find((f) => f.value === target.value);
 		if (!filter) return;
@@ -145,7 +150,30 @@
 					</p>
 				{/if}
 			</div>
-			{#each filteredEvents as event}
+      <Pagination
+        count={filteredEvents.length}
+        pageSize={PAGE_SIZE}
+        {page}
+        onPageChange={(event) => (page = event.page)}
+        class="flex justify-center w-auto"
+      >
+        <Pagination.PrevTrigger><ArrowLeftIcon class="size-4"/></Pagination.PrevTrigger>
+        <Pagination.Context>
+          {#snippet children(pagination)}
+            {#each pagination().pages as page, index(page)}
+              {#if page.type === 'page'}
+              <Pagination.Item {...page}>
+                {page.value}
+              </Pagination.Item>
+              {:else}
+              <Pagination.Ellipsis {index}>&#8230</Pagination.Ellipsis>
+              {/if}
+            {/each}
+          {/snippet}
+        </Pagination.Context>
+        <Pagination.NextTrigger><ArrowRightIcon class="size-4"/></Pagination.NextTrigger>
+      </Pagination>
+			{#each paginatedEvents as event}
 				<CalendarEvent {event} class="mt-6 mb-2" />
 				<hr class="hr" />
 			{/each}
