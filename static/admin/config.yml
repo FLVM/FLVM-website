@@ -55,7 +55,7 @@ phone: &phone
 url: &url
   label: Lien
   name: url
-  pattern: ["((http|https)://)(www.)?[a-zA-Z0-9@:%._\\+~#?&//=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%._\\+~#?&//=]*)", "URL invalide"]
+  pattern: ["^(|((http|https)://(www.)?[a-zA-Z0-9@:%._\\+~#?&//=]{2,256}\\.[a-z]{2,6}\b([-a-zA-Z0-9@:%._\\+~#?&//=]*)|(/[-a-zA-Z0-9@:%._\\+~#?&//=]*))$)", "URL invalide"]
 # Makdown minimal
 markdown_minimal: &markdown_minimal
   label: Contenu
@@ -119,8 +119,9 @@ link: &link
     - label: Texte
       name: text
       maxlength: 32
-    - label: Lien
-      name: url
+    # - label: Lien
+      # name: url
+    - <<:  *url
     - label: Couleur
       name: color
       widget: select
@@ -607,6 +608,10 @@ singletons:
       - label: Description
         name: description
         <<: *markdown_minimal
+      - <<: *url
+        label: URL de base
+        hint: Dans le doute, laisser vide.
+        required: false
       - label: Contact
         name: contact
         widget: object
