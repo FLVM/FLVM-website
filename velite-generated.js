@@ -116,6 +116,7 @@ export const EditorSchema = s.object({
  name: s.string(),
  baseline: s.string().optional().nullable(),
  description: s.markdown(),
+ url: s.string().optional().nullable(),
  contact: s.object({name: s.string().optional().nullable(),phone: s.string(),email: s.string()}),
  socials: s.array(s.object({text: s.string(),icon: s.enum(["", "facebook","twitter","instagram","vimeo"]),url: s.string(),icon_only: s.boolean().optional().nullable()})).optional().nullable(),
  address: s.object({name: s.string().optional().nullable(),street: s.string().optional().nullable(),zipcode: s.string(),city: s.string(),country: s.string()}),
