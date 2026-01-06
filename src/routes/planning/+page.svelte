@@ -1,5 +1,5 @@
 <script lang="ts" module>
-  const PAGE_SIZE = 3
+  const PAGE_SIZE = 25
 </script>
 
 <script lang="ts">
@@ -150,12 +150,17 @@
 					</p>
 				{/if}
 			</div>
+			{#each paginatedEvents as event}
+				<CalendarEvent {event} class="mt-6 mb-2" />
+				<hr class="hr" />
+			{/each}
+			{#if filteredEvents.length/PAGE_SIZE > 1}
       <Pagination
         count={filteredEvents.length}
         pageSize={PAGE_SIZE}
         {page}
         onPageChange={(event) => (page = event.page)}
-        class="flex justify-center w-auto"
+        class="flex justify-center w-auto border-t-0"
       >
         <Pagination.PrevTrigger><ArrowLeftIcon class="size-4"/></Pagination.PrevTrigger>
         <Pagination.Context>
@@ -173,10 +178,7 @@
         </Pagination.Context>
         <Pagination.NextTrigger><ArrowRightIcon class="size-4"/></Pagination.NextTrigger>
       </Pagination>
-			{#each paginatedEvents as event}
-				<CalendarEvent {event} class="mt-6 mb-2" />
-				<hr class="hr" />
-			{/each}
+			{/if}
 		</div>
 		{#if data.booking.cards}
 			<aside class="mt-12">
