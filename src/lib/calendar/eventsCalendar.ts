@@ -50,7 +50,9 @@ export async function getEvents() {
 			return result.json();
 		}
 	);
-	const eventsCalendar: Array<CalendarEventType> = calendarApiResponse.items.map(
+	const eventsCalendar: Array<CalendarEventType> = calendarApiResponse.items
+		.filter((i: CalendarEventType) => Boolean(i.summary))
+		.map(
 		(i: CalendarEventType) => ({
 			id: i.id,
 			status: i.status,
