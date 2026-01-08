@@ -162,7 +162,7 @@
         pageSize={PAGE_SIZE}
         {page}
         onPageChange={(event) => {
-					document.getElementById('result')?.scrollIntoView()
+					document.getElementById('result')?.scrollIntoView({behavior: 'smooth'})
 					return (page = event.page)
 				}}
         class="flex justify-center w-auto border-t-0"
