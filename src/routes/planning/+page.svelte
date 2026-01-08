@@ -150,16 +150,21 @@
 					</p>
 				{/if}
 			</div>
-			{#each paginatedEvents as event}
-				<CalendarEvent {event} class="mt-6 mb-2" />
-				<hr class="hr" />
-			{/each}
+			<div id="result" class="pt-6">
+				{#each paginatedEvents as event}
+					<CalendarEvent {event} class="not-first:mt-6 mb-2" />
+					<hr class="hr" />
+				{/each}
+			</div>
 			{#if filteredEvents.length/PAGE_SIZE > 1}
       <Pagination
         count={filteredEvents.length}
         pageSize={PAGE_SIZE}
         {page}
-        onPageChange={(event) => (page = event.page)}
+        onPageChange={(event) => {
+					document.getElementById('result')?.scrollIntoView()
+					return (page = event.page)
+				}}
         class="flex justify-center w-auto border-t-0"
       >
         <Pagination.PrevTrigger><ArrowLeftIcon class="size-4"/></Pagination.PrevTrigger>
