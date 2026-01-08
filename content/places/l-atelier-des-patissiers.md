@@ -1,6 +1,6 @@
 ---
 publish: true
-name: L'atelier des pâtissier
+name: L'atelier des pâtissiers
 image:
   src: /uploads/places/l-atelier-de-patisserie.jpg
   alt: Façade de l'atelier de pâtisserie
@@ -18,4 +18,5 @@ hours: |-
   - de 14h30 à 17h30 ;
   - et de 18h30 à 21h30.
 ---
+
 L'atelier de pâtisserie accueille les cours de pâtisserie pour adultes et enfants.

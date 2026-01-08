@@ -3,88 +3,136 @@
  */
 
 @utility typo {
-  @apply text-base space-y-4 leading-[1.6];
-  & h1, h2, h3, h4, h5, h6 {
-    @apply font-bold heading-font-family text-base leading-none
-  }
-  .tagline:has( + h1) { @apply heading-font-family font-medium; }
-  & h1 { @apply text-3xl; }
-  & h2 { @apply text-2xl; }
-  & h3 { @apply text-xl; }
-  & h4 { @apply text-lg; }
-  & h5 { @apply text-base; }
-  & h6 { @apply text-base; }
-  & blockquote { @apply blockquote; }
-  & a:not(.btn) { @apply anchor; }
-  & pre { @apply pre; }
-  & code { @apply code; }
-  & kbd { @apply kbd; }
-  & del { @apply del; }
-  & ins { @apply ins; }
-  & mark { @apply mark; }
-  & ul { @apply list-inside list-disc; }
-  & ol { @apply list-inside list-decimal; }
-  & dt { @apply font-bold; }
-  & dd { @apply opacity-60; }
-  &.typo-insert {
-    --text-scaling: 1.125;
-    @apply space-y-0 heading-font-family;
-    @apply p-4 preset-tonal-primary dark:preset-tonal;
-
-  }
-  & h1, h2, h3, h4, h5, h6,
-    p:not(:last-child),
-    ul:not(:last-child), ol:not(:last-child),
-    dl:not(:last-child),
-    pre:not(:last-child),
-    blockquote:not(:last-child) {
-    /* margin-block-end: calc(calc(var(--spacing) * 4)); */
-  }
+	@apply text-base space-y-4 leading-[1.6];
+	& h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold heading-font-family text-base leading-none;
+	}
+	.tagline:has(+ h1) {
+		@apply heading-font-family font-medium;
+	}
+	& h1 {
+		@apply text-3xl;
+	}
+	& h2 {
+		@apply text-2xl;
+	}
+	& h3 {
+		@apply text-xl;
+	}
+	& h4 {
+		@apply text-lg;
+	}
+	& h5 {
+		@apply text-base;
+	}
+	& h6 {
+		@apply text-base;
+	}
+	& blockquote {
+		@apply blockquote;
+	}
+	& a:not(.btn) {
+		@apply anchor;
+	}
+	& pre {
+		@apply pre;
+	}
+	& code {
+		@apply code;
+	}
+	& kbd {
+		@apply kbd;
+	}
+	& del {
+		@apply del;
+	}
+	& ins {
+		@apply ins;
+	}
+	& mark {
+		@apply mark;
+	}
+	& ul {
+		@apply list-inside list-disc;
+	}
+	& ol {
+		@apply list-inside list-decimal;
+	}
+	& dt {
+		@apply font-bold;
+	}
+	& dd {
+		@apply opacity-60;
+	}
+	&.typo-insert {
+		--text-scaling: 1.125;
+		@apply space-y-0 heading-font-family;
+		@apply p-4 preset-tonal-primary dark:preset-tonal;
+	}
+	& h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p:not(:last-child),
+	ul:not(:last-child),
+	ol:not(:last-child),
+	dl:not(:last-child),
+	pre:not(:last-child),
+	blockquote:not(:last-child) {
+		/* margin-block-end: calc(calc(var(--spacing) * 4)); */
+	}
 }
 
 @utility typo-lg {
-  --text-scaling: 1.5;
+	--text-scaling: 1.5;
 }
 
 @utility typo-sm {
-  --text-scaling: 1;
+	--text-scaling: 1;
 }
 
 /* From DaisyUI Footer */
 /* https://raw.githubusercontent.com/saadeghi/daisyui/refs/heads/master/packages/daisyui/src/components/footer.css */
 
 @layer components {
-  .footer {
-    @apply typo typo-sm text-surface-400 bg-surface-950 grid w-full grid-flow-row place-items-start gap-x-4 gap-y-10;
-    & > * {
-      @apply grid place-items-start;
-    }
-    & a:not(.btn) {
-      @apply text-inherit underline;
-    }
-    /* Centrage vertical et horizontal */
-    /* &.footer-center {
+	.footer {
+		@apply typo typo-sm text-surface-400 bg-surface-950 grid w-full grid-flow-row place-items-start gap-x-4 gap-y-10;
+		& > * {
+			@apply grid place-items-start;
+		}
+		& a:not(.btn) {
+			@apply text-inherit underline;
+		}
+		/* Centrage vertical et horizontal */
+		/* &.footer-center {
       @apply place-items-center text-center;
       & > * {
         @apply place-items-center;
       }
     } */
-  }
+	}
 }
 
 @layer components {
-  .footer-title {
-    @apply mb-2 opacity-60;
-  }
+	.footer-title {
+		@apply mb-2 opacity-60;
+	}
 }
 
 @layer components {
-  .footer-mentions {
-    @apply px-6 flex gap-3 text-xs text-surface-600;
-    & > * {
-      @apply inline m-0;
-    }
-  }
+	.footer-mentions {
+		@apply px-6 flex gap-3 text-xs text-surface-600;
+		& > * {
+			@apply inline m-0;
+		}
+	}
 }
 
 /* @todo: utiliser des classes utilitaires dédiées pour un meilleur controle
@@ -92,28 +140,28 @@
  * .footer-vertical-center
  */
 @utility footer-center {
-  @apply place-items-center text-center;
-  & > * {
-    @apply place-items-center;
-  }
-  &.footer-mentions {
-    @apply justify-center;
-  }
+	@apply place-items-center text-center;
+	& > * {
+		@apply place-items-center;
+	}
+	&.footer-mentions {
+		@apply justify-center;
+	}
 }
 
 @utility footer-horizontal {
-  @apply grid-flow-col;
-  &.footer-center {
-    @apply grid-flow-col-dense;
-  }
+	@apply grid-flow-col;
+	&.footer-center {
+		@apply grid-flow-col-dense;
+	}
 }
 
 @utility footer-vertical {
-  @apply grid-flow-row;
-  /* Doit neutraliser  grid-flow-col-dense  */
-  &.footer-center {
-    @apply grid-flow-row-dense;
-  }
+	@apply grid-flow-row;
+	/* Doit neutraliser  grid-flow-col-dense  */
+	&.footer-center {
+		@apply grid-flow-row-dense;
+	}
 }
 
 /* Complète Skeleton Card en s'insirant de DaisyUI Card  */
@@ -121,41 +169,43 @@
 /* https://daisyui.com/components/card/ */
 
 @layer components {
-  .card-body {
-    @apply typo p-6;
-    & a:not(.btn) {
-      @apply text-inherit underline;  
-    }
-  }
-  .card-actions {
-    @apply text-center mt-6;
-  }
-  & .card-figure {
-    @apply relative;
-    & > img {
-      @apply w-full;
-    }
-    & .card-caption {
-      @apply absolute bottom-0 text-surface-contrast-950 bg-surface-950 px-3 py-1 text-xs heading-font-family opacity-60;
-      & a { @apply underline; }
-    }
-  }
+	.card-body {
+		@apply typo p-6;
+		& a:not(.btn) {
+			@apply text-inherit underline;
+		}
+	}
+	.card-actions {
+		@apply text-center mt-6;
+	}
+	& .card-figure {
+		@apply relative;
+		& > img {
+			@apply w-full;
+		}
+		& .card-caption {
+			@apply absolute bottom-0 text-surface-contrast-950 bg-surface-950 px-3 py-1 text-xs heading-font-family opacity-60;
+			& a {
+				@apply underline;
+			}
+		}
+	}
 
-  .card-featured {
-    @apply preset-filled-secondary-500;
+	.card-featured {
+		@apply preset-filled-secondary-500;
 
-    & .card-body {
-      @apply p-4
-    }
-  }
-  .card-sm {
-    & .card-body {
-      @apply typo-sm p-3;
-    }
-  }
-  .card-lg {
-    & .card-body {
-      @apply typo-lg;
-    }
-  }
+		& .card-body {
+			@apply p-4;
+		}
+	}
+	.card-sm {
+		& .card-body {
+			@apply typo-sm p-3;
+		}
+	}
+	.card-lg {
+		& .card-body {
+			@apply typo-lg;
+		}
+	}
 }

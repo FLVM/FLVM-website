@@ -13,10 +13,19 @@ backend:
 # @todo: Conserver une config local commenté
   # name: test-repo
   # Confgi from : https://github.com/yardstick-codebase/decap-cms-oauth?tab=readme-ov-file
+  # Suivre tuto : 
+  # https://ironeko.com/posts/how-to-install-netlify-cms-on-vercel
   name: github
   repo: FLVM/FLVM-website
   branch: develop
-  # base_url: https://flvm-website.vercel.app
+  # custom
+  # Base URL pour le serveur d'authentification (https://api.netlify.com  par defaut)
+  base_url: https://flvm-website.vercel.app
+  # base_url: http://localhost:5173
+  auth_endpoint: "api/auth"
+  # Github
+  # auth_endpoint: "auth" # Github
+  # auth_endpoint: "oauth/authorize" # Gitlab
 media_folder: /static/uploads
 public_folder: /uploads
 slug:
@@ -46,7 +55,7 @@ phone: &phone
 url: &url
   label: Lien
   name: url
-  pattern: ["((http|https)://)(www.)?[a-zA-Z0-9@:%._\\+~#?&//=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%._\\+~#?&//=]*)", "URL invalide"]
+  pattern: ["^(|((http|https)://(www.)?[a-zA-Z0-9@:%._\\+~#?&//=]{2,256}\\.[a-z]{2,6}\b([-a-zA-Z0-9@:%._\\+~#?&//=]*)|(/[-a-zA-Z0-9@:%._\\+~#?&//=]*))$)", "URL invalide"]
 # Makdown minimal
 markdown_minimal: &markdown_minimal
   label: Contenu
@@ -110,8 +119,9 @@ link: &link
     - label: Texte
       name: text
       maxlength: 32
-    - label: Lien
-      name: url
+    # - label: Lien
+      # name: url
+    - <<:  *url
     - label: Couleur
       name: color
       widget: select
@@ -156,12 +166,12 @@ cover: &cover
   - label: Titre
     name: title
     hint: Titre à afficher par dessus l'image.
-    required: false
+    required: true
   - label: Texte
     name: text
     hint: Texte à afficher par dessus l'image.
-    widget: markdown
-    required: false
+    <<: *markdown_minimal
+    required: true
   - <<: *image
     required: false
   # - label: Lien
@@ -303,6 +313,10 @@ collections:
     hide: true
     folder: content/schema
     <<: *card
+  - name: cover
+    hide: true
+    folder: content/schema 
+    <<: *cover
     # - <<: *block_text
     # - <<: *block_cover
     # - <<: *block_link
@@ -373,7 +387,7 @@ singletons:
     name: home
     editor:
       preview: false
-    file: content/settings/home.json
+    file: content/home.json
     icon: home
     fields:
       - <<: *SEO
@@ -431,12 +445,13 @@ singletons:
     public_folder: "{{public_folder}}/courses"
     editor:
       preview: false
-    file: content/cours.md
+    file: content/cours.json
     fields:
       - <<: *SEO
-      - label: Description
-        name: body
-        <<: *markdown_minimal
+      - label: Au sujet des cours
+        hint: Décrivez succinctement les types de cours et la durée.
+        collapsed: true
+        <<: *cover
       - label: Cours
         name: lessons
         widget: list
@@ -473,37 +488,39 @@ singletons:
         name: cards
         widget: list
         collapsed: true
+        required: false
         <<: *card
   - label: Planning & réservation
     name: booking
     icon: calendar_meal
-    file: content/booking.md
+    file: content/booking.json
     editor:
       preview: false
     fields:
       - <<: *SEO
       - label: Informations de réservations
-        hint: Décrivez brievement comment choisir un cours.
-        name: body
-        <<: *markdown_minimal
+        hint: Décrivez brievement comment réserver un cours.
+        collapsed: true
+        <<: *cover
       - label: Informations complémentaires
         label_singular: Information
         name: cards
         widget: list
         collapsed: true
+        required: false
         <<: *card
   - label: Tarifs & modalités
     name: pricelist
     icon: view_list
-    file: content/pricelist.md
+    file: content/pricelist.json
     editor:
       preview: false
     fields:
       - <<: *SEO
-      - label: Information de réservation
-        hint: Décrivez brievement les modalité de réservation.
-        name: body
-        <<: *markdown_minimal
+      - label: Information sur les tarifs
+        hint: Décrivez simplement les modalités de réglement.
+        collapsed: true
+        <<: *cover
       - label: Grille de tarifs
         name: prices
         widget: list
@@ -526,77 +543,54 @@ singletons:
         name: cards
         widget: list
         collapsed: true
+        required: false
         <<: *card
   - label: À propos
     name: about
-    icon: view_list
-    file: content/about.md
+    icon: chat_info
+    file: content/about.json
     editor:
       preview: false
     fields:
       - <<: *SEO
-      - label: Contenu
+      - label: Introduction de la page
+        hint: Écrivez un texte cours d'introduction
+        collapsed: true
+        <<: *cover
+      - label: Contenu de la page
         name: body
+        hint: Contenu long de la page, vous pouvez y insérer des titrages intermédiaires, des images, des tableau, etc.
+        required: false
         <<: *markdown_simple
       - label: Informations complémentaire
         label_singular: Information
         name: cards
         widget: list
         collapsed: true
+        required: false
         <<: *card
   - divider: true
-  - label: Configuration
-    name: configuration
-    file: content/settings/main.json
-    editor:
-      preview: false
-    icon: instant_mix
-    fields:
-      # @todo : Ajouter configurations 
-      # - URL du google calendar
-      # - mentions de pied de page
-      - label: Pied de page
-        name: footer
-        widget: object
-        summary: Gestion du colophon et des listes de liens
-        collapsed: true
-        fields: 
-          - label: Colophon
-            name: colophon
-            widget: text
-          - label: Liste de liens
-            name: links
-  # - label: Grille de tarifs
-  #   name: price-list
-  #   # icon: percent_discount
-  #   # icon: payments
-  #   file: content/price-list.md
+  # - label: Configuration
+  #   name: configuration
+  #   file: content/settings/main.json
   #   editor:
   #     preview: false
-  #   fields: 
-  #     - label: Présentation
-  #       name: body
-  #       widget: markdown
-  #       minimal: true
-  #       buttons: [bold, italic, link]
-  #       editor_components: []
-  #       required: false
-  #     - label: Tarifs
-  #       name: prices
-  #       widget: list
+  #   icon: instant_mix
+  #   fields:
+  #     # @todo : Ajouter configurations 
+  #     # - URL du google calendar
+  #     # - mentions de pied de page
+  #     - label: Pied de page
+  #       name: footer
+  #       widget: object
+  #       summary: Gestion du colophon et des listes de liens
   #       collapsed: true
-  #       # summary: "{{name}}"
   #       fields: 
-  #         - label: Intitulé
-  #           name: name
-  #         - label: Tarif par personne
-  #           name: price
-  #           widget: number
-  #           value_type: float
-  #           required: false
-  #         - label: Détail
-  #           name: detail
-  #           <<: *markdown_simple
+  #         - label: Colophon
+  #           name: colophon
+  #           widget: text
+  #         - label: Liste de liens
+  #           name: links
   - label: Informations éditeur
     name: editor
     file: content/settings/editor.json
@@ -614,6 +608,10 @@ singletons:
       - label: Description
         name: description
         <<: *markdown_minimal
+      - <<: *url
+        label: URL de base
+        hint: Dans le doute, laisser vide.
+        required: false
       - label: Contact
         name: contact
         widget: object
