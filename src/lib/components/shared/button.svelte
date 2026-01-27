@@ -85,11 +85,10 @@
 		href={props.link.url}
 		class={[
 			'btn',
-      'drop-shadow-md/20',
       'font-sans',
       'font-bold',
 			!props.link.color && 'hover:preset-filled',
-			props.link.color && 'text-white text-shadow-md/20',
+			props.link.color && 'text-white  [text-shadow:_0px_1px_1px_rgb(0_0_0_/_0.6),_0px_0px_4px_rgb(0_0_0/_0.4)]',
 			props.link.color && `preset-filled-${props.link.color}`,
 			props.class
 		]}
