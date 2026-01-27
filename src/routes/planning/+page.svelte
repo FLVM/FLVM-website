@@ -9,7 +9,7 @@
 	import Card from '$lib/components/shared/card.svelte';
 	import { browser } from '$app/environment';
 	import Cover from '$lib/components/shared/cover.svelte';
-	import { Pagination, Switch } from '@skeletonlabs/skeleton-svelte';
+	import { Collapsible, Pagination, Switch } from '@skeletonlabs/skeleton-svelte';
 	import { categories } from '$lib/calendar/eventsCalendar.js';
 
   let { data } = $props()
@@ -96,25 +96,37 @@
               </button>
               {/if}
 						</div>
-						<div class="flex gap-2 mb-2">
-							<b>Filtres</b>:
-							{#each filterTags as tag}
-								<label
-									for={`id-${tag.value}`}
-									class="flex items-center space-x-2 gap-2 cursor-pointer"
-								>
-									<input
-										type="checkbox"
-										class="checkbox"
-										id={`id-${tag.value}`}
-										checked={tag.checked}
-										value={tag.value}
-										onchange={(e) => changeFilterValue(e.currentTarget)}
-									/>
-									{tag.label}
-								</label>
-							{/each}
-						</div>
+						<Collapsible class="items-start">
+							<Collapsible.Content class="text-sm">
+								<strong class="h6 text-sm">Vos options de recherches</strong>
+								<div class="flex flex-wrap gap-x-2">
+									{#each filterTags as tag}
+										<label
+											for={`id-${tag.value}`}
+											class="flex items-center space-x-2 gap-2 cursor-pointer"
+										>
+											<input
+												type="checkbox"
+												class="checkbox"
+												id={`id-${tag.value}`}
+												checked={tag.checked}
+												value={tag.value}
+												onchange={(e) => changeFilterValue(e.currentTarget)}
+											/>
+											{tag.label}
+										</label>
+									{/each}
+								</div>
+							</Collapsible.Content>
+							<Collapsible.Trigger class="mb-2">
+								<Collapsible.Indicator class="group">
+									<span class="btn btn-sm preset-filled-surface-900-100">
+										<span class="group-data-[state=open]:hidden block">Afficher les filtres</span>
+										<span class="group-data-[state=open]:block hidden">Masquer les filtres</span>
+									</span>
+								</Collapsible.Indicator>
+							</Collapsible.Trigger>
+						</Collapsible>
             <div class="flex gap-2 justify-end">
               <Switch checked={showHiddens} onCheckedChange={(details) => showHiddens = details.checked}>
                 <Switch.Label>Afficher les cours cloturés</Switch.Label>
@@ -131,7 +143,9 @@
 				{/if}
 				{#if checkedFilterTags.length > 0}
 					<div>
-						<b>Vos filtres</b> : {checkedFilterTags.map((tag) => tag.label).join(', ')}
+						<p class="text-sm mb-2">
+							<b>Vos filtres</b> : {checkedFilterTags.map((tag) => tag.label).join(', ')}
+						</p>
 						<button
 							class="btn btn-sm preset-filled-surface-100-900"
 							onclick={(e) => {
@@ -150,16 +164,21 @@
 					</p>
 				{/if}
 			</div>
-			{#each paginatedEvents as event}
-				<CalendarEvent {event} class="mt-6 mb-2" />
-				<hr class="hr" />
-			{/each}
+			<div id="result" class="pt-6">
+				{#each paginatedEvents as event}
+					<CalendarEvent {event} class="not-first:mt-6 mb-2" />
+					<hr class="hr" />
+				{/each}
+			</div>
 			{#if filteredEvents.length/PAGE_SIZE > 1}
       <Pagination
         count={filteredEvents.length}
         pageSize={PAGE_SIZE}
         {page}
-        onPageChange={(event) => (page = event.page)}
+        onPageChange={(event) => {
+					document.getElementById('result')?.scrollIntoView({behavior: 'smooth'})
+					return (page = event.page)
+				}}
         class="flex justify-center w-auto border-t-0"
       >
         <Pagination.PrevTrigger><ArrowLeftIcon class="size-4"/></Pagination.PrevTrigger>
