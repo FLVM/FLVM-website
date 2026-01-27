@@ -17,6 +17,7 @@
   "lessons": [
     {
       "title": "Cours de pâtisserie",
+      "id": "patisserie",
       "image": {
         "src": "/uploads/courses/chocopistache.jpg",
         "alt": "Gâteaux Chocopistache.",
@@ -36,6 +37,7 @@
     },
     {
       "title": "Cours de cuisine",
+      "id": "cuisine",
       "image": {
         "src": "/uploads/courses/cours-de-cuisine.jpg",
         "alt": "Préparation de sushis en cours de cuisine",

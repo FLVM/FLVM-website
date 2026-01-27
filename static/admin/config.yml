@@ -461,6 +461,9 @@ singletons:
         fields: 
         - label: Nom du cours
           name: title
+        - label: Identifiant
+          name: id
+          hint: Un nom de cours unique, sans espace ni caractères spéciaux, permettant de créer des ancres (ex. patisserie)
         - <<: *image
           required: false
         - label: Description du cours
