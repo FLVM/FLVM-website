@@ -6,7 +6,7 @@
   "cover": {
     "overhead": "Cuisine & pâtisserie",
     "title": "Les cours",
-    "text": "<p>Nous proposons des <a href=\"http://localhost:5173/les-cours#cours-de-patisserie\">cours de pâtisserie</a> et <a href=\"http://localhost:5173/cours-de-cuisine\">des cours de cuisine</a> d'une durée de 3 heures, pour prendre rendez-vous, choisissez un cours <a href=\"/planning\">sur le planning</a> ou <a href=\"/devis\">proposez votre thème</a>.</p>",
+    "text": "<p>Nous proposons des <a href=\"/les-cours#patisserie\">cours de pâtisserie</a> et <a href=\"/les-cours#cuisine\">des cours de cuisine</a> d'une durée de 3 heures, pour prendre rendez-vous, choisissez un cours <a href=\"/planning#planning\">sur le planning</a> ou <a href=\"mailto:contact@flvm.fr?subject=Demande%20cours%20de%20sp%C3%A9cifique&#x26;body=Bonjour%2C%0A%0AJe%20ne%20trouve%20pas%20de%20cours%20de%20cuisine%20ou%20de%20p%C3%A2tisserie%20qui%20me%20conviennent.%0ASerait-il%20possible%20de%20planifier%20un%20cours%20de%20%5Bsujet%20de%20votre%20cours%5D%20pour%20%5Bn%5D%20personne(s)%20d&#x27;une%20dur%C3%A9e%20d&#x27;environ%203%20heures%3F%0ABien%20cordialement.\">proposez votre thème</a>.</p>",
     "image": {
       "src": "/uploads/courses/cover-cours.jpg",
       "alt": "Illustration d'un chat prenant un cours de cuisine",
@@ -23,13 +23,13 @@
         "alt": "Gâteaux Chocopistache.",
         "legend": ""
       },
-      "description": "<p>Arnaud Houley, maître pâtissier, vous aidera à parfaire vos connaissances en pâtisserie, chocolaterie et confiserie. Les cours se déroulent à <a href=\"http://flvm.fr/informations#l-atelier-de-patisserie\">l'Atelier de pâtisserie</a>.</p>",
+      "description": "<p>Arnaud Houley, maître pâtissier, vous aidera à parfaire vos connaissances en pâtisserie, chocolaterie et confiserie. Les cours se déroulent à <a href=\"http://flvm.fr/informations#l-atelier-de-patisserie\">l'Atelier de pâtisserie</a>.</p>",
       "instructor": "Arnaud Houley",
       "place": "L'atelier des pâtissiers",
       "link": {
         "text": "Réservez un cours de pâtisserie",
         "url": "/planning#planning?category=patisserie",
-        "color": "primary-500",
+        "color": "secondary-500",
         "icon_before": "cake",
         "icon_after": "arrow-right",
         "icon_only": false
@@ -49,9 +49,9 @@
       "link": {
         "text": "Réserver un cours de cuisine",
         "url": "/planning#planning?category=cuisine",
-        "color": "",
-        "icon_before": "",
-        "icon_after": "",
+        "color": "secondary-500",
+        "icon_before": "chef-hat",
+        "icon_after": "arrow-right",
         "icon_only": false
       }
     }
@@ -68,9 +68,9 @@
       },
       "link": {
         "text": "Proposer un thème",
-        "url": "/devis",
+        "url": "mailto:contact@flvm.fr?subject=Demande%20cours%20de%20sp%C3%A9cifique&body=Bonjour%2C%0A%0AJe%20ne%20trouve%20pas%20de%20cours%20de%20cuisine%20ou%20de%20p%C3%A2tisserie%20qui%20me%20conviennent.%0ASerait-il%20possible%20de%20planifier%20un%20cours%20de%20%5Bsujet%20de%20votre%20cours%5D%20pour%20%5Bn%5D%20personne(s)%20d'une%20dur%C3%A9e%20d'environ%203%20heures%3F%0ABien%20cordialement.",
         "color": "primary-500",
-        "icon_before": "",
+        "icon_before": "mail",
         "icon_after": "",
         "icon_only": false
       }
