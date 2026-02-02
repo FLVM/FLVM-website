@@ -8,7 +8,7 @@
     "title": "Planning & réservation",
     "text": "<p>Choisissez un cours disponible qui vous convient dans le planning ou <a href=\"/information#proposer-son-theme\">proposez votre propre thème</a>.</p>",
     "image": {
-      "src": "/uploads/booking/cover-planning.jpg",
+      "src": "/uploads/booking/cover-planning.png",
       "alt": "Illustration de chat préparant un gâteau.",
       "legend": ""
     },
