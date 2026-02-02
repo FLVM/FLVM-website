@@ -6,14 +6,14 @@
   "cover": {
     "overhead": "C'est la rentrée!",
     "title": "Réouverture des ateliers adultes",
-    "text": "Les ateliers [pâtisserie](/cours#patisserie) et [cuisine](/cours#cuisine) adultes sont de nouveau ouvert.\nN'hésitez pas à consulter le planning afin de réserver votre cours.",
+    "text": "Les ateliers [pâtisserie](/les-cours#patisserie) et [cuisine](/les-cours#cuisine) adultes sont de nouveau ouvert.\nN'hésitez pas à consulter le planning afin de réserver votre cours.",
     "image": {
       "src": "/uploads/chocopistache.jpg",
       "alt": "Visuels de réalisation d'un forêt noire",
       "legend": "©crédit photo"
     },
     "link": {
-      "text": "Réserver un cours",
+      "text": "Choisir un cours",
       "url": "/planning",
       "color": "primary-500",
       "icon_before": "calendar",

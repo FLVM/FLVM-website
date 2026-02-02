@@ -41,7 +41,7 @@
 				</ul>
 			</section>
 		</article>
-		<aside class="mt-11">
+		<aside class="mt-11" id="contact">
 			<article class="typo typo-sm p-4 bg-yellow-500">
 				<h2>{data.editor.name}</h2>
 				<address>

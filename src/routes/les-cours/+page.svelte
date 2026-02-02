@@ -23,7 +23,7 @@
 		<Cover cover={data.courses.cover} />
 		<div class="pr-8">
 			{#each data.courses.lessons as lesson}
-				<article class="mb-12 last:border-0 last:pb-0 text-center md:text-left">
+				<article id={lesson.id} class="mb-12 last:border-0 last:pb-0 text-center md:text-left">
 					<!-- Cover -->
 					<div class="typo mb-6">
 						<h2>{lesson.title}</h2>
