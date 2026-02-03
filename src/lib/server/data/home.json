@@ -39,7 +39,7 @@
       "image": null,
       "link": {
         "text": "Offrir une carte cadeau",
-        "url": "/informations#carte-cadeaux",
+        "url": "mailto:arnaud@flvm.fr?subject=Commande%20de%20carte%20cadeau&body=Bonjour%2C%0A%0APourriez-vous%20me%20pr%C3%A9parer%20une%20carte%20cadeau%20pour%20%5Bnom%20de%20la%20personne%5D.%0AD%C3%A8s%20qu'elle%20sera%20pr%C3%AAte%2C%20je%20viendrai%20la%20r%C3%A9cup%C3%A9rer%20%C3%A0%20l'atelier%20de%20p%C3%A2tisserie%20situ%C3%A9%20au%202%20place%20du%2039%C3%A8me%20r%C3%A9giment%20d'infanterie%20%C3%A0%20Rouen.%20Je%20paierai%20le%20montant%20sur%20place.%0ABien%20cordialement.",
         "color": "tertiary-950-50",
         "icon_before": "cake",
         "icon_after": "",

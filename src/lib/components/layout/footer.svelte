@@ -36,7 +36,6 @@
 </footer>
 <footer class="footer footer-mentions footer-center py-4 pt-2">
 	<p>© {new Date().getFullYear()}</p>
-	<a href="/styleguide">Guide de style</a>
-	<a href="/legals/mentions-legales">Mentions légales</a>
+	<a href="/mentions-legales">Mentions légales</a>
   <LightSwitch />
 </footer>
