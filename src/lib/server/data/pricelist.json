@@ -54,14 +54,14 @@
     {
       "name": "Carte cadeau adulte",
       "price": 50,
-      "detail": "<p>Offrez un cours à un adulte.</p>\n<p>Les cours est collectif, la carte est illimitée dans le temps.</p>\n<p><a href=\"mailto:arnaud@flvm.fr?subject=Commande%20de%20carte%20cadeau%20adulte&#x26;body=Bonjour%2C%0A%0APourriez-vous%20me%20pr%C3%A9parer%20une%20carte%20cadeau%20pour%20%5Bnom%20de%20la%20personne%5D.%0AD%C3%A8s%20qu&#x27;elle%20sera%20pr%C3%AAte%2C%20je%20viendrai%20la%20r%C3%A9cup%C3%A9rer%20%C3%A0%20l&#x27;atelier%20de%20p%C3%A2tisserie%20situ%C3%A9%20au%202%20place%20du%2039%C3%A8me%20r%C3%A9giment%20d&#x27;infanterie%20%C3%A0%20Rouen.%20Je%20paierai%20le%20montant%20sur%20place.%0ABien%20cordialement.\">Commander une carte cadeau pour un adulte.</a></p>"
+      "detail": "<p>Offrez un cours à un adulte.</p>\n<p>Les cours sont collectif, la carte est illimitée dans le temps.</p>\n<p><a href=\"mailto:arnaud@flvm.fr?subject=Commande%20de%20carte%20cadeau%20adulte&#x26;body=Bonjour%2C%0A%0APourriez-vous%20me%20pr%C3%A9parer%20une%20carte%20cadeau%20pour%20%5Bnom%20de%20la%20personne%5D.%0AD%C3%A8s%20qu&#x27;elle%20sera%20pr%C3%AAte%2C%20je%20viendrai%20la%20r%C3%A9cup%C3%A9rer%20%C3%A0%20l&#x27;atelier%20de%20p%C3%A2tisserie%20situ%C3%A9%20au%202%20place%20du%2039%C3%A8me%20r%C3%A9giment%20d&#x27;infanterie%20%C3%A0%20Rouen.%20Je%20paierai%20le%20montant%20sur%20place.%0ABien%20cordialement.\">Commander une carte cadeau pour un adulte.</a></p>"
     }
   ],
   "cards": [
     {
       "featured": true,
       "title": "Cours pour les enfants",
-      "content": "<p>Les enfants de moins de 8 ans doivent être accompagnées d'au moins un adulte référent.</p>\n<p>Pour toute question <a href=\"/a-propos#contact\">écrivez-nous</a>.</p>",
+      "content": "<p>Nous proposons des cours ludiques et éducatifs adaptés au enfants, <strong>à partir de 8 ans</strong>.</p>\n<p>Pour toute question <a href=\"/a-propos#contact\">écrivez-nous</a>.</p>",
       "image": null,
       "link": null
     },
