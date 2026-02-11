@@ -68,7 +68,7 @@
     {
       "featured": false,
       "title": "Annulation et remboursement",
-      "content": "<p>\"[Détailler brièvement la politique et la procédure d'annulation et de remboursement]\"</p>",
+      "content": "<p>\"[Détailler brièvement la politique et la procédure d'annulation et de remboursement]\"</p>\n<p>Se référer au ticket pour discuter et travailler sur  le sujet : . <a href=\"https://github.com/FLVM/FLVM-website/issues/19\">https://github.com/FLVM/FLVM-website/issues/19</a></p>",
       "image": null,
       "link": null
     }

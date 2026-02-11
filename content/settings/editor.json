@@ -8,11 +8,11 @@
     "phone": "06 62 81 56 74",
     "email": "contact@flvm.fr",
     "address": {
-      "country": "France",
-      "city": "Rouen",
-      "zipcode": "76000",
+      "name": "Siège de l'association",
       "street": "32 rue des Capucins",
-      "name": "Siège de l'association"
+      "zipcode": "76000",
+      "city": "Rouen",
+      "country": "France"
     }
   },
   "socials": [
@@ -30,8 +30,8 @@
     }
   ],
   "address": {
-    "name": "Siège de l'association",
-    "street": "32 ru des Capucins",
+    "name": "FLVM",
+    "street": "32 rue des Capucins",
     "zipcode": "76000",
     "city": "Rouen",
     "country": "France"
