@@ -13,7 +13,7 @@
 
 <div
 	class={[
-		'mb-8 md:pb-0 md:min-h-100 md:max-w-500 mx-auto px-12 md:grid grid-cols-2 typo typo-lg bg-no-repeat bg-bottom-right md:bg-top-right',
+		'mb-8 md:pb-0 md:min-h-100 md:max-w-500 mx-auto md:grid grid-cols-2 typo typo-lg bg-no-repeat bg-bottom-right md:bg-top-right',
 		bgImage && 'pb-120',
 		// 'bg-primary-500 p-12 -mt-12'
 	]}
