@@ -5,7 +5,7 @@
 </script>
 
 {#if person}
-	<div>
-		Intervenant : <strong>{person.name}</strong> ({person.title})
-	</div>
+<div>
+	Intervenant : <strong>{person.name}</strong> ({person.title})
+</div>
 {/if}

@@ -4,6 +4,9 @@ import type __vc from '../../../../velite.config.ts'
 
 type Collections = typeof __vc.collections
 
+export type Address = Collections['address']['schema']['_output']
+export declare const address: Address[]
+
 export type Image = Collections['image']['schema']['_output']
 export declare const image: Image[]
 
@@ -36,6 +39,9 @@ export declare const pricelist: Pricelist
 
 export type About = Collections['about']['schema']['_output']
 export declare const about: About
+
+export type Legals = Collections['legals']['schema']['_output']
+export declare const legals: Legals
 
 export type Editor = Collections['editor']['schema']['_output']
 export declare const editor: Editor
