@@ -54,14 +54,6 @@ export function load(): {
 			{
 				url: '/a-propos',
 				text: 'À propos'
-			},
-			{
-				url: '/legals/mentions-legales',
-				text: 'Mentions légales'
-			},
-			{
-				url: '/styleguide',
-				text: 'Guide de style'
 			}
 		]
 	};

@@ -301,6 +301,10 @@ cards: &cards
 # Collections
 collections:
   # Permet de générer le schéma pour Velite
+  - name: address
+    hide: true
+    folder: content/schema
+    <<: *address
   - name: image
     hide: true
     folder: content/schema
@@ -573,27 +577,18 @@ singletons:
         required: false
         <<: *card
   - divider: true
-  # - label: Configuration
-  #   name: configuration
-  #   file: content/settings/main.json
-  #   editor:
-  #     preview: false
-  #   icon: instant_mix
-  #   fields:
-  #     # @todo : Ajouter configurations 
-  #     # - URL du google calendar
-  #     # - mentions de pied de page
-  #     - label: Pied de page
-  #       name: footer
-  #       widget: object
-  #       summary: Gestion du colophon et des listes de liens
-  #       collapsed: true
-  #       fields: 
-  #         - label: Colophon
-  #           name: colophon
-  #           widget: text
-  #         - label: Liste de liens
-  #           name: links
+  - label: Mentions légales
+    name: legals
+    file: content/legals.json
+    editor:
+      preview: false
+    fields:
+      - <<: *SEO
+      - label: Contenu de la page
+        name: content
+        <<: *markdown_simple
+        hint: Indiquer toutes les mentions légales relatives au site (CGU, usage des cookies, etc.)
+        required: false
   - label: Informations éditeur
     name: editor
     file: content/settings/editor.json

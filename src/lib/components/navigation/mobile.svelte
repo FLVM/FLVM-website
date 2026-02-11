@@ -60,8 +60,7 @@
 					{/if}
 					<hr class="hr mb-12" />
 					<nav class="btn-group flex flex-col w-full">
-						<a href="/legals" onclick={() => (open = false)}>Mentions légales</a>
-						<a href="styleguide" onclick={() => (open = false)}>Guide de style</a>
+						<a href="/mentions-legales" onclick={() => (open = false)}>Mentions légales</a>
 					</nav>
 				</Dialog.Content>
 			</Dialog.Positioner>

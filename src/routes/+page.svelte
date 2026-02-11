@@ -37,7 +37,7 @@
 		{/each}
 		{#if data.home.posts}
 			<section class="typo mt-12">
-				<h2>Ça c"est passé à FLVM</h2>
+				<h2>Ça c'est passé à FLVM</h2>
 				<div class="flex -mt-6">
 					{#each data.home.posts as post}
 						<Card card={post} size="sm" class="my-6 max-w-1/2" noShadow />

@@ -2,6 +2,15 @@
 
 
 import { s } from 'velite'
+export const AddressSchema = s.object({
+ name: s.string().optional().nullable(),
+ street: s.string().optional().nullable(),
+ zipcode: s.string(),
+ city: s.string(),
+ country: s.string()
+})
+export const address = { name: "Address", pattern: "schema/**/*.md", single: false, schema: AddressSchema}
+
 export const ImageSchema = s.object({
  src: s.string(),
  alt: s.string(),
@@ -112,6 +121,13 @@ export const AboutSchema = s.object({
 })
 export const about = { name: "About", pattern: "about.json", single: true, schema: AboutSchema}
 
+export const LegalsSchema = s.object({
+ seo: s.object({title: s.string(),description: s.string()}),
+ content: s.markdown().optional().nullable(),
+ slug: s.path()
+})
+export const legals = { name: "Legals", pattern: "legals.json", single: true, schema: LegalsSchema}
+
 export const EditorSchema = s.object({
  name: s.string(),
  baseline: s.string().optional().nullable(),
@@ -125,4 +141,4 @@ export const EditorSchema = s.object({
 })
 export const editor = { name: "Editor", pattern: "settings/editor.json", single: true, schema: EditorSchema}
 
-export const collections = {image, link, card, cover, team, places, home, courses, booking, pricelist, about, editor};
+export const collections = {address, image, link, card, cover, team, places, home, courses, booking, pricelist, about, legals, editor};

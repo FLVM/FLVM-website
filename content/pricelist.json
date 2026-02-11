@@ -54,21 +54,21 @@
     {
       "name": "Carte cadeau adulte",
       "price": 50,
-      "detail": "Offrez un cours à un adulte. \n\nLes cours est collectif, la carte est illimitée dans le temps.\n\n[Commander une carte cadeau pour un adulte.](mailto:arnaud@flvm.?subject=Commande%20de%20carte%20cadeau%20adulte&body=Bonjour%2C%0A%0APourriez-vous%20me%20pr%C3%A9parer%20une%20carte%20cadeau%20pour%20%5Bnom%20de%20la%20personne%5D.%0AD%C3%A8s%20qu'elle%20sera%20pr%C3%AAte%2C%20je%20viendrai%20la%20r%C3%A9cup%C3%A9rer%20%C3%A0%20l'atelier%20de%20p%C3%A2tisserie%20situ%C3%A9%20au%202%20place%20du%2039%C3%A8me%20r%C3%A9giment%20d'infanterie%20%C3%A0%20Rouen.%20Je%20paierai%20le%20montant%20sur%20place.%0ABien%20cordialement.)"
+      "detail": "Offrez un cours à un adulte.\n\nLes cours sont collectif, la carte est illimitée dans le temps.\n\n[Commander une carte cadeau pour un adulte.](mailto:arnaud@flvm.fr?subject=Commande%20de%20carte%20cadeau%20adulte&body=Bonjour%2C%0A%0APourriez-vous%20me%20pr%C3%A9parer%20une%20carte%20cadeau%20pour%20%5Bnom%20de%20la%20personne%5D.%0AD%C3%A8s%20qu'elle%20sera%20pr%C3%AAte%2C%20je%20viendrai%20la%20r%C3%A9cup%C3%A9rer%20%C3%A0%20l'atelier%20de%20p%C3%A2tisserie%20situ%C3%A9%20au%202%20place%20du%2039%C3%A8me%20r%C3%A9giment%20d'infanterie%20%C3%A0%20Rouen.%20Je%20paierai%20le%20montant%20sur%20place.%0ABien%20cordialement.)"
     }
   ],
   "cards": [
     {
       "featured": true,
       "title": "Cours pour les enfants",
-      "content": "Les enfants de moins de 8 ans doivent être accompagnées d'au moins un adulte référent.\n\nPour tout d'autres question, consulter notre [FAQ](/informatiosn#faq) ou [écrivez-nous](/informations/contact)",
+      "content": "Nous proposons des cours ludiques et éducatifs adaptés au enfants, **à partir de 8 ans**.\n\nPour toute question [écrivez-nous](/a-propos#contact).",
       "image": null,
       "link": null
     },
     {
       "featured": false,
       "title": "Annulation et remboursement",
-      "content": "\"[Détailler brièvement la politique et la procédure d'annulation et de remboursement]\"",
+      "content": "\"[Détailler brièvement la politique et la procédure d'annulation et de remboursement]\"\n\nSe référer au ticket pour discuter et travailler sur  le sujet : . https://github.com/FLVM/FLVM-website/issues/19",
       "image": null,
       "link": null
     }

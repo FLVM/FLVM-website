@@ -1,6 +1,7 @@
 <script lang="ts">
 	import TwoCols from '$lib/components/layout/two-cols.svelte';
 	import Cover from '$lib/components/shared/cover.svelte';
+	import Address from '$lib/components/shared/adress.svelte';
 	import type { About, Editor, Places, Team } from '$lib/server/data';
 
 	type Props = {
@@ -22,23 +23,49 @@
 				{@html data.about.content}
 			</div>
 			<section>
-				<h2>Les ateliers</h2>
+				<h2 class="h2">Les ateliers</h2>
 				{#each data.places as place}
-					<article>
+					<article class="typo">
+						{#if place.image }
+						<figure>
+							<img src={place.image.src} alt={place.image.alt}/>
+							{#if place.image.legend}
+							<figcaption>{@html place.image.legend}</figcaption>
+							{/if}
+						</figure>
+						{/if}
 						<h3>{place.name}</h3>
 						{@html place.content}
+						{#if place.hours}
+						<div class="typo typo-insert mb-6">
+							{@html place.hours}
+						</div>
+						{/if}
+						<Address address={place.address} />
 					</article>
 				{/each}
 			</section>
-			<section>
+			<section class="typo">
 				<h2>L'équipe</h2>
-				<ul>
-					{#each data.team as { name, title, email }}
-						<li>
-							<a href={`mailto:${email}`} title={`Contacter ${name}`}>{name}</a> - <em>{title}</em>
-						</li>
-					{/each}
-				</ul>
+				{#each data.team as { name, title, email, phone, description}}
+					<article>
+						<h3>{name}</h3>
+						<em>{title}</em>
+						<p>{@html description}</p>
+						{#if phone || email}
+						<p class="typo typo-insert my-6">
+							Contacter {name}
+							{#if email}
+							<a href={`mailto:${email}`} title={`Contacter ${name} par courriel`}>par email</a>
+							{/if}
+							{(phone && email) && 'ou'}
+							{#if phone}
+							<a href={`phone:${phone}`} title={`Contacter ${name} par téléphone`}>par téléphone</a>
+							{/if}
+						</p>
+						{/if}
+					</article>
+				{/each}
 			</section>
 		</article>
 		<aside class="mt-11" id="contact">

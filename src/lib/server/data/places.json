@@ -1,6 +1,20 @@
 [
   {
     "publish": true,
+    "name": "L'atelier de cuisine",
+    "image": null,
+    "address": {
+      "name": "La Cantine",
+      "street": "192, rue Eau deRobec",
+      "zipcode": "76000",
+      "city": "Rouen",
+      "country": "France"
+    },
+    "hours": "",
+    "slug": "places/l-atelier-de-cuisine"
+  },
+  {
+    "publish": true,
     "name": "L'atelier des pâtissiers",
     "image": {
       "src": "/uploads/places/l-atelier-de-patisserie.jpg",
