@@ -58,7 +58,7 @@
       <Button link={{
         text: "Réserver ce cours",
         url: mailtoLink,
-        color: "secondary-500"
+        color: "secondary"
       }}
         class="btn-sm"
       />

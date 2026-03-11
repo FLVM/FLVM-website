@@ -15,7 +15,7 @@
     "link": {
       "text": "Choisir un cours",
       "url": "/planning",
-      "color": "primary-500",
+      "color": "primary",
       "icon_before": "calendar",
       "icon_after": "arrow-right"
     }
@@ -40,7 +40,7 @@
       "link": {
         "text": "Offrir une carte cadeau",
         "url": "mailto:arnaud@flvm.fr?subject=Commande%20de%20carte%20cadeau&body=Bonjour%2C%0A%0APourriez-vous%20me%20pr%C3%A9parer%20une%20carte%20cadeau%20pour%20%5Bnom%20de%20la%20personne%5D.%0AD%C3%A8s%20qu'elle%20sera%20pr%C3%AAte%2C%20je%20viendrai%20la%20r%C3%A9cup%C3%A9rer%20%C3%A0%20l'atelier%20de%20p%C3%A2tisserie%20situ%C3%A9%20au%202%20place%20du%2039%C3%A8me%20r%C3%A9giment%20d'infanterie%20%C3%A0%20Rouen.%20Je%20paierai%20le%20montant%20sur%20place.%0ABien%20cordialement.",
-        "color": "tertiary-950-50",
+        "color": "dark",
         "icon_before": "cake",
         "icon_after": "",
         "icon_only": false
@@ -58,7 +58,7 @@
       "link": {
         "text": "Réserver un cours",
         "url": "mailto:contact@flvm.fr",
-        "color": "primary-500",
+        "color": "primary",
         "icon_before": "party-popper",
         "icon_after": "arrow-right",
         "icon_only": false
@@ -92,7 +92,7 @@
       "link": {
         "text": "Réservez ce cours",
         "url": "/planning",
-        "color": "secondary-500",
+        "color": "secondary",
         "icon_before": "cake",
         "icon_after": "arrow-right",
         "icon_only": false
@@ -113,7 +113,7 @@
       "link": {
         "text": "S'inscrire à la newsletter",
         "url": "https://example.com",
-        "color": "tertiary-950-50",
+        "color": "dark",
         "icon_before": "send",
         "icon_after": "",
         "icon_only": false
@@ -133,7 +133,7 @@
       "link": {
         "text": "Consulter sur Facebook",
         "url": "https://example.com",
-        "color": "secondary-500",
+        "color": "secondary",
         "icon_before": "facebook",
         "icon_after": "external-link",
         "icon_only": false
@@ -147,7 +147,7 @@
       "link": {
         "text": "Consulter sur Instagram",
         "url": "https://example.com",
-        "color": "secondary-500",
+        "color": "secondary",
         "icon_before": "instagram",
         "icon_after": "external-link",
         "icon_only": false

@@ -126,16 +126,16 @@ link: &link
       name: color
       widget: select
       # options: ["primary", "secondary", "black"]
-      default: ""
-      options: [
-        { label: "Neutre", value: "" },
-        { label: "Coloré", value: "primary-500" },
-        { label: "Variante coloré", value: "secondary-500" },
-        { label: "Sombre", value: "tertiary-950-50" },
-        { label: "Noir", value: "surface-950-50" },
-        { label: "Blanc", value: "surface-50-950" }
-      ]
+      default: "neutral"
       required: false
+      options: [
+       { label: "Neutre", value: "neutral" },
+        { label: "Coloré", value: "primary" },
+        { label: "Variante coloré", value: "secondary" },
+        { label: "Sombre", value: "dark" },
+        { label: "Noir", value: "black" },
+        { label: "Blanc", value: "white" }
+      ]
     - label: Icone avant
       name: icon_before
       required: false

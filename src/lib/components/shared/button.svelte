@@ -60,6 +60,16 @@
 				? props.class
 				: '';
 	const iconSize = classes.includes('btn-sm') ? 16 : classes.includes('btn-lg') ? 25 : 18;
+
+	type presetKeys = Exclude<Link['color'],"" | null | undefined>
+	const preset:{ [id in presetKeys]: String}={
+		neutral: "",
+		primary: 'preset-filled-primary-500',
+		secondary: 'preset-filled-secondary-500',
+		dark: 'preset-filled-tertiary-950-50',
+		black: 'preset-filled-surface-950-50',
+		white: 'preset-filled-surface-50-950'
+	}
 </script>
 
 {#if props.link.icon_only}
@@ -89,8 +99,8 @@
       'font-bold',
 			!props.link.color && 'hover:preset-filled',
 			props.link.color && 'text-white  [text-shadow:_0px_1px_1px_rgb(0_0_0_/_0.6),_0px_0px_4px_rgb(0_0_0/_0.4)]',
-			props.link.color && `preset-filled-${props.link.color}`,
-			props.class
+			preset[props.link.color || 'neutral'],
+			props.class,
 		]}
 		onclick={props.onclick && props.onclick}
 	>

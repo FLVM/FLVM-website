@@ -23,7 +23,7 @@
 			"link": {
 				"text": "Voir la grille tarifaire",
 				"url": "/tarifs#tarifs",
-				"color": "primary-500",
+				"color": "primary",
 				"icon_before": "",
 				"icon_after": "",
 				"icon_only": false

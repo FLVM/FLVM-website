@@ -31,7 +31,7 @@ export function load(): {
 			{
 				url: '/planning',
 				text: 'Planning & réservation',
-				color: 'secondary-500'
+				color: 'secondary'
 			}
 		],
 		navigation: [
