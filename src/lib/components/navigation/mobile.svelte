@@ -4,9 +4,9 @@
 	import { Dialog, Portal } from '@skeletonlabs/skeleton-svelte';
 	import Button from '../shared/button.svelte';
 	import { onMount } from 'svelte';
-	import Headline from '../shared/headline.svelte';
 	import type { Editor, Link } from '$lib/server/data';
 	import type { ClassValue } from 'svelte/elements';
+	import LogoFlvm from '$lib/assets/logo-flvm.svelte';
 
 	let props: { editor: Editor; links: Link[]; class?: ClassValue } = $props();
 
@@ -37,13 +37,18 @@
 				<Dialog.Content
 					class="h-screen w-full card bg-surface-100-900 p-4 space-y-4 shadow-xl transition transition-discrete opacity-0 -translate-x-full starting:data-[state-open]:opacity-0 starting:data-[state=open]:-translate-x-full data-[state=open]:opacity-100 data-[state=open]:translate-x-0"
 				>
-					<header class="flex justify-between items-start">
-						<Dialog.Title>
-							<Headline editor={props.editor} />
-						</Dialog.Title>
-						<Dialog.CloseTrigger class="btn-icon preset-tonal" onclick={() => (open = false)}>
+					<header class="">
+						<Dialog.CloseTrigger class="btn-icon preset-tonal absolute right-3" onclick={() => (open = false)}>
 							<XIcon />
 						</Dialog.CloseTrigger>
+
+						<Dialog.Title class="text-center">
+							<LogoFlvm class="mx-auto mb-4"/>
+							<h1 class="h6 leading-none">{props.editor.name}</h1>
+							<span class="text-xs leading-[1] italic">
+								{@html props.editor.baseline}
+							</span>
+						</Dialog.Title>
 					</header>
 					<nav class="btn-group flex flex-col w-full">
 						{#each props.links as link}

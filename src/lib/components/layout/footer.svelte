@@ -1,10 +1,9 @@
 <script lang="ts">
 	import type { Editor, Link } from '$lib/server/data';
 	import type { ClassValue } from 'svelte/elements';
-	import Headline from '$lib/components/shared/headline.svelte';
 	import ButtonSocial from '$lib/components/shared/button/social.svelte';
 	import LightSwitch from '../shared/light-switch.svelte';
-
+	import LogoFlvmCompact from '$lib/assets/logo-flvm-compact.svelte';
 	let props: { class?: ClassValue; editor: Editor; links: Link[] } = $props();
 </script>
 
@@ -13,7 +12,9 @@
 	class="{props.class} footer md:footer-horizontal max-md:footer-vertical bg-primary text-primary-content p-10 pb-0 gap-4"
 >
 	<aside class="max-md:flex-col flex gap-4">
-		<Headline editor={props.editor} />
+		<a href={props.editor.url || "/"} class="flex pt-2">
+			<LogoFlvmCompact  />
+		</a>
 		<div class="max-w-[24rem]">
 			{@html props.editor.description}
 		</div>
