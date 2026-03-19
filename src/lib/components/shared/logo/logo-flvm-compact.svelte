@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { SVGAttributes } from "svelte/elements";
-  let props: SVGAttributes<SVGElement> = $props()
+  import type { SVGAttributes } from 'svelte/elements';
+  let props: SVGAttributes<SVGElement> = $props();
 </script>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="120" height="120" {...props}>
   <title>Logo FLVM – format compact</title>

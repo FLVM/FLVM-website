@@ -6,7 +6,7 @@
 	import { onMount } from 'svelte';
 	import type { Editor, Link } from '$lib/server/data';
 	import type { ClassValue } from 'svelte/elements';
-	import LogoFlvm from '$lib/assets/logo-flvm.svelte';
+	import LogoFlvm from '$lib/components/shared/logo/logo-flvm.svelte';
 
 	let props: { editor: Editor; links: Link[]; class?: ClassValue } = $props();
 

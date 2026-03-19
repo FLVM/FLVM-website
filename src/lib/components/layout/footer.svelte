@@ -2,8 +2,8 @@
 	import type { Editor, Link } from '$lib/server/data';
 	import type { ClassValue } from 'svelte/elements';
 	import ButtonSocial from '$lib/components/shared/button/social.svelte';
-	import LightSwitch from '../shared/light-switch.svelte';
-	import LogoFlvmCompact from '$lib/assets/logo-flvm-compact.svelte';
+	import LightSwitch from '$lib/components/shared/light-switch.svelte';
+	import LogoFlvmCompact from '$lib/components/shared/logo/logo-flvm-compact.svelte';
 	let props: { class?: ClassValue; editor: Editor; links: Link[] } = $props();
 </script>
 
