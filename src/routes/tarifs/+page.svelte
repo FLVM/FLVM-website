@@ -42,7 +42,7 @@
 					link={{
 						url: '/planning#planning',
 						text: 'Réserver un cours',
-						color: 'primary-500',
+						color: 'secondary',
 						icon_before: 'calendar',
 						icon_after: 'arrow-right'
 					}}

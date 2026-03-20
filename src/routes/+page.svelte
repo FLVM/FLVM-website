@@ -57,7 +57,7 @@
       <Button link={{
         text: "Voir le planning",
         url: "/planning#planning",
-        color: "tertiary-950-50"
+        color: "secondary"
       }} class="w-full"/>
     </section>
     {/if}
