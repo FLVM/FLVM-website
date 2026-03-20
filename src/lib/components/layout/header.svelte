@@ -22,7 +22,7 @@
 	<AppBar.Toolbar class="md:h-10 grid-cols-[auto_1fr] content-center">
 		<AppBar.Lead>
   	<a href={props.editor.url || "/"} class="block flex flex-col text-center">
-			<LogoFlvm width="180" height="180" class="mb-4 mx-auto md:absolute md:top-2 md:left-2 drop-shadow-lg" />
+			<LogoFlvm width="120" height="120" class="mb-4 mx-auto md:absolute md:top-2 md:left-2 drop-shadow-lg" />
 			<div class="md:pl-48 leading-none">
 				<h1 class="h6 leading-none">{props.editor.name}</h1>
 				<span class="text-xs leading-[1] italic">
