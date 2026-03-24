@@ -89,7 +89,8 @@
 			IconBefore || (IconAfter && 'btn-icon'),
 			!props.link.color && 'preset-tonal-primary',
 			props.link.color && `preset-filled-${props.link.color}`,
-			props.class
+			props.class,
+			props.disabled && 'disabled cursor-not-allowed'
 		]}
 		title={props.link.text}
 		aria-label={props.link.text}
@@ -109,6 +110,7 @@
 			props.link.color && 'text-white  [text-shadow:_0px_1px_1px_rgb(0_0_0_/_0.6),_0px_0px_4px_rgb(0_0_0/_0.4)]',
 			preset[props.link.color || 'neutral'],
 			props.class,
+			props.disabled && 'disabled cursor-not-allowed'
 		]}
 		onclick={props.onclick && props.onclick}
 	>

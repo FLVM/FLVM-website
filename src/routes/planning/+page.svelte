@@ -166,8 +166,10 @@
 			</div>
 			<div id="result" class="pt-6">
 				{#each paginatedEvents as event}
+				{#key event.id}
 					<CalendarEvent {event} contact={data.editor.contact.email} class="not-first:mt-6 mb-2" />
 					<hr class="hr" />
+				{/key}
 				{/each}
 			</div>
 			{#if filteredEvents.length/PAGE_SIZE > 1}
