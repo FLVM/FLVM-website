@@ -13,6 +13,16 @@
 		};
 	};
 	let { data }: Props = $props();
+	// @todo: add closure ?
+	function mailtoContact(name?: string, to?: string) {
+		name = name || ''
+		to = to || data.editor.contact.email
+		const subject = "Demande d'information"
+		const body = `Bonjour ${name},\n\nJe vous contact au sujet de ...\n\nBien cordialement.`
+		return encodeURI(`mailto:${to}`
+		+`?subject=${subject}`
+		+`&body=${body}`)
+	}
 </script>
 
 <main>
@@ -56,11 +66,11 @@
 						<p class="typo typo-insert my-6">
 							Contacter {name}
 							{#if email}
-							<a href={`mailto:${email}`} title={`Contacter ${name} par courriel`}>par email</a>
+							<a href={mailtoContact(name, email)} title={`Contacter ${name} par courriel`}>par email</a>
 							{/if}
 							{(phone && email) && 'ou'}
 							{#if phone}
-							<a href={`phone:${phone}`} title={`Contacter ${name} par téléphone`}>par téléphone</a>
+							<a href={`tel:${phone.replace(/\s/g,'')}`} title={`Contacter ${name} par téléphone`}>par téléphone</a>
 							{/if}
 						</p>
 						{/if}
@@ -78,11 +88,14 @@
 					{data.editor.address.city}<br />
 					{data.editor.address.country}
 				</address>
+				{#if data.editor.contact.email || data.editor.contact.phone}
 				<p>
-					<strong>{data.editor.contact.name}</strong><br />
-					Email : {data.editor.contact.email}<br />
-					Téléphone : {data.editor.contact.phone}
+					{#if data.editor.contact.name}<strong>{data.editor.contact.name}</strong><br />{/if}
+					{#if data.editor.contact.email}Email : <a href="{mailtoContact()}">{data.editor.contact.email}</a><br />{/if}
+					{#if data.editor.contact.phone}Téléphone : <a href="tel:{data.editor.contact.phone.replace(/\s/g,'')}">{data.editor.contact.phone}</a>{/if}
 				</p>
+				
+				{/if}
 				<p>
 					<strong>Réseaux sociaux</strong><br />
 					{#each data.editor.socials as social}

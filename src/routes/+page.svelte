@@ -51,7 +51,7 @@
     <section>
       <h1 class="h5">Il reste des places !</h1>
       {#each data.lastEvents as event}
-      <CalendarEvent event={event} class="mt-3 mb-3" />
+      <CalendarEvent event={event} contact={data.editor.contact.email} class="mt-3 mb-3" />
       <hr class="hr" />
       {/each}
       <Button link={{

@@ -25,7 +25,12 @@
 	import type { Component } from 'svelte';
 	import type { ClassValue } from 'svelte/elements';
 
-	let props: { link: Link; class?: ClassValue; onclick?: () => void } = $props();
+	let props: {
+		link: Link;
+		class?: ClassValue;
+		onclick?: () => void;
+		disabled?: boolean
+	} = $props();
 
 	const icons: { [id: string]: Component<IconProps, {}, ''> } = {
 		'arrow-left': ArrowLeft,
@@ -50,8 +55,10 @@
 	};
 
 	// Version SSR
-	const IconBefore = props.link.icon_before && icons[props.link.icon_before || ''];
-	const IconAfter = props.link.icon_after && icons[props.link.icon_after];
+	const getIconBefore = () => props.link.icon_before && icons[props.link.icon_before];
+	const getIconAfter = () => props.link.icon_after && icons[props.link.icon_after];
+	const IconBefore = getIconBefore()
+	const IconAfter = getIconAfter()
 
 	const classes =
 		typeof props.class === 'string'
@@ -63,7 +70,7 @@
 
 	type presetKeys = Exclude<Link['color'],"" | null | undefined>
 	const preset:{ [id in presetKeys]: String}={
-		neutral: "",
+		neutral: '',
 		primary: 'preset-filled-primary-500',
 		secondary: 'preset-filled-secondary-500',
 		dark: 'preset-filled-tertiary-950-50',
@@ -72,9 +79,10 @@
 	}
 </script>
 
+<!-- @todo: changer la couleur pour les boutons désactivés -->
 {#if props.link.icon_only}
 	<a
-		href={props.link.url}
+		href={props.disabled ? null : props.link.url}
 		class={[
       'text-shadow',
 			`size-[${iconSize}px]`,
@@ -92,7 +100,7 @@
 	</a>
 {:else}
 	<a
-		href={props.link.url}
+		href={props.disabled ? null : props.link.url}
 		class={[
 			'btn',
       'font-sans',

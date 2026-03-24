@@ -166,7 +166,7 @@
 			</div>
 			<div id="result" class="pt-6">
 				{#each paginatedEvents as event}
-					<CalendarEvent {event} class="not-first:mt-6 mb-2" />
+					<CalendarEvent {event} contact={data.editor.contact.email} class="not-first:mt-6 mb-2" />
 					<hr class="hr" />
 				{/each}
 			</div>
