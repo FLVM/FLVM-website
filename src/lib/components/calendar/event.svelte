@@ -14,6 +14,7 @@
   // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace#exemples
   const mailtoLink = `mailto:${props.contact}?subject=R%C3%A9servation%20d'un%20cours%20%22${props.event.title}%22&body=(veuillez%20remplir%20les%20champs%20entre%20crochets%20%5B%20%5D)%0ABonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20cours%20%22${props.event.title}%22%20pour%20%5Bn%5D%20personnes%20pour%20le%20${props.event.start.prettyDate}.%0A%0AJe%20vous%20doit%20la%20somme%20de%20%5Bn%5D%20%C3%97%20${props.event.tags.includes("enfants") ? "29" : "39"}%E2%82%AC%2C%20soit%20un%20total%20de%20%5Bn%5D%E2%82%AC.%20R%C3%A9gl%C3%A9%20par%20virement%20%7C%20par%20ch%C3%A8que%20sur%20place%20%7C%20en%20liquide%20sur%20place%20(supprimez%20les%20mentions%20inutiles)%5D.%20%0A%0A%5BVotre%20nom%5D%0ABien%20cordialement.`
   const active = props.event.transparency === 'transparent'
+  const tags = () => props.event.tags.map((t, k) => ({id:k, name:t}))
 </script>
 
 <article class={['@container', props.class]}>
@@ -22,12 +23,12 @@
       <h2 class="leading-none mb-2">Le {props.event.start.prettyDate}</h2>
       <h1 class="h6 leading-none mb-2">{props.event.title}</h1>
       <div class="flex justify-center @xl:justify-start gap-1">
-        {#each props.event.tags as tag}
-          <span title={tag} class="text-surface-600">
-            {#if tag === "pâtisserie"}<DessertIcon />{/if}
-            {#if tag === "enfants"}<BabyIcon />{/if}
-            {#if tag === "cuisine"}<CookingPot />{/if}
-            {#if tag === "confiserie"}<Candy />{/if}
+        {#each tags() as tag (tag.id)}
+          <span title={tag.name} class="text-surface-600">
+            {#if tag.name === "pâtisserie"}<DessertIcon />{/if}
+            {#if tag.name === "enfants"}<BabyIcon />{/if}
+            {#if tag.name === "cuisine"}<CookingPot />{/if}
+            {#if tag.name === "confiserie"}<Candy />{/if}
           </span>
         {/each}
       </div>

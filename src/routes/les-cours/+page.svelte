@@ -22,7 +22,7 @@
 	<TwoCols>
 		<Cover cover={data.courses.cover} />
 		<div class="pr-8">
-			{#each data.courses.lessons as lesson}
+			{#each data.courses.lessons as lesson (lesson.id)}
 				<article id={lesson.id} class="mb-12 last:border-0 last:pb-0 text-center md:text-left">
 					<!-- Cover -->
 					<div class="typo mb-6">
@@ -47,7 +47,7 @@
 		</div>
 		{#if data.courses.cards}
 			<aside class="mt-12">
-				{#each data.courses.cards as card}
+				{#each data.courses.cards as card (card.title)}
 					<Card {card} size="sm" class="my-4 first:mt-0 last:pb-0" />
 				{/each}
 			</aside>

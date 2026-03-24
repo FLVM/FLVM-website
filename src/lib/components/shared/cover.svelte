@@ -1,11 +1,10 @@
 <script lang="ts">
-	import type { ClassValue } from 'svelte/elements';
-	import type { Cover, Image } from '$lib/server/data';
+	import type { Cover } from '$lib/server/data';
 	import Button from './button.svelte';
 
 	let props: {
 		cover: Cover;
-		class?: ClassValue;
+		// class?: ClassValue;
 	} = $props();
 
 	const bgImage = props.cover.image ? `background-image: url(${props.cover.image.src})` : '';

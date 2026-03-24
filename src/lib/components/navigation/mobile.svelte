@@ -51,14 +51,14 @@
 						</Dialog.Title>
 					</header>
 					<nav class="btn-group flex flex-col w-full">
-						{#each props.links as link}
+						{#each props.links as link (link.url)}
 							<Button {link} class="w-full" onclick={() => (open = false)} />
 						{/each}
 					</nav>
 					<hr class="hr" />
 					{#if props.editor.socials}
 						<nav class="flex flex-wrap w-full gap-4 justify-center text-base">
-							{#each props.editor.socials as link}
+							{#each props.editor.socials as link (link.url)}
 								<ButtonSocial {link} size="lg" onclick={() => (open = false)} />
 							{/each}
 						</nav>

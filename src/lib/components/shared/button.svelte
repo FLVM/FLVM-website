@@ -32,7 +32,7 @@
 		disabled?: boolean
 	} = $props();
 
-	const icons: { [id: string]: Component<IconProps, {}, ''> } = {
+	const icons: { [id: string]: Component<IconProps, object, ''> } = {
 		'arrow-left': ArrowLeft,
 		'arrow-right': ArrowRight,
 		calendar: Calendar,
@@ -69,7 +69,7 @@
 	const iconSize = classes.includes('btn-sm') ? 16 : classes.includes('btn-lg') ? 25 : 18;
 
 	type presetKeys = Exclude<Link['color'],"" | null | undefined>
-	const preset:{ [id in presetKeys]: String}={
+	const preset:{ [id in presetKeys]: string}={
 		neutral: '',
 		primary: 'preset-filled-primary-500',
 		secondary: 'preset-filled-secondary-500',

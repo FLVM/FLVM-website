@@ -47,7 +47,6 @@ export async function GET({ url, request }: { url: URL; request: Request }) {
 	if (!accessToken) return new Response('No access token', { status: 500 });
 
 	const expireCookie = `gh_oauth_state=deleted; Path=/; Max-Age=0; HttpOnly; SameSite=Strict`;
-	const allowedOrigin = url.origin || '*';
 	// @todo: debug auth :
 	// https://www.ailurotech.com/blog/github-oauth-with-decap
 	const html = `<!doctype html><html><head><meta charset="utf-8"></head><body>

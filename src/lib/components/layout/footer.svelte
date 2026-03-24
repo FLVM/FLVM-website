@@ -21,7 +21,7 @@
 	</aside>
 	<nav class="">
 		<h6 class="footer-title">Navigation</h6>
-		{#each props.links as link}
+		{#each props.links as link (link.url)}
 			<a class="link link-hover" href={link.url}>{link.text}</a>
 		{/each}
 		<!-- @todo: ajouter les autres liens  -->
@@ -29,7 +29,7 @@
 	<nav class="justify-center">
 		<h6 class="footer-title">Réseaux sociaux</h6>
 		<div class="flex flex-wrap gap-4">
-			{#each props.editor.socials as link}
+			{#each props.editor.socials as link (link.url)}
 				<ButtonSocial {link} size="lg" />
 			{/each}
 		</div>

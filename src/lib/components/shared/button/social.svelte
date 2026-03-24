@@ -11,7 +11,7 @@
 		size?: 'sm' | 'md' | 'lg';
 		onclick?: () => void;
 	} = $props();
-	const icons: { [id: string]: Component<IconProps, {}, ''> } = {
+	const icons: { [id: string]: Component<IconProps, object, ''> } = {
 		facebook: Facebook,
 		twitter: Twitter,
 		instagram: Instagram,

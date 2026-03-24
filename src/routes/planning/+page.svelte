@@ -87,7 +87,7 @@
               {#if querySearch.length >= 3}
 							<button
                 class="ig-btn preset-filled-surface-300-700"
-                onclick={(e) => {
+                onclick={() => {
                   querySearch = ""
                   return false
                 }}
@@ -100,7 +100,7 @@
 							<Collapsible.Content class="text-sm">
 								<strong class="h6 text-sm">Vos options de recherches</strong>
 								<div class="flex flex-wrap gap-x-2">
-									{#each filterTags as tag}
+									{#each filterTags as tag (tag.value)}
 										<label
 											for={`id-${tag.value}`}
 											class="flex items-center space-x-2 gap-2 cursor-pointer"
@@ -148,7 +148,7 @@
 						</p>
 						<button
 							class="btn btn-sm preset-filled-surface-100-900"
-							onclick={(e) => {
+							onclick={() => {
 								filterTags.forEach((f) => (f.checked = false));
 								checkedFilterTags = [];
 								return false;
@@ -165,11 +165,9 @@
 				{/if}
 			</div>
 			<div id="result" class="pt-6">
-				{#each paginatedEvents as event}
-				{#key event.id}
+				{#each paginatedEvents as event (event.id)}
 					<CalendarEvent {event} contact={data.editor.contact.email} class="not-first:mt-6 mb-2" />
 					<hr class="hr" />
-				{/key}
 				{/each}
 			</div>
 			{#if filteredEvents.length/PAGE_SIZE > 1}
@@ -203,7 +201,7 @@
 		</div>
 		{#if data.booking.cards}
 			<aside class="mt-12">
-				{#each data.booking.cards as card}
+				{#each data.booking.cards as card (card.title)}
 					<Card {card} size="sm" class="my-4 first:mt-0 last:pb-0" />
 				{/each}
 			</aside>

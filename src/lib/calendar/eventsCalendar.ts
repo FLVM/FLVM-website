@@ -133,7 +133,7 @@ export const categories = [
 
 function getTitle(string: string) {
   const pattern = new RegExp(categories.join("|") + "|:", "gi")
-	let title = string.replace(pattern, '').trim();
+	const title = string.replace(pattern, '').trim();
 	return title.charAt(0).toUpperCase() + title.slice(1);
 }
 

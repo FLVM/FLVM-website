@@ -21,7 +21,7 @@
 			<h2 id="tarifs">Tarifs</h2>
 			<table class="table">
 				<tbody class="align-top">
-					{#each data.pricelist.prices as price}
+					{#each data.pricelist.prices as price (price.name)}
 						<tr class="border-none md:border-1">
 							<td class="min-w-72" style="padding-bottom: 0;"><strong>{price.name}</strong></td>
 							<td class="pb-0" style="padding-bottom: 0;"
@@ -51,7 +51,7 @@
 			</div>
 		</div>
 		<aside class="mt-12">
-			{#each data.pricelist.cards as card}
+			{#each data.pricelist.cards as card (card.title)}
 				<Card {card} size="sm" class="my-4 first:mt-0 last:pb-0" />
 			{/each}
 		</aside>

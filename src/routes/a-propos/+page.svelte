@@ -2,7 +2,7 @@
 	import TwoCols from '$lib/components/layout/two-cols.svelte';
 	import Cover from '$lib/components/shared/cover.svelte';
 	import Address from '$lib/components/shared/adress.svelte';
-	import type { About, Editor, Places, Team } from '$lib/server/data';
+	import { type About, type Editor, type Places, type Team } from '$lib/server/data';
 
 	type Props = {
 		data: {
@@ -34,7 +34,7 @@
 			</div>
 			<section>
 				<h2 class="h2">Les ateliers</h2>
-				{#each data.places as place}
+				{#each data.places as place (place.slug)}
 					<article class="typo">
 						{#if place.image }
 						<figure>
@@ -57,7 +57,7 @@
 			</section>
 			<section class="typo">
 				<h2>L'équipe</h2>
-				{#each data.team as { name, title, email, phone, description}}
+				{#each data.team as { name, title, email, phone, description } (name)}
 					<article>
 						<h3>{name}</h3>
 						<em>{title}</em>
@@ -98,7 +98,7 @@
 				{/if}
 				<p>
 					<strong>Réseaux sociaux</strong><br />
-					{#each data.editor.socials as social}
+					{#each data.editor.socials as social (social.url)}
 						<a href={social.url}>{social.text}</a><br />
 					{/each}
 				</p>

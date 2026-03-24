@@ -32,14 +32,14 @@
 </Full>
 <TwoCols>
 	<main class="pr-8 cards">
-		{#each data.home.cards as block}
+		{#each data.home.cards as block (block.title)}
 			<Card card={block} size="base" class="my-6" />
 		{/each}
 		{#if data.home.posts}
 			<section class="typo mt-12">
 				<h2>Ça c'est passé à FLVM</h2>
 				<div class="flex -mt-6">
-					{#each data.home.posts as post}
+					{#each data.home.posts as post (post.title)}
 						<Card card={post} size="sm" class="my-6 max-w-1/2" noShadow />
 					{/each}
 				</div>
@@ -50,7 +50,7 @@
     {#if data.lastEvents.length > 0}
     <section>
       <h1 class="h5">Il reste des places !</h1>
-      {#each data.lastEvents as event}
+      {#each data.lastEvents as event (event.id)}
       <CalendarEvent event={event} contact={data.editor.contact.email} class="mt-3 mb-3" />
       <hr class="hr" />
       {/each}
@@ -61,7 +61,7 @@
       }} class="w-full"/>
     </section>
     {/if}
-		{#each data.home.aside as block}
+		{#each data.home.aside as block (block.title)}
 			<Card card={block} size="sm" class="my-4 last:pb-0" />
 		{/each}
 	</aside>

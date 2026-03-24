@@ -33,7 +33,7 @@
 		</AppBar.Lead>
 		<AppBar.Trail class="justify-end self-start">
       <div class="hidden sm:flex flex-wrap justify-end self-center">
-        {#each props.links as link}
+        {#each props.links as link (link.url)}
           <Button
             {link}
             class={[
