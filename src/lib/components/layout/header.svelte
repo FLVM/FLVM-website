@@ -21,7 +21,7 @@
 <AppBar class="{props.class} bg-primary-500 py-6">
 	<AppBar.Toolbar class="grid-cols-[auto_1fr] content-center md:h-10">
 		<AppBar.Lead>
-			<a href={props.editor.url || '/'} class="block flex flex-col text-center">
+			<a href="/" class="block flex flex-col text-center">
 				<LogoFlvm
 					width="120"
 					height="120"

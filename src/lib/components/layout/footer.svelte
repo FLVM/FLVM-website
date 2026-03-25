@@ -12,7 +12,7 @@
 	class="{props.class} footer bg-primary text-primary-content gap-4 p-10 pb-0 max-md:footer-vertical md:footer-horizontal"
 >
 	<aside class="flex gap-4 max-md:flex-col">
-		<a href={props.editor.url || '/'} class="flex pt-2">
+		<a href="/" class="flex pt-2">
 			<LogoFlvmCompact />
 		</a>
 		<div class="max-w-[24rem]">
