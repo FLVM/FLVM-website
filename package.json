@@ -11,8 +11,9 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
-		"lint": "prettier --check . && eslint .",
-		"build-velite": "node ./lib/sveltia-to-velite.mjs"
+		"lint": "prettier --check . && eslint .",		
+		"build-velite": "node ./lib/sveltia-to-velite.mjs",
+		"velite": "velite --watch"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2.0.3",
