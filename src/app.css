@@ -2,8 +2,8 @@
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton-svelte';
 @import '@skeletonlabs/skeleton/themes/cerberus';
-@import '$lib/style/themes/flvm.css';
-@import '$lib/style/components.css';
+@import './lib/style/themes/flvm.css';
+@import './lib/style/components.css';
 
 @import '@fontsource-variable/roboto';
 /* @import "@fontsource-variable/lora"; */
@@ -55,13 +55,13 @@
 @layer components {
 	.hero-overlay {
 		/* @apply bg-neutral/50 col-start-1 row-start-1 h-full w-full; */
-		@apply bg-surface-50-950/30 col-start-1 row-start-1 h-full w-full;
+		@apply col-start-1 row-start-1 h-full w-full bg-surface-50-950/30;
 	}
 }
 /* Affichage d'une image en arrière plan */
 @layer components {
 	.hero-content {
 		/* @apply isolate flex max-w-[80rem] items-center justify-center gap-4 p-4; */
-		@apply p-4 md:ml-12 justify-self-start max-w-xl;
+		@apply max-w-xl justify-self-start p-4 md:ml-12;
 	}
 }
