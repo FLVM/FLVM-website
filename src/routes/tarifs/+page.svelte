@@ -17,7 +17,7 @@
 <main>
 	<TwoCols>
 		<Cover cover={data.pricelist.cover} />
-		<div class="typo pr-8 mb-8 border-b-1 md:border-none border-surface-200-800 pb-6">
+		<div class="mb-8 typo border-b-1 border-surface-200-800 pr-8 pb-6 md:border-none">
 			<h2 id="tarifs">Tarifs</h2>
 			<table class="table">
 				<tbody class="align-top">
@@ -27,10 +27,10 @@
 							<td class="pb-0" style="padding-bottom: 0;"
 								>{#if price.price}{price.price}€&nbsp;/&nbsppers.{/if}</td
 							>
-							<td class="text-xs hidden md:table-cell">{@html price.detail}</td>
+							<td class="hidden text-xs md:table-cell">{@html price.detail}</td>
 						</tr>
 						<tr>
-							<td class="text-xs md:hidden table-cell" style="padding-top: 0" colspan="2"
+							<td class="table-cell text-xs md:hidden" style="padding-top: 0" colspan="2"
 								>{@html price.detail}</td
 							>
 						</tr>

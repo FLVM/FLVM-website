@@ -1,5 +1,5 @@
 <script lang="ts" module>
-  const PAGE_SIZE = 25
+	const PAGE_SIZE = 25;
 </script>
 
 <script lang="ts">
@@ -12,31 +12,36 @@
 	import { Collapsible, Pagination, Switch } from '@skeletonlabs/skeleton-svelte';
 	import { categories } from '$lib/calendar/eventsCalendar.js';
 
-  let { data } = $props()
+	let { data } = $props();
 	// Query
-  let querySearch = $state('');
-  // Tags
-  let filterTags = $state(categories.map(c => ({
-    label: c.charAt(0).toUpperCase() + c.slice(1),
-    value: c,
-    checked: false
-  })))
+	let querySearch = $state('');
+	// Tags
+	let filterTags = $state(
+		categories.map((c) => ({
+			label: c.charAt(0).toUpperCase() + c.slice(1),
+			value: c,
+			checked: false
+		}))
+	);
 	let checkedFilterTags = $derived(filterTags.filter((tag) => tag.checked));
-  // Status masqués
-  let showHiddens = $state(false)
+	// Status masqués
+	let showHiddens = $state(false);
 
 	const eventsCalendar = () => data.eventsCalendar;
 	const filteredEvents = $derived(
 		eventsCalendar()
-      .filter((e) => {
-        return e.transparency === "opaque" && showHiddens || e.transparency === "transparent" && !showHiddens
-      })
-      // Filter OR
-      // .filter(e => {
-      //   if (checkedFilterTags.length <= 0) return true
-      //   return checkedFilterTags.some(tag => e.tags.includes(tag.value))
-      // })
-      // Filter AND
+			.filter((e) => {
+				return (
+					(e.transparency === 'opaque' && showHiddens) ||
+					(e.transparency === 'transparent' && !showHiddens)
+				);
+			})
+			// Filter OR
+			// .filter(e => {
+			//   if (checkedFilterTags.length <= 0) return true
+			//   return checkedFilterTags.some(tag => e.tags.includes(tag.value))
+			// })
+			// Filter AND
 			.filter((e) => {
 				if (checkedFilterTags.length <= 0) return true;
 				return checkedFilterTags.every((tag) => e.tags.includes(tag.value));
@@ -49,13 +54,13 @@
 			})
 	);
 
-  // Pagination
-  let page = $state(1) // @todo : récupérerdepuis l'URL
-  const start = $derived((page -1) * PAGE_SIZE)
-  const end = $derived(start + PAGE_SIZE) 
-  const paginatedEvents = $derived(filteredEvents.slice(start, end))
+	// Pagination
+	let page = $state(1); // @todo : récupérerdepuis l'URL
+	const start = $derived((page - 1) * PAGE_SIZE);
+	const end = $derived(start + PAGE_SIZE);
+	const paginatedEvents = $derived(filteredEvents.slice(start, end));
 
-  // Actions pour les filtres
+	// Actions pour les filtres
 	function changeFilterValue(target: EventTarget & HTMLInputElement) {
 		const filter = filterTags.find((f) => f.value === target.value);
 		if (!filter) return;
@@ -65,36 +70,35 @@
 	function changeSearchValue(target: EventTarget & HTMLInputElement) {
 		querySearch = target.value;
 	}
-
 </script>
 
 <main>
 	<TwoCols>
 		<Cover cover={data.booking.cover} />
-		<div class="pr-8 mb-8">
+		<div class="mb-8 pr-8">
 			<div class="typo">
 				<h2 id="planning">Planning</h2>
 				{#if browser}
 					<form class="card preset-filled-surface-100-900 p-4 font-sans">
-						<div class="input-group flex mb-2">
+						<div class="mb-2 input-group flex">
 							<input
 								class="ig-input preset-filled-surface-50-950"
 								type="search"
 								placeholder="Macarons, Cupcake…"
-                value={querySearch}
+								value={querySearch}
 								oninput={(e) => changeSearchValue(e.currentTarget)}
 							/>
-              {#if querySearch.length >= 3}
-							<button
-                class="ig-btn preset-filled-surface-300-700"
-                onclick={() => {
-                  querySearch = ""
-                  return false
-                }}
-              >
-                <XIcon size={16}/>
-              </button>
-              {/if}
+							{#if querySearch.length >= 3}
+								<button
+									class="ig-btn preset-filled-surface-300-700"
+									onclick={() => {
+										querySearch = '';
+										return false;
+									}}
+								>
+									<XIcon size={16} />
+								</button>
+							{/if}
 						</div>
 						<Collapsible class="items-start">
 							<Collapsible.Content class="text-sm">
@@ -103,7 +107,7 @@
 									{#each filterTags as tag (tag.value)}
 										<label
 											for={`id-${tag.value}`}
-											class="flex items-center space-x-2 gap-2 cursor-pointer"
+											class="flex cursor-pointer items-center gap-2 space-x-2"
 										>
 											<input
 												type="checkbox"
@@ -120,22 +124,25 @@
 							</Collapsible.Content>
 							<Collapsible.Trigger class="mb-2">
 								<Collapsible.Indicator class="group">
-									<span class="btn btn-sm preset-filled-surface-900-100">
-										<span class="group-data-[state=open]:hidden block">Afficher les filtres</span>
-										<span class="group-data-[state=open]:block hidden">Masquer les filtres</span>
+									<span class="btn preset-filled-surface-900-100 btn-sm">
+										<span class="block group-data-[state=open]:hidden">Afficher les filtres</span>
+										<span class="hidden group-data-[state=open]:block">Masquer les filtres</span>
 									</span>
 								</Collapsible.Indicator>
 							</Collapsible.Trigger>
 						</Collapsible>
-            <div class="flex gap-2 justify-end">
-              <Switch checked={showHiddens} onCheckedChange={(details) => showHiddens = details.checked}>
-                <Switch.Label>Afficher les cours cloturés</Switch.Label>
-                <Switch.Control>
-                  <Switch.Thumb />
-                </Switch.Control>
-                <Switch.HiddenInput/>
-              </Switch>
-            </div>
+						<div class="flex justify-end gap-2">
+							<Switch
+								checked={showHiddens}
+								onCheckedChange={(details) => (showHiddens = details.checked)}
+							>
+								<Switch.Label>Afficher les cours cloturés</Switch.Label>
+								<Switch.Control>
+									<Switch.Thumb />
+								</Switch.Control>
+								<Switch.HiddenInput />
+							</Switch>
+						</div>
 					</form>
 				{/if}
 				{#if querySearch.length > 3}
@@ -143,11 +150,11 @@
 				{/if}
 				{#if checkedFilterTags.length > 0}
 					<div>
-						<p class="text-sm mb-2">
+						<p class="mb-2 text-sm">
 							<b>Vos filtres</b> : {checkedFilterTags.map((tag) => tag.label).join(', ')}
 						</p>
 						<button
-							class="btn btn-sm preset-filled-surface-100-900"
+							class="btn preset-filled-surface-100-900 btn-sm"
 							onclick={() => {
 								filterTags.forEach((f) => (f.checked = false));
 								checkedFilterTags = [];
@@ -166,37 +173,37 @@
 			</div>
 			<div id="result" class="pt-6">
 				{#each paginatedEvents as event (event.id)}
-					<CalendarEvent {event} contact={data.editor.contact.email} class="not-first:mt-6 mb-2" />
+					<CalendarEvent {event} contact={data.editor.contact.email} class="mb-2 not-first:mt-6" />
 					<hr class="hr" />
 				{/each}
 			</div>
-			{#if filteredEvents.length/PAGE_SIZE > 1}
-      <Pagination
-        count={filteredEvents.length}
-        pageSize={PAGE_SIZE}
-        {page}
-        onPageChange={(event) => {
-					document.getElementById('result')?.scrollIntoView({behavior: 'smooth'})
-					return (page = event.page)
-				}}
-        class="flex justify-center w-auto border-t-0"
-      >
-        <Pagination.PrevTrigger><ArrowLeftIcon class="size-4"/></Pagination.PrevTrigger>
-        <Pagination.Context>
-          {#snippet children(pagination)}
-            {#each pagination().pages as page, index(page)}
-              {#if page.type === 'page'}
-              <Pagination.Item {...page}>
-                {page.value}
-              </Pagination.Item>
-              {:else}
-              <Pagination.Ellipsis {index}>&#8230</Pagination.Ellipsis>
-              {/if}
-            {/each}
-          {/snippet}
-        </Pagination.Context>
-        <Pagination.NextTrigger><ArrowRightIcon class="size-4"/></Pagination.NextTrigger>
-      </Pagination>
+			{#if filteredEvents.length / PAGE_SIZE > 1}
+				<Pagination
+					count={filteredEvents.length}
+					pageSize={PAGE_SIZE}
+					{page}
+					onPageChange={(event) => {
+						document.getElementById('result')?.scrollIntoView({ behavior: 'smooth' });
+						return (page = event.page);
+					}}
+					class="flex w-auto justify-center border-t-0"
+				>
+					<Pagination.PrevTrigger><ArrowLeftIcon class="size-4" /></Pagination.PrevTrigger>
+					<Pagination.Context>
+						{#snippet children(pagination)}
+							{#each pagination().pages as page, index (page)}
+								{#if page.type === 'page'}
+									<Pagination.Item {...page}>
+										{page.value}
+									</Pagination.Item>
+								{:else}
+									<Pagination.Ellipsis {index}>&#8230</Pagination.Ellipsis>
+								{/if}
+							{/each}
+						{/snippet}
+					</Pagination.Context>
+					<Pagination.NextTrigger><ArrowRightIcon class="size-4" /></Pagination.NextTrigger>
+				</Pagination>
 			{/if}
 		</div>
 		{#if data.booking.cards}

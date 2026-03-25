@@ -3,14 +3,14 @@
  */
 
 @utility typo {
-	@apply text-base space-y-4 leading-[1.6];
+	@apply space-y-4 text-base leading-[1.6];
 	& h1,
 	h2,
 	h3,
 	h4,
 	h5,
 	h6 {
-		@apply font-bold heading-font-family text-base leading-none;
+		@apply heading-font-family text-base leading-none font-bold;
 	}
 	.tagline:has(+ h1) {
 		@apply heading-font-family font-medium;
@@ -72,7 +72,7 @@
 	&.typo-insert {
 		--text-scaling: 1.125;
 		@apply space-y-0 heading-font-family;
-		@apply p-4 preset-tonal-primary dark:preset-tonal;
+		@apply preset-tonal-primary p-4 dark:preset-tonal;
 	}
 	& h1,
 	h2,
@@ -103,7 +103,7 @@
 
 @layer components {
 	.footer {
-		@apply typo typo-sm text-surface-400 bg-surface-950 grid w-full grid-flow-row place-items-start gap-x-4 gap-y-10;
+		@apply grid w-full grid-flow-row place-items-start typo gap-x-4 gap-y-10 bg-surface-950 text-surface-400 typo-sm;
 		& > * {
 			@apply grid place-items-start;
 		}
@@ -128,9 +128,9 @@
 
 @layer components {
 	.footer-mentions {
-		@apply px-6 flex gap-3 text-xs text-surface-600;
+		@apply flex gap-3 px-6 text-xs text-surface-600;
 		& > * {
-			@apply inline m-0;
+			@apply m-0 inline;
 		}
 	}
 }
@@ -176,7 +176,7 @@
 		}
 	}
 	.card-actions {
-		@apply text-center mt-6;
+		@apply mt-6 text-center;
 	}
 	& .card-figure {
 		@apply relative;
@@ -184,7 +184,7 @@
 			@apply w-full;
 		}
 		& .card-caption {
-			@apply absolute bottom-0 text-surface-contrast-950 bg-surface-950 px-3 py-1 text-xs heading-font-family opacity-60;
+			@apply absolute bottom-0 bg-surface-950 px-3 py-1 heading-font-family text-xs text-surface-contrast-950 opacity-60;
 			& a {
 				@apply underline;
 			}
@@ -200,7 +200,7 @@
 	}
 	.card-sm {
 		& .card-body {
-			@apply typo-sm p-3;
+			@apply p-3 typo-sm;
 		}
 	}
 	.card-lg {

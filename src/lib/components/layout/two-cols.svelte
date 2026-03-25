@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="{props.class} container gap-6 mx-auto max-w-[76rem] p-4 md:grid md:grid-cols-[48rem_1fr]"
+	class="{props.class} container mx-auto max-w-[76rem] gap-6 p-4 md:grid md:grid-cols-[48rem_1fr]"
 	{style}
 >
 	{@render props.children()}

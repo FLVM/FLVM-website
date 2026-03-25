@@ -9,11 +9,11 @@
 
 <footer
 	id="mobile-navigation"
-	class="{props.class} footer md:footer-horizontal max-md:footer-vertical bg-primary text-primary-content p-10 pb-0 gap-4"
+	class="{props.class} footer bg-primary text-primary-content gap-4 p-10 pb-0 max-md:footer-vertical md:footer-horizontal"
 >
-	<aside class="max-md:flex-col flex gap-4">
-		<a href={props.editor.url || "/"} class="flex pt-2">
-			<LogoFlvmCompact  />
+	<aside class="flex gap-4 max-md:flex-col">
+		<a href={props.editor.url || '/'} class="flex pt-2">
+			<LogoFlvmCompact />
 		</a>
 		<div class="max-w-[24rem]">
 			{@html props.editor.description}
@@ -38,5 +38,5 @@
 <footer class="footer footer-mentions footer-center py-4 pt-2">
 	<p>© {new Date().getFullYear()}</p>
 	<a href="/mentions-legales">Mentions légales</a>
-  <LightSwitch />
+	<LightSwitch />
 </footer>

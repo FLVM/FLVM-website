@@ -23,18 +23,18 @@
 		<Cover cover={data.courses.cover} />
 		<div class="pr-8">
 			{#each data.courses.lessons as lesson (lesson.id)}
-				<article id={lesson.id} class="mb-12 last:border-0 last:pb-0 text-center md:text-left">
+				<article id={lesson.id} class="mb-12 text-center last:border-0 last:pb-0 md:text-left">
 					<!-- Cover -->
-					<div class="typo mb-6">
+					<div class="mb-6 typo">
 						<h2>{lesson.title}</h2>
-            {#if lesson.image}
-            <figure>
-              <img src={lesson.image.src} alt={lesson.image.alt} class="w-full"/>
-            </figure>
-            {/if}
+						{#if lesson.image}
+							<figure>
+								<img src={lesson.image.src} alt={lesson.image.alt} class="w-full" />
+							</figure>
+						{/if}
 						{@html lesson.description}
 					</div>
-					<div class="typo typo-insert mb-6 text-left">
+					<div class="typo-insert mb-6 typo text-left">
 						<Place place={getPlaceByName(lesson.place)} />
 						<Person person={getPersonByName(lesson.instructor)} />
 					</div>

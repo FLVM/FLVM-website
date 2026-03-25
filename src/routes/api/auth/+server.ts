@@ -10,7 +10,7 @@ import { GITHUB_CLIENT_ID } from '$env/static/private';
 // import { dev } from "$app/environment";
 // const randomString = () => randomBytes(4).toString("hex")
 
-export function _load({ setHeaders }: { setHeaders: (header:object) => void }) {
+export function _load({ setHeaders }: { setHeaders: (header: object) => void }) {
 	setHeaders({
 		'Content-Type': 'text/plain'
 	});

@@ -15,13 +15,11 @@
 	let { data }: Props = $props();
 	// @todo: add closure ?
 	function mailtoContact(name?: string, to?: string) {
-		name = name || ''
-		to = to || data.editor.contact.email
-		const subject = "Demande d'information"
-		const body = `Bonjour ${name},\n\nJe vous contact au sujet de ...\n\nBien cordialement.`
-		return encodeURI(`mailto:${to}`
-		+`?subject=${subject}`
-		+`&body=${body}`)
+		name = name || '';
+		to = to || data.editor.contact.email;
+		const subject = "Demande d'information";
+		const body = `Bonjour ${name},\n\nJe vous contact au sujet de ...\n\nBien cordialement.`;
+		return encodeURI(`mailto:${to}` + `?subject=${subject}` + `&body=${body}`);
 	}
 </script>
 
@@ -29,27 +27,27 @@
 	<TwoCols>
 		<Cover cover={data.about.cover} />
 		<article>
-			<div class="pr-8 typo">
+			<div class="typo pr-8">
 				{@html data.about.content}
 			</div>
 			<section>
 				<h2 class="h2">Les ateliers</h2>
 				{#each data.places as place (place.slug)}
 					<article class="typo">
-						{#if place.image }
-						<figure>
-							<img src={place.image.src} alt={place.image.alt}/>
-							{#if place.image.legend}
-							<figcaption>{@html place.image.legend}</figcaption>
-							{/if}
-						</figure>
+						{#if place.image}
+							<figure>
+								<img src={place.image.src} alt={place.image.alt} />
+								{#if place.image.legend}
+									<figcaption>{@html place.image.legend}</figcaption>
+								{/if}
+							</figure>
 						{/if}
 						<h3>{place.name}</h3>
 						{@html place.content}
 						{#if place.hours}
-						<div class="typo typo-insert mb-6">
-							{@html place.hours}
-						</div>
+							<div class="typo-insert mb-6 typo">
+								{@html place.hours}
+							</div>
 						{/if}
 						<Address address={place.address} />
 					</article>
@@ -63,23 +61,28 @@
 						<em>{title}</em>
 						<p>{@html description}</p>
 						{#if phone || email}
-						<p class="typo typo-insert my-6">
-							Contacter {name}
-							{#if email}
-							<a href={mailtoContact(name, email)} title={`Contacter ${name} par courriel`}>par email</a>
-							{/if}
-							{(phone && email) && 'ou'}
-							{#if phone}
-							<a href={`tel:${phone.replace(/\s/g,'')}`} title={`Contacter ${name} par téléphone`}>par téléphone</a>
-							{/if}
-						</p>
+							<p class="typo-insert my-6 typo">
+								Contacter {name}
+								{#if email}
+									<a href={mailtoContact(name, email)} title={`Contacter ${name} par courriel`}
+										>par email</a
+									>
+								{/if}
+								{phone && email && 'ou'}
+								{#if phone}
+									<a
+										href={`tel:${phone.replace(/\s/g, '')}`}
+										title={`Contacter ${name} par téléphone`}>par téléphone</a
+									>
+								{/if}
+							</p>
 						{/if}
 					</article>
 				{/each}
 			</section>
 		</article>
 		<aside class="mt-11" id="contact">
-			<article class="typo typo-sm p-4 bg-yellow-500">
+			<article class="typo bg-yellow-500 p-4 typo-sm">
 				<h2>{data.editor.name}</h2>
 				<address>
 					<strong>{data.editor.address.name}</strong><br />
@@ -89,12 +92,16 @@
 					{data.editor.address.country}
 				</address>
 				{#if data.editor.contact.email || data.editor.contact.phone}
-				<p>
-					{#if data.editor.contact.name}<strong>{data.editor.contact.name}</strong><br />{/if}
-					{#if data.editor.contact.email}Email : <a href="{mailtoContact()}">{data.editor.contact.email}</a><br />{/if}
-					{#if data.editor.contact.phone}Téléphone : <a href="tel:{data.editor.contact.phone.replace(/\s/g,'')}">{data.editor.contact.phone}</a>{/if}
-				</p>
-				
+					<p>
+						{#if data.editor.contact.name}<strong>{data.editor.contact.name}</strong><br />{/if}
+						{#if data.editor.contact.email}Email : <a href={mailtoContact()}
+								>{data.editor.contact.email}</a
+							><br />{/if}
+						{#if data.editor.contact.phone}Téléphone : <a
+								href="tel:{data.editor.contact.phone.replace(/\s/g, '')}"
+								>{data.editor.contact.phone}</a
+							>{/if}
+					</p>
 				{/if}
 				<p>
 					<strong>Réseaux sociaux</strong><br />
@@ -103,7 +110,7 @@
 					{/each}
 				</p>
 				{#if data.editor.vcf_file}
-					<a href={data.editor.vcf_file} class="btn btn-primary w-full bnt-soft"
+					<a href={data.editor.vcf_file} class="btn-primary bnt-soft btn w-full"
 						>Ajouter à mon carnet d'adresse</a
 					>
 				{/if}

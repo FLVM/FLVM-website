@@ -18,16 +18,16 @@ export function load(): {
 		links: [
 			{
 				url: '/les-cours',
-				text: 'Les cours',
+				text: 'Les cours'
 			},
 			{
 				url: '/tarifs',
-				text: 'Tarifs',
+				text: 'Tarifs'
 			},
-      {
-        url: '/a-propos',
-        text: 'À propos'
-      },
+			{
+				url: '/a-propos',
+				text: 'À propos'
+			},
 			{
 				url: '/planning',
 				text: 'Planning & réservation',

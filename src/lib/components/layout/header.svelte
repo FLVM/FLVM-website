@@ -19,29 +19,28 @@
 </script>
 
 <AppBar class="{props.class} bg-primary-500 py-6">
-	<AppBar.Toolbar class="md:h-10 grid-cols-[auto_1fr] content-center">
+	<AppBar.Toolbar class="grid-cols-[auto_1fr] content-center md:h-10">
 		<AppBar.Lead>
-  	<a href={props.editor.url || "/"} class="block flex flex-col text-center">
-			<LogoFlvm width="120" height="120" class="mb-4 mx-auto md:absolute md:top-2 md:left-2 drop-shadow-lg" />
-			<div class="md:pl-48 leading-none">
-				<h1 class="h6 leading-none">{props.editor.name}</h1>
-				<span class="text-xs leading-[1] italic">
-					{@html props.editor.baseline}
-				</span>
-			</div>
-		</a>
+			<a href={props.editor.url || '/'} class="block flex flex-col text-center">
+				<LogoFlvm
+					width="120"
+					height="120"
+					class="mx-auto mb-4 drop-shadow-lg md:absolute md:top-2 md:left-2"
+				/>
+				<div class="leading-none md:pl-48">
+					<h1 class="h6 leading-none">{props.editor.name}</h1>
+					<span class="text-xs leading-[1] italic">
+						{@html props.editor.baseline}
+					</span>
+				</div>
+			</a>
 		</AppBar.Lead>
 		<AppBar.Trail class="justify-end self-start">
-      <div class="hidden sm:flex flex-wrap justify-end self-center">
-        {#each props.links as link (link.url)}
-          <Button
-            {link}
-            class={[
-              page.url.pathname === link.url && 'underline'
-            ]}
-          />
-        {/each}
-      </div>
+			<div class="hidden flex-wrap justify-end self-center sm:flex">
+				{#each props.links as link (link.url)}
+					<Button {link} class={[page.url.pathname === link.url && 'underline']} />
+				{/each}
+			</div>
 			<NavigationMobile class="sm:hidden" links={props.links} editor={props.editor} />
 		</AppBar.Trail>
 	</AppBar.Toolbar>

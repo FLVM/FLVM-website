@@ -5,7 +5,7 @@
 </script>
 
 {#if place}
-<div>
-	Lieux : <strong>{place.name}</strong> ({place.address.city})
-</div>
+	<div>
+		Lieux : <strong>{place.name}</strong> ({place.address.city})
+	</div>
 {/if}

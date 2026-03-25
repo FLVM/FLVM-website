@@ -12,8 +12,8 @@
 
 <div
 	class={[
-		'mb-8 md:pb-0 md:min-h-100 md:max-w-500 mx-auto md:grid grid-cols-2 typo typo-lg bg-no-repeat bg-bottom-right md:bg-top-right',
-		bgImage && 'pb-120',
+		'mx-auto mb-8 grid-cols-2 typo bg-bottom-right bg-no-repeat typo-lg md:grid md:min-h-100 md:max-w-500 md:bg-top-right md:pb-0',
+		bgImage && 'pb-120'
 		// 'bg-primary-500 p-12 -mt-12'
 	]}
 	style={'grid-column: 1 / 3;' + bgImage}

@@ -2,7 +2,6 @@
 	import { page } from '$app/state';
 	import Button from '$lib/components/shared/button.svelte';
 	import OneCol from '$lib/components/layout/one-col.svelte';
-
 </script>
 
 <OneCol class="mt-12">

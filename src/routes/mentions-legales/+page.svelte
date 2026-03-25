@@ -6,17 +6,17 @@
 
 	type Props = {
 		data: {
-			legals: Legals
-		}
-	}
+			legals: Legals;
+		};
+	};
 
-	let { data }: Props = $props()
+	let { data }: Props = $props();
 </script>
 
 <OneCol>
 	<main>
 		<div class="typo">
-			{@html data.legals.content }
+			{@html data.legals.content}
 		</div>
 	</main>
 </OneCol>

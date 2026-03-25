@@ -2,48 +2,48 @@ const { VITE_CALENDAR_ID, VITE_CALENDAR_API_KEY } = import.meta.env;
 // Google Calendar Event ressource :
 // https://developers.google.com/workspace/calendar/api/v3/reference/events?hl=fr
 export type CalendarEventType = {
-  id: string;
-  status: 'confirmed' | 'tentative' | 'cancelled';
-  htmlLink: string;
-  created: string;
-  updated: string;
-  title: string;
-  tags: Array<string>;
-  summary: string;
-  description: string;
-  location: string;
-  creator: {
-    email: string;
-  };
-  organizer: {
-    email: string;
-    displayName: string;
-  };
-  start: {
-    dateTime: string;
-    prettyDate: string;
-    prettyHour: string;
-  };
-  end: {
-    dateTime: string;
-    prettyDate: string;
-    prettyHour: string;
-  };
-  transparency: 'opaque' | 'transparent' | null; // equivant à Occupé et Disponible
-  visibility: 'default' | 'public' | 'private' | 'confidential' | null;
+	id: string;
+	status: 'confirmed' | 'tentative' | 'cancelled';
+	htmlLink: string;
+	created: string;
+	updated: string;
+	title: string;
+	tags: Array<string>;
+	summary: string;
+	description: string;
+	location: string;
+	creator: {
+		email: string;
+	};
+	organizer: {
+		email: string;
+		displayName: string;
+	};
+	start: {
+		dateTime: string;
+		prettyDate: string;
+		prettyHour: string;
+	};
+	end: {
+		dateTime: string;
+		prettyDate: string;
+		prettyHour: string;
+	};
+	transparency: 'opaque' | 'transparent' | null; // equivant à Occupé et Disponible
+	visibility: 'default' | 'public' | 'private' | 'confidential' | null;
 };
 
 const url = `https://www.googleapis.com/calendar/v3/calendars/${VITE_CALENDAR_ID}/events?`;
 const params: Record<string, string> = {
-  key: VITE_CALENDAR_API_KEY || '',
-  orderBy: 'startTime',
-  singleEvents: 'true',
-  timeMin: '2025-11-15T10:07:25.123Z',
-  timeMax: '2026-11-15T10:07:25.123Z'
+	key: VITE_CALENDAR_API_KEY || '',
+	orderBy: 'startTime',
+	singleEvents: 'true',
+	timeMin: '2025-11-15T10:07:25.123Z',
+	timeMax: '2026-11-15T10:07:25.123Z'
 };
 
 export async function getEvents() {
-  // Documentation: https://developers.google.com/workspace/calendar/api/v3/reference/events/list#parameters
+	// Documentation: https://developers.google.com/workspace/calendar/api/v3/reference/events/list#parameters
 	const calendarApiResponse = await fetch(url + new URLSearchParams(params).toString()).then(
 		(result) => {
 			// console.log("RESULT", result)
@@ -52,8 +52,7 @@ export async function getEvents() {
 	);
 	const eventsCalendar: Array<CalendarEventType> = calendarApiResponse.items
 		.filter((i: CalendarEventType) => Boolean(i.summary))
-		.map(
-		(i: CalendarEventType) => ({
+		.map((i: CalendarEventType) => ({
 			id: i.id,
 			status: i.status,
 			htmlLink: i.htmlLink,
@@ -83,18 +82,15 @@ export async function getEvents() {
 			},
 			transparency: i.transparency || 'opaque',
 			visibility: i.visibility || null
-		})
-	);
+		}));
 
-  return eventsCalendar
+	return eventsCalendar;
 }
 
 export async function getLastEvents() {
-  // Les derniers events
-  const lastEvents = await getEvents()
-  return lastEvents
-    .filter(e => e.transparency === "transparent")
-    .slice(0,3)
+	// Les derniers events
+	const lastEvents = await getEvents();
+	return lastEvents.filter((e) => e.transparency === 'transparent').slice(0, 3);
 }
 
 // Utilities
@@ -132,7 +128,7 @@ export const categories = [
 ];
 
 function getTitle(string: string) {
-  const pattern = new RegExp(categories.join("|") + "|:", "gi")
+	const pattern = new RegExp(categories.join('|') + '|:', 'gi');
 	const title = string.replace(pattern, '').trim();
 	return title.charAt(0).toUpperCase() + title.slice(1);
 }
