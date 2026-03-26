@@ -1,56 +1,56 @@
 <script lang="ts">
-	import Person from '$lib/components/courses/person.svelte';
-	import Debug from '$lib/components/debug.svelte';
-	import TwoCols from '$lib/components/layout/two-cols.svelte';
-	import Card from '$lib/components/shared/card.svelte';
-	import Place from '$lib/components/courses/place.svelte';
-	import Button from '$lib/components/shared/button.svelte';
-	import Cover from '$lib/components/shared/cover.svelte';
+  import Person from '$lib/components/courses/person.svelte';
+  import Debug from '$lib/components/debug.svelte';
+  import TwoCols from '$lib/components/layout/two-cols.svelte';
+  import Card from '$lib/components/shared/card.svelte';
+  import Place from '$lib/components/courses/place.svelte';
+  import Button from '$lib/components/shared/button.svelte';
+  import Cover from '$lib/components/shared/cover.svelte';
 
-	let { data } = $props();
+  let { data } = $props();
 
-	const getPlaceByName = (name: string) => {
-		return data.places.find((place) => place.name === name);
-	};
+  const getPlaceByName = (name: string) => {
+    return data.places.find((place) => place.name === name);
+  };
 
-	const getPersonByName = (name: string) => {
-		return data.team.find((person) => person.name === name);
-	};
+  const getPersonByName = (name: string) => {
+    return data.team.find((person) => person.name === name);
+  };
 </script>
 
 <main>
-	<TwoCols>
-		<Cover cover={data.courses.cover} />
-		<div class="pr-8">
-			{#each data.courses.lessons as lesson (lesson.id)}
-				<article id={lesson.id} class="mb-12 text-center last:border-0 last:pb-0 md:text-left">
-					<!-- Cover -->
-					<div class="mb-6 typo">
-						<h2>{lesson.title}</h2>
-						{#if lesson.image}
-							<figure>
-								<img src={lesson.image.src} alt={lesson.image.alt} class="w-full" />
-							</figure>
-						{/if}
-						{@html lesson.description}
-					</div>
-					<div class="typo-insert mb-6 typo text-left">
-						<Place place={getPlaceByName(lesson.place)} />
-						<Person person={getPersonByName(lesson.instructor)} />
-					</div>
-					{#if lesson.link}
-						<Button link={lesson.link} class="m-auto" />
-					{/if}
-				</article>
-			{/each}
-			<Debug data={data.courses} />
-		</div>
-		{#if data.courses.cards}
-			<aside class="mt-12">
-				{#each data.courses.cards as card (card.title)}
-					<Card {card} size="sm" class="my-4 first:mt-0 last:pb-0" />
-				{/each}
-			</aside>
-		{/if}
-	</TwoCols>
+  <TwoCols>
+    <Cover cover={data.courses.cover} />
+    <div class="pr-8">
+      {#each data.courses.lessons as lesson (lesson.id)}
+        <article id={lesson.id} class="mb-12 text-center last:border-0 last:pb-0 md:text-left">
+          <!-- Cover -->
+          <div class="mb-6 typo">
+            <h2>{lesson.title}</h2>
+            {#if lesson.image}
+              <figure>
+                <img src={lesson.image.src} alt={lesson.image.alt} class="w-full" />
+              </figure>
+            {/if}
+            {@html lesson.description}
+          </div>
+          <div class="typo-insert mb-6 typo text-left">
+            <Place place={getPlaceByName(lesson.place)} />
+            <Person person={getPersonByName(lesson.instructor)} />
+          </div>
+          {#if lesson.link}
+            <Button link={lesson.link} class="m-auto" />
+          {/if}
+        </article>
+      {/each}
+      <Debug data={data.courses} />
+    </div>
+    {#if data.courses.cards}
+      <aside class="mt-12">
+        {#each data.courses.cards as card (card.title)}
+          <Card {card} size="sm" class="my-4 first:mt-0 last:pb-0" />
+        {/each}
+      </aside>
+    {/if}
+  </TwoCols>
 </main>

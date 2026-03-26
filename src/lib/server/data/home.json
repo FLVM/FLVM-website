@@ -22,6 +22,7 @@
   },
   "cards": [
     {
+      "id": "2480af5e-b6ba-43a9-b0d5-ea19df698222",
       "featured": false,
       "title": "Enterrement de vie de jeune fille",
       "content": "<p>Faites une surprise à la future mariée et offrez-lui un cours mémorable de cuisine et de pâtisserie !</p>",
@@ -33,6 +34,7 @@
       "link": null
     },
     {
+      "id": "d84919df-c7ce-41b3-b4f6-670a717217b8",
       "featured": true,
       "title": "Carte cadeau",
       "content": "<p>Pour les enfants ou les adultes, Faites découvrir les trucs et astuces de pâtisserie et de cuisines en offrant une carte‑cadeaux FLVM.</p>",
@@ -47,6 +49,7 @@
       }
     },
     {
+      "id": "298d5076-b3da-4ce5-9b6f-3d4b9451112b",
       "featured": false,
       "title": "Laisse ton cartable et mets ton tablier !",
       "content": "<p>Viens me retrouver après la classe, à partir de 17h du lundi au vendredi. Nous apprendrons ensemble trucs et astuces de pâtissier et cuisinier ! Si tu veux, dès les mercredis matins, tu peux aussi réaliser du bon pain ou de la viennoiserie! MIAM 😋</p>",
@@ -65,6 +68,7 @@
       }
     },
     {
+      "id": "31a71d6e-717d-41eb-89ce-d8b6b0ba0785",
       "featured": false,
       "title": "Team Building",
       "content": "<p>FLVM, c’est aussi un lieu pour vos événements professionnels, n’hésitez pas à nous contacter à <a href=\"mailto:contact@flvm.fr\">contact@flvm.fr</a>.</p>",
@@ -74,6 +78,7 @@
   ],
   "aside": [
     {
+      "id": "96fbb196-9848-4fa8-be67-325a37d96707",
       "featured": false,
       "title": "Formats des cours",
       "content": "<p>Nous propons des divers formats de cours : atelier standard, atelier enfant après-scolaire, team Building, évenements d'anniversaire, EVJF et des thèmes saisonniers. N'hésitez pas à proposer vos thèmes &#x26; idées pour des cours à la demande.</p>",
@@ -81,6 +86,7 @@
       "link": null
     },
     {
+      "id": "068b543f-f313-4d77-84dc-d5c70dffc0e8",
       "featured": false,
       "title": "Atelier le Chocopistache",
       "content": "<p>Ce cours d'une durée de 3 heures est accéssible au débutant, vous préparerez une recette gourmande et originale de gateau au chocolat et à la pistache de Arnaud Houley.</p>",
@@ -99,6 +105,7 @@
       }
     },
     {
+      "id": "b5f9a1f3-8e1e-4ad3-8ade-eb654c5f495d",
       "featured": false,
       "title": "Vos chocolat de pâques",
       "content": "<p>À partir du 10 mars, les chocolats de Pâque fait maison sont en vente à l'atelier de pâtisserie <a href=\"http://flvm.fr/informations#l-atelier-de-patisserie\">au 2 place du 39e Régiment d'Infanterie</a>.</p>",
@@ -106,6 +113,7 @@
       "link": null
     },
     {
+      "id": "e9c823c2-7982-40cc-b21c-9e282f3a5c8b",
       "featured": true,
       "title": "Newsletter FLVM",
       "content": "<p>Inscrivez-vous à notre newsletter pour rester informé des activités et des projets de FLVM.</p>",
@@ -122,6 +130,7 @@
   ],
   "posts": [
     {
+      "id": "946b1240-d32a-4d8d-ae69-5b8b6f1efb21",
       "featured": false,
       "title": "La recette du Chocopistache",
       "content": "<p>Arnaud à mis au point cette recette gourmande et facile à réaliser à la maison. Suivez avec nous le déroulement de cette atelier, réalisez-le et déguster-le 😋 !</p>",
@@ -140,6 +149,7 @@
       }
     },
     {
+      "id": "8382ceab-d857-414b-8515-d9ad0bb124d3",
       "featured": false,
       "title": "Un EFJF pas comme les autres",
       "content": "<p>Aline nous partage sont enterrement de vie de jeune fille à FLVM, quelle aventure !</p>",
