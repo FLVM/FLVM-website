@@ -1,40 +1,42 @@
 {
-	"seo": {
-		"title": "Planning des cours",
-		"description": "Calendrier des cours."
-	},
-	"cover": {
-		"overhead": "",
-		"title": "Planning & réservation",
-		"text": "Choisissez un cours disponible qui vous convient dans le planning ou [proposez votre propre thème](mailto:contact@flvm.fr?subject=Demande%20cours%20de%20sp%C3%A9cifique&body=Bonjour%2C%0A%0AJe%20ne%20trouve%20pas%20de%20cours%20de%20cuisine%20ou%20de%20p%C3%A2tisserie%20qui%20me%20conviennent.%0ASerait-il%20possible%20de%20planifier%20un%20cours%20de%20%5Bsujet%20de%20votre%20cours%5D%20pour%20%5Bn%5D%20personne(s)%20d'une%20dur%C3%A9e%20d'environ%203%20heures%3F%0ABien%20cordialement.).",
-		"image": {
-			"src": "/uploads/booking/cover-planning.png",
-			"alt": "Illustration de chat préparant un gâteau.",
-			"legend": ""
-		},
-		"link": null
-	},
-	"cards": [
-		{
-			"featured": true,
-			"title": "Tarifs & durée des cours",
-			"content": "Nos cours sont **ouverts à tout public**, comptez en moyenne **3h avec un professionnel** et **39€ par personne** pour un atelier de 5 personnes.",
-			"image": null,
-			"link": {
-				"text": "Voir la grille tarifaire",
-				"url": "/tarifs#tarifs",
-				"color": "primary-500",
-				"icon_before": "",
-				"icon_after": "",
-				"icon_only": false
-			}
-		},
-		{
-			"featured": false,
-			"title": "Se préparer pour son cours",
-			"content": "**Le matériel et les produits sont fournis**. Attention tout de mêmes au vétements sensible aux tâches.\n\n**Votre checklist** :\n\n- ✔ Un carnet & crayon si voulez noter des astuces.\n- ✔ une boîte hermétique pour repartir avec vos réalisations.",
-			"image": null,
-			"link": null
-		}
-	]
+  "seo": {
+    "title": "Planning des cours",
+    "description": "Calendrier des cours."
+  },
+  "cover": {
+    "overhead": "",
+    "title": "Planning & réservation",
+    "text": "Choisissez un cours disponible qui vous convient dans le planning ou [proposez votre propre thème](mailto:contact@flvm.fr?subject=Demande%20cours%20de%20sp%C3%A9cifique&body=Bonjour%2C%0A%0AJe%20ne%20trouve%20pas%20de%20cours%20de%20cuisine%20ou%20de%20p%C3%A2tisserie%20qui%20me%20conviennent.%0ASerait-il%20possible%20de%20planifier%20un%20cours%20de%20%5Bsujet%20de%20votre%20cours%5D%20pour%20%5Bn%5D%20personne(s)%20d'une%20dur%C3%A9e%20d'environ%203%20heures%3F%0ABien%20cordialement.).",
+    "image": {
+      "src": "/uploads/booking/cover-planning.png",
+      "alt": "Illustration de chat préparant un gâteau.",
+      "legend": ""
+    },
+    "link": null
+  },
+  "cards": [
+    {
+      "id": "76500713-8e66-4d58-9b17-832c7773e7fa",
+      "featured": true,
+      "title": "Tarifs & durée des cours",
+      "content": "Nos cours sont **ouverts à tout public**, comptez en moyenne **3h avec un professionnel** et **39€ par personne** pour un atelier de 5 personnes.",
+      "image": null,
+      "link": {
+        "text": "Voir la grille tarifaire",
+        "url": "/tarifs#tarifs",
+        "color": "primary",
+        "icon_before": "",
+        "icon_after": "",
+        "icon_only": false
+      }
+    },
+    {
+      "id": "de776340-2691-44e3-8925-bbec152c0724",
+      "featured": false,
+      "title": "Se préparer pour son cours",
+      "content": "**Le matériel et les produits sont fournis**. Attention tout de mêmes au vétements sensible aux tâches.\n\n**Votre checklist** :\n\n- ✔ Un carnet & crayon si voulez noter des astuces.\n- ✔ une boîte hermétique pour repartir avec vos réalisations.",
+      "image": null,
+      "link": null
+    }
+  ]
 }

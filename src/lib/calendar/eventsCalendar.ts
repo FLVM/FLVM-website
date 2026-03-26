@@ -44,107 +44,103 @@ const params: Record<string, string> = {
 
 export async function getEvents() {
   // Documentation: https://developers.google.com/workspace/calendar/api/v3/reference/events/list#parameters
-	const calendarApiResponse = await fetch(url + new URLSearchParams(params).toString()).then(
-		(result) => {
-			// console.log("RESULT", result)
-			return result.json();
-		}
-	);
-	const eventsCalendar: Array<CalendarEventType> = calendarApiResponse.items
-		.filter((i: CalendarEventType) => Boolean(i.summary))
-		.map(
-		(i: CalendarEventType) => ({
-			id: i.id,
-			status: i.status,
-			htmlLink: i.htmlLink,
-			created: i.created,
-			updated: i.updated,
-			summary: i.summary,
-			title: getTitle(i.summary),
-			tags: getTags(i.summary),
-			description: i.description,
-			location: i.location,
-			creator: {
-				email: i.creator.email
-			},
-			organizer: {
-				email: i.organizer.email,
-				displayName: i.organizer.displayName
-			},
-			start: {
-				dateTime: i.start.dateTime,
-				prettyDate: getPrettyDate(i.start.dateTime),
-				prettyHour: getPrettyHour(i.start.dateTime)
-			},
-			end: {
-				dateTime: i.end.dateTime,
-				prettyDate: getPrettyDate(i.end.dateTime),
-				prettyHour: getPrettyHour(i.end.dateTime)
-			},
-			transparency: i.transparency || 'opaque',
-			visibility: i.visibility || null
-		})
-	);
+  const calendarApiResponse = await fetch(url + new URLSearchParams(params).toString()).then(
+    (result) => {
+      // console.log("RESULT", result)
+      return result.json();
+    }
+  );
+  const eventsCalendar: Array<CalendarEventType> = calendarApiResponse.items
+    .filter((i: CalendarEventType) => Boolean(i.summary))
+    .map((i: CalendarEventType) => ({
+      id: i.id,
+      status: i.status,
+      htmlLink: i.htmlLink,
+      created: i.created,
+      updated: i.updated,
+      summary: i.summary,
+      title: getTitle(i.summary),
+      tags: getTags(i.summary),
+      description: i.description,
+      location: i.location,
+      creator: {
+        email: i.creator.email
+      },
+      organizer: {
+        email: i.organizer.email,
+        displayName: i.organizer.displayName
+      },
+      start: {
+        dateTime: i.start.dateTime,
+        prettyDate: getPrettyDate(i.start.dateTime),
+        prettyHour: getPrettyHour(i.start.dateTime)
+      },
+      end: {
+        dateTime: i.end.dateTime,
+        prettyDate: getPrettyDate(i.end.dateTime),
+        prettyHour: getPrettyHour(i.end.dateTime)
+      },
+      transparency: i.transparency || 'opaque',
+      visibility: i.visibility || null
+    }));
 
-  return eventsCalendar
+  return eventsCalendar;
 }
 
 export async function getLastEvents() {
   // Les derniers events
-  const lastEvents = await getEvents()
-  return lastEvents
-    .filter(e => e.transparency === "transparent")
-    .slice(0,3)
+  const lastEvents = await getEvents();
+  return lastEvents.filter((e) => e.transparency === 'transparent').slice(0, 3);
 }
 
 // Utilities
 
 const defaultPrettyDateLocale: Intl.LocalesArgument = 'fr-FR';
 const defaultPrettyDateOptions: Intl.DateTimeFormatOptions = {
-	year: 'numeric',
-	month: 'long',
-	weekday: 'long',
-	day: 'numeric'
+  year: 'numeric',
+  month: 'long',
+  weekday: 'long',
+  day: 'numeric'
 };
 
 function getPrettyDate(
-	date: string,
-	locale?: Intl.LocalesArgument,
-	options?: Intl.DateTimeFormatOptions
+  date: string,
+  locale?: Intl.LocalesArgument,
+  options?: Intl.DateTimeFormatOptions
 ) {
-	locale = locale || defaultPrettyDateLocale;
-	options = options || defaultPrettyDateOptions;
-	return new Date(date).toLocaleDateString(locale, options);
+  locale = locale || defaultPrettyDateLocale;
+  options = options || defaultPrettyDateOptions;
+  return new Date(date).toLocaleDateString(locale, options);
 }
 
 function getPrettyHour(date: string) {
-	const d = new Date(date);
-	return `${('0' + d.getHours()).slice(-2)}:${('0' + d.getMinutes()).slice(-2)}`;
+  const d = new Date(date);
+  return `${('0' + d.getHours()).slice(-2)}:${('0' + d.getMinutes()).slice(-2)}`;
 }
 
 export const categories = [
-	'cuisine',
-	'pâtisserie',
-	// 'patisserie',
-	'confiserie',
-	'enfants'
-	// ':'
+  'cuisine',
+  'pâtisserie',
+  // 'patisserie',
+  'confiserie',
+  'enfants'
+  // ':'
 ];
 
 function getTitle(string: string) {
-  const pattern = new RegExp(categories.join("|") + "|:", "gi")
-	let title = string.replace(pattern, '').trim();
-	return title.charAt(0).toUpperCase() + title.slice(1);
+  const pattern = new RegExp(categories.join('|') + '|:', 'gi');
+  const title = string.replace(pattern, '').trim();
+  return title.charAt(0).toUpperCase() + title.slice(1);
 }
 
 function getTags(string: string) {
-	const tags: Array<string> = [];
-	const words: Array<string> = string
-		.split(/[\s:]+/)
-		.filter((w) => w.trim() !== ':')
-		.map((w) => w.toLocaleLowerCase());
-	categories.forEach((w) => {
-		if (words.includes(w)) tags.push(w.toLocaleLowerCase());
-	});
-	return tags;
+  const tags: Array<string> = [];
+  const words: Array<string> = string
+    .split(/[\s:]+/)
+    .filter((w) => w.trim() !== ':')
+    .map((w) => w.toLocaleLowerCase());
+  categories.forEach((w) => {
+    if (words.includes(w)) tags.push(w.toLocaleLowerCase());
+  });
+  return tags;
 }

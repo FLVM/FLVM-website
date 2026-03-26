@@ -12,46 +12,55 @@
   },
   "prices": [
     {
+      "id": "4a9c88ac-d9c2-46b2-abbd-cdd1cc790490",
       "name": "2 personnes",
       "price": 69,
       "detail": ""
     },
     {
+      "id": "554637d3-5763-43fd-868c-bab58a1321fd",
       "name": "3 à 4 personnes",
       "price": 49,
       "detail": ""
     },
     {
+      "id": "3d22e6ed-cf75-48b0-ba44-69eb7a242023",
       "name": "5 personnes ou plus",
       "price": 39,
       "detail": "<p>Tarif pour un groupe de 5 personnes minimum, dans la limite de 8 personnes.</p>"
     },
     {
+      "id": "6991a14d-ea87-415b-8872-a40dc5f1175c",
       "name": "Tarif réduit",
       "price": 29,
       "detail": "<p>Tarif applicable pour les enfants, les étudiants et les bénéficiaire des minima sociaux (groupe de 4 personnes minimum).</p>"
     },
     {
+      "id": "0f6874e5-c816-4b23-ba14-f5e3e32099b2",
       "name": "Entreprise",
       "price": 45,
       "detail": "<p>Pour un groupe de 4 personnes minimum.</p>"
     },
     {
+      "id": "e9a9c3ce-73a7-43b6-adf6-d59283b6d22c",
       "name": "Cours à la demande",
       "price": null,
       "detail": "<p>Si vous souhaitez un cours pour une occasion spéciale, <a href=\"/a-propos#contact\">n'hésitez-pas à nous contacter</a></p>"
     },
     {
+      "id": "a9b9e990-a5b1-4657-a3c9-049e91801123",
       "name": "Adhésion",
       "price": null,
       "detail": "<p>L'adhésion à l'association est obligatoire pour profiter des cours, elle est incluse dans le prix de votre premier cours de l'année.</p>"
     },
     {
+      "id": "dfffd3dc-62f5-434d-9793-8c3f8b7bc2c0",
       "name": "Carte cadeau enfant",
       "price": 30,
       "detail": "<p>Offrez un cours à un enfant.</p>\n<p>Les cours est collectif, la carte est illimitée dans le temps.</p>\n<p><a href=\"mailto:arnaud@flvm.fr?subject=Commande%20de%20carte%20cadeau%20enfant&#x26;body=Bonjour%2C%0A%0APourriez-vous%20me%20pr%C3%A9parer%20une%20carte%20cadeau%20pour%20%5Bnom%20de%20la%20personne%5D.%0AD%C3%A8s%20qu&#x27;elle%20sera%20pr%C3%AAte%2C%20je%20viendrai%20la%20r%C3%A9cup%C3%A9rer%20%C3%A0%20l&#x27;atelier%20de%20p%C3%A2tisserie%20situ%C3%A9%20au%202%20place%20du%2039%C3%A8me%20r%C3%A9giment%20d&#x27;infanterie%20%C3%A0%20Rouen.%20Je%20paierai%20le%20montant%20sur%20place.%0ABien%20cordialement.\">Commander une carte cadeau pour un enfant.</a></p>"
     },
     {
+      "id": "b30d2213-065a-4908-a2a7-20f2b1e21ac3",
       "name": "Carte cadeau adulte",
       "price": 50,
       "detail": "<p>Offrez un cours à un adulte.</p>\n<p>Les cours sont collectif, la carte est illimitée dans le temps.</p>\n<p><a href=\"mailto:arnaud@flvm.fr?subject=Commande%20de%20carte%20cadeau%20adulte&#x26;body=Bonjour%2C%0A%0APourriez-vous%20me%20pr%C3%A9parer%20une%20carte%20cadeau%20pour%20%5Bnom%20de%20la%20personne%5D.%0AD%C3%A8s%20qu&#x27;elle%20sera%20pr%C3%AAte%2C%20je%20viendrai%20la%20r%C3%A9cup%C3%A9rer%20%C3%A0%20l&#x27;atelier%20de%20p%C3%A2tisserie%20situ%C3%A9%20au%202%20place%20du%2039%C3%A8me%20r%C3%A9giment%20d&#x27;infanterie%20%C3%A0%20Rouen.%20Je%20paierai%20le%20montant%20sur%20place.%0ABien%20cordialement.\">Commander une carte cadeau pour un adulte.</a></p>"
@@ -59,6 +68,7 @@
   ],
   "cards": [
     {
+      "id": "c02b0034-92a2-44b0-b874-9ea3073088a7",
       "featured": true,
       "title": "Cours pour les enfants",
       "content": "<p>Nous proposons des cours ludiques et éducatifs adaptés au enfants, <strong>à partir de 8 ans</strong>.</p>\n<p>Pour toute question <a href=\"/a-propos#contact\">écrivez-nous</a>.</p>",
@@ -66,6 +76,7 @@
       "link": null
     },
     {
+      "id": "00c99202-e566-41d0-9904-0b6fcf6fbc66",
       "featured": false,
       "title": "Annulation et remboursement",
       "content": "<p>\"[Détailler brièvement la politique et la procédure d'annulation et de remboursement]\"</p>\n<p>Se référer au ticket pour discuter et travailler sur  le sujet : . <a href=\"https://github.com/FLVM/FLVM-website/issues/19\">https://github.com/FLVM/FLVM-website/issues/19</a></p>",

@@ -126,16 +126,16 @@ link: &link
       name: color
       widget: select
       # options: ["primary", "secondary", "black"]
-      default: ""
-      options: [
-        { label: "Neutre", value: "" },
-        { label: "Coloré", value: "primary-500" },
-        { label: "Variante coloré", value: "secondary-500" },
-        { label: "Sombre", value: "tertiary-950-50" },
-        { label: "Noir", value: "surface-950-50" },
-        { label: "Blanc", value: "surface-50-950" }
-      ]
+      default: "neutral"
       required: false
+      options: [
+       { label: "Neutre", value: "neutral" },
+        { label: "Coloré", value: "primary" },
+        { label: "Variante coloré", value: "secondary" },
+        { label: "Sombre", value: "dark" },
+        { label: "Noir", value: "black" },
+        { label: "Blanc", value: "white" }
+      ]
     - label: Icone avant
       name: icon_before
       required: false
@@ -260,7 +260,7 @@ block_cover: &block_cover
     - <<: *image
 block_link: &block_link
   label: Bloc de lien
-  name: block_link
+  name: link
   widget: object
   summary: "{{link.text}}"
   fields:
@@ -272,6 +272,9 @@ card: &card
   widget: object
   collapsed: true
   fields:
+    - name: id
+      widget: hidden
+      default: '{{uuid}}'
     - <<: *field_featured
     - label: Titre
       name: title
@@ -534,6 +537,9 @@ singletons:
         collapsed: true
         required: false
         fields: 
+          - name: id
+            widget: hidden
+            default: '{{uuid}}'
           - label: Intitulé
             name: name
           - label: Tarif par personne
@@ -577,18 +583,6 @@ singletons:
         required: false
         <<: *card
   - divider: true
-  - label: Mentions légales
-    name: legals
-    file: content/legals.json
-    editor:
-      preview: false
-    fields:
-      - <<: *SEO
-      - label: Contenu de la page
-        name: content
-        <<: *markdown_simple
-        hint: Indiquer toutes les mentions légales relatives au site (CGU, usage des cookies, etc.)
-        required: false
   - label: Informations éditeur
     name: editor
     file: content/settings/editor.json
@@ -606,10 +600,6 @@ singletons:
       - label: Description
         name: description
         <<: *markdown_minimal
-      - <<: *url
-        label: URL de base
-        hint: Dans le doute, laisser vide.
-        required: false
       - label: Contact
         name: contact
         widget: object
@@ -631,6 +621,9 @@ singletons:
           - label: Description
             name: text
             maxlength: 26
+          - name: id
+            widget: hidden
+            default: '{{uuid}}'
           - label: Nom du réseau
             name: icon
             widget: select
@@ -652,4 +645,17 @@ singletons:
       - label: Fichier de contact
         name: vcf_file
         widget: file
+        required: false
+  - label: Mentions légales
+    name: legals
+    file: content/legals.json
+    editor:
+      preview: false
+    icon: balance
+    fields:
+      - <<: *SEO
+      - label: Contenu de la page
+        name: content
+        <<: *markdown_simple
+        hint: Indiquer toutes les mentions légales relatives au site (CGU, usage des cookies, etc.)
         required: false

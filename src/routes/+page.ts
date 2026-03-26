@@ -1,10 +1,8 @@
 import { getLastEvents } from '$lib/calendar/eventsCalendar';
 import type { PageLoad } from './$types';
 
-
 export const load: PageLoad = async () => {
-	return {
+  return {
     lastEvents: await getLastEvents()
-	};
+  };
 };
-

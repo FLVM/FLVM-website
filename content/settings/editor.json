@@ -2,7 +2,6 @@
   "name": "Faites le vous même",
   "baseline": "Cours de cuisine &amp; de pâtisserie",
   "description": "L'association FLVM vous propose des cours de cuisine et de pâtisserie pour adultes et enfants.\n\nNos cours se déroulent dans [nos ateliers à Rouen](http://flvm.fr/informations#ateliers), nous mettons un point d'honneur à pratiquer des [tarifs accessibles à toutes et tous](http://flvm.fr/informations#tarifs).",
-  "url": "",
   "contact": {
     "name": "Faites-le vous-même",
     "phone": "06 62 81 56 74",
@@ -17,12 +16,14 @@
   },
   "socials": [
     {
+      "id": "4cc3e358-cffc-473d-870c-2df878eba43f",
       "text": "Notre page Facebook",
       "icon": "facebook",
       "url": "https://example.com",
       "icon_only": true
     },
     {
+      "id": "445987c7-5b6c-4aa7-a613-a99dfdc2ef9b",
       "text": "Nos vidéos",
       "icon": "vimeo",
       "url": "https://example.com",
@@ -36,5 +37,6 @@
     "city": "Rouen",
     "country": "France"
   },
-  "vcf_file": "/uploads/FLVM.vcf"
+  "vcf_file": "/uploads/FLVM.vcf",
+  "url": ""
 }

@@ -16,6 +16,7 @@
   },
   "cards": [
     {
+      "id": "76500713-8e66-4d58-9b17-832c7773e7fa",
       "featured": true,
       "title": "Tarifs & durée des cours",
       "content": "<p>Nos cours sont <strong>ouverts à tout public</strong>, comptez en moyenne <strong>3h avec un professionnel</strong> et <strong>39€ par personne</strong> pour un atelier de 5 personnes.</p>",
@@ -23,13 +24,14 @@
       "link": {
         "text": "Voir la grille tarifaire",
         "url": "/tarifs#tarifs",
-        "color": "primary-500",
+        "color": "primary",
         "icon_before": "",
         "icon_after": "",
         "icon_only": false
       }
     },
     {
+      "id": "de776340-2691-44e3-8925-bbec152c0724",
       "featured": false,
       "title": "Se préparer pour son cours",
       "content": "<p><strong>Le matériel et les produits sont fournis</strong>. Attention tout de mêmes au vétements sensible aux tâches.</p>\n<p><strong>Votre checklist</strong> :</p>\n<ul>\n<li>✔ Un carnet &#x26; crayon si voulez noter des astuces.</li>\n<li>✔ une boîte hermétique pour repartir avec vos réalisations.</li>\n</ul>",
