@@ -5,5 +5,8 @@ yarn.lock
 bun.lock
 bun.lockb
 
+# Data
+/src/lib/server/data/
+
 # Miscellaneous
 /static/
