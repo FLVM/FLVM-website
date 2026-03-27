@@ -17,7 +17,7 @@ backend:
   # https://ironeko.com/posts/how-to-install-netlify-cms-on-vercel
   name: github
   repo: FLVM/FLVM-website
-  branch: develop
+  branch: preview
   # custom
   # Base URL pour le serveur d'authentification (https://api.netlify.com  par defaut)
   base_url: https://flvm-website.vercel.app
