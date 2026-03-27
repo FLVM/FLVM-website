@@ -3,7 +3,8 @@
   import Cover from '$lib/components/shared/cover.svelte';
   import Address from '$lib/components/shared/adress.svelte';
   import { type About, type Editor, type Places, type Team } from '$lib/server/data';
-
+  import Button from '$lib/components/shared/button.svelte';
+  
   type Props = {
     data: {
       about: About;
@@ -110,9 +111,12 @@
           {/each}
         </p>
         {#if data.editor.vcf_file}
-          <a href={data.editor.vcf_file} class="btn-primary bnt-soft btn w-full"
-            >Ajouter à mon carnet d'adresse</a
-          >
+          <Button link={{
+            url:data.editor.vcf_file,
+            text: "Ajouter à mon carnet d'adresse",
+            color: "secondary",
+            icon_after: "download"
+          }} class="w-full" download={data.editor.vcf_file.split('/').pop()}/>
         {/if}
       </article>
     </aside>
