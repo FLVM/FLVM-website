@@ -147,21 +147,6 @@
         "icon_after": "external-link",
         "icon_only": false
       }
-    },
-    {
-      "id": "8382ceab-d857-414b-8515-d9ad0bb124d3",
-      "featured": false,
-      "title": "Un EFJF pas comme les autres",
-      "content": "<p>Aline nous partage sont enterrement de vie de jeune fille à FLVM, quelle aventure !</p>",
-      "image": null,
-      "link": {
-        "text": "Consulter sur Instagram",
-        "url": "https://example.com",
-        "color": "secondary",
-        "icon_before": "instagram",
-        "icon_after": "external-link",
-        "icon_only": false
-      }
     }
   ],
   "slug": "home"
