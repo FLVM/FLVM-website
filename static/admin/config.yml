@@ -271,6 +271,7 @@ card: &card
   name: card
   widget: object
   collapsed: true
+  required: false
   fields:
     - name: id
       widget: hidden
@@ -440,6 +441,7 @@ singletons:
         <<: *card
       - label: Publications
         label_singular: Publication
+        hint: Publiez les comptes rendus de cours ou d'évenements.
         name: posts
         widget: list
         collapsed: true
