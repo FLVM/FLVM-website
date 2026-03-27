@@ -128,26 +128,6 @@
       }
     }
   ],
-  "posts": [
-    {
-      "id": "946b1240-d32a-4d8d-ae69-5b8b6f1efb21",
-      "featured": false,
-      "title": "La recette du Chocopistache",
-      "content": "<p>Arnaud à mis au point cette recette gourmande et facile à réaliser à la maison. Suivez avec nous le déroulement de cette atelier, réalisez-le et déguster-le 😋 !</p>",
-      "image": {
-        "src": "/uploads/chocopistache.jpg",
-        "alt": "Gâteau chocopistache",
-        "legend": ""
-      },
-      "link": {
-        "text": "Consulter sur Facebook",
-        "url": "https://example.com",
-        "color": "secondary",
-        "icon_before": "facebook",
-        "icon_after": "external-link",
-        "icon_only": false
-      }
-    }
-  ],
+  "posts": [],
   "slug": "home"
 }
