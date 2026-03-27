@@ -35,9 +35,9 @@
     {#each data.home.cards as block (block.title)}
       <Card card={block} size="base" class="my-6" />
     {/each}
-    {#if data.home.posts}
-      <section class="mt-12 typo">
-        <h2>Ça c'est passé à FLVM</h2>
+    {#if data.home.posts.length > 0}
+      <section class="mt-12">
+        <h2 class="h6">Ça c'est passé à FLVM</h2>
         <div class="-mt-6 flex">
           {#each data.home.posts as post (post.title)}
             <Card card={post} size="sm" class="my-6 max-w-1/2" noShadow />
