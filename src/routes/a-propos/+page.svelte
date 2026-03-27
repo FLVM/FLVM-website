@@ -35,6 +35,7 @@
         <h2 class="h2">Les ateliers</h2>
         {#each data.places as place (place.slug)}
           <article class="typo">
+            <h3>{place.name}</h3>
             {#if place.image}
               <figure>
                 <img src={place.image.src} alt={place.image.alt} />
@@ -43,7 +44,6 @@
                 {/if}
               </figure>
             {/if}
-            <h3>{place.name}</h3>
             {@html place.content}
             {#if place.hours}
               <div class="typo-insert mb-6 typo">
