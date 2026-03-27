@@ -7,26 +7,19 @@
     "phone": "06 62 81 56 74",
     "email": "contact@flvm.fr",
     "address": {
-      "name": "Siège de l'association",
-      "street": "32 rue des Capucins",
-      "zipcode": "76000",
+      "country": "France",
       "city": "Rouen",
-      "country": "France"
+      "zipcode": "76000",
+      "street": "32 rue des Capucins",
+      "name": "Siège de l'association"
     }
   },
   "socials": [
     {
-      "id": "4cc3e358-cffc-473d-870c-2df878eba43f",
       "text": "Notre page Facebook",
+      "id": "4cc3e358-cffc-473d-870c-2df878eba43f",
       "icon": "facebook",
-      "url": "https://example.com",
-      "icon_only": true
-    },
-    {
-      "id": "445987c7-5b6c-4aa7-a613-a99dfdc2ef9b",
-      "text": "Nos vidéos",
-      "icon": "vimeo",
-      "url": "https://example.com",
+      "url": "https://www.facebook.com/flvm.cours",
       "icon_only": true
     }
   ],

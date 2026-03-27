@@ -12,14 +12,7 @@
       "text": "Notre page Facebook",
       "id": "4cc3e358-cffc-473d-870c-2df878eba43f",
       "icon": "facebook",
-      "url": "https://example.com",
-      "icon_only": true
-    },
-    {
-      "text": "Nos vidéos",
-      "id": "445987c7-5b6c-4aa7-a613-a99dfdc2ef9b",
-      "icon": "vimeo",
-      "url": "https://example.com",
+      "url": "https://www.facebook.com/flvm.cours",
       "icon_only": true
     }
   ],
