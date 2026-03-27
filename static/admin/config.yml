@@ -12,7 +12,7 @@ backend:
 # @todo: utiliser github pour ce projet
 # @todo: Conserver une config local commenté
   # name: test-repo
-  # Confgi from : https://github.com/yardstick-codebase/decap-cms-oauth?tab=readme-ov-file
+  # Config from : https://github.com/yardstick-codebase/decap-cms-oauth?tab=readme-ov-file
   # Suivre tuto : 
   # https://ironeko.com/posts/how-to-install-netlify-cms-on-vercel
   name: github
