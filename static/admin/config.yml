@@ -141,12 +141,12 @@ link: &link
       required: false
       widget: select
       # Selectionner les icones sur https://lucide.dev/icons/ 
-      options: ["arrow-left", "arrow-right", "external-link", "facebook", "instagram", "twitter", "calendar", "cake", "cookie", "ice-cream-cone", "croissant", "cooking-pot", "chef-hat", "heart", "gift", "mail", "send", "star", "party-popper"]
+      options: ["arrow-left", "arrow-right", "external-link", "facebook", "instagram", "twitter", "calendar", "cake", "cookie", "ice-cream-cone", "croissant", "cooking-pot", "chef-hat", "heart", "gift", "mail", "send", "star", "party-popper", "download"]
     - label: Icone après
       name: icon_after
       required: false
       widget: select
-      options: ["arrow-left", "arrow-right", "external-link", "facebook", "instagram", "twitter", "calendar", "cake", "cookie", "ice-cream-cone", "croissant", "cooking-pot", "chef-hat", "heart", "gift", "mail", "send", "star", "party-popper"]
+      options: ["arrow-left", "arrow-right", "external-link", "facebook", "instagram", "twitter", "calendar", "cake", "cookie", "ice-cream-cone", "croissant", "cooking-pot", "chef-hat", "heart", "gift", "mail", "send", "star", "party-popper", "download"]
     - label: Afficher uniquement l'icone
       name: icon_only
       widget: boolean

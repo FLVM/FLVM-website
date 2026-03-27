@@ -9,6 +9,7 @@
     Cookie,
     CookingPot,
     Croissant,
+    Download,
     ExternalLink,
     Facebook,
     Gift,
@@ -30,6 +31,7 @@
     class?: ClassValue;
     onclick?: () => void;
     disabled?: boolean;
+    download?: string;
   } = $props();
 
   const icons: { [id: string]: Component<IconProps, object, ''> } = {
@@ -51,7 +53,8 @@
     facebook: Facebook,
     instagram: Instagram,
     twitter: Twitter,
-    'external-link': ExternalLink
+    'external-link': ExternalLink,
+    download: Download
   };
 
   // Version SSR
@@ -95,6 +98,7 @@
     title={props.link.text}
     aria-label={props.link.text}
     onclick={props.onclick && props.onclick}
+    download={props.download}
   >
     {#if IconBefore}<IconBefore size={iconSize} />{/if}
     {#if IconAfter}<IconAfter size={iconSize} />{/if}
@@ -114,6 +118,7 @@
       props.disabled && 'disabled cursor-not-allowed'
     ]}
     onclick={props.onclick && props.onclick}
+    download={props.download}
   >
     {#if IconBefore}<IconBefore size={iconSize} class="drop-shadow-md/40" />{/if}
     {props.link.text}
