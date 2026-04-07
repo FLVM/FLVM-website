@@ -22,7 +22,7 @@
     <div class="mb-2 flex-grow @xl:w-1/3">
       <h2 class="mb-2 leading-none">Le {props.event.start.prettyDate}</h2>
       <h1 class="mb-2 h6 leading-none">{props.event.title}</h1>
-      <div class="flex justify-center gap-1 justify-start">
+      <div class="flex justify-center justify-start gap-1">
         {#each tags() as tag (tag.id)}
           <span title={tag.name} class="text-surface-600">
             {#if tag.name === 'pâtisserie'}<DessertIcon />{/if}
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="mb-2 @xl:w-1/3">
-      <p class="mb-2 flex sm:max-md:flex-col justify-center gap-2 justify-start">
+      <p class="mb-2 flex justify-center justify-start gap-2 sm:max-md:flex-col">
         <span class="badge preset-filled">
           <ClockIcon size={16} />
           {props.event.start.prettyHour} - {props.event.end.prettyHour}
