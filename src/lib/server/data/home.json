@@ -17,7 +17,8 @@
       "url": "/planning",
       "color": "primary",
       "icon_before": "calendar",
-      "icon_after": "arrow-right"
+      "icon_after": "arrow-right",
+      "icon_only": false
     }
   },
   "cards": [
