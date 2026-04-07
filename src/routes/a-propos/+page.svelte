@@ -29,7 +29,7 @@
     <Cover cover={data.about.cover} />
     <article>
       <div class="typo pr-8">
-        {@html data.about.content}
+        {@html data.about.body}
       </div>
       <section>
         <h2 class="h2">Les ateliers</h2>
@@ -44,7 +44,7 @@
                 {/if}
               </figure>
             {/if}
-            {@html place.content}
+            {@html place.body}
             {#if place.hours}
               <div class="typo-insert mb-6 typo">
                 {@html place.hours}
