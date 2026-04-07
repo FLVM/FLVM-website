@@ -14,4 +14,4 @@ address:
 hours: La Cantine, réserve ses locaux pour les cours de cuisines pour FLVM _la semaine de 16h30 à 19h30 et le samedi de 14h30 à 17h30_.
 ---
 
-La Cantine, réserve ses locaux pour les cours de cuisines pour FLVM _la semaine de 16h30 à 19h30 et le samedi de 14h30 à 17h30_.
+La Cantine, réserve ses locaux pour les cours de cuisines pour FLVM *la semaine de 16h30 à 19h30 et le samedi de 14h30 à 17h30*.
