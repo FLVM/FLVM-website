@@ -3,7 +3,7 @@
   import Cover from '$lib/components/shared/cover.svelte';
   import Address from '$lib/components/shared/adress.svelte';
   import { type About, type Editor, type Places, type Team } from '$lib/server/data';
-  import Button from '$lib/components/shared/button.svelte';
+  import Card from '$lib/components/shared/card.svelte';
 
   type Props = {
     data: {
@@ -83,8 +83,21 @@
       </section>
     </article>
     <aside class="mt-11" id="contact">
-      <article class="typo bg-yellow-500 p-4 typo-sm">
-        <h2>{data.editor.name}</h2>
+      <Card
+        card={{
+          id: 'contact-card',
+          featured: true,
+          title: data.editor.name,
+          link: data.editor.vcf_file
+            ? {
+                url: data.editor.vcf_file,
+                text: "Ajouter à mon carnet d'adresse",
+                color: 'primary',
+                icon_after: 'download'
+              }
+            : null
+        }}
+      >
         <address>
           <strong>{data.editor.address.name}</strong><br />
           {data.editor.address.street}<br />
@@ -110,19 +123,7 @@
             <a href={social.url}>{social.text}</a><br />
           {/each}
         </p>
-        {#if data.editor.vcf_file}
-          <Button
-            link={{
-              url: data.editor.vcf_file,
-              text: "Ajouter à mon carnet d'adresse",
-              color: 'secondary',
-              icon_after: 'download'
-            }}
-            class="w-full"
-            download={data.editor.vcf_file.split('/').pop()}
-          />
-        {/if}
-      </article>
+      </Card>
     </aside>
   </TwoCols>
 </main>
