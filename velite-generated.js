@@ -1249,7 +1249,7 @@ export const EditorSchema = s.object({
         id: s.string(),
         icon: s.enum(['', 'facebook', 'twitter', 'instagram', 'vimeo']),
         url: s.string(),
-        icon_only: s.boolean().nullable()
+        icon_only: s.boolean()
       })
     )
     .nullable(),
