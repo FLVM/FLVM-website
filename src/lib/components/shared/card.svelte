@@ -2,9 +2,16 @@
   import type { Card } from '$lib/server/data';
   import type { ClassValue } from 'svelte/elements';
   import Button from './button.svelte';
+  import type { Snippet } from 'svelte';
 
   type CardSizes = 'sm' | 'base' | 'lg';
-  let props: { card: Card; size?: CardSizes; class?: ClassValue; noShadow?: boolean } = $props();
+  let props: {
+    card: Card;
+    size?: CardSizes;
+    class?: ClassValue;
+    noShadow?: boolean;
+    children: Snippet;
+  } = $props();
   const card = props.card;
   const size = props.size || 'base';
 </script>
@@ -35,6 +42,9 @@
       <h2>{card.title}</h2>
       {#if card.content}
         {@html card.content}
+      {/if}
+      {#if props.children}
+        {@render props.children()}
       {/if}
     {/if}
     {#if card.link}
