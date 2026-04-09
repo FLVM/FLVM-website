@@ -642,7 +642,6 @@ singletons:
             name: icon_only
             widget: boolean
             default: false
-            required: false
       - <<: *address
       - label: Fichier de contact
         name: vcf_file
