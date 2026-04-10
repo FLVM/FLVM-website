@@ -76,3 +76,17 @@ Constater les mises à jour avec la commande `yarn outdated`.
 Mise à jour en respectant les versions sémantiques `yarn upgrade`.
 
 Forecer la mise à jour sans respecter les versions sémantiques `yarn upgrade --latest` ou en commande interactive `yarn upgrade-interactive --latest`.
+
+## Git flow
+
+La branche principale `main` est utilisé pour la production.
+
+La branche `development` est utilisée pour des essai insitue sur le serveur.
+
+La branche `preview` est utilisée pour faire la démonstration et la prise en main de nouvelle fonctionnalités.
+
+Les correctifs se fait sur des branches dédié (ex. `feature-x`). Elle peuvent testée sur les branche `development` et `preview`.
+
+Une fois un correctif validé, le correctif est fusionné sur la branche principale `main` sans avance rapide `--no-ff` : `merge feature-x --no-ff`. La branche de correctif est ensuite à supprimer.
+
+Des étiquettes de jalon sont à utiliser (ex. `v0.1.34`).
