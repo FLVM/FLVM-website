@@ -23,7 +23,7 @@
     <Cover cover={data.courses.cover} />
     <div class="pr-8">
       {#each data.courses.lessons as lesson (lesson.id)}
-        <article id={lesson.id} class="mb-12 text-center last:border-0 last:pb-0 md:text-left">
+        <article id={lesson.id} class="mb-12 last:border-0 last:pb-0">
           <!-- Cover -->
           <div class="mb-6 typo">
             <h2>{lesson.title}</h2>
@@ -34,7 +34,7 @@
             {/if}
             {@html lesson.description}
           </div>
-          <div class="typo-insert mb-6 typo text-left">
+          <div class="typo-insert mb-6 typo">
             <Place place={getPlaceByName(lesson.place)} />
             <Person person={getPersonByName(lesson.instructor)} />
           </div>

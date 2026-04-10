@@ -37,7 +37,7 @@
       {/if}
     </figure>
   {/if}
-  <div class="card-body">
+  <div class="card-body max-md:px-2">
     {#if card.content || card.title}
       <h2>{card.title}</h2>
       {#if card.content}
