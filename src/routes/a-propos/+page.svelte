@@ -28,7 +28,7 @@
   <TwoCols>
     <Cover cover={data.about.cover} />
     <article>
-      <div class="typo pr-8 mb-8">
+      <div class="mb-8 typo pr-8">
         {@html data.about.body}
       </div>
       <section>
