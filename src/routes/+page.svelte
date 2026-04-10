@@ -35,7 +35,7 @@
     {#each data.home.cards as block (block.title)}
       <Card card={block} size="base" class="my-6" />
     {/each}
-    {#if data.home.posts.length > 0}
+    {#if data.home.posts?.length || 0 > 0}
       <section class="mt-12">
         <h2 class="h6">Ça c'est passé à FLVM</h2>
         <div class="-mt-6 flex">
