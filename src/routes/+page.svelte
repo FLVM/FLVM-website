@@ -31,7 +31,7 @@
   </div>
 </Full>
 <TwoCols>
-  <main class="cards pr-8">
+  <main class="cards md:pr-8">
     {#each data.home.cards as block (block.title)}
       <Card card={block} size="base" class="my-6" />
     {/each}
