@@ -28,11 +28,11 @@
   <TwoCols>
     <Cover cover={data.about.cover} />
     <article>
-      <div class="typo pr-8">
+      <div class="typo pr-8 mb-8">
         {@html data.about.body}
       </div>
       <section>
-        <h2 class="h2">Les ateliers</h2>
+        <h2 class="h2" id="les-ateliers">Les ateliers</h2>
         {#each data.places as place (place.slug)}
           <article class="typo">
             <h3>{place.name}</h3>
