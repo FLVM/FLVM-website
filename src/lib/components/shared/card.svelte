@@ -10,7 +10,7 @@
     size?: CardSizes;
     class?: ClassValue;
     noShadow?: boolean;
-    children: Snippet;
+    children?: Snippet;
   } = $props();
   const card = props.card;
   const size = props.size || 'base';
