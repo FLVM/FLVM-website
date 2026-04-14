@@ -19,8 +19,8 @@
 </script>
 
 <AppBar class="{props.class} bg-primary-500 py-6">
-  <AppBar.Toolbar class="grid-cols-[auto_1fr] justify-center content-center md:h-10">
-    <AppBar.Lead>
+  <AppBar.Toolbar class="flex content-center md:h-10">
+    <AppBar.Lead class="justify-self-center grow">
       <a href="/" class="block flex flex-col text-center">
         <LogoFlvm
           width="120"
@@ -35,7 +35,7 @@
         </div>
       </a>
     </AppBar.Lead>
-    <AppBar.Trail class="justify-end self-start">
+    <AppBar.Trail class="place-self-start">
       <div class="hidden flex-wrap justify-end self-center sm:flex">
         {#each props.links as link (link.url)}
           <Button {link} class={[page.url.pathname === link.url && 'underline']} />
