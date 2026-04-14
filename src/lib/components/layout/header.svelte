@@ -19,7 +19,7 @@
 </script>
 
 <AppBar class="{props.class} bg-primary-500 py-6">
-  <AppBar.Toolbar class="grid-cols-[auto_1fr] content-center md:h-10">
+  <AppBar.Toolbar class="grid-cols-[auto_1fr] justify-center content-center md:h-10">
     <AppBar.Lead>
       <a href="/" class="block flex flex-col text-center">
         <LogoFlvm
@@ -27,7 +27,7 @@
           height="120"
           class="mx-auto mb-4 drop-shadow-lg md:absolute md:top-2 md:left-2"
         />
-        <div class="leading-none md:pl-48">
+        <div class="leading-none md:pl-32">
           <h1 class="h6 leading-none">{props.editor.name}</h1>
           <span class="text-xs leading-[1] italic">
             {@html props.editor.baseline}
