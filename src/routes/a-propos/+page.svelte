@@ -14,7 +14,6 @@
     };
   };
   let { data }: Props = $props();
-  // @todo: add closure ?
   function mailtoContact(name?: string, to?: string) {
     name = name || '';
     to = to || data.editor.contact.email;
@@ -23,7 +22,6 @@
     return encodeURI(`mailto:${to}` + `?subject=${subject}` + `&body=${body}`);
   }
 </script>
-
 <main>
   <TwoCols>
     <Cover cover={data.about.cover} />
