@@ -23,7 +23,7 @@
         url: '/',
         text: "Retourner sur la page d'accueil",
         icon_before: 'arrow-left',
-        color: 'surface-900-100'
+        color: 'dark'
       }}
     />
   </main>

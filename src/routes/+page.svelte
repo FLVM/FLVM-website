@@ -46,7 +46,7 @@
       </section>
     {/if}
   </main>
-  <aside class="cards mt-6 preset-tonal md:p-6 pt-2">
+  <aside class="cards mt-6 preset-tonal pt-2 md:p-6">
     {#if data.lastEvents.length > 0}
       <section>
         <h1 class="h5">Il reste des places !</h1>

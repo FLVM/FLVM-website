@@ -22,6 +22,7 @@
     return encodeURI(`mailto:${to}` + `?subject=${subject}` + `&body=${body}`);
   }
 </script>
+
 <main>
   <TwoCols>
     <Cover cover={data.about.cover} />
