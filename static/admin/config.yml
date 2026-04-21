@@ -596,6 +596,8 @@ singletons:
     fields:
       - label: Nom de l'éditeur
         name: name
+      - label: Nom du site
+        name: site_name
       - label: Slogan
         name: baseline
         required: false
