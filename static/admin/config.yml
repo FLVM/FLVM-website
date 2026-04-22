@@ -598,6 +598,9 @@ singletons:
         name: name
       - label: Nom du site
         name: site_name
+      - label: URL de base du site
+        name: base_url
+        hint: Essentiellement utilisé pour générer les liens caniques de référencement (ex. https://flvm.fr).
       - label: Slogan
         name: baseline
         required: false

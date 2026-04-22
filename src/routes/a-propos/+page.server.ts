@@ -1,6 +1,6 @@
 import { about, editor, places, team } from '$lib/server/data';
 import type { PageServerLoad } from './$types';
-import { BASE_URL } from '$env/static/private';
+
 import type { PageMetadata } from '../../app';
 // Gestion des méta données sur Sveltkit
 // @related: /src/app.d.ts, /src/routes/layout.svelte
@@ -8,12 +8,12 @@ import type { PageMetadata } from '../../app';
 const meta: PageMetadata = {
   title: about.seo.title,
   description: about.seo.description,
-  canonical: `${BASE_URL}/a-propos`,
+  canonical: `${editor.base_url}/a-propos`,
   social: {
     title: about.seo.title,
     description: about.seo.description,
     type: 'website',
-    url: `${BASE_URL}/a-propos`,
+    url: `${editor.base_url}/a-propos`,
     image: about.cover.image?.src
   }
 };

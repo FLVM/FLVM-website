@@ -1350,6 +1350,7 @@ export const about = { name: 'About', pattern: 'about.json', single: true, schem
 export const EditorSchema = s.object({
   name: s.string(),
   site_name: s.string(),
+  base_url: s.string(),
   baseline: s.string().optional().nullable(),
   description: s.markdown(),
   contact: s.object({
