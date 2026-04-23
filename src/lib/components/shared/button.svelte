@@ -11,20 +11,20 @@
     Croissant,
     Download,
     ExternalLink,
-    Facebook,
     Gift,
     Heart,
     IceCreamCone,
-    Instagram,
     Mail,
     PartyPopper,
     Send,
     Star,
-    Twitter,
     type IconProps
   } from '@lucide/svelte';
+  import Facebook from '$lib/components/shared/icons/facebook.svelte';
+  import Twitter from '$lib/components/shared/icons/twitter.svelte';
+  import Instagram from '$lib/components/shared/icons/instagram.svelte';
   import type { Component } from 'svelte';
-  import type { ClassValue } from 'svelte/elements';
+  import type { ClassValue, SVGAttributes } from 'svelte/elements';
 
   let props: {
     link: Link;
@@ -34,7 +34,9 @@
     download?: string;
   } = $props();
 
-  const icons: { [id: string]: Component<IconProps, object, ''> } = {
+  const icons: {
+    [id: string]: Component<IconProps> | Component<Partial<SVGAttributes<SVGElement>>>;
+  } = {
     'arrow-left': ArrowLeft,
     'arrow-right': ArrowRight,
     calendar: Calendar,

@@ -1,8 +1,13 @@
 <script lang="ts">
   import type { Editor } from '$lib/server/data';
-  import { Facebook, Instagram, Twitter, Video, type IconProps } from '@lucide/svelte';
+  // Svelte v1, les "Brand icons" doivent être géré en SVG custom
+  // https://lucide.dev/guide/svelte/migration
+  import { Video, type IconProps } from '@lucide/svelte/icons';
+  import Facebook from '$lib/components/shared/icons/facebook.svelte';
+  import Twitter from '$lib/components/shared/icons/twitter.svelte';
+  import Instagram from '$lib/components/shared/icons/instagram.svelte';
   import type { Component } from 'svelte';
-  import type { ClassValue } from 'svelte/elements';
+  import type { ClassValue, SVGAttributes } from 'svelte/elements';
 
   type SocialLink = NonNullable<Editor['socials']>[number];
   let props: {
@@ -11,7 +16,9 @@
     size?: 'sm' | 'md' | 'lg';
     onclick?: () => void;
   } = $props();
-  const icons: { [id: string]: Component<IconProps, object, ''> } = {
+  const icons: {
+    [id: string]: Component<IconProps> | Component<Partial<SVGAttributes<SVGElement>>>;
+  } = {
     facebook: Facebook,
     twitter: Twitter,
     instagram: Instagram,
