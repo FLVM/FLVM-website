@@ -12,44 +12,42 @@
     noShadow?: boolean;
     children?: Snippet;
   } = $props();
-  const card = props.card;
-  const size = props.size || 'base';
 </script>
 
 <article
   class={[
     props.class,
     'card',
-    size === 'sm' && 'card-sm',
-    size === 'base' && 'card-base',
-    size === 'lg' && 'card-lg',
-    card.featured && 'card-featured'
+    props.size === 'sm' && 'card-sm',
+    props.size === undefined && 'card-base',
+    props.size === 'lg' && 'card-lg',
+    props.card.featured && 'card-featured'
   ]}
   style={props.noShadow ? null : 'box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;'}
 >
-  {#if card.image}
+  {#if props.card.image}
     <figure class="card-figure">
-      <img src={card.image.src} alt={card.image.alt} />
-      {#if card.image.legend}
+      <img src={props.card.image?.src} alt={props.card.image?.alt} />
+      {#if props.card.image?.legend}
         <figcaption class="card-caption">
-          {@html card.image.legend}
+          {@html props.card.image?.legend}
         </figcaption>
       {/if}
     </figure>
   {/if}
   <div class="card-body max-md:px-2">
-    {#if card.content || card.title}
-      <h2>{card.title}</h2>
-      {#if card.content}
-        {@html card.content}
+    {#if props.card.content || props.card.title}
+      <h2>{props.card.title}</h2>
+      {#if props.card.content}
+        {@html props.card.content}
       {/if}
       {#if props.children}
         {@render props.children()}
       {/if}
     {/if}
-    {#if card.link}
+    {#if props.card.link}
       <div class="card-actions">
-        <Button link={card.link} class="btn-md btn-wide w-full" />
+        <Button link={props.card.link} class="btn-md btn-wide w-full" />
       </div>
     {/if}
   </div>

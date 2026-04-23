@@ -12,8 +12,9 @@
   };
   let props: Props = $props();
   // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace#exemples
-  const mailtoLink = `mailto:${props.contact}?subject=R%C3%A9servation%20d'un%20cours%20%22${props.event.title}%22&body=(veuillez%20remplir%20les%20champs%20entre%20crochets%20%5B%20%5D)%0ABonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20cours%20%22${props.event.title}%22%20pour%20%5Bn%5D%20personnes%20pour%20le%20${props.event.start.prettyDate}.%20%0A%0A%5BVotre%20nom%5D%0ABien%20cordialement.`;
-  const active = props.event.transparency === 'transparent';
+  const mailtoLink = () =>
+    `mailto:${props.contact}?subject=R%C3%A9servation%20d'un%20cours%20%22${props.event.title}%22&body=(veuillez%20remplir%20les%20champs%20entre%20crochets%20%5B%20%5D)%0ABonjour%2C%0A%0AJe%20souhaite%20r%C3%A9server%20un%20cours%20%22${props.event.title}%22%20pour%20%5Bn%5D%20personnes%20pour%20le%20${props.event.start.prettyDate}.%20%0A%0A%5BVotre%20nom%5D%0ABien%20cordialement.`;
+  const active = () => props.event.transparency === 'transparent';
   const tags = () => props.event.tags.map((t, k) => ({ id: k, name: t }));
 </script>
 
@@ -39,8 +40,8 @@
           <ClockIcon size={16} />
           {props.event.start.prettyHour} - {props.event.end.prettyHour}
         </span>
-        <span class={['badge', active ? 'preset-filled-success-500' : 'preset-filled-error-500']}>
-          {active ? 'disponible' : 'complet'}
+        <span class={['badge', active() ? 'preset-filled-success-500' : 'preset-filled-error-500']}>
+          {active() ? 'disponible' : 'complet'}
         </span>
       </p>
       <div class="mb-2 text-xs">
@@ -54,7 +55,7 @@
       <Button
         link={{
           text: 'Réserver ce cours',
-          url: mailtoLink,
+          url: mailtoLink(),
           color: 'secondary'
         }}
         disabled={!active}

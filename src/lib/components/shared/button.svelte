@@ -63,12 +63,12 @@
   const IconBefore = getIconBefore();
   const IconAfter = getIconAfter();
 
-  const classes =
+  const classes = (() =>
     typeof props.class === 'string'
       ? props.class.split(' ')
       : Array.isArray(props.class)
         ? props.class
-        : '';
+        : '')();
   const iconSize = classes.includes('btn-sm') ? 16 : classes.includes('btn-lg') ? 25 : 18;
 
   type presetKeys = Exclude<Link['color'], '' | null | undefined>;

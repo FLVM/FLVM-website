@@ -18,8 +18,8 @@
     vimeo: Video
   };
 
-  const Icon = props.link.icon && icons[props.link.icon];
-  const iconSize = props.size === 'sm' ? 16 : props.size === 'lg' ? 25 : 18;
+  const Icon = (() => props.link.icon && icons[props.link.icon])();
+  const iconSize = () => (props.size === 'sm' ? 16 : props.size === 'lg' ? 25 : 18);
 </script>
 
 {#if props.link.icon_only}
@@ -36,7 +36,7 @@
     title={props.link.text}
     aria-label={props.link.text}
     onclick={props.onclick && props.onclick}
-    >{#if Icon}<Icon size={iconSize} />{/if}</a
+    >{#if Icon}<Icon size={iconSize()} />{/if}</a
   >
 {:else}
   <a
@@ -50,7 +50,7 @@
       props.class
     ]}
   >
-    {#if Icon}<Icon size={iconSize} style="width: 25px" class="w-{iconSize}" />{/if}&nbsp;{props
+    {#if Icon}<Icon size={iconSize()} style="width: 25px" class="w-{iconSize()}" />{/if}&nbsp;{props
       .link.text}
   </a>
 {/if}

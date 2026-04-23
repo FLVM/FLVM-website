@@ -7,7 +7,8 @@
     // class?: ClassValue;
   } = $props();
 
-  const bgImage = props.cover.image ? `background-image: url(${props.cover.image.src})` : '';
+  const bgImage = (() =>
+    props.cover.image ? `background-image: url(${props.cover.image.src})` : '')();
 </script>
 
 <div
