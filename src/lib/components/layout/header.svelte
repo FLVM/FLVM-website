@@ -13,7 +13,7 @@
   import type { Editor, Link } from '$lib/server/data';
   import type { ClassValue } from 'svelte/elements';
   import { page } from '$app/state';
-  import LogoFlvm from '$lib/components/shared/logo/logo-flvm.svelte';
+  import LogoFlvm from '$lib/components/shared/logos/logo-flvm.svelte';
 
   let props: { editor: Editor; links: Link[]; class?: ClassValue } = $props();
 </script>
