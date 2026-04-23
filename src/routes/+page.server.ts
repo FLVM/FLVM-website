@@ -1,6 +1,8 @@
-import { getLastEvents } from '$lib/calendar/eventsCalendar';
-import { editor, home } from '$lib/server/data';
+// Données traités coté serveur uniquement
+// https://svelte.dev/docs/kit/load#Universal-vs-server-When-to-use-which
 import type { PageMetadata } from '../app';
+import type { PageServerLoad } from './$types';
+import { editor, home } from '$lib/server/data';
 
 const meta: PageMetadata = {
   title: home.seo.title,
@@ -12,23 +14,10 @@ const meta: PageMetadata = {
     url: `${editor.base_url}`,
     image: home.cover.image?.src
   }
-}
-
-export function load() {
-  return {
-    lastEvents: [],
-    meta
-  };
 };
 
-// @todo: comment concilier le charchement coté serveur, avec 
-// des données dynamique ?
-// import { getLastEvents } from '$lib/calendar/eventsCalendar';
-// import type { PageLoad } from './$types';
-
-
-// export const load: PageLoad = async () => {
-//   return {
-//     lastEvents: await getLastEvents(),
-//   };
-// };
+export const load: PageServerLoad = async () => {
+  return {
+    ...meta
+  };
+};
