@@ -43,7 +43,7 @@
         "alt": "Préparation de sushis en cours de cuisine",
         "legend": "<p>Préparation de sushis</p>"
       },
-      "description": "<p>Produire la description du cours.</p>",
+      "description": "<p>Décrire brièvement l'ambiance des cours, les types de cours (recettes traditionnelles, approfondir une compétence, boulangerie, Team building, événement, etc.);</p>",
       "instructor": "Marie Lionis",
       "place": "L'atelier des pâtissiers",
       "link": {
