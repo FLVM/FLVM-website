@@ -625,22 +625,24 @@ singletons:
         required: false
         summary: "{{text}}"
         fields:
-          - label: Description
+          - label: Nom du réseau social
             name: text
             maxlength: 26
           - name: id
             widget: hidden
             default: '{{uuid}}'
-          - label: Nom du réseau
+          - label: Icone
             name: icon
             widget: select
+            required: true
             options: [
+             { label: "Autre", value: "default" },
              { label: "Facebook", value: "facebook" },
              { label: "Twitter", value: "twitter" },
              { label: "Instagram", value: "instagram" },
              { label: "Vimeo", value: "vimeo" }
             ]
-            default: { label: "Facebook", value: "facebook" }
+            default: "default"
           - <<: *url
             label: Lien vers le réseau
           - label: Afficher uniquement l'icône
