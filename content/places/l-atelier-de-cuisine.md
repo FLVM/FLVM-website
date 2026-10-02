@@ -3,7 +3,7 @@ publish: true
 name: L'atelier de cuisine
 image:
   src: /uploads/places/la-cantine.jpg
-  alt: Façade du restaurant associatif "La Canntine"
+  alt: Façade du restaurant associatif "La Cantine"
   legend: ''
 address:
   name: La Cantine
