@@ -26,8 +26,8 @@
     {
       "id": "0f6874e5-c816-4b23-ba14-f5e3e32099b2",
       "name": "Entreprise",
-      "price": 45,
-      "detail": "Pour un groupe de 4 personnes minimum."
+      "price": 49,
+      "detail": "Pour un groupe de 5 personnes minimum."
     },
     {
       "id": "e9a9c3ce-73a7-43b6-adf6-d59283b6d22c",
@@ -44,8 +44,8 @@
     {
       "id": "dfffd3dc-62f5-434d-9793-8c3f8b7bc2c0",
       "name": "Carte cadeau enfant",
-      "price": 30,
-      "detail": "Offrez un cours à un enfant.\n\nLes cours est collectif, la carte est illimitée dans le temps.\n\n[Passez à l'atelier pour acheter votre carte cadeau](/a-propos#les-ateliers)."
+      "price": 32,
+      "detail": "Offrez un cours à un enfant.\n\nLes cours est collectif, la carte est illimitée dans le temps.\n\n[Passez à l'atelier de pâtisserie pour acheter votre carte cadeau](/a-propos#les-ateliers)."
     },
     {
       "id": "b30d2213-065a-4908-a2a7-20f2b1e21ac3",
