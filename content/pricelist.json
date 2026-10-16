@@ -12,22 +12,10 @@
   },
   "prices": [
     {
-      "id": "4a9c88ac-d9c2-46b2-abbd-cdd1cc790490",
-      "name": "2 personnes",
-      "price": 69,
-      "detail": ""
-    },
-    {
-      "id": "554637d3-5763-43fd-868c-bab58a1321fd",
-      "name": "3 à 4 personnes",
-      "price": 49,
-      "detail": ""
-    },
-    {
       "id": "3d22e6ed-cf75-48b0-ba44-69eb7a242023",
-      "name": "5 personnes ou plus",
-      "price": 39,
-      "detail": "Tarif pour un groupe de 5 personnes minimum, dans la limite de 8 personnes."
+      "name": "Cours en groupe",
+      "price": 41,
+      "detail": "Tarif pour participer à un cours collectif, 5 personnes minimum."
     },
     {
       "id": "6991a14d-ea87-415b-8872-a40dc5f1175c",
